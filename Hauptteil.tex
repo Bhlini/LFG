@@ -1,0 +1,95 @@
+\documentclass[12pt,a4paper]{article}
+%%% PACKAGES
+%\usepackage{times} % Schriftart Times verwenden
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{colortbl} % enables to shade tables
+\usepackage[style=authoryear]{biblatex}
+\bibliography{quellen}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{qtree}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}  % stellt sicher, dass im PDF auch Umlaute gefunden werden
+\usepackage{tgtermes}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage[ngerman]{babel} % deutsche Begriffe (z.B. Inhaltsverzeichnis statt Contents)
+\usepackage[german=quotes]{csquotes}
+%\renewcommand{\baselinestretch}{1.47} % Zeilenabstand
+\usepackage[onehalfspacing]{setspace} %Zeilenabstand
+%Seitenränder
+\usepackage{geometry}
+%\geometry{a4paper, top=2cm, left=2cm, right=2cm, bottom=2cm}
+%Linenumbers
+\usepackage[modulo]{lineno}
+\DeclareBibliographyCategory{primary}
+\DeclareBibliographyCategory{secondary}
+\DeclareBibliographyCategory{online}
+\addtocategory{primary}{lucil1, lucil2, original, seneca66}
+\addtocategory{secondary}{hachmann1995, bartsch, becker1893sittlichen, cancik, inwood, edwards, motto, becker1893sittlichen}
+\addtocategory{online}{philatinFLU, philatinAUDIS}
+\defbibheading{primary}{\subsection*{Textausgaben und Kommentare}}
+\defbibheading{secondary}{\subsection*{Sekundärliteratur}}
+\defbibheading{online}{\subsection*{Online Ressourcen}}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deckblatt
+\input{./Deckblatt.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{2}
+\begingroup
+\flushbottom
+\tableofcontents
+\thispagestyle{empty}
+%\newpage
+\pagebreak
+\endgroup
+%\setcounter{page}{1}
+% The introduction
+\section{Einleitung}
+\nocite{lucil1}
+\nocite{lucil2} 
+\nocite{original}
+\nocite{seneca66} 
+\nocite{hachmann1995} 
+\nocite{bartsch}  
+\nocite{philatinFLU} 
+\nocite{becker1893sittlichen} 
+\nocite{cancik} 
+\nocite{inwood}
+\nocite{edwards}
+\nocite{motto} 
+\nocite{becker1893sittlichen}
+\nocite{philatinAUDIS}
+
+Eines der bedeutsamsten Themen in Lucius Annaeus Senecas \textit{epistulae morales} ist Selbstgenügsamkeit. Während sie sich nicht unter den von Seneca genannten Tugenden befindet,\footnote{Siehe \textit{epist.} 66.13, 115.3.} so macht sie doch einen erheblichen Teil der vollkommenen Geisteshaltung des stoischen Weisen aus, dessen Bild Seneca in den \textit{epistulae morales} zeichnet. Bereits ganz zu Beginn des ersten Briefs fordert er Lucilius dazu auf, sich selbst zu befreien, sein eigener Herr zu werden;\footnote{Siehe Edwards 2009, S. 139.} auch die Schlussätze des letzten Briefs, \textit{epist.} 124, sind dem Erkennen des einen, höchsten Gutes und dem Erlangen vollkommenen Glücks gewidmet. All diese Punkte sind Aspekte von Senecas Konzeption der Selbstgenügsamkeit, wie in dieser Arbeit dargelegt wird; denn eine selbstgenügsame Geisteshaltung bildet eine wichtige Basis, um sich sowohl von den eigenen Affekten als auch aus der Abhängigkeit vom Schicksal zu befreien, wodurch der Weg zu einem tugendhaften, sorglosen, und dauerhaft glücklichen Leben offen steht. Diese Arbeit soll zudem zeigen, dass, wenngleich nur der Weise wirklich selbstgenügsam sein kann, sich das Streben nach Selbstgenügsamkeit stets lohnt. 
+
+\Tree [.S [.NP LaTeX ] [.VP [.V is ] [.NP fun ] ] ]
+
+
+\section{Die Textstelle Sen. \textit{epist.} 72.7-8 und deren Übersetzung}
+\begin{singlespace}
+\renewcommand\linenumberfont{\normalfont\small}
+\begin{linenumbers}
+\begin{quotation}
+\fontfamily{ybv}\selectfont
+Dicam quomodo intellegas sanum: si se ipse contentus est, si confidit sibi, si scit omnia vota mortalium, omnia beneficia quae dantur petunturque, nullum in beata vita habere momentum. Nam cui aliquid accedere potest, id inperfectum est; cui aliquid abscedere potest, id inperpetuum est: cuius perpetua futura laetitia est, is suo gaudeat. Omnia autem quibus vulgus inhiat ultro citroque fluunt: nihil dat fortuna mancipio. Sed haec quoque fortuita tunc delectant cum illa ratio temperavit ac miscuit: haec est quae etiam externa commendet, quorum avidis usus ingratus est. Solebat Attalus hac imagine uti: 'vidisti aliquando canem missa a domino frusta panis aut carnis aperto ore captantem? quidquid excepit protinus integrum devorat et semper ad spem venturi hiat. Idem evenit nobis: quid\-quid expectantibus fortuna proiecit, id sine ulla voluptate demittimus statim, ad rapinam alterius erecti et attoniti.' Hoc sapienti non evenit: plenus est; etiam si quid obvenit, secure excipit ac reponit; laetitia fruitur maxima, continua, sua.\footnote{Die Textstelle sowie der textkritische Apparat wurden entnommen aus Reynolds (1965, S. 219-20), die Zeilenangaben wurden jedoch der Einfachheit halber geändert. Auch alle übrigen verwendeten lateinischen Zitate aus den \textit{epistulae morales} entstammen Reynolds (1965).}
+\end{quotation}
+\end{linenumbers}
+\vspace{0.5cm}
+\fontfamily{ybv}\selectfont
+Ich werde dir sagen, wie du einen Gesunden erkennst: Wenn er sich selbst genügt, wenn er auf sich vertraut, wenn er weiß, dass alle Wünsche der Menschen\footnote{s. \textit{OLD} s.v. \textit{mortalis$^{2}$} 1.} und alle Begünstigungen, die gewährt und erbeten werden, keinen Einfluss auf das glückliche Leben haben. Denn das, zu dem irgendetwas hinzutreten kann, ist unvollkommen; 
+\end{singlespace}
+%\bibliographystyle{plain}
+\pagebreak
+\section*{Literaturverzeichnis}
+\bibbycategory
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\end{document}
