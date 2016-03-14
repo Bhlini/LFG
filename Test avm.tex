@@ -1,0 +1,150 @@
+\documentclass[12pt,a4paper]{article}
+%%% PACKAGES
+%\usepackage{times} % Schriftart Times verwenden
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{colortbl} % enables to shade tables
+\usepackage[style=authoryear]{biblatex}
+\bibliography{quellen}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}  % stellt sicher, dass im PDF auch Umlaute gefunden werden
+\usepackage{tgtermes}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage[ngerman]{babel} % deutsche Begriffe (z.B. Inhaltsverzeichnis statt Contents)
+\usepackage[german=quotes]{csquotes}
+%\renewcommand{\baselinestretch}{1.47} % Zeilenabstand
+\usepackage[onehalfspacing]{setspace} %Zeilenabstand
+%Seitenränder
+\usepackage{geometry}
+%\geometry{a4paper, top=2cm, left=2cm, right=2cm, bottom=2cm}
+%Linenumbers
+\usepackage[modulo]{lineno}
+\DeclareBibliographyCategory{primary}
+\DeclareBibliographyCategory{secondary}
+\DeclareBibliographyCategory{online}
+\addtocategory{primary}{lucil1, lucil2, original, seneca66}
+\addtocategory{secondary}{hachmann1995, bartsch, becker1893sittlichen, cancik, inwood, edwards, motto, becker1893sittlichen}
+\addtocategory{online}{philatinFLU, philatinAUDIS}
+\defbibheading{primary}{\subsection*{Textausgaben und Kommentare}}
+\defbibheading{secondary}{\subsection*{Sekundärliteratur}}
+\defbibheading{online}{\subsection*{Online Ressourcen}}
+\begin{document}
+
+\begin{avm}
+\[ cat\|subcat & \<NP$_{it}$, NP$_{\@2}$, S[comp]:\@3\> \\
+content & \[ relation & \bf bother\\
+bothered & \@2 \\
+soa-arg & \@3 \] \]
+\end{avm}
+\\
+\\
+
+\begin{avm}
+\[ subj & \[ pers & 3 \\
+num & sg \\
+gend & masc\\
+pred & \rm ‘pro’ \]\\
+pred & \rm ‘eat\q<SUBJ, OBJ\q>’\\
+obj & \[ pers & 3 \\
+num & pl \\
+gend & fem \\
+pred & \rm ‘pro’ \]
+\]
+\end{avm}
+\\
+\\
+
+\newpage
+\begin{avm}
+\[qstore & \{ \[det & \rm the \\
+restpar & \[para & \@1 \\
+restr & \{ \[reln & \rm poss \\
+possessor & \@3 \\
+possessed & \@1\]\}\ \bf union \q\{\@2\q\}
+\] \] \} \]
+\end{avm}
+\\
+\\
+\newpage
+
+\begin{avm}
+\{ \[ pred & \rm ‘see\q<girl, Mary\q>’ \\
+subj & \rm ‘girl’ \\
+obj & \rm ‘Mary’ \] \\
+5
+\[ pred & \rm ‘heard\q<girl, Bill\q>’ \\
+subj & \rm ‘girl’ \\
+obj & \rm ‘Bill’ \] \}
+\end{avm}
+
+\newpage
+
+\newbox\matrixsynsem \newbox\headdtr 
+\newbox\compdtrone   \newbox\compdtrtwo
+
+{\scriptsize
+\avmoptions{center}
+\setbox\matrixsynsem=\hbox{\begin{avm}
+\osort{synsem}{\[local & \[cat & \[ \] \\
+                    content & \[ \]\]\]}
+\end{avm}}
+
+\setbox\headdtr=\hbox{\begin{avm}
+\osort{word}{\[ phon\;\<\rm likes\>\\
+            synsem\;\[local\[ cat\;\[ head  \; \@{5}\\
+                                      arg-s\;\< \@{1},\@{2}\>\] \\
+                              content\;\@{6} \]\]\]} \end{avm}}
+                              
+                              \setbox\compdtrtwo=\hbox{\begin{avm}
+\sort{phrase}{\[ phon\;\<\rm bones\>\\
+            synsem\;\@{2}\;\[local\[ cat\;\[ head\;noun\\
+                                      arg-s\;\< \>\] \\
+                              content\;\@{4} \]\]\]} \end{avm}}
+
+\setbox\compdtrone=\hbox{\begin{avm}
+\sort{phrase}{\[ phon\;\<\rm fido\>\\
+            synsem\;\@{1}\;\[local\[ cat\;\[ head\;noun\\
+                                      arg-s\;\< \>\] \\
+                              content\;\@{3} \]\]\]} \end{avm}}
+
+
+
+\avmoptions{active,sorted}
+\begin{avm} \hspace{-1in}
+[{phrase} phon\;\<\rm fido likes bones\> \\
+       synsem\;[{synsem} local [{} cat & [{} head & @{5}\\
+                                             arg-s & \< \; \>] \\
+                                   content & @{6}[{psoa} reln\;like \\
+                                                     arg1\;@{3} \\
+                                                     arg2\;@{4} ]]]\\
+       dtrs\;\sort{head-struc}{[{} head-dtr\;\box\headdtr \\
+                  comp-dtrs\;< \box\compdtrone , \\ \hspace{.5in}
+                                            \box\compdtrtwo>]}]
+\end{avm}}
+
+\begin{avm}
+\[ subj & \[ pers & 3 \\
+num & sg \\
+gend & masc\\
+pred & \rm ‘pro’ \]\\
+pred & \rm ‘eat\q<SUBJ, OBJ\q>’\\
+obj & \[ pers & 3 \\
+num & pl \\
+gend & fem \\
+pred & \rm ‘pro’ \]
+\]
+\end{avm}
+
+\end{document}
+
