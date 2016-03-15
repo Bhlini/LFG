@@ -1,0 +1,343 @@
+\documentclass[12pt,a4paper]{article}
+%%% PACKAGES
+%\usepackage{times} % Schriftart Times verwenden
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{colortbl} % enables to shade tables
+\usepackage[style=authoryear]{biblatex}
+\bibliography{quellen}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{qtree}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}  % stellt sicher, dass im PDF auch Umlaute gefunden werden
+\usepackage{tgtermes}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{fixltx2e}
+\usepackage[ngerman]{babel} % deutsche Begriffe (z.B. Inhaltsverzeichnis statt Contents)
+\usepackage[german=quotes]{csquotes}
+%\renewcommand{\baselinestretch}{1.47} % Zeilenabstand
+%\usepackage[onehalfspacing]{setspace} %Zeilenabstand
+\usepackage{setspace}
+%Seitenränder
+\usepackage{geometry}
+%\geometry{a4paper, top=2cm, left=2cm, right=2cm, bottom=2cm}
+%Linenumbers
+\usepackage[modulo]{lineno}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark,positioning}
+\usepackage{avm}
+\DeclareBibliographyCategory{primary}
+\DeclareBibliographyCategory{secondary}
+\DeclareBibliographyCategory{online}
+\addtocategory{primary}{lucil1, lucil2, original, seneca66}
+\addtocategory{secondary}{hachmann1995, bartsch, becker1893sittlichen, cancik, inwood, edwards, motto, becker1893sittlichen}
+\addtocategory{online}{philatinFLU, philatinAUDIS}
+\defbibheading{primary}{\subsection*{Textausgaben und Kommentare}}
+\defbibheading{secondary}{\subsection*{Sekundärliteratur}}
+\defbibheading{online}{\subsection*{Online Ressourcen}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deckblatt
+\input{./Deckblatt.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{2}
+\begingroup
+\flushbottom
+\tableofcontents
+\thispagestyle{empty}
+%\newpage
+\pagebreak
+\endgroup
+%\setcounter{page}{1}
+% The introduction
+\section{Einleitung}
+\nocite{lucil1}
+\nocite{lucil2} 
+\nocite{original}
+\nocite{seneca66} 
+\nocite{hachmann1995} 
+\nocite{bartsch}  
+\nocite{philatinFLU} 
+\nocite{becker1893sittlichen} 
+\nocite{cancik} 
+\nocite{inwood}
+\nocite{edwards}
+\nocite{motto} 
+\nocite{becker1893sittlichen}
+\nocite{philatinAUDIS}
+
+% AVM Referenz http://nlp.stanford.edu/manning/tex/avm-doc.pdf
+%https://github.com/Bhlini/LFG
+%https://en.wikibooks.org/wiki/LaTeX/Linguistics#Syntactic_trees
+%https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+%http://nlp.stanford.edu/manning/tex/avm-doc.pdf
+%http://nlp.stanford.edu/cmanning/tex/
+%http://tex.stackexchange.com/questions/157131/problems-using-avm-package-for-lfg-structures
+%http://latex-community.org/forum/viewtopic.php?f=12&t=11365
+%http://www.essex.ac.uk/linguistics/external/clmt/latex4ling/avms/
+%http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html Zeichen
+
+\subsection{Lexikoneinträge}
+
+($\uparrow$PRED)= xy <SUBJ...>
+
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)
+
+$\theta$
+
+$\mid$
+
+$\neq$
+
+$\in$
+
+$\ni$
+
+$\vdash$
+
+$\subset$
+
+$\vee$
+
+$\wedge$
+
+$\ast$
+\\
+\\
+\subsection{Syntaxregeln}
+
+(NP) $\rightarrow$
+\newpage
+\section{PC (abhängig von Objekt)}
+
+\Tree [.S 
+		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
+		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} missum ]						
+			] 
+		] 
+		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
+	]
+\\
+\\
+\\
+\\
+\textbf{ALTERNATIVE 1}
+
+	\Tree [.S
+		[.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} \textit{legatum} ]
+		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} missum ]						
+			] 
+		] 
+		[.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} Caesar ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
+	]
+\\
+\begin{figure}[!ht]
+  \caption{PC-Baum}
+  \label{MyTree}
+\end{figure}
+\\
+\textbf{ALTERNATIVE 2}
+
+\Tree [.S [\qroof{legatum}.{\textbf{NP} ($\uparrow$OBJ)=$\downarrow$} ] [.VP [.V is ] [.NP fun ] ] ]
+
+
+
+\newpage
+\section{PARTICIPIUM CONJUNCTUM (objektabhängig)}
+
+\Tree [.S 
+		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
+		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} missum ]						
+			] 
+		] 
+		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
+	]
+\\
+\\
+
+\subsection{f-Struktur PC (objektabhängig)}
+\begin{avm}
+\[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
+SUBJ & \[``mater'' \]\\
+OBJ & \[ PRED & 'legatus' \\
+CASE & acc \\
+NUM & sg \\
+GEN & m \]\tikzmark{topic} \\
+XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & acc \\
+NUM & sg \\
+GEN & m \\
+SUBJ &  \tikzmark{object} \\
+OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
+\} &            $\qquad$
+\]
+\end{avm}
+
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
+
+\newpage
+\section{PARTICIPIUM CONJUNCTUM (subjektabhängig)}
+
+\Tree [.S 
+		[\qroof{milites}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
+		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} missi ]						
+			] 
+		] 
+		[\qroof{hostes}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} vicerunt ]	
+	]
+
+\subsection{f-Struktur PC (subjektabhängig)}
+\begin{avm}
+\[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
+SUBJ & \["mater" \]\\
+OBJ & \[ PRED & 'legatus' \\
+CASE & acc \\
+NUM & sg \\
+GEN & m \]\\
+XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\q>’\\
+PASSIVE & + \\
+RELTENSE & past \\
+MOOD & part \\
+CASE & acc \\
+NUM & sg \\
+GEN & m \\
+SUBJ & \bf{weird arrow!!!} \\
+OLBgoal & \[\"in scholam"\] \]\\
+\}
+\]
+\end{avm}
+
+\newpage
+\section{Abl. abs.}
+
+\Tree [.S\textsubscript{fin} 
+		[.S{\textsubscript{part} \textsubscript{($\downarrow$ $\in$ $\uparrow$ADJ)}}
+			[\qroof{barbaris}.NP{\textsubscript{($\uparrow$SUBJ)=$\downarrow$}}			
+			 ]
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Gallia}.PP\textsubscript{($\uparrow$OBL\textsubscript{LOC})=$\downarrow$} ]
+					[.V\textsubscript{$\uparrow$=$\downarrow$} victis ]
+			 ]
+		]							
+		[\qroof{Caesar}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
+		[.V{\textsubscript{$\uparrow$=$\downarrow$}} gaudet ]
+	]
+\\
+\\
+\\
+\\
+\textbf{Abl. abs.}
+\\
+\\
+\begin{avm}
+\[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
+SUBJ & \["Caesar" \]\\
+ADJ & \{ \[PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & abl \\
+NUM & pl \\
+GEN & m \\
+SUBJ & \[PRED & `barbarus' \\
+CASE & abl \\
+NUM & pl \\
+GEN & m \\ \] \\
+OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
+\}
+\]
+\end{avm}
+
+\newpage
+\subsection{AcP - Accusativus cum Participio}
+\Tree [.S 
+		[\qroof{militem}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
+		[.VP{\textsubscript{($\uparrow$XCOMP)=$\downarrow$}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in campo}.PP\textsubscript{($\uparrow$OBL\textsubscript{LOC})=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} iacentem ]					
+			]	
+		] 
+		[.V\textsubscript{$\uparrow$=$\downarrow$} vidit ]	
+	]
+\\
+\\
+\\
+\\
+\\
+\textbf{AcP - Accusativus cum Participio}
+\\
+\\
+\begin{avm}
+\[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
+SUBJ & \["Caesar" \]\\
+ADJ & \{ \[PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & abl \\
+NUM & pl \\
+GEN & m \\
+SUBJ & \[PRED & `barbarus' \\
+CASE & abl \\
+NUM & pl \\
+GEN & m \\ \] \\
+OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
+\}
+\]
+\end{avm}
+
+
+
+
+
+\newpage
+\section{Die Textstelle Sen. \textit{epist.} 72.7-8 und deren Übersetzung}
+%\begin{singlespace}
+\renewcommand\linenumberfont{\normalfont\small}
+\begin{linenumbers}
+\begin{quotation}
+\fontfamily{ybv}\selectfont
+Dicam quomodo intellegas sanum: si se ipse contentus est, si confidit sibi, si scit omnia vota mortalium, omnia beneficia quae dantur petunturque, nullum in beata vita habere momentum. Nam cui aliquid accedere potest, id inperfectum est; cui aliquid abscedere potest, id inperpetuum est: cuius perpetua futura laetitia est, is suo gaudeat. Omnia autem quibus vulgus inhiat ultro citroque fluunt: nihil dat fortuna mancipio. Sed haec quoque fortuita tunc delectant cum illa ratio temperavit ac miscuit: haec est quae etiam externa commendet, quorum avidis usus ingratus est. Solebat Attalus hac imagine uti: 'vidisti aliquando canem missa a domino frusta panis aut carnis aperto ore captantem? quidquid excepit protinus integrum devorat et semper ad spem venturi hiat. Idem evenit nobis: quid\-quid expectantibus fortuna proiecit, id sine ulla voluptate demittimus statim, ad rapinam alterius erecti et attoniti.' Hoc sapienti non evenit: plenus est; etiam si quid obvenit, secure excipit ac reponit; laetitia fruitur maxima, continua, sua.\footnote{Die Textstelle sowie der textkritische Apparat wurden entnommen aus Reynolds (1965, S. 219-20), die Zeilenangaben wurden jedoch der Einfachheit halber geändert. Auch alle übrigen verwendeten lateinischen Zitate aus den \textit{epistulae morales} entstammen Reynolds (1965).}
+\end{quotation}
+\end{linenumbers}
+\vspace{0.5cm}
+\fontfamily{ybv}\selectfont
+
+Referenz auf Abbildung \ref{MyTree}!
+%\end{singlespace}
+%\bibliographystyle{plain}
+\pagebreak
+\section*{Literaturverzeichnis}
+\bibbycategory
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\end{document}

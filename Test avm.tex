@@ -153,6 +153,115 @@ pred & \rm ‘pro’ \]
                            [.AP [.Deg \textit{really} ]
                                 [.A\1 [.A \textit{simple} ]
                                       \qroof{\textit{to use}}.CP ]]]]]]
+                                      
+                                      \newpage
+Due to a limitation on LaTeX, large avms can cause problems (you might get errors referring to semantic nest size. To get round this, you have to build complex avms by nesting smaller ones (it is also easier to avoid mistakes if you do things like this). The best way to do this is by defining and using `boxes':
+
+\begin{avm}
+\[ cat\|subcat & \<NP$_{it}$, NP$_{\@2}$, S[comp]:\@3\> \\
+content & \[ relation & \bf bother\\
+bothered & \@2 \\
+soa-arg & \@3 \] \]
+\end{avm}
+\\
+\\
+
+\begin{avm}
+\[ subj & \[ pers & 3 \\
+num & sg \\
+gend & masc\\
+pred & \rm ‘pro’ \]\\
+pred & \rm ‘eat\q<SUBJ, OBJ\q>’\\
+obj & \[ pers & 3 \\
+num & pl \\
+gend & fem \\
+pred & \rm ‘pro’ \]
+\]
+\end{avm}
+\\
+\\
+
+\newpage
+\begin{avm}
+\[qstore & \{ \[det & \rm the \\
+restpar & \[para & \@1 \\
+restr & \{ \[reln & \rm poss \\
+possessor & \@3 \\
+possessed & \@1\]\}\ \bf union \q\{\@2\q\}
+\] \] \} \]
+\end{avm}
+
+\newpage
+\begin{avm}
+\{ \[ pred & \rm ‘see\q<girl, Mary\q>’ \\
+subj & \rm ‘girl’ \\
+obj & \rm ‘Mary’ \] \\
+5
+\[ pred & \rm ‘heard\q<girl, Bill\q>’ \\
+subj & \rm ‘girl’ \\
+obj & \rm ‘Bill’ \] \}
+\end{avm}
+
+\newpage
+
+\newbox\matrixsynsem \newbox\headdtr 
+\newbox\compdtrone   \newbox\compdtrtwo
+
+{\scriptsize
+\avmoptions{center}
+\setbox\matrixsynsem=\hbox{\begin{avm}
+\osort{synsem}{\[local & \[cat & \[ \] \\
+                    content & \[ \]\]\]}
+\end{avm}}
+
+\setbox\headdtr=\hbox{\begin{avm}
+\osort{word}{\[ phon\;\<\rm likes\>\\
+            synsem\;\[local\[ cat\;\[ head  \; \@{5}\\
+                                      arg-s\;\< \@{1},\@{2}\>\] \\
+                              content\;\@{6} \]\]\]} \end{avm}}
+                              
+                              \setbox\compdtrtwo=\hbox{\begin{avm}
+\sort{phrase}{\[ phon\;\<\rm bones\>\\
+            synsem\;\@{2}\;\[local\[ cat\;\[ head\;noun\\
+                                      arg-s\;\< \>\] \\
+                              content\;\@{4} \]\]\]} \end{avm}}
+
+\setbox\compdtrone=\hbox{\begin{avm}
+\sort{phrase}{\[ phon\;\<\rm fido\>\\
+            synsem\;\@{1}\;\[local\[ cat\;\[ head\;noun\\
+                                      arg-s\;\< \>\] \\
+                              content\;\@{3} \]\]\]} \end{avm}}
+
+
+
+\avmoptions{active,sorted}
+\begin{avm} \hspace{-1in}
+[{phrase} phon\;\<\rm fido likes bones\> \\
+       synsem\;[{synsem} local [{} cat & [{} head & @{5}\\
+                                             arg-s & \< \; \>] \\
+                                   content & @{6}[{psoa} reln\;like \\
+                                                     arg1\;@{3} \\
+                                                     arg2\;@{4} ]]]\\
+       dtrs\;\sort{head-struc}{[{} head-dtr\;\box\headdtr \\
+                  comp-dtrs\;< \box\compdtrone , \\ \hspace{.5in}
+                                            \box\compdtrtwo>]}]
+\end{avm}}
+
+\begin{avm}
+\[ subj & \[ pers & 3 \\
+num & sg \\
+gend & masc\\
+pred & \rm ‘pro’ \]\\
+pred & \rm ‘eat\q<SUBJ, OBJ\q>’\\
+obj & \[ pers & 3 \\
+num & pl \\
+gend & fem \\
+pred & \rm ‘pro’ \]
+\]
+\end{avm}
+
+
+
 
 \end{document}
 
