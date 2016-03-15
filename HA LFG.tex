@@ -88,7 +88,30 @@
 
 \subsection{Lexikoneinträge}
 
-($\uparrow$PRED)= xy <SUBJ...>
+victis = Nom Pl Dat $\mid$ Akk
+\subsubsection{PC}
+
+missum ($\uparrow$PRED = `mitto$\langle$SUBJ, OBL\textsubscript{GOAL} $\rangle$\\
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
+($\uparrow$KNG) = acc m sg \\
+((ADJ$\uparrow$)GF) = ($\uparrow$SUBJ) \\
+($\uparrow$PASSIVE) = + \\
+((XADJ$\uparrow$)OBJ) = ($\uparrow$SUBJ) \\
+
+\subsubsection{Abl. abs.}
+\subsubsection{AcP}
+
+induco: $\langle$SUBJ, OBJ, COMP$\rangle$\\
+($\uparrow$COMP SUBJ) = `pro'\\
+($\uparrow$COMP SUBJ KNG) = ($\uparrow$OBJ KNG)\\
+
+ODER\\
+induco: $\langle$SUBJ, OBJ, XCOMP$\rangle$\\
+($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ)\\
+($\uparrow$OBJ CASE) = acc\\
+
+\subsection{Zeichen}
+($\uparrow$PRED)= xy $\langle$SUBJ...$\rangle$
 
 ($\uparrow$SUBJ KNG) = ($\uparrow$KNG)
 
@@ -112,10 +135,50 @@ $\wedge$
 
 $\ast$
 
+$\neg$
 
+
+\newpage
 \subsection{Syntaxregeln}
 
-(NP) $\rightarrow$
+\textbf{PC}\\
+S $\rightarrow$ NP \, VP \: XP\\
+
+
+\subsubsection{PC}
+
+\textbf{VP (d.h. Partizipialphrase) ?}\\
+
+(SUBJ XADJ) $\in$ ($\uparrow$S)\\
+XADJ (KNG) = SUBJ XADJ (KNG) \textbf{(allgemeine Regel, oder?)} \\
+
+\subsubsection{Abl. abs.}
+
+S\textsubscript{part} $\rightarrow$ NP \: V'\\
+$\neg$ ($\downarrow$PRED) = ($\uparrow$GF PRED)\\
+
+\textbf{VP (d.h. Partizipialphrase)?}\\
+
+XADJ (KNG) = SUBJ XADJ (KNG) = abl\\
+SUBJ ADJ)$\notin$ ($\uparrow$S) \textbf{(allgemeine Regel, oder?)} \\
+\textbf{(entspricht:}   $\neg$ ($\uparrow$SUBJ) = ((ADJ$\uparrow$)GF) \textbf{(?)} \\
+d.h. Subjekt des Abl. abs. darf eigentlich keine Rolle im übergeordneten Satz spielen; nur bei AcI geht das\\
+($\uparrow$RELTENSE (ADJ)) $\neq$ future
+
+
+\subsubsection{AcP}
+
+\textbf{VP (d.h. Partizipialphrase)}\\
+($\uparrow$XCOMP) = $\downarrow$\\
+($\downarrow$SUBJCASE) = acc\\
+($\downarrow$CASE) = acc\\
+
+\textbf{Sonstiges}
+($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ)\\
+($\uparrow$XCOMP MOOD) = part\\
+$\neg$ ($\uparrow$XCOMP RELTENSE) = future\\
+VERB TYPE = verb of perception $\mid$ `facere' $\mid$ `inducere'
+
 \newpage
 \section{PC (abhängig von Objekt)}
 
