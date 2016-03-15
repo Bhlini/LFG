@@ -275,24 +275,27 @@ OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
 
 \subsection{f-Struktur PC (subjektabhängig)}
 \begin{avm}
-\[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
-SUBJ & \["mater" \]\\
-OBJ & \[ PRED & 'legatus' \\
-CASE & acc \\
-NUM & sg \\
-GEN & m \]\\
+\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
+SUBJ & \[ PRED & 'milites' \\
+CASE & nom \\
+NUM & pl \\
+GEN & m \]\tikzmark{topic} \\
 XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\q>’\\
+MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
-MOOD & part \\
-CASE & acc \\
-NUM & sg \\
+CASE & nom \\
+NUM & pl \\
 GEN & m \\
-SUBJ & \bf{weird arrow!!!} \\
-OLBgoal & \[\"in scholam"\] \]\\
-\}
+SUBJ &  \tikzmark{object} \\
+OBL\textsubscript{LOC} & \[``in Galliam''\] \]\\
+\} &            $\qquad$ \\
+OBJ & \[``hostes'' \]\\
 \]
 \end{avm}
+
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
 \newpage
 \section{Abl. abs.}
