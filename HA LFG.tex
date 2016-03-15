@@ -60,8 +60,20 @@
 %\setcounter{page}{1}
 % The introduction
 \section{Einleitung}
-
-
+\nocite{lucil1}
+\nocite{lucil2} 
+\nocite{original}
+\nocite{seneca66} 
+\nocite{hachmann1995} 
+\nocite{bartsch}  
+\nocite{philatinFLU} 
+\nocite{becker1893sittlichen} 
+\nocite{cancik} 
+\nocite{inwood}
+\nocite{edwards}
+\nocite{motto} 
+\nocite{becker1893sittlichen}
+\nocite{philatinAUDIS}
 
 % AVM Referenz http://nlp.stanford.edu/manning/tex/avm-doc.pdf
 %https://github.com/Bhlini/LFG
@@ -105,7 +117,7 @@ $\ast$
 
 (NP) $\rightarrow$
 \newpage
-\subsection{PC (abhängig von Objekt)}
+\section{PC (abhängig von Objekt)}
 
 \Tree [.S 
 		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
@@ -118,9 +130,7 @@ $\ast$
 		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
 	]
-
-
-
+\\
 \textbf{ALTERNATIVE 1}
 
 	\Tree [.S
@@ -134,15 +144,20 @@ $\ast$
 		[.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} Caesar ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
 	]
-
-
-
+\\
+\begin{figure}[!ht]
+  \caption{PC-Baum}
+  \label{MyTree}
+\end{figure}
+\\
 \textbf{ALTERNATIVE 2}
 
 \Tree [.S [\qroof{legatum}.{\textbf{NP} ($\uparrow$OBJ)=$\downarrow$} ] [.VP [.V is ] [.NP fun ] ] ]
 
+
+
 \newpage
-\subsection{PARTICIPIUM CONJUNCTUM -abhängig von Objekt}
+\section{PARTICIPIUM CONJUNCTUM (objektabhängig)}
 
 \Tree [.S 
 		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
@@ -156,8 +171,7 @@ $\ast$
 		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
 	]
 
-trying
-
+\subsection{f-Struktur PC (objektabhängig)}
 \begin{avm}
 \[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
 SUBJ & \[``mater'' \]\\
@@ -182,7 +196,7 @@ OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
     \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
 \newpage
-\subsection{PARTICIPIUM CONJUNCTUM - abhängig von Subjekt}
+\section{PARTICIPIUM CONJUNCTUM (subjektabhängig)}
 
 \Tree [.S 
 		[\qroof{milites}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
@@ -194,18 +208,11 @@ OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
 		] 
 		[\qroof{hostes}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} vicerunt ]	
-	 ]
+	]
 
-\begin{figure}[!ht]
-  \caption{PC-Baum}
-  \label{MyTree}
-\end{figure}
-\\
-\\
-\textbf{PC (abhängig von Subjekt)}
-
+\subsection{f-Struktur PC (subjektabhängig)}
 \begin{avm}
-\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ\q>’\\
+\[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
 SUBJ & \["mater" \]\\
 OBJ & \[ PRED & 'legatus' \\
 CASE & acc \\
@@ -225,7 +232,7 @@ OLBgoal & \[\"in scholam"\] \]\\
 \end{avm}
 
 \newpage
-\subsection{Abl. abs}
+\section{Abl. abs.}
 
 \Tree [.S\textsubscript{fin} 
 		[.S{\textsubscript{part} \textsubscript{($\downarrow$ $\in$ $\uparrow$ADJ)}}
@@ -240,10 +247,7 @@ OLBgoal & \[\"in scholam"\] \]\\
 		[.V{\textsubscript{$\uparrow$=$\downarrow$}} gaudet ]
 	]
 
-
-\textbf{Abl. abs.}
-
-
+\subsection{Abl. abs.}
 \begin{avm}
 \[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
 SUBJ & \["Caesar" \]\\
@@ -264,9 +268,7 @@ OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
 \end{avm}
 
 \newpage
-\subsection{AcP - Accusativus cum Participio}
-\\
-\\
+\section{AcP - Accusativus cum Participio}
 \Tree [.S 
 		[\qroof{militem}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
 		[.VP{\textsubscript{($\uparrow$XCOMP)=$\downarrow$}}
@@ -279,32 +281,51 @@ OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
 	]
 
 
-
-\newpage
-\textbf{AcP - Accusativus cum Participio}
-
+\subsection{f-Struktur AcP}
 \begin{avm}
-\[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
-SUBJ & \["Caesar" \]\\
-ADJ & \{ \[PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
+\[ PRED &  \rm ‘video \q<SUBJ, OBJ, XCOMP\q>’\\
+SUBJ & \[ PRED & `pro' \\
+		PRON-TYPE & mis	\]\\
+OBJ & \[ PRED & `miles' \\
+CASE & acc \\
+NUM & sg \\
+GEN & m \]\tikzmark{topic} \\
+XCOMP & \[PRED &  \rm ‘iaceo \q<SUBJ, OBL\textsubscript{LOC}\q>’\\
 MOOD & part \\
-PASSIVE & + \\
-RELTENSE & past \\
-CASE & abl \\
-NUM & pl \\
+PASSIVE & - \\
+RELTENSE & present \\
+CASE & acc \\
+NUM & sg \\
 GEN & m \\
-SUBJ & \[PRED & `barbarus' \\
-CASE & abl \\
-NUM & pl \\
-GEN & m \\ \] \\
-OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
-\}
+SUBJ &  \tikzmark{object} \\
+OBL\textsubscript{LOC} & \[``in Gallia''\] \]  &            $\qquad$\\
 \]
 \end{avm}
 
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
 
 
-\section{Schluss? Zusammenfassung? Abschließende Beobachtungenß}
 
+\newpage
+\section{Die Textstelle Sen. \textit{epist.} 72.7-8 und deren Übersetzung}
+%\begin{singlespace}
+\renewcommand\linenumberfont{\normalfont\small}
+\begin{linenumbers}
+\begin{quotation}
+\fontfamily{ybv}\selectfont
+Dicam quomodo intellegas sanum: si se ipse contentus est, si confidit sibi, si scit omnia vota mortalium, omnia beneficia quae dantur petunturque, nullum in beata vita habere momentum. Nam cui aliquid accedere potest, id inperfectum est; cui aliquid abscedere potest, id inperpetuum est: cuius perpetua futura laetitia est, is suo gaudeat. Omnia autem quibus vulgus inhiat ultro citroque fluunt: nihil dat fortuna mancipio. Sed haec quoque fortuita tunc delectant cum illa ratio temperavit ac miscuit: haec est quae etiam externa commendet, quorum avidis usus ingratus est. Solebat Attalus hac imagine uti: 'vidisti aliquando canem missa a domino frusta panis aut carnis aperto ore captantem? quidquid excepit protinus integrum devorat et semper ad spem venturi hiat. Idem evenit nobis: quid\-quid expectantibus fortuna proiecit, id sine ulla voluptate demittimus statim, ad rapinam alterius erecti et attoniti.' Hoc sapienti non evenit: plenus est; etiam si quid obvenit, secure excipit ac reponit; laetitia fruitur maxima, continua, sua.\footnote{Die Textstelle sowie der textkritische Apparat wurden entnommen aus Reynolds (1965, S. 219-20), die Zeilenangaben wurden jedoch der Einfachheit halber geändert. Auch alle übrigen verwendeten lateinischen Zitate aus den \textit{epistulae morales} entstammen Reynolds (1965).}
+\end{quotation}
+\end{linenumbers}
+\vspace{0.5cm}
+\fontfamily{ybv}\selectfont
+
+Referenz auf Abbildung \ref{MyTree}!
+%\end{singlespace}
+%\bibliographystyle{plain}
+\pagebreak
+\section*{Literaturverzeichnis}
+\bibbycategory
+\addcontentsline{toc}{section}{Literaturverzeichnis}
 \end{document}
