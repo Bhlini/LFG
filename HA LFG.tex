@@ -60,20 +60,8 @@
 %\setcounter{page}{1}
 % The introduction
 \section{Einleitung}
-\nocite{lucil1}
-\nocite{lucil2} 
-\nocite{original}
-\nocite{seneca66} 
-\nocite{hachmann1995} 
-\nocite{bartsch}  
-\nocite{philatinFLU} 
-\nocite{becker1893sittlichen} 
-\nocite{cancik} 
-\nocite{inwood}
-\nocite{edwards}
-\nocite{motto} 
-\nocite{becker1893sittlichen}
-\nocite{philatinAUDIS}
+
+
 
 % AVM Referenz http://nlp.stanford.edu/manning/tex/avm-doc.pdf
 %https://github.com/Bhlini/LFG
@@ -86,7 +74,7 @@
 %http://www.essex.ac.uk/linguistics/external/clmt/latex4ling/avms/
 %http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html Zeichen
 
-\textbf{Lexikoneinträge}
+\subsection{Lexikoneinträge}
 
 ($\uparrow$PRED)= xy <SUBJ...>
 
@@ -111,13 +99,13 @@ $\vee$
 $\wedge$
 
 $\ast$
-\\
-\\
-\textbf{Syntaxregeln}
+
+
+\subsection{Syntaxregeln}
 
 (NP) $\rightarrow$
 \newpage
-\textbf{PC (abhängig von Objekt)}
+\subsection{PC (abhängig von Objekt)}
 
 \Tree [.S 
 		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
@@ -130,10 +118,9 @@ $\ast$
 		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
 	]
-\\
-\\
-\\
-\\
+
+
+
 \textbf{ALTERNATIVE 1}
 
 	\Tree [.S
@@ -147,82 +134,29 @@ $\ast$
 		[.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} Caesar ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
 	]
-\\
-\\
+
+
+
 \textbf{ALTERNATIVE 2}
 
 \Tree [.S [\qroof{legatum}.{\textbf{NP} ($\uparrow$OBJ)=$\downarrow$} ] [.VP [.V is ] [.NP fun ] ] ]
 
-
-\Tree [.S [.NP legatum ] [.VP [.V is ] [.NP fun ] ] ]
-
 \newpage
-\textbf{PC (abhängig von Subjekt)}
+\subsection{PARTICIPIUM CONJUNCTUM -abhängig von Objekt}
 
 \Tree [.S 
-		[\qroof{milites}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
+		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
 		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
 			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
 				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
-				[.V\textsubscript{$\uparrow$=$\downarrow$} missi ]						
+				[.V\textsubscript{$\uparrow$=$\downarrow$} missum ]						
 			] 
 		] 
-		[\qroof{hostes}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
-		[.V\textsubscript{$\uparrow$=$\downarrow$} vicerunt ]	
+		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
 	]
-\\
-\begin{figure}[!ht]
 
-
-
-  \caption{PC-Baum}
-  \label{MyTree}
-\end{figure}
-
-
-
-\newpage
-Due to a limitation on LaTeX, large avms can cause problems (you might get errors referring to semantic nest size. To get round this, you have to build complex avms by nesting smaller ones (it is also easier to avoid mistakes if you do things like this). The best way to do this is by defining and using `boxes':
-
-\begin{avm}
-\[ cat\|subcat & \<NP$_{it}$, NP$_{\@2}$, S[comp]:\@3\> \\
-content & \[ relation & \bf bother\\
-bothered & \@2 \\
-soa-arg & \@3 \] \]
-\end{avm}
-\\
-\\
-
-\begin{avm}
-\[ subj & \[ pers & 3 \\
-num & sg \\
-gend & masc\\
-pred & \rm ‘pro’ \]\\
-pred & \rm ‘eat\q<SUBJ, OBJ\q>’\\
-obj & \[ pers & 3 \\
-num & pl \\
-gend & fem \\
-pred & \rm ‘pro’ \]
-\]
-\end{avm}
-\\
-\\
-
-\newpage
-\begin{avm}
-\[qstore & \{ \[det & \rm the \\
-restpar & \[para & \@1 \\
-restr & \{ \[reln & \rm poss \\
-possessor & \@3 \\
-possessed & \@1\]\}\ \bf union \q\{\@2\q\}
-\] \] \} \]
-\end{avm}
-\\
-\\
-\newpage
-\textbf{PARTICIPIUM CONJUNCTUM -abhängig von Objekt}
-\\
-\\
+trying
 
 \begin{avm}
 \[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
@@ -248,11 +182,30 @@ OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
     \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
 \newpage
-\textbf{PARTICIPIUM CONJUNCTUM - abhängig von Subjekt}
+\subsection{PARTICIPIUM CONJUNCTUM - abhängig von Subjekt}
+
+\Tree [.S 
+		[\qroof{milites}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
+		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} missi ]						
+			] 
+		] 
+		[\qroof{hostes}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} vicerunt ]	
+	 ]
+
+\begin{figure}[!ht]
+  \caption{PC-Baum}
+  \label{MyTree}
+\end{figure}
 \\
 \\
+\textbf{PC (abhängig von Subjekt)}
+
 \begin{avm}
-\[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
+\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ\q>’\\
 SUBJ & \["mater" \]\\
 OBJ & \[ PRED & 'legatus' \\
 CASE & acc \\
@@ -272,7 +225,7 @@ OLBgoal & \[\"in scholam"\] \]\\
 \end{avm}
 
 \newpage
-\textbf{Abl. abs}
+\subsection{Abl. abs}
 
 \Tree [.S\textsubscript{fin} 
 		[.S{\textsubscript{part} \textsubscript{($\downarrow$ $\in$ $\uparrow$ADJ)}}
@@ -286,12 +239,11 @@ OLBgoal & \[\"in scholam"\] \]\\
 		[\qroof{Caesar}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
 		[.V{\textsubscript{$\uparrow$=$\downarrow$}} gaudet ]
 	]
-\\
-\\
-\newpage
-\textbf{ABL ABS}
-\\
-\\
+
+
+\textbf{Abl. abs.}
+
+
 \begin{avm}
 \[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
 SUBJ & \["Caesar" \]\\
@@ -312,7 +264,7 @@ OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
 \end{avm}
 
 \newpage
-\textbf{AcP - Accusativus cum Participio}
+\subsection{AcP - Accusativus cum Participio}
 \\
 \\
 \Tree [.S 
@@ -325,13 +277,12 @@ OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
 		] 
 		[.V\textsubscript{$\uparrow$=$\downarrow$} vidit ]	
 	]
-\\
-\\
-\\
+
+
+
 \newpage
 \textbf{AcP - Accusativus cum Participio}
-\\
-\\
+
 \begin{avm}
 \[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
 SUBJ & \["Caesar" \]\\
@@ -352,95 +303,8 @@ OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
 \end{avm}
 
 
-\newpage
-\begin{avm}
-\{ \[ pred & \rm ‘see\q<girl, Mary\q>’ \\
-subj & \rm ‘girl’ \\
-obj & \rm ‘Mary’ \] \\
-5
-\[ pred & \rm ‘heard\q<girl, Bill\q>’ \\
-subj & \rm ‘girl’ \\
-obj & \rm ‘Bill’ \] \}
-\end{avm}
-
-\newpage
-
-\newbox\matrixsynsem \newbox\headdtr 
-\newbox\compdtrone   \newbox\compdtrtwo
-
-{\scriptsize
-\avmoptions{center}
-\setbox\matrixsynsem=\hbox{\begin{avm}
-\osort{synsem}{\[local & \[cat & \[ \] \\
-                    content & \[ \]\]\]}
-\end{avm}}
-
-\setbox\headdtr=\hbox{\begin{avm}
-\osort{word}{\[ phon\;\<\rm likes\>\\
-            synsem\;\[local\[ cat\;\[ head  \; \@{5}\\
-                                      arg-s\;\< \@{1},\@{2}\>\] \\
-                              content\;\@{6} \]\]\]} \end{avm}}
-                              
-                              \setbox\compdtrtwo=\hbox{\begin{avm}
-\sort{phrase}{\[ phon\;\<\rm bones\>\\
-            synsem\;\@{2}\;\[local\[ cat\;\[ head\;noun\\
-                                      arg-s\;\< \>\] \\
-                              content\;\@{4} \]\]\]} \end{avm}}
-
-\setbox\compdtrone=\hbox{\begin{avm}
-\sort{phrase}{\[ phon\;\<\rm fido\>\\
-            synsem\;\@{1}\;\[local\[ cat\;\[ head\;noun\\
-                                      arg-s\;\< \>\] \\
-                              content\;\@{3} \]\]\]} \end{avm}}
 
 
+\section{Schluss? Zusammenfassung? Abschließende Beobachtungenß}
 
-\avmoptions{active,sorted}
-\begin{avm} \hspace{-1in}
-[{phrase} phon\;\<\rm fido likes bones\> \\
-       synsem\;[{synsem} local [{} cat & [{} head & @{5}\\
-                                             arg-s & \< \; \>] \\
-                                   content & @{6}[{psoa} reln\;like \\
-                                                     arg1\;@{3} \\
-                                                     arg2\;@{4} ]]]\\
-       dtrs\;\sort{head-struc}{[{} head-dtr\;\box\headdtr \\
-                  comp-dtrs\;< \box\compdtrone , \\ \hspace{.5in}
-                                            \box\compdtrtwo>]}]
-\end{avm}}
-
-\begin{avm}
-\[ subj & \[ pers & 3 \\
-num & sg \\
-gend & masc\\
-pred & \rm ‘pro’ \]\\
-pred & \rm ‘eat\q<SUBJ, OBJ\q>’\\
-obj & \[ pers & 3 \\
-num & pl \\
-gend & fem \\
-pred & \rm ‘pro’ \]
-\]
-\end{avm}
-
-
-
-
-\section{Die Textstelle Sen. \textit{epist.} 72.7-8 und deren Übersetzung}
-%\begin{singlespace}
-\renewcommand\linenumberfont{\normalfont\small}
-\begin{linenumbers}
-\begin{quotation}
-\fontfamily{ybv}\selectfont
-Dicam quomodo intellegas sanum: si se ipse contentus est, si confidit sibi, si scit omnia vota mortalium, omnia beneficia quae dantur petunturque, nullum in beata vita habere momentum. Nam cui aliquid accedere potest, id inperfectum est; cui aliquid abscedere potest, id inperpetuum est: cuius perpetua futura laetitia est, is suo gaudeat. Omnia autem quibus vulgus inhiat ultro citroque fluunt: nihil dat fortuna mancipio. Sed haec quoque fortuita tunc delectant cum illa ratio temperavit ac miscuit: haec est quae etiam externa commendet, quorum avidis usus ingratus est. Solebat Attalus hac imagine uti: 'vidisti aliquando canem missa a domino frusta panis aut carnis aperto ore captantem? quidquid excepit protinus integrum devorat et semper ad spem venturi hiat. Idem evenit nobis: quid\-quid expectantibus fortuna proiecit, id sine ulla voluptate demittimus statim, ad rapinam alterius erecti et attoniti.' Hoc sapienti non evenit: plenus est; etiam si quid obvenit, secure excipit ac reponit; laetitia fruitur maxima, continua, sua.\footnote{Die Textstelle sowie der textkritische Apparat wurden entnommen aus Reynolds (1965, S. 219-20), die Zeilenangaben wurden jedoch der Einfachheit halber geändert. Auch alle übrigen verwendeten lateinischen Zitate aus den \textit{epistulae morales} entstammen Reynolds (1965).}
-\end{quotation}
-\end{linenumbers}
-\vspace{0.5cm}
-\fontfamily{ybv}\selectfont
-
-Referenz auf Abbildung \ref{MyTree}!
-%\end{singlespace}
-%\bibliographystyle{plain}
-\pagebreak
-\section*{Literaturverzeichnis}
-\bibbycategory
-\addcontentsline{toc}{section}{Literaturverzeichnis}
 \end{document}
