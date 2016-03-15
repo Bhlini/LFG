@@ -84,11 +84,43 @@
 %http://tex.stackexchange.com/questions/157131/problems-using-avm-package-for-lfg-structures
 %http://latex-community.org/forum/viewtopic.php?f=12&t=11365
 %http://www.essex.ac.uk/linguistics/external/clmt/latex4ling/avms/
+%http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html Zeichen
 
+\textbf{Lexikoneinträge}
+
+($\uparrow$PRED)= xy <SUBJ...>
+
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)
+
+$\theta$
+
+$\mid$
+
+$\neq$
+
+$\in$
+
+$\ni$
+
+$\vdash$
+
+$\subset$
+
+$\vee$
+
+$\wedge$
+
+$\ast$
+\\
+\\
+\textbf{Syntaxregeln}
+
+(NP) $\rightarrow$
+\newpage
 \textbf{PC (abhängig von Objekt)}
 
 \Tree [.S 
-		[\qroof{puellam}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
+		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
 		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
 			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
 				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
@@ -105,7 +137,7 @@
 \textbf{ALTERNATIVE 1}
 
 	\Tree [.S
-		[.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} legatum ]
+		[.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} \textit{legatum} ]
 		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
 			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
 				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
@@ -119,29 +151,35 @@
 \\
 \textbf{ALTERNATIVE 2}
 
-\Tree [.S [\qroof{puellam}.{\textbf{NP} ($\uparrow$OBJ)=$\downarrow$} ] [.VP [.V is ] [.NP fun ] ] ]
+\Tree [.S [\qroof{legatum}.{\textbf{NP} ($\uparrow$OBJ)=$\downarrow$} ] [.VP [.V is ] [.NP fun ] ] ]
 
 
-\Tree [.S [.NP puellam ] [.VP [.V is ] [.NP fun ] ] ]
+\Tree [.S [.NP legatum ] [.VP [.V is ] [.NP fun ] ] ]
 
 \newpage
-\Tree [.S [\qroof{LaTeX is fun}.NP ] [.VP [.V is ] [.NP fun ] ] ]
+\textbf{PC (abhängig von Subjekt)}
 
-
-
+\Tree [.S 
+		[\qroof{milites}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
+		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} missi ]						
+			] 
+		] 
+		[\qroof{hostes}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} vicerunt ]	
+	]
+\\
 \begin{figure}[!ht]
 
-\Tree[.IP [.NP [.Det \textit{the} ]
-               [.N\1 [.N \textit{package} ]]]
-          [.I\1 [.I \textsc{3sg.Pres} ]
-                [.VP [.V\1 [.V \textit{is} ]
-                           [.AP [.Deg \textit{really} ]
-                                [.A\1 [.A \textit{simple} ]
-                                      \qroof{\textit{to use}}.CP ]]]]]]
 
-  \caption{Look Ma, a tree!}
+
+  \caption{PC-Baum}
   \label{MyTree}
 \end{figure}
+
+
 
 \newpage
 Due to a limitation on LaTeX, large avms can cause problems (you might get errors referring to semantic nest size. To get round this, you have to build complex avms by nesting smaller ones (it is also easier to avoid mistakes if you do things like this). The best way to do this is by defining and using `boxes':
@@ -182,7 +220,7 @@ possessed & \@1\]\}\ \bf union \q\{\@2\q\}
 \\
 \\
 \newpage
-\textbf{PARTICIPIUM CONJUNCTUM!!!}
+\textbf{PARTICIPIUM CONJUNCTUM -abhängig von Objekt}
 \\
 \\
 
@@ -194,9 +232,9 @@ CASE & acc \\
 NUM & sg \\
 GEN & m \]\tikzmark{topic} \\
 XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\q>’\\
+MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
-MOOD & part \\
 CASE & acc \\
 NUM & sg \\
 GEN & m \\
@@ -210,7 +248,7 @@ OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
     \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
 \newpage
-\textbf{PARTICIPIUM CONJUNCTUM - NOCH VON SUBJEKT ABHÄNGIG MACHEN!}
+\textbf{PARTICIPIUM CONJUNCTUM - abhängig von Subjekt}
 \\
 \\
 \begin{avm}
@@ -234,28 +272,85 @@ OLBgoal & \[\"in scholam"\] \]\\
 \end{avm}
 
 \newpage
-\textbf{ABL ABS!!!}
+\textbf{Abl. abs}
+
+\Tree [.S\textsubscript{fin} 
+		[.S{\textsubscript{part} \textsubscript{($\downarrow$ $\in$ $\uparrow$ADJ)}}
+			[\qroof{barbaris}.NP{\textsubscript{($\uparrow$SUBJ)=$\downarrow$}}			
+			 ]
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Gallia}.PP\textsubscript{($\uparrow$OBL\textsubscript{LOC})=$\downarrow$} ]
+					[.V\textsubscript{$\uparrow$=$\downarrow$} victis ]
+			 ]
+		]							
+		[\qroof{Caesar}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
+		[.V{\textsubscript{$\uparrow$=$\downarrow$}} gaudet ]
+	]
+\\
+\\
+\newpage
+\textbf{ABL ABS}
 \\
 \\
 \begin{avm}
-\[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
-SUBJ & \["mater" \]\\
-OBJ & \[ PRED & 'legatus' \\
-CASE & acc \\
-NUM & sg \\
-GEN & m \]\\
-XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\q>’\\
+\[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
+SUBJ & \["Caesar" \]\\
+ADJ & \{ \[PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
+MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
-MOOD & part \\
-CASE & acc \\
-NUM & sg \\
+CASE & abl \\
+NUM & pl \\
 GEN & m \\
-SUBJ & \bf{weird arrow!!!} \\
-OLBgoal & \[\"in scholam"\] \]\\
+SUBJ & \[PRED & `barbarus' \\
+CASE & abl \\
+NUM & pl \\
+GEN & m \\ \] \\
+OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
 \}
 \]
 \end{avm}
+
+\newpage
+\textbf{AcP - Accusativus cum Participio}
+
+\Tree [.S 
+		[\qroof{militem}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
+		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} missum ]						
+			] 
+		] 
+		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
+	]
+\\
+\\
+\\
+\newpage
+\textbf{AcP - Accusativus cum Participio}
+\\
+\\
+\begin{avm}
+\[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
+SUBJ & \["Caesar" \]\\
+ADJ & \{ \[PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & abl \\
+NUM & pl \\
+GEN & m \\
+SUBJ & \[PRED & `barbarus' \\
+CASE & abl \\
+NUM & pl \\
+GEN & m \\ \] \\
+OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
+\}
+\]
+\end{avm}
+
 
 \newpage
 \begin{avm}
