@@ -111,6 +111,9 @@ induco: $\langle$SUBJ, OBJ, XCOMP$\rangle$\\
 ($\uparrow$OBJ CASE) = acc\\
 
 \subsection{Zeichen}
+($\uparrow$PRED)= xy $\langle$SUBJ...$\rangle$
+
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)
 
 $\theta$
 
@@ -125,6 +128,10 @@ $\ni$
 $\vdash$
 
 $\subset$
+
+$\vee$
+
+$\wedge$
 
 $\ast$
 
@@ -172,30 +179,25 @@ $\neg$ ($\uparrow$XCOMP RELTENSE) = future\\
 VERB TYPE = verb of perception $\mid$ `facere' $\mid$ `inducere'
 
 
-\newpage
-\section{PARTICIPIUM CONJUNCTUM (objektabhängig)}
+\begin{figure}[!ht]
+  \caption{PC-Baum}
+  \label{MyTree}
+\end{figure}
 
-\Tree [.S 
-		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
-		[.VP{\textsubscript{$\downarrow$=($\uparrow$XADJ)}}
-			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
-				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
-				[.V\textsubscript{$\uparrow$=$\downarrow$} missum ]						
-			] 
-		] 
-		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
-		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
-	]
 
 \subsection{f-Struktur PC (objektabhängig)}
 \begin{avm}
-\[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
-SUBJ & \[``mater'' \]\\
+
+\[ PRED &  \rm ‘revoco \q<SUBJ, OBJ\q>’\\
+SUBJ & \[PRED & `Caesar' \\
+CASE & nom \\
+NUM & sg \\
+GEN & m \]\\
 OBJ & \[ PRED & 'legatus' \\
 CASE & acc \\
 NUM & sg \\
 GEN & m \]\tikzmark{topic} \\
-XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\q>’\\
+XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -204,7 +206,12 @@ NUM & sg \\
 GEN & m \\
 SUBJ &  \tikzmark{object} \\
 OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
-\} &            $\qquad$
+\} &            $\qquad$ \\
+TENSE & present \\
+NUM & sg \\
+PERS & 3 \\
+PASSIVE & - \\
+MODE & ind \\
 \]
 \end{avm}
 
@@ -228,27 +235,24 @@ OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
 
 \subsection{f-Struktur PC (subjektabhängig)}
 \begin{avm}
-\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
-SUBJ & \[ PRED & 'milites' \\
-CASE & nom \\
-NUM & pl \\
-GEN & m \]\tikzmark{meow} \\
+\[ PRED &  \rm ‘voco \q<SUBJ, OBJ\q>’\\
+SUBJ & \["mater" \]\\
+OBJ & \[ PRED & 'legatus' \\
+CASE & acc \\
+NUM & sg \\
+GEN & m \]\\
 XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\q>’\\
-MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
-CASE & nom \\
-NUM & pl \\
+MOOD & part \\
+CASE & acc \\
+NUM & sg \\
 GEN & m \\
-SUBJ &  \tikzmark{objectmeow} \\
-OBL\textsubscript{LOC} & \[``in Galliam''\] \]\\
-\} &            $\qquad$ \\
-OBJ & \[``hostes'' \]\\
+SUBJ & \bf{weird arrow!!!} \\
+OLBgoal & \[\"in scholam"\] \]\\
+\}
 \]
 \end{avm}
-
-\tikz[remember picture,overlay] 
-    \draw[<-] (pic cs:meow) to[out=0,in=0,looseness=3]  (pic cs:objectmeow);
 
 \newpage
 \section{Abl. abs.}
