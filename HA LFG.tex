@@ -31,6 +31,7 @@
 %\geometry{a4paper, top=2cm, left=2cm, right=2cm, bottom=2cm}
 %Linenumbers
 \usepackage[modulo]{lineno}
+\usepackage{tabularx}
 \usepackage{tikz}
 \usetikzlibrary{tikzmark,positioning}
 \usepackage{avm}
@@ -86,6 +87,31 @@
 %http://www.essex.ac.uk/linguistics/external/clmt/latex4ling/avms/
 %http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html Zeichen
 
+\subsection{Einschränkungen}
+
+\subsubsection{PC}
+
+(SUBJ XADJ) $\in$ ($\uparrow$S)\\
+XADJ (KNG) = SUBJ XADJ (KNG) \textbf{(allgemeine Regel, oder?)} \\
+
+\subsubsection{Abl. abs.}
+
+XADJ (KNG) = SUBJ XADJ (KNG) = abl\\
+$\neg$ ($\uparrow$SUBJ) = ((ADJ$\uparrow$)GF) \\
+d.h. Subjekt des Abl. abs. darf eigentlich keine Rolle im übergeordneten Satz spielen; nur bei AcI geht das\\
+($\uparrow$RELTENSE (ADJ)) $\neq$ future \\
+$\neg$ ($\downarrow$PRED) = ($\uparrow$GF PRED)\\
+
+\subsubsection{AcP}
+
+($\uparrow$XCOMP) = $\downarrow$\\
+($\downarrow$SUBJ CASE) = acc\\
+($\downarrow$CASE) = acc\\
+($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ)\\
+($\uparrow$XCOMP MOOD) = part\\
+$\neg$ ($\uparrow$XCOMP RELTENSE) = future\\
+VERB TYPE = verb of perception $\mid$ `facere' $\mid$ `inducere'
+
 \subsection{Lexikoneinträge}
 
 victis = Nom Pl Dat $\mid$ Akk
@@ -98,7 +124,12 @@ missum ($\uparrow$PRED = `mitto$\langle$SUBJ, OBL\textsubscript{GOAL} $\rangle$\
 ($\uparrow$PASSIVE) = + \\
 ((XADJ$\uparrow$)OBJ) = ($\uparrow$SUBJ) \\
 
+
+
 \subsubsection{Abl. abs.}
+
+
+
 \subsubsection{AcP}
 
 induco: $\langle$SUBJ, OBJ, COMP$\rangle$\\
@@ -133,43 +164,129 @@ $\neg$
 
 \subsection{Syntaxregeln}
 
-\textbf{PC}\\
 S $\rightarrow$ NP \, VP \: XP\\
 
 
-\subsubsection{PC}
+\subsubsection{PC objektabhängig}
 
-\textbf{VP (d.h. Partizipialphrase) ?}\\
+S $\rightarrow$ NP \, VP \: V\\
 
-(SUBJ XADJ) $\in$ ($\uparrow$S)\\
-XADJ (KNG) = SUBJ XADJ (KNG) \textbf{(allgemeine Regel, oder?)} \\
+\begin{tabular}{ l  l  l  l  l  l }
+  \textbf{S} & $\rightarrow$ & \: \: \textbf{NP} & \: \textbf{VP} & \: \: \textbf{NP} & \: \textbf{V}\\
+   & $\qquad$ & ($\uparrow$OBJ) = $\downarrow$ & $\downarrow$ $\in$ ($\uparrow$XADJ) & ($\uparrow$SUBJ) = $\downarrow$ & $\uparrow$ = $\downarrow$ \\
+   $\qquad$ & $\qquad$ \\
+    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\
+    \textbf{VP} & $\rightarrow$ & \: \textbf{V'} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{V'} & $\rightarrow$ & \: \: \textbf{PP} & \: \: \: \textbf{V} & \\
+   & $\qquad$ &($\uparrow$OBL\textsubscript{GOAL}) = $\downarrow$  & \: $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{PP} & $\rightarrow$ & \: \: \textbf{P'} \\
+	& $\qquad$   & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{P'} & $\rightarrow$ & \: \: \textbf{P} & \: \: \textbf{NP} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$ & ($\uparrow$OBJ) = $\downarrow$ \\
+   $\qquad$ & $\qquad$ \\
+    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\     
+\end{tabular} 
+
+\subsubsection{PC attributiv}
+
+S $\rightarrow$ NP \, VP \: V\\
+
+\begin{tabular}{ l  l  l  l  l  l }
+  \textbf{S} & $\rightarrow$ & \: \: \textbf{NP} & \: \textbf{V}\\
+   & $\qquad$ & ($\uparrow$OBJ) = $\downarrow$ & $\uparrow$ = $\downarrow$ \\
+   $\qquad$ & $\qquad$ \\
+    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\
+    \textbf{VP} & $\rightarrow$ & \: \textbf{V'} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{V'} & $\rightarrow$ & \: \: \textbf{PP} & \: \: \textbf{V} & \\
+   & $\qquad$ &($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$  & \: $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{PP} & $\rightarrow$ & \: \textbf{P'} \\
+	& $\qquad$   & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{P'} & $\rightarrow$ & \: \textbf{P} & \: \: \textbf{NP} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$ & ($\uparrow$OBJ) = $\downarrow$ \\
+   $\qquad$ & $\qquad$ \\
+    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\     
+\end{tabular} 
 
 \subsubsection{Abl. abs.}
 
 S\textsubscript{part} $\rightarrow$ NP \: V'\\
-$\neg$ ($\downarrow$PRED) = ($\uparrow$GF PRED)\\
 
-\textbf{VP (d.h. Partizipialphrase)?}\\
+S $\rightarrow$ NP \, VP \: V\\
 
-XADJ (KNG) = SUBJ XADJ (KNG) = abl\\
-SUBJ ADJ)$\notin$ ($\uparrow$S) \textbf{(allgemeine Regel, oder?)} \\
-\textbf{(entspricht:}   $\neg$ ($\uparrow$SUBJ) = ((ADJ$\uparrow$)GF) \textbf{(?)} \\
-d.h. Subjekt des Abl. abs. darf eigentlich keine Rolle im übergeordneten Satz spielen; nur bei AcI geht das\\
-($\uparrow$RELTENSE (ADJ)) $\neq$ future
+\begin{tabular}{ l  l  l  l  l  l }
+  \textbf{S\textsubscript{fin}} & $\rightarrow$ & \: \: \textbf{S\textsubscript{part}} & \: \: \textbf{NP}\label{1} & \: \textbf{V}\\
+   & $\qquad$ &  $\downarrow$ $\in$ ($\uparrow$ADJ) & ($\uparrow$OBJ) = $\downarrow$ & $\uparrow$ = $\downarrow$ \\
+   $\qquad$ & $\qquad$ \\
+   \textbf{S\textsubscript{part}} & $\rightarrow$ & \: \: \textbf{NP} & \: \textbf{V'}\\
+   & $\qquad$ & ($\uparrow$SUBJ) = $\downarrow$ & $\uparrow$ = $\downarrow$ \\
+   $\qquad$ & $\qquad$ \\
+    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\
+    \textbf{V'} & $\rightarrow$ & \: \: \textbf{PP} & \: \: \textbf{V} & \\
+   & $\qquad$ &($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$  & \: $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{PP} & $\rightarrow$ & \: \textbf{P'} \\
+	& $\qquad$   & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{P'} & $\rightarrow$ & \: \textbf{P} & \: \: \textbf{NP} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$ & ($\uparrow$OBJ) = $\downarrow$ \\
+   $\qquad$ & $\qquad$ \\
+    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\     
+\end{tabular} 
 
 
 \subsubsection{AcP}
 
-\textbf{VP (d.h. Partizipialphrase)}\\
-($\uparrow$XCOMP) = $\downarrow$\\
-($\downarrow$SUBJCASE) = acc\\
-($\downarrow$CASE) = acc\\
+S $\rightarrow$ NP \, VP \: V\\
 
-\textbf{Sonstiges}
-($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ)\\
-($\uparrow$XCOMP MOOD) = part\\
-$\neg$ ($\uparrow$XCOMP RELTENSE) = future\\
-VERB TYPE = verb of perception $\mid$ `facere' $\mid$ `inducere'
+($\uparrow$OBJ) = $\downarrow$\\
+
+\renewcommand{\arraystretch}{1}  
+\begin{tabular}{ l  l  l  l  l }
+  \textbf{S} & $\rightarrow$ & \: \: \textbf{NP} & \: \: \: \textbf{VP} & \: \textbf{V}\\
+   & $\qquad$ &($\uparrow$OBJ) = $\downarrow$ & ($\uparrow$COMP) = $\downarrow$ & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\
+    \textbf{VP} & $\rightarrow$ & \: \textbf{V'} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{V'} & $\rightarrow$ & \: \: \textbf{PP} & \: \: \: \textbf{V} & \\
+   & $\qquad$ &($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$  & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{PP} & $\rightarrow$ & \: \: \textbf{P'} \\
+	& $\qquad$   & $\uparrow$ = $\downarrow$\\
+   $\qquad$ & $\qquad$ \\
+    \textbf{P'} & $\rightarrow$ & \: \: \textbf{P} & \: \: \textbf{NP} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$ & ($\uparrow$OBJ) = $\downarrow$ \\
+   $\qquad$ & $\qquad$ \\
+    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\     
+\end{tabular} 
+ 
+ 
+
 
 
 \newpage
@@ -237,12 +354,12 @@ MODE & ind \\
 
 \subsection{f-Struktur PC (subjektabhängig)}
 \begin{avm}
-\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
-SUBJ & \[ PRED & 'milites' \\
+\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ\q>’\\
+SUBJ & \[ PRED & 'miles' \\
 CASE & nom \\
 NUM & pl \\
 GEN & m \]\tikzmark{meow} \\
-XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\q>’\\
+XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -250,7 +367,7 @@ CASE & nom \\
 NUM & pl \\
 GEN & m \\
 SUBJ &  \tikzmark{objectmeow} \\
-OBL\textsubscript{LOC} & \[``in Galliam''\] \]\\
+OBL\textsubscript{GOAL} & \[``in Galliam''\] \]\\
 \} &            $\qquad$ \\
 OBJ & \[``hostes'' \]\\
 \]
@@ -279,7 +396,7 @@ OBJ & \[``hostes'' \]\\
 \begin{avm}
 \[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
 SUBJ & \["Caesar" \]\\
-ADJ & \{ \[PRED &  \rm ‘vinco \q<SUBJ, OBJ, OBL\textsubscript{LOC}\q>’\\
+ADJ & \{ \[PRED &  \rm ‘vinco \q<SUBJ, OBL\textsubscript{LOC}\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -326,7 +443,7 @@ CASE & acc \\
 NUM & sg \\
 GEN & m \\
 SUBJ &  \tikzmark{object} \\
-OBL\textsubscript{LOC} & \[``in Gallia''\] \]  &            $\qquad$\\
+OBL\textsubscript{LOC} & \[``in campo''\] \]  &            $\qquad$\\
 \]
 \end{avm}
 
