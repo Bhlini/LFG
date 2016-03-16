@@ -230,13 +230,13 @@ S\textsubscript{part} $\rightarrow$ NP \: V'\\
 S $\rightarrow$ NP \, VP \: V\\
 
 \begin{tabular}{ l  l  l  l  l  l }
-  \textbf{S\textsubscript{fin}} & $\rightarrow$ & \: \: \textbf{S\textsubscript{part}} & \: \: \textbf{NP}\label{1} & \: \textbf{V}\\
+  \textbf{S\textsubscript{fin}} & $\rightarrow$ & \: \: \textbf{S\textsubscript{part}} & \: \: \textbf{NP}(1) & \: \textbf{V}\\
    & $\qquad$ &  $\downarrow$ $\in$ ($\uparrow$ADJ) & ($\uparrow$OBJ) = $\downarrow$ & $\uparrow$ = $\downarrow$ \\
    $\qquad$ & $\qquad$ \\
-   \textbf{S\textsubscript{part}} & $\rightarrow$ & \: \: \textbf{NP} & \: \textbf{V'}\\
+   \textbf{S\textsubscript{part}} & $\rightarrow$ & \: \: \textbf{NP}(2) & \: \textbf{V'}\\
    & $\qquad$ & ($\uparrow$SUBJ) = $\downarrow$ & $\uparrow$ = $\downarrow$ \\
    $\qquad$ & $\qquad$ \\
-    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+    \textbf{NP}(2) & $\rightarrow$ & \: \textbf{N} \\
    & $\qquad$ & $\uparrow$ = $\downarrow$\\
       $\qquad$ & $\qquad$ \\
     \textbf{V'} & $\rightarrow$ & \: \: \textbf{PP} & \: \: \textbf{V} & \\
@@ -245,10 +245,13 @@ S $\rightarrow$ NP \, VP \: V\\
     \textbf{PP} & $\rightarrow$ & \: \textbf{P'} \\
 	& $\qquad$   & $\uparrow$ = $\downarrow$\\
    $\qquad$ & $\qquad$ \\
-    \textbf{P'} & $\rightarrow$ & \: \textbf{P} & \: \: \textbf{NP} \\
+    \textbf{P'} & $\rightarrow$ & \: \textbf{P} & \: \: \textbf{NP}(3) \\
    & $\qquad$ & $\uparrow$ = $\downarrow$ & ($\uparrow$OBJ) = $\downarrow$ \\
    $\qquad$ & $\qquad$ \\
-    \textbf{NP} & $\rightarrow$ & \: \textbf{N} \\
+    \textbf{NP}(3) & $\rightarrow$ & \: \textbf{N} \\
+   & $\qquad$ & $\uparrow$ = $\downarrow$\\
+      $\qquad$ & $\qquad$ \\     
+          \textbf{NP}(1) & $\rightarrow$ & \: \textbf{N} \\
    & $\qquad$ & $\uparrow$ = $\downarrow$\\
       $\qquad$ & $\qquad$ \\     
 \end{tabular} 
