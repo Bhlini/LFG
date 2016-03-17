@@ -290,7 +290,45 @@ S $\rightarrow$ NP \, VP \: V\\
  
  
 
+\newpage
+\section{PARTICIPIUM CONJUNCTUM (attributiv)}
 
+\Tree [.S 
+		[.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} 
+		[.NP\textsubscript{$\uparrow$=$\downarrow$} insulam ]		
+		[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[.V\textsubscript{$\uparrow$=$\downarrow$} obiectam ] 
+		[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{dat})=$\downarrow$} ]
+		] 
+		]
+			]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} tenuit ]	
+	]
+
+\subsection{f-Struktur PC (attributiv)}
+\begin{avm}
+\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ\q>’\\
+SUBJ & \[ PRED & 'miles' \\
+CASE & nom \\
+NUM & pl \\
+GEN & m \]\tikzmark{a} \\
+XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & nom \\
+NUM & pl \\
+GEN & m \\
+SUBJ &  \tikzmark{z} \\
+OBL\textsubscript{GOAL} & \[``in Galliam''\] \]\\
+\} &            $\qquad$ \\
+OBJ & \[``hostes'' \]\\
+\]
+\end{avm}
+
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:a) to[out=0,in=0,looseness=3.5]  (pic cs:z);
 
 \newpage
 \section{PARTICIPIUM CONJUNCTUM (objektabhängig)}
@@ -318,7 +356,7 @@ GEN & m \]\\
 OBJ & \[ PRED & 'legatus' \\
 CASE & acc \\
 NUM & sg \\
-GEN & m \]\tikzmark{topic} \\
+GEN & m \]\tikzmark{aim} \\
 XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
 MOOD & part \\
 PASSIVE & + \\
@@ -326,7 +364,7 @@ RELTENSE & past \\
 CASE & acc \\
 NUM & sg \\
 GEN & m \\
-SUBJ &  \tikzmark{object} \\
+SUBJ &  \tikzmark{start} \\
 OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
 \} &            $\qquad$ \\
 TENSE & present \\
@@ -338,7 +376,7 @@ MODE & ind \\
 \end{avm}
 
 \tikz[remember picture,overlay] 
-    \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
+    \draw[<-] (pic cs:aim) to[out=0,in=0,looseness=3.5]  (pic cs:start);
 
 \newpage
 \section{PARTICIPIUM CONJUNCTUM (subjektabhängig)}
@@ -377,7 +415,7 @@ OBJ & \[``hostes'' \]\\
 \end{avm}
 
 \tikz[remember picture,overlay] 
-    \draw[<-] (pic cs:meow) to[out=0,in=0,looseness=3]  (pic cs:objectmeow);
+    \draw[<-] (pic cs:meow) to[out=0,in=0,looseness=3.5]  (pic cs:objectmeow);
 
 \newpage
 \section{Abl. abs.}
