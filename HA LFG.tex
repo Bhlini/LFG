@@ -633,6 +633,62 @@ GEN & n \] \\
 \] \]
 \end{avm}
 
+\newpage
+\section{dominantes Partizip}
+\subsection{f-Struktur dom Part}
+\textbf{Geigers Variante 1}\\
+
+\begin{avm}
+\[ PRED &  \rm ‘ab \q<OBJ\q>’\\
+OBJ & \[ PRED & `urbs' \tikzmark{begin} \\ 
+CASE & abl \\
+NUM & sg \\
+GEN & f  \\
+ADJ & \[PRED &  \rm ‘condo \q<SUBJ\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & abl \\
+NUM & sg \\ 
+GEN & f  \\
+SUBJ &  \tikzmark{end} \] &            $\qquad$ \\
+\]  \\
+\]
+\end{avm}
+
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:begin) to[out=0,in=0,looseness=2.4]  (pic cs:end);
+
+ich kapier nicht, wo genau der Pfeil hingehen soll... entweder auf urbs, aber dann wär er mitten in der box, oder auf die ganze OBJ-Box... ?\\
+
+\textbf{Geigers Variante 2 - findet er besser}
+
+\begin{avm}
+\[ PRED &  \rm ‘parco \q<SUBJ, OBJ\textsubscript{REC}\q>’\\
+SUBJ & \[``Caesar'' \] \\
+OBJ\textsubscript{REC} & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
+MOOD & part \\
+PASSIVE & - \\
+RELTENSE & present \\
+CASE & dat \\
+NUM & pl \\
+GEN & m \\
+SUBJ & \[PRED & `pro' \\
+PRON-TYPE  & mis \\
+CASE & dat \\
+NUM & pl \\
+GEN  & m \] \\
+OBJ & \[PRED & `auxilium' \\
+CASE & acc \\
+NUM & sg \\
+GEN & n \] \\
+\] \]
+\end{avm}
+
+
+\textbf{meine Variante 1}
+\textbf{meine Variante 2}
+
 
 \newpage
 \section{Die Textstelle Sen. \textit{epist.} 72.7-8 und deren Übersetzung}
