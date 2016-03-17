@@ -119,7 +119,6 @@ VERB TYPE = verb of perception $\mid$ `facere' $\mid$ `inducere'
 
 \subsection{Lexikoneinträge}
 
-victis = Nom Pl Dat $\mid$ Akk
 \subsubsection{PC objektabhängig}
 
 \begin{tabular}{ l  l  l  l  } 
@@ -135,7 +134,8 @@ $\qquad$ & (6.3) $\qquad$ ($\uparrow$CASE) & = & nom  $\mid$\\
 $\qquad$ & (6.3) $\qquad$ ($\uparrow$CASE) & = & acc \} \} \\
 $\qquad$ & (7) ($\uparrow$NUM) & = & sg \\
 \end{tabular}
-
+\newline
+\newline
 
 ((XADJ$\uparrow$)OBJ) = ($\uparrow$SUBJ) \\
 
@@ -487,7 +487,7 @@ OBJ & \[``hostes'' \]\\
 		[.V{\textsubscript{$\uparrow$=$\downarrow$}} gaudet ]
 	]
 
-\subsection{Abl. abs.}
+\subsection{f-Struktur Abl. abs.}
 \begin{avm}
 \[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
 SUBJ & \["Caesar" \]\\
@@ -545,7 +545,49 @@ OBL\textsubscript{LOC} & \[``in campo''\] \]  &            $\qquad$\\
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
+\section{PARTICIPIUM CONJUNCTUM (substantiviert)}
 
+\Tree [.S 
+		[.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} 
+		[.NP\textsubscript{$\uparrow$=$\downarrow$} insulam ]		
+		[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+				[.V\textsubscript{$\uparrow$=$\downarrow$} obiectam ] 
+		[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{DAT})=$\downarrow$} ]
+		] 
+		]
+			]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} tenuit ]	
+	]
+
+\subsection{f-Struktur PC (substantiviert)}
+\begin{avm}
+\[ PRED &  \rm ‘teneo \q<SUBJ, OBJ\q>’\\
+SUBJ & \[ PRED & 'pro' \\
+PRON-TYPE & mis \] \\
+OBJ & \[PRED & `insula' \\
+CASE & acc \\
+NUM & sg \\
+GEN & f \]\tikzmark{alpha} \\
+XADJ & \{ \[PRED &  \rm ‘obicio \q<SUBJ, OBJ\textsubscript{DAT}\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & acc \\
+NUM & sg \\
+GEN & f \\
+SUBJ &  \tikzmark{omega} \\
+OBJ\textsubscript{DAT} & \[PRED & `portus' \\
+CASE & dat \\
+NUM & sg \\
+GEN & m \\
+\] \]\\
+\} &            $\qquad$ \\
+\]
+\end{avm}
+
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:alpha) to[out=0,in=0,looseness=3.4]  (pic cs:omega);
 
 
 \newpage
