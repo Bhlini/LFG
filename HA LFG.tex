@@ -635,11 +635,29 @@ GEN & n \] \\
 
 \newpage
 \section{dominantes Partizip}
-\subsection{f-Struktur dom Part}
-\textbf{Geigers Variante 1}\\
+\subsection{dom Part - Geigers Variante 1}
 
+\Tree [.S 
+		[.PP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)}}
+			[.P'\textsubscript{$\uparrow$=$\downarrow$} 
+				[.P\textsubscript{$\uparrow$=$\downarrow$} ab ] 
+				[.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}
+					[.N'\textsubscript{$\uparrow$=$\downarrow$} 
+						[.N\textsubscript{$\uparrow$=$\downarrow$} urbe ]
+						[\qroof{condita}.VP\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)} ]
+					] 
+				]
+				]				
+			] 	
+		[\qroof{Roma}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} viguit ]	
+		]
+	]\\
+\newline
 \begin{avm}
-\[ PRED &  \rm ‘ab \q<OBJ\q>’\\
+\[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
+SUBJ & ``Roma'' \\
+ADJ & \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
 OBJ & \[ PRED & `urbs' \tikzmark{begin} \\ 
 CASE & abl \\
 NUM & sg \\
@@ -653,14 +671,16 @@ NUM & sg \\
 GEN & f  \\
 SUBJ &  \tikzmark{end} \] &            $\qquad$ \\
 \]  \\
-\]
+\] \]
 \end{avm}
 
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:begin) to[out=0,in=0,looseness=2.4]  (pic cs:end);
     
     \begin{avm}
-\[ PRED &  \rm ‘ab \q<OBJ\q>’\\
+\[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
+SUBJ & ``Roma'' \\
+ADJ & \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
 OBJ & \[ PRED & `urbs' \\ 
 CASE & abl \\
 NUM & sg \\
@@ -672,8 +692,8 @@ RELTENSE & past \\
 CASE & abl \\
 NUM & sg \\ 
 GEN & f  \\
-SUBJ &  \tikzmark{Ziel} \] \\
-\] \tikzmark{Start} &            $\qquad$ &            $\qquad$  \\
+SUBJ &  \tikzmark{Ziel} \] &            $\qquad$ &            $\qquad$  \] \\
+\] \tikzmark{Start} \\
 \]
 \end{avm}
 
@@ -682,10 +702,30 @@ SUBJ &  \tikzmark{Ziel} \] \\
 
 ich kapier nicht, wo genau der Pfeil hingehen soll... entweder auf urbs, aber dann wär er mitten in der box, oder auf die ganze OBJ-Box... ?\\
 
-\textbf{Geigers Variante 2 - findet er besser}
+\subsection{dom Part - Geigers Variante 2 (findet er besser)}
 
+\Tree [.S 
+		[.PP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)}}
+			[.P'\textsubscript{$\uparrow$=$\downarrow$} 
+				[.P\textsubscript{$\uparrow$=$\downarrow$} ab ] 
+				[.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}
+					[.N'\textsubscript{$\uparrow$=$\downarrow$} 
+						[.N\textsubscript{$\uparrow$=$\downarrow$} urbe ]
+						[\qroof{condita}.VP\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)} ]
+					] 
+				]
+				]				
+			] 	
+		[\qroof{Roma}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} viguit ]	
+		]
+	]\\
+	
+	
 \begin{avm}
-\[ PRED &  \rm ‘ab \q<OBJ\q>’\\
+\[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
+SUBJ & ``Roma'' \\
+ADJ & \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
 OBJ & \[ PRED &  \rm ‘condo \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
@@ -696,12 +736,12 @@ GEN & f \\
 SUBJ & \[PRED & `urbs' \\
 CASE & abl \\
 NUM & sg \\
-GEN  & f \] \] \]
+GEN  & f \] \] \] \]
 \end{avm}\\
 
 
-\textbf{meine Variante 1}
-\textbf{meine Variante 2}
+\subsection{dom Part - meine Variante 1}
+\subsection{dom Part - meine Variante 2}
 
 
 \newpage
