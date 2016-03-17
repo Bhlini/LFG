@@ -190,6 +190,12 @@ induco: $\langle$SUBJ, OBJ, XCOMP$\rangle$\\
 ($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ)\\
 ($\uparrow$OBJ CASE) = acc\\
 
+\subsubsection{PC (substantiviert)}
+\textbf{Variante 1: XADJ}:\\
+($\downarrow$SUBJ) = ((OBJ$\uparrow$)XADJ)
+= das Subjekt der untergeordneten Struktur ist das Objekt der dem XADJ übergeordneten Struktur (welches fehlt).
+
+
 \subsection{Zeichen}
 
 $\theta$
@@ -546,48 +552,86 @@ OBL\textsubscript{LOC} & \[``in campo''\] \]  &            $\qquad$\\
     \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
 \section{PARTICIPIUM CONJUNCTUM (substantiviert)}
+\subsection{Variante 1: XADJ}
 
 \Tree [.S 
-		[.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} 
-		[.NP\textsubscript{$\uparrow$=$\downarrow$} insulam ]		
 		[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
 			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
-				[.V\textsubscript{$\uparrow$=$\downarrow$} obiectam ] 
-		[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{DAT})=$\downarrow$} ]
-		] 
+					[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
+					[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
 		]
 			]
-		[.V\textsubscript{$\uparrow$=$\downarrow$} tenuit ]	
+		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} parcit ]	
 	]
 
-\subsection{f-Struktur PC (substantiviert)}
+\subsubsection{f-Struktur PC (substantiviert)}
 \begin{avm}
-\[ PRED &  \rm ‘teneo \q<SUBJ, OBJ\q>’\\
-SUBJ & \[ PRED & 'pro' \\
-PRON-TYPE & mis \] \\
-OBJ & \[PRED & `insula' \\
-CASE & acc \\
-NUM & sg \\
-GEN & f \]\tikzmark{alpha} \\
-XADJ & \{ \[PRED &  \rm ‘obicio \q<SUBJ, OBJ\textsubscript{DAT}\q>’\\
-MOOD & part \\
-PASSIVE & + \\
-RELTENSE & past \\
-CASE & acc \\
-NUM & sg \\
-GEN & f \\
-SUBJ &  \tikzmark{omega} \\
-OBJ\textsubscript{DAT} & \[PRED & `portus' \\
+\[ PRED &  \rm ‘parco \q<SUBJ, OBJ\textsubscript{REC}\q>’\\
+SUBJ & \[``Caesar'' \] \\
+OBJ\textsubscript{REC} & \[PRED & `pro' \\
+PRON-TYPE & mis \\
 CASE & dat \\
-NUM & sg \\
+NUM & pl \\
+GEN & m \]\tikzmark{alpha} \\
+XADJ & \{ \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
+MOOD & part \\
+PASSIVE & - \\
+RELTENSE & present \\
+CASE & dat \\
+NUM & pl \\
 GEN & m \\
+SUBJ &  \tikzmark{omega} \\
+OBJ & \[PRED & `auxilium' \\
+CASE & acc \\
+NUM & sg \\
+GEN & n \\
 \] \]\\
 \} &            $\qquad$ \\
 \]
 \end{avm}
 
 \tikz[remember picture,overlay] 
-    \draw[<-] (pic cs:alpha) to[out=0,in=0,looseness=3.4]  (pic cs:omega);
+    \draw[<-] (pic cs:alpha) to[out=0,in=0,looseness=2.5]  (pic cs:omega);
+
+\newpage
+\section{PARTICIPIUM CONJUNCTUM (substantiviert)}
+\subsection{Variante 2: OBJ}
+
+\Tree [.S 
+		[.VP{\textsubscript{($\uparrow$OBJ) = $\downarrow$}}
+			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+					[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
+					[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
+		]
+			]
+		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} parcit ]	
+	]
+	
+\subsubsection{f-Struktur PC (substantiviert)}
+
+\begin{avm}
+\[ PRED &  \rm ‘parco \q<SUBJ, OBJ\textsubscript{REC}\q>’\\
+SUBJ & \[``Caesar'' \] \\
+OBJ\textsubscript{REC} & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
+MOOD & part \\
+PASSIVE & - \\
+RELTENSE & present \\
+CASE & dat \\
+NUM & pl \\
+GEN & m \\
+SUBJ & \[PRED & `pro' \\
+PRON-TYPE  & mis \\
+CASE & dat \\
+NUM & pl \\
+GEN  & m \] \\
+OBJ & \[PRED & `auxilium' \\
+CASE & acc \\
+NUM & sg \\
+GEN & n \] \\
+\] \]
+\end{avm}
 
 
 \newpage
