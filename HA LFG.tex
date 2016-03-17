@@ -299,7 +299,7 @@ S $\rightarrow$ NP \, VP \: V\\
 		[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
 			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
 				[.V\textsubscript{$\uparrow$=$\downarrow$} obiectam ] 
-		[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{dat})=$\downarrow$} ]
+		[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{DAT})=$\downarrow$} ]
 		] 
 		]
 			]
@@ -308,27 +308,32 @@ S $\rightarrow$ NP \, VP \: V\\
 
 \subsection{f-Struktur PC (attributiv)}
 \begin{avm}
-\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ\q>’\\
-SUBJ & \[ PRED & 'miles' \\
-CASE & nom \\
-NUM & pl \\
-GEN & m \]\tikzmark{a} \\
-XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
+\[ PRED &  \rm ‘teneo \q<SUBJ, OBJ\q>’\\
+SUBJ & \[ PRED & 'pro' \\
+PRON-TYPE & mis \] \\
+OBJ & \[PRED & `insula' \\
+CASE & acc \\
+NUM & sg \\
+GEN & f \]\tikzmark{a} \\
+XADJ & \{ \[PRED &  \rm ‘obicio \q<SUBJ, OBJ\textsubscript{DAT}\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
-CASE & nom \\
-NUM & pl \\
-GEN & m \\
+CASE & acc \\
+NUM & sg \\
+GEN & f \\
 SUBJ &  \tikzmark{z} \\
-OBL\textsubscript{GOAL} & \[``in Galliam''\] \]\\
+OBJ\textsubscript{DAT} & \[PRED & `portus' \\
+CASE & dat \\
+NUM & sg \\
+GEN & m \\
+\] \]\\
 \} &            $\qquad$ \\
-OBJ & \[``hostes'' \]\\
 \]
 \end{avm}
 
 \tikz[remember picture,overlay] 
-    \draw[<-] (pic cs:a) to[out=0,in=0,looseness=3.5]  (pic cs:z);
+    \draw[<-] (pic cs:a) to[out=0,in=0,looseness=3.4]  (pic cs:z);
 
 \newpage
 \section{PARTICIPIUM CONJUNCTUM (objektabhängig)}
