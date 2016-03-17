@@ -658,32 +658,46 @@ SUBJ &  \tikzmark{end} \] &            $\qquad$ \\
 
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:begin) to[out=0,in=0,looseness=2.4]  (pic cs:end);
+    
+    \begin{avm}
+\[ PRED &  \rm ‘ab \q<OBJ\q>’\\
+OBJ & \[ PRED & `urbs' \\ 
+CASE & abl \\
+NUM & sg \\
+GEN & f  \\
+ADJ & \[PRED &  \rm ‘condo \q<SUBJ\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & abl \\
+NUM & sg \\ 
+GEN & f  \\
+SUBJ &  \tikzmark{Ziel} \] \\
+\] \tikzmark{Start} &            $\qquad$ &            $\qquad$  \\
+\]
+\end{avm}
+
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:Start) to[out=10,in=0,looseness=2.4]  (pic cs:Ziel);
 
 ich kapier nicht, wo genau der Pfeil hingehen soll... entweder auf urbs, aber dann wär er mitten in der box, oder auf die ganze OBJ-Box... ?\\
 
 \textbf{Geigers Variante 2 - findet er besser}
 
 \begin{avm}
-\[ PRED &  \rm ‘parco \q<SUBJ, OBJ\textsubscript{REC}\q>’\\
-SUBJ & \[``Caesar'' \] \\
-OBJ\textsubscript{REC} & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
+\[ PRED &  \rm ‘ab \q<OBJ\q>’\\
+OBJ & \[ PRED &  \rm ‘condo \q<SUBJ\q>’\\
 MOOD & part \\
-PASSIVE & - \\
-RELTENSE & present \\
-CASE & dat \\
-NUM & pl \\
-GEN & m \\
-SUBJ & \[PRED & `pro' \\
-PRON-TYPE  & mis \\
-CASE & dat \\
-NUM & pl \\
-GEN  & m \] \\
-OBJ & \[PRED & `auxilium' \\
-CASE & acc \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & abl \\
 NUM & sg \\
-GEN & n \] \\
-\] \]
-\end{avm}
+GEN & f \\
+SUBJ & \[PRED & `urbs' \\
+CASE & abl \\
+NUM & sg \\
+GEN  & f \] \] \]
+\end{avm}\\
 
 
 \textbf{meine Variante 1}
