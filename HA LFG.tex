@@ -654,6 +654,7 @@ GEN & n \] \\
 		]
 	]\\
 \newline
+\\
 \begin{avm}
 \[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
 SUBJ & ``Roma'' \\
@@ -720,13 +721,13 @@ ich kapier nicht, wo genau der Pfeil hingehen soll... entweder auf urbs, aber da
 		[.V\textsubscript{$\uparrow$=$\downarrow$} viguit ]	
 		]
 	]\\
-	
-	
+\newline
+\\	
 \begin{avm}
 \[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
 SUBJ & ``Roma'' \\
 ADJ & \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
-OBJ & \[ PRED &  \rm ‘condo \q<SUBJ\q>’\\
+OBJ & \[ PRED &  \rm ‘condor \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -740,8 +741,45 @@ GEN  & f \] \] \] \]
 \end{avm}\\
 
 
-\subsection{dom Part - meine Variante 1}
-\subsection{dom Part - meine Variante 2}
+\subsection{dom Part - meine Variante}
+
+\Tree [.S 
+		[.VP{\textsubscript{$\uparrow$=$\downarrow$}}
+			[.V'\textsubscript{($\uparrow$COMP) = $\downarrow$}
+				[\qroof{illum}.NP\textsubscript{($\uparrow$SUBJ) = $\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} interfectum ]
+			] 
+				]				 	
+			[.V'\textsubscript{$\uparrow$=$\downarrow$}
+				[\qroof{aegre}.NP\textsubscript{($\uparrow$ADJ)=$\downarrow$} ]
+				[.V\textsubscript{$\uparrow$=$\downarrow$} tuli ]	
+			]	
+			]
+		]
+	]\\
+\newline
+\\
+\begin{avm}
+\[ PRED &  \rm ‘fero \q<SUBJ, (OBJ), COMP\q>’\\
+SUBJ & \[PRED & `pro' \\
+PRON-Type & mis\] \\
+ADJ & \{\[ PRED &  \rm ‘aeger \q<OBJ\q>’\\
+TYPE & adverb \\
+CASE & indecl\\
+NUM & indecl\\
+GEN &  indecl\] \} \\
+COMP & \[ PRED &  \rm ‘interficior \q<SUBJ, (OBJ)\q>’\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & acc \\
+NUM & sg \\
+GEN & m \\
+SUBJ & \[PRED & `ille' \\
+CASE & acc \\
+NUM & sg \\
+GEN  & m \] \] \]
+\end{avm}\\
 
 
 \newpage
