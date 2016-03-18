@@ -89,7 +89,17 @@
 
 \subsection{Einschränkungen}
 
+Da im Lateinischen im Gegensatz zu den modernen Sprachen die Wortstellung innerhalb eines Satzes nicht explizit festgelegt ist (stimmt das als Grund?) (Footnote: Die gewöhnliche Wortstellung im Lateinischen ist zwar Subjekt – Objekt – Prädikat, jedoch wird diese, vor allem aus Gründen der Betonung und des Wohlklangs, nur selten streng eingehalten. Diese Selbstständigkeit der Wörter im Satz ist aufgrund ihrer deutlichen Charakterisierung durch die Flexionsendungen möglich. Vgl. LHS S. 397, § 212.), müssen die für die spezifischen grammatikalischen Konstruktionen geltenden Bedingungen nicht wie üblicherweise in den Syntaxregeln, sondern im Lexikoneintrag festgelegt werden. Diese Einschränkungen sollen für das Participium coniunctum, den Ablativus absolutus und den Accusativus cum Participio (die Namen der Konstruktionen evtl kursiv, weiß aber nicht) zunächst allgemein anhand von Lexikoneinträgen eines Partizips x definiert werden, um sie im Anschluss an konkreten Lexikoneinträgen anwenden zu können.
+
 \subsubsection{PC}
+
+Beim Participium coniunctum muss das Partizip in Kasus, Numerus und Genus mit seinem Bezugswort kongruent sei: (Footnote: Vgl. KSt S. 771, § 138,5a.)
+(SUBJ KNG) = (KNG)
+Das Bezugswort des Partizips ist eine grammatikalische Funktion der dem XADJ übergeordneten Struktur, und somit Element von S: (Footnote: Vgl. KSt S. 771, § 138,5a./oder: Vgl. Ebd.)
+(SUBJ) = ((XADJ)GF)
+
+
+
 
 ($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
 ($\uparrow$SUBJ) = ((ADJ$\uparrow$)GF) \\
@@ -97,9 +107,20 @@
 
 XADJ (KNG) = SUBJ XADJ (KNG) \\
 
-\subsubsection{PC (objektabhängig}
 
 \subsubsection{Abl. abs.}
+
+Auch im Ablativus absolutus muss das Partizip mit seinem Bezugswort in Kasus, Numerus und Genus übereinstimmen: 
+(SUBJ KNG) = (KNG)
+Partizip und Bezugswort stehen dabei immer im Ablativ: (Footnote: Vgl. KSt S. 771, § 138,5b.)
+(CASE) = abl
+
+Das Bezugswort des Partizips ist keine grammatikalische Funktion der dem XADJ übergeordneten Struktur, und somit von S losgelöst: (Footnote: Vgl. KSt S. 771, § 138,5b./oder: Vgl. Ebd.)
+(SUBJ) = ((ADJ)GF)
+Im Ablativus absolutus darf kein Partizip Futur Aktiv verwendet werden (steht in den Grammatiken nirgends explizit  ich glaube, dass das nur klassisch nicht belegt ist und seit Livius schon, zeigs dir aber: evtl: Footnote: Vgl. KSt. S. 760, § 136,4c oder NM S. 771, § 469.)
+(RELTENSE) future   (das (ADJ) kann weggelassen werden, da wir ja Lexikoneintrag von Partizip x definiert haben)
+(sagt das letzte nicht das gleiche wie das zweite aus -> oder ich verstehs grad nicht, sorry)
+
 
 XADJ (KNG) = SUBJ XADJ (KNG) = abl\\
 $\neg$ ($\uparrow$SUBJ) = ((ADJ$\uparrow$)GF) \\
@@ -108,6 +129,24 @@ d.h. Subjekt des Abl. abs. darf eigentlich keine Rolle im übergeordneten Satz s
 $\neg$ ($\downarrow$PRED) = ($\uparrow$GF PRED)\\
 
 \subsubsection{AcP}
+
+Das Partizip und sein Bezugswort stehen auch beim Accusativus cum Participio im selben Kasus, Numerus und Genus:
+(SUBJ KNG) = (KNG)
+Dabei stehen Partizip und Bezugswort im Akkusativ: (Footnote: Vgl. KSt S. 763, § 137,2a.)
+(CASE) = acc
+Das Bezugswort des Partizips ist das Objekt der dem XCOMP übergeordneten Struktur:
+	(SUBJ) = ((XCOMP)OBJ)
+Das Partizip ist beim Accusativus cum Patricipio stets ein Partizip Präsens Aktiv: (Footnote: Vgl. KSt S. 763, § 137,2a./oder: Vgl. Ebd.)	
+(RELTENSE) = present   
+Der Accusativus cum Participio ist von einem Verb der unmittelbaren sinnlichen Wahrnehmung oder von facere und inducere im Sinne von ‚in einem Werk, in einem Drama darstellen, (auftreten) lassen‘ abhängig. (Footnote: Vgl. NM S. 714, § 499. im KSt ist es etwas anders definiert, dann müsstens wir auch unten ändern  vgl. Auszüge unten) ( kann man das im Lexikoneintrag des Partizips darstellen?? evtl. Text:) Dies kann jedoch nicht im Lexikoneintrag des Partizips direkt, sondern nur in dem des PRED der übergeordneten Struktur dargestellt werden. Dieser müsste dann folgende Einschränkung beinhalten:
+	(VERB TYPE) = verb of perception / `facere` / `inducere`
+		
+
+Grammatik Auszüge aus KSt und NM zu AcP:
+KSt: a) bei den Verben des Sehens, Hörens u. ähnl., wenn sie von einer unmittelbaren Wahrnehmung gebraucht werden, sowie bei den Verben des Darstellens und Einführens in Verbindung mit einem Objekte und dem Participium Praes. Act., als: Video puerum currentem
+NM: § 499 S. 714: (1) Bei den Verben der Wahrnehmung steht der sog. Accusativus cum Participio (AcP), wenn es um die unmittelbare sinnliche Wahrnehmung geht, oft bei videre und audire, seltener bei anderen Verben. 
+(2) Bei den Verben facere und inducere i. S. v. ‚in einem Werk, in einem Drama darstellen, (auftreten) lassen‘ steht ebenfalls der AcP. Dem deutschen ‚auftreten als, dargestellt werden als‘ entspricht est mit PPA, wobei est häufig am Satzanfang steht.
+
 
 ($\uparrow$XCOMP) = $\downarrow$\\
 ($\downarrow$SUBJ CASE) = acc\\
@@ -118,6 +157,7 @@ $\neg$ ($\uparrow$XCOMP RELTENSE) = future\\
 VERB TYPE = verb of perception $\mid$ `facere' $\mid$ `inducere'
 
 \subsection{Lexikoneinträge}
+Neben diesen allgemein gültigen Einschränkungen treten im Lexikoneintrag auch konkrete Angaben zur Bestimmung der Wortform, wie bei den Partizipien Kasus, Numerus, Genus, auf. Im Folgenden sollen exemplarische Lexikoneinträge zu den Partizipien mitto für das objektabhängige Participium coniunctum, missi für das subjektabhängige Participium coniunctum, victis für den Ablativus absolutus und iaecentem für den Accusativus cum Participio aufgeführt werden.
 
 \subsubsection{PC objektabhängig}
 
