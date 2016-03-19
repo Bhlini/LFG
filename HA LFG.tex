@@ -195,9 +195,9 @@ $\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & past \\
 $\qquad$ & $[6]$ \:  \{(($\uparrow$GEN) & = & f \\ 
 $\qquad$ & $[6.1]$ \:  ($\uparrow$NUM) & = & sg \\
 $\qquad$ & $[6.2]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
-$\qquad$ & $[7.2]$ \: (($\uparrow$GEN) & = & n \\
-$\qquad$ & $[7.3]$ \:  ($\uparrow$NUM) & = & pl \\
-$\qquad$ & $[7.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
+$\qquad$ & $[6.2]$ \: (($\uparrow$GEN) & = & n \\
+$\qquad$ & $[6.3]$ \:  ($\uparrow$NUM) & = & pl \\
+$\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 \end{tabular}
 \newline
 \newline
@@ -207,16 +207,17 @@ $\qquad$ & $[7.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
-\textbf{missum}: & $[1]$ \:  ($\uparrow$PRED) & = & `mitto$\langle$SUBJ, OBJ, OBL\textsubscript{GOAL}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
+\textbf{amissa}: & $[1]$ \:  ($\uparrow$PRED) & = & `amitto$\langle$SUBJ, OBJ, OBL\textsubscript{LOC}$\rangle$'\\
+%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
 $\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
 $\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & + \\
 $\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & past \\
-$\qquad$ & $[6]$ \:  ($\uparrow$NUM) & = & sg \\
-$\qquad$ & $[7]$ \:  \{(($\uparrow$GEN) & = & m \\ 
-$\qquad$ & $[7.1]$ \:  ($\uparrow$CASE) & = & acc ) $\mid$\\
-$\qquad$ & $[7.2]$ \: (($\uparrow$GEN) & = & n \\
-$\qquad$ & $[7.3]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
+$\qquad$ & $[6]$ \:  \{(($\uparrow$GEN) & = & f \\ 
+$\qquad$ & $[6.1]$ \:  ($\uparrow$NUM) & = & sg \\
+$\qquad$ & $[6.2]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
+$\qquad$ & $[6.2]$ \: (($\uparrow$GEN) & = & n \\
+$\qquad$ & $[6.3]$ \:  ($\uparrow$NUM) & = & pl \\
+$\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 \end{tabular}
 \newline
 \newline
@@ -288,21 +289,22 @@ $\qquad$ & $[6]$ \: ($\uparrow$NUM) & = & sg \\
 $\qquad$ & $[7]$ \: ($\uparrow$GEN) & = & \{m $\mid$ f\} \\
 \end{tabular}\\
 \newline
-\newline
-induco: $\langle$SUBJ, OBJ, COMP$\rangle$\\
+Im Lexikoneintrag des Prädikats der dem AcP-XCOMP übergeordneten Struktur müsste, wie oben erwähnt, zunächst spezifiziert sein, dass es ein XCOMP zu sich nehmen kann, und im Folgenden die Bedingungen, die dieses XCOMP erfüllen muss:\\
+\textbf{video}: $\langle$SUBJ, OBJ, XCOMP$\rangle$\\
+($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ)\\
+($\uparrow$OBJ CASE) = acc\\
+
+Alternative:
+video: $\langle$SUBJ, OBJ, COMP$\rangle$\\
 ($\uparrow$COMP SUBJ) = `pro'\\
 ($\uparrow$COMP SUBJ KNG) = ($\uparrow$OBJ KNG)\\
 
-ODER\\
-induco: $\langle$SUBJ, OBJ, XCOMP$\rangle$\\
-($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ)\\
-($\uparrow$OBJ CASE) = acc\\
 \end{singlespace}
 
 \subsubsection{PC (substantiviert)}
 \textbf{Variante 1: XADJ}:\\
+Das Subjekt der untergeordneten Struktur ist das Objekt der dem XADJ übergeordneten Struktur (welches fehlt): \\
 ($\downarrow$SUBJ) = ((OBJ$\uparrow$)XADJ)
-= das Subjekt der untergeordneten Struktur ist das Objekt der dem XADJ übergeordneten Struktur (welches fehlt).
 
 
 %\subsection{Zeichen}
@@ -328,28 +330,27 @@ induco: $\langle$SUBJ, OBJ, XCOMP$\rangle$\\
 
 \subsection{Syntaxregeln}
 
-S $\rightarrow$ NP \, VP \: XP\\
-
+%S $\rightarrow$ NP \, VP \: XP\\
 
 \subsubsection{PC objektabhängig}
 
-S $\rightarrow$ NP \, VP \: V\\
-
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c }
-  S & $\rightarrow$ & NP & VP & NP & V\\
+S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
    & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP & $\rightarrow$ & N \\
+    NP\textsubscript{1} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
     VP & $\rightarrow$ & V' \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    V' & $\rightarrow$ & PP & V & \\
+  	  V' & $\rightarrow$ & PP & V & \\
    & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{GOAL}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    PP & $\rightarrow$ & P' \\
+   		 PP & $\rightarrow$ & P' \\
 	& $\qquad$   & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    P' & $\rightarrow$ & P & NP \\
+    		P' & $\rightarrow$ & P & NP\textsubscript{3} \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
-    NP & $\rightarrow$ & N \\
+ 		   NP\textsubscript{3} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{2} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
 \end{tabular}\\
 \end{singlespace}
@@ -360,19 +361,17 @@ S $\rightarrow$ NP \, VP \: V\\
 
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c }
-  S & $\rightarrow$ & NP & V\\
+  S & $\rightarrow$ & NP\textsubscript{1} & V\\
    & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP & $\rightarrow$ & N \\
+    NP\textsubscript{1} & $\rightarrow$ & N' \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    VP & $\rightarrow$ & V' \\
+       N' & $\rightarrow$ & N & VP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} \\
+		    VP & $\rightarrow$ & V' \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    V' & $\rightarrow$ & PP & V & \\
-   & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    PP & $\rightarrow$ & P' \\
-	& $\qquad$   & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    P' & $\rightarrow$ & P & NP \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
-    NP & $\rightarrow$ & N \\
+  				  V' & $\rightarrow$ & V & NP\textsubscript{2} \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$ }  \\
+   					 NP\textsubscript{2} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
 \end{tabular} 
 \end{singlespace}
@@ -385,21 +384,21 @@ S $\rightarrow$ NP \, VP \: V\\
 
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c }
-   S\textsubscript{fin} & $\rightarrow$ & S\textsubscript{part} & NP(1) & V\\
+   S\textsubscript{fin} & $\rightarrow$ & S\textsubscript{part} & NP\textsubscript{1} & V\\
    & $\qquad$ & \textsuperscript{ $\downarrow$ $\in$ ($\uparrow$ADJ)} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   S\textsubscript{part} & $\rightarrow$ & NP(2) & V'\\
+   S\textsubscript{part} & $\rightarrow$ & NP\textsubscript{2} & V'\\
    & \textsuperscript{$\qquad$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   NP(2) & $\rightarrow$ & N \\
+   NP\textsubscript{2} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
    V' & $\rightarrow$ & PP & V & \\
    & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
    PP & $\rightarrow$ & P' \\
 	& $\qquad$   & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    P' & $\rightarrow$ & P & NP(3) \\
+    P' & $\rightarrow$ & P & NP\textsubscript{3} \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
-    NP(3) & $\rightarrow$ & N \\
+    NP\textsubscript{3} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   NP(1) & $\rightarrow$ & N \\
+   NP\textsubscript{1} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
 \end{tabular} 
 \end{singlespace}
@@ -413,9 +412,9 @@ S $\rightarrow$ NP \, VP \: V\\
 \begin{singlespace}
 \renewcommand{\arraystretch}{1}  
 \begin{tabular}{ l  l  c  c  c }
-  S & $\rightarrow$ & NP & VP & V\\
+  S & $\rightarrow$ & NP\textsubscript{1} & VP & V\\
    & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{($\uparrow$COMP) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP & $\rightarrow$ & N \\
+    NP\textsubscript{1} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
     VP & $\rightarrow$ & V' \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
@@ -423,9 +422,9 @@ S $\rightarrow$ NP \, VP \: V\\
    & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
     PP & $\rightarrow$ & P' \\
 	& $\qquad$   & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    P' & $\rightarrow$ & P & NP \\
+    P' & $\rightarrow$ & P & NP\textsubscript{2} \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
-    NP & $\rightarrow$ & N \\
+    NP\textsubscript{2} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
 \end{tabular} 
 \end{singlespace}
@@ -443,14 +442,16 @@ Beispielsatz:\\
 \begin{singlespace}
 \Tree [.S 
 		[.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} 
-		[.NP\textsubscript{$\uparrow$=$\downarrow$} insulam ]		
-		[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
-			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
-				[.V\textsubscript{$\uparrow$=$\downarrow$} obiectam ] 
-		[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{DAT})=$\downarrow$} ]
-		] 
-		]
-			]
+			[.N'\textsubscript{$\uparrow$=$\downarrow$}
+				[.N\textsubscript{$\uparrow$=$\downarrow$} insulam ]		
+				[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
+					[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+						[.V\textsubscript{$\uparrow$=$\downarrow$} obiectam ] 
+						[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{DAT})=$\downarrow$} ]
+					] 
+				]
+				]
+			]	
 		[.V\textsubscript{$\uparrow$=$\downarrow$} tenuit ]	
 	]
 \end{singlespace}
