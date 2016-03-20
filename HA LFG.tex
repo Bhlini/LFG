@@ -125,6 +125,8 @@ Dieses Bezugswort des Partizips ist eine grammatikalische Funktion der dem XADJ 
 \subsubsection{Abl. abs.}
 Da der \textit{Ablativus absolutus} vom finiten Satz (s\textsubscript{fin}) losgelöst ist, steht er in der Funktion eines ADJ: \\
 ($\uparrow$ADJ) = $\downarrow$ \\
+Auch beim Abl. abs. muss das Partizip in Kasus, Numerus und Genus mit seinem Bezugswort übereinstimmen:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
 Sowohl Partizip als auch Bezugswort stehen stets im Ablativ:\footnote{Vgl. KSt S. 771, § 138,5b.} \\
 ($\uparrow$CASE) = abl \\
 ($\uparrow$SUBJ CASE) = abl \\
@@ -139,6 +141,8 @@ $\neg$ ($\uparrow$RELTENSE) = future \\
 \subsubsection{AcP}
 Die AcP-Konstruktion nimmt im Satz stets die Funktion des XCOMP an: \\
 ($\uparrow$XCOMP) = $\downarrow$ \\
+Das Partizip und sein Bezugswort stehen auch beim AcP im selben Kasus, Numerus und Genus:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
 Wie auch hier der Name der Konstruktion vermuten lässt, müssen beim AcP Partizip und Bezugswort im Akkusativ stehen:\footnote{Vgl. KSt S. 763, § 137,2a.} \\
 ($\uparrow$CASE) = acc \\
 ($\uparrow$SUBJ CASE) = acc \\
@@ -387,6 +391,30 @@ S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
 \end{tabular} 
 \end{singlespace}
 
+\subsubsection{substantiviertes PC}
+\textbf{Variante 1: XCOMP}
+
+
+\textbf{Variante 1: OBJ}
+
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c }
+  S & $\rightarrow$ & NP\textsubscript{1} & V\\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{1} & $\rightarrow$ & N' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+       N' & $\rightarrow$ & N & VP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} \\
+		    VP & $\rightarrow$ & V' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+  				  V' & $\rightarrow$ & V & NP\textsubscript{2} \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$ }  \\
+   					 NP\textsubscript{2} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+\end{tabular} 
+\end{singlespace}
+
+
 \subsubsection{Abl. abs.}
 
 %S\textsubscript{part} $\rightarrow$ NP \: V'\\
@@ -445,8 +473,14 @@ S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
 \section{Das rein attributive Participium Coniunctum}
 
 Das rein attributive Partizip hat zum \textit{verbum finitum} keinerlei Beziehung, sondern charakterisiert nur sein Bezugswort; es ersetzt somit einen attributiven Gliedsatz.\footnote{Vgl. NM, S. 713, § 498.} \\
+
+\subsection{Vorüberlegungen zur Umsetzung in der LFG}
+
+* da rein attributiv ist es abhängig von NP \\
+
 Beispielsatz:\\
 \textit{insulam obiectam portui tenuit.}
+
 
 
 \begin{singlespace}
@@ -499,9 +533,11 @@ GEN & m \\
 
 \newpage
 \section{PARTICIPIUM CONJUNCTUM}
-Partizipien können als Vertreter von Adverbialsätzen aufgefasst werden und stehen dabei für Temporal-, Kausal-, Modal-, Kondizional- und Konzessivsätze. Das Partizip ist hierbei mit seinem Bezugswort verbunden, welches in einem der fünf Kasus Bestandteil des Hauptsatzes und gleichzeitig Subjekt des Nebensatzes ist. Partizip und Bezugswort stimmen daher in Kasus, Numerus und Genus überein. Diese Partizipialkonstruktion bezeichnet man als PC.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5a; Vgl. NM, S. 715, § 500.}
+Partizipien können als Vertreter von Adverbialsätzen aufgefasst werden und stehen dabei für Temporal-, Kausal-, Modal-, Kondizional- und Konzessivsätze. Das Partizip ist hierbei mit seinem Bezugswort verbunden, welches in einem der fünf Kasus Bestandteil des Hauptsatzes und gleichzeitig Subjekt des Nebensatzes ist. Partizip und Bezugswort stimmen daher in Kasus, Numerus und Genus überein. Diese Partizipialkonstruktion bezeichnet man als PC.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5a; Vgl. NM, S. 715, § 500.} \\
+\textbf{+ prädikativ oder attributiv} \\
 
 \subsection{PARTICIPIUM CONJUNCTUM (objektabhängig)}
+\subsubsection{Vorüberlegungen zur Umsetzung in der LFG}
 Beispielsatz:\\
 \textit{legatum in Galliam missum Caesar revocat.} \\
 \begin{singlespace}
@@ -555,6 +591,7 @@ MODE & ind \\
 
 \newpage
 \subsection{PARTICIPIUM CONJUNCTUM (subjektabhängig)}
+\subsubsection{Vorüberlegungen zur Umsetzung in der LFG}
 Beispielsatz:\\
 \textit{milites in Galliam missi hostes vicerunt.} \\
 \begin{singlespace}
@@ -599,8 +636,11 @@ OBJ & \[``hostes'' \]\\
 \newpage
 \section{Abl. abs.}
 Wie beim PC vertritt auch die Partizipialkonstruktion des Ablativus absolutus einen Adverbialsatz, wobei das Bezugswort dem Subjekt, das Partizip dem Prädikat entspricht \textbf{(das kann eig weg wenn wir das in der Einführung lassen)}. Dabei wird das Bezugswort nicht vom Prädikat des finiten Satzes gefordert, und besitzt demnach keine eigene Satzgliedfunktion. Der Abl. abs. ist somit vom Rest des Satzes losgelöst, welcher auch ohne ihn noch Sinn ergeben würde, weswegen dem Abl. abs. die Satzgliedfunktion der freien Angabe zukommt. \textbf{Partizip und Bezugswort stehen immer im Ablativ. (doppelt - bei Neugliederung beachten} Aufgrund seiner Entsprechung mit dem Prädikat des zugrunde liegenden Satzes kann sein Partizip nur als prädikativ aufgefasst werden; dass es nicht in attributiver Funktion zu einem Nomen steht, wird auch daran deutlich, dass der Satz bei Wegfall des Partizips nicht mehr grammatikalisch korrekt wäre. Der Ablativ ist im Lateinischen für diese Konstruktion gewählt, da dieser Kasus bereits ohne Partizip adverbiale Verhältnisse, beispielsweise der Zeit, bezeichnet.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5b; Vgl. NM, S. 718 f., § 503. Anstelle eines Partizips können auch bestimmte Nomina in den Ablativus absolutus treten. Auf dies kann im Rahmen des Umfangs dieser Arbeit, die sich auf Partizipialkonstruktionen konzentriert, nicht näher eingegangen werden. Vgl. NM, S. 720, § 504.} \\
+
+\subsection{Vorüberlegungen zur Umsetzung in der LFG}
 Beispielsatz: \\
 \textit{barbaris in Gallia victis Caesar gaudet.} \\
+
 \begin{singlespace}
 \Tree [.S\textsubscript{fin} 
 		[.S{\textsubscript{part} \textsubscript{($\downarrow$ $\in$ $\uparrow$ADJ)}}
@@ -640,7 +680,18 @@ OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
 
 \newpage
 \section{AcP - Accusativus cum Participio}
-Bei den Verben der unmittelbaren sinnlichen Wahrnehmung, oft bei \textit{videre} und \textit{audire}, sowie bei den Verben des Darstellens und Einführens, besonders bei \textit{facere} und \textit{inducere}, steht die satzwertige Ergänzung oft in Verbindung mit einem Objekt und dem Partizip Präsens Aktiv im Akkusativ. Man nennt diese Verbindung Accusativus cum Participio (AcP).\footnote{Vgl. KSt, S. 763, § 137,2a; Vgl. NM, S. 714, § 499.}
+Bei den Verben der unmittelbaren sinnlichen Wahrnehmung, oft bei \textit{videre} und \textit{audire}, sowie bei den Verben des Darstellens und Einführens, besonders bei \textit{facere} und \textit{inducere}, steht die satzwertige Ergänzung oft in Verbindung mit einem Objekt \textbf{und dem Partizip Präsens Aktiv im Akkusativ (Lex-Eintrag, nicht doppeln)}. Man nennt diese Verbindung Accusativus cum Participio (AcP).\footnote{Vgl. KSt, S. 763, § 137,2a; Vgl. NM, S. 714, § 499.}\\
+\textbf{+ prädikativ} \\
+\textbf{+ ähnlich dem AcI} \\
+
+\subsection{Vorüberlegungen zur Umsetzung in der LFG}
+* da prädikativ: direkt von S abhängig, nicht z.B. von der NP \\
+* muss auf jeden Fall entweder XADJ oder XCOMP sein, da das Subjekt zum Prädikat der Struktur vom Prädikat der darüberliegenden Struktur (d.h. vom finiten Verb, "vidit") gefordert wird // da das Prädikat der AcP-Konstruktion, d.h. das Partizip, sein Subjekt aus der übergeordneten Struktur bezieht. \\
+* XCOMP oder XADJ?
+	
+	\textbf{*für XADJ spricht:} Restsatz ergibt auch so Sinn; analog zum PC;
+	
+	\textbf{*für XCOMP spricht:} semantisch großer Unterschied (andere Bedeutung als PC wegen Verben der Wahrnehmung, würde dem Sinn der Konstruktion sonst nicht gerecht werden); facere / inducere; analog zu AcI -> also haben wir uns dafür entschieden \\
 Beispielsatz: \\
 \textit{militem in campo iacentem vidit.} \\
 
@@ -685,8 +736,17 @@ OBL\textsubscript{LOC} & \[``in campo''\] \]  &            $\qquad$\\
 
 \section{PARTICIPIUM CONJUNCTUM (substantiviert)}
 
-Da Partizipien einige Eigenschaften der Adjektive übernehmen, können sie wie diese können substantiviert werden und die Rolle eines Substantives übernehmen.\footnote{Vgl. NM, S. 713, § 498.}
-Der Neue Menge \textbf{(? richtige Bezeichnung?)} bezeichnet auch das substantivierte Partizip als rein attributiv. Da das Vorhandensein eines Bezugswortes für die LFG jedoch einen erheblichen Unterschied darstellt, wird das substantivierte Partizip in dieser Arbeit gesondert aufgeführt.
+Da Partizipien einige Eigenschaften der Adjektive übernehmen, können sie wie diese substantiviert werden und die Rolle eines Substantives übernehmen. Der Neue Menge bezeichnet auch das substantivierte Partizip als rein attributiv. Da das Vorhandensein eines Bezugswortes für die LFG jedoch einen erheblichen Unterschied darstellt, wird das substantivierte Partizip in dieser Arbeit gesondert aufgeführt.\footnote{Vgl. NM, S. 713, § 498.} \\
+\textbf{+ klassisch selten / weniger häufig als PC, Abl abs, AcP} \\
+\textbf{+ kommt v.a. in bestimmten Kontexten vor, wie... ?}
+
+
+\subsection{Vorüberlegungen zur Umsetzung in der LFG}
+* XCOMP oder OBJ
+	* XCOMP, wenn man annimmt, dass das eigentlich Objekt fehlt, zu dem dem das Partizip kongruent ist (dann als missing object und so); somit würde man sich immer ein nur ausgelassenes Bezugswort des Partizips hinzudenken
+	* OBJ haben uns für OBJ entschieden, weil das Partizip ja eben substantiviert ist, und damit nicht einem "fehlenden" Bezugswort untergeordnet. Andere Variante bietet aus Sicht der LFG keinen Mehrwert, würde aber durch hinzugedachte Wörter die Sache unnötig verkomplizieren
+
+
 Beispielsatz: \\
 \textit{auxilium petentibus Caesar parcit.} \\
 
@@ -694,7 +754,7 @@ Beispielsatz: \\
 
 \begin{singlespace}
 \Tree [.S 
-		[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
+		[.VP{\textsubscript{$\downarrow$ = ($\uparrow$XCOMP)}}
 			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
 					[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
 					[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
@@ -715,7 +775,7 @@ PRON-TYPE & mis \\
 CASE & dat \\
 NUM & pl \\
 GEN & m \]\tikzmark{alpha} \\
-XADJ & \{ \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
+XCOMP & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
 MOOD & part \\
 PASSIVE & - \\
 RELTENSE & present \\
@@ -727,8 +787,7 @@ OBJ & \[PRED & `auxilium' \\
 CASE & acc \\
 NUM & sg \\
 GEN & n \\
-\] \]\\
-\} &            $\qquad$ \\
+\] \]  &            $\qquad$ \\
 \]
 \end{avm}
 \tikz[remember picture,overlay] 
@@ -782,6 +841,8 @@ GEN & n \] \\
 \newpage
 \section{dominantes Partizip}
 Beim sogenannten dominanten Partizip \textbf{liegt der Hauptgedanke nicht auf den Substantiven sondern auf den dazugehörigen in Kasus, Numerus und Genus übereinstimmenden Partizipien. evt nicht klar genug:} tragen die Partizipien eine ihren scheinbaren Bezugswörtern übergeordnete Funktion. Meistens verwendet man das Partizip Perfekt Passiv als dominantes Partizip. \textbf{(Hierzu würde ich noch mehr schreiben! Dass das Bezugswort vom Partizip gefordert wird, z.B. (je nach Variante eben, und die einzelnen Varianten dann genauer beleuchten usw.))} \textbf{Im Deutschen wird das Partizip in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das im Lateinischen regierende Substantiv als Genetiv abhängt.}\footnote{Vgl. NM, S. 717 f., § 502.}\\
+
+\subsection{Vorüberlegungen zur Umsetzung in der LFG}
 Beispielsatz: \\
 \textit{ab urbe condita Roma viguit.}
 
