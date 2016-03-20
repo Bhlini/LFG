@@ -394,22 +394,35 @@ S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
 \subsubsection{substantiviertes PC}
 \textbf{Variante 1: XCOMP}
 
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c }
+  S & $\rightarrow$ & VP & NP\textsubscript{1} & V\\
+   & $\qquad$ & \textsuperscript{($\uparrow$XCOMP) = $\downarrow$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+		    VP & $\rightarrow$ & V' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+  				  V' & $\rightarrow$ & NP\textsubscript{2} & V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+   					 NP\textsubscript{2} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{1} & $\rightarrow$ & N' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+\end{tabular} 
+\end{singlespace}
 
-\textbf{Variante 1: OBJ}
+
+\textbf{Variante 2: OBJ}
 
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c }
-  S & $\rightarrow$ & NP\textsubscript{1} & V\\
-   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP\textsubscript{1} & $\rightarrow$ & N' \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-       N' & $\rightarrow$ & N & VP \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} \\
+  S & $\rightarrow$ & VP & NP\textsubscript{1} & V\\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ\textsubscript{REC}) = $\downarrow$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
 		    VP & $\rightarrow$ & V' \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-  				  V' & $\rightarrow$ & V & NP\textsubscript{2} \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBL\textsubscript{LOC}) = $\downarrow$ }  \\
+  				  V' & $\rightarrow$ & NP\textsubscript{2} & V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
    					 NP\textsubscript{2} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{1} & $\rightarrow$ & N' \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
 \end{tabular} 
 \end{singlespace}
@@ -750,7 +763,7 @@ Da Partizipien einige Eigenschaften der Adjektive übernehmen, können sie wie d
 Beispielsatz: \\
 \textit{auxilium petentibus Caesar parcit.} \\
 
-\subsection{Variante 1: XADJ}
+\subsection{Variante 1: XCOMP}
 
 \begin{singlespace}
 \Tree [.S 
@@ -801,7 +814,7 @@ GEN & n \\
 
 \begin{singlespace}
 \Tree [.S 
-		[.VP{\textsubscript{($\uparrow$OBJ) = $\downarrow$}}
+		[.VP{\textsubscript{($\uparrow$OBJ\textsubscript{REC}) = $\downarrow$}}
 			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
 					[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
 					[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
@@ -826,10 +839,7 @@ CASE & dat \\
 NUM & pl \\
 GEN & m \\
 SUBJ & \[PRED & `pro' \\
-PRON-TYPE  & mis \\
-CASE & dat \\
-NUM & pl \\
-GEN  & m \] \\
+PRON-TYPE  & mis \] \\
 OBJ & \[PRED & `auxilium' \\
 CASE & acc \\
 NUM & sg \\
