@@ -860,7 +860,7 @@ Nun sieht das dominante Partizip \textit{condita} rein formal zunächst aus wie 
 
 \begin{singlespace}
 \Tree [.S 
-		[.PP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)}}
+		[.PP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
 			[.P'\textsubscript{$\uparrow$=$\downarrow$} 
 				[.P\textsubscript{$\uparrow$=$\downarrow$} ab ] 
 				[.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}
@@ -886,7 +886,7 @@ OBJ & \[ PRED & `urbs' \tikzmark{begin} \\
 CASE & abl \\
 NUM & sg \\
 GEN & f  \\
-ADJ & \[PRED &  \rm ‘condo \q<SUBJ\q>’\\
+XADJ & \[PRED &  \rm ‘condo \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -911,7 +911,7 @@ OBJ & \[ PRED & `urbs' \\
 CASE & abl \\
 NUM & sg \\
 GEN & f  \\
-ADJ & \[PRED &  \rm ‘condo \q<SUBJ\q>’\\
+XADJ & \[PRED &  \rm ‘condo \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -926,19 +926,13 @@ SUBJ &  \tikzmark{Ziel} \] \] \tikzmark{Start} & $\qquad$ & $\qquad$  \\
 \newline
 \end{singlespace}
 
-Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass der Satz \textit{ab urbe Roma viguit} korrekt wäre. Das stimmt zwar formal - ist jedoch semantisch sinnfrei.
-
-Da das Partizip seine Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen. Das Bezugswort wird demnach vom Prädikat des Partizips gefordert.
-
-Beispielsatz: \\
-\textit{ab urbe condita Roma viguit.}
-
-
-
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:Start) to[out=10,in=0,looseness=2.4]  (pic cs:Ziel);
 
-ich kapier nicht, wo genau der Pfeil hingehen soll... entweder auf urbs, aber dann wär er mitten in der box, oder auf die ganze OBJ-Box... ?\\
+Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass der Satz \textit{ab urbe Roma viguit} korrekt wäre. Das stimmt zwar formal - ist jedoch semantisch sinnfrei. Eine semantisch sinnvollere Darstellung ergibt sich, wenn das Bezugswort vom Prädikat des Partizips gefordert wird; da das Partizip sein Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen.
+
+
+
 
 \subsection{dom Part - Geigers Variante 2 (findet er besser)}
 
@@ -950,14 +944,13 @@ ich kapier nicht, wo genau der Pfeil hingehen soll... entweder auf urbs, aber da
 				[.VP\textsubscript{($\uparrow$OBJ)=$\downarrow$}
 					[.V'\textsubscript{$\uparrow$=$\downarrow$} 
 						[.V\textsubscript{$\uparrow$=$\downarrow$} condita ]
-						[\qroof{urbe}.VP\textsubscript{($\uparrow$SUBJ) = $\downarrow$} ]
+						[\qroof{urbe}.NP\textsubscript{($\uparrow$SUBJ) = $\downarrow$} ]
 					] 
 				]
 				]				
 			] 	
 		[\qroof{Roma}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} viguit ]	
-		]
 	]\\
 \newline
 \end{singlespace}
