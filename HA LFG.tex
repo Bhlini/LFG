@@ -755,8 +755,8 @@ Da Partizipien einige Eigenschaften der Adjektive übernehmen, können sie wie d
 
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
-* XCOMP oder OBJ
-	* XCOMP, wenn man annimmt, dass das eigentlich Objekt fehlt, zu dem dem das Partizip kongruent ist (dann als missing object und so); somit würde man sich immer ein nur ausgelassenes Bezugswort des Partizips hinzudenken
+* XCOMP oder OBJ\\
+	* XCOMP: Neuer Menge Variante! man nimmt an, dass das eigentlich Objekt fehlt, zu dem dem das -- dann attributiv aufzufassende -- Partizip kongruent ist (dann als missing object und so); somit würde man sich immer ein nur ausgelassenes Bezugswort des Partizips hinzudenken \\
 	* OBJ haben uns für OBJ entschieden, weil das Partizip ja eben substantiviert ist, und damit nicht einem "fehlenden" Bezugswort untergeordnet. Andere Variante bietet aus Sicht der LFG keinen Mehrwert, würde aber durch hinzugedachte Wörter die Sache unnötig verkomplizieren
 
 
@@ -850,13 +850,13 @@ GEN & n \] \\
 
 \newpage
 \section{dominantes Partizip}
-Beim sogenannten dominanten Partizip \textbf{liegt der Hauptgedanke nicht auf den Substantiven sondern auf den dazugehörigen in Kasus, Numerus und Genus übereinstimmenden Partizipien. evt nicht klar genug:} tragen die Partizipien eine ihren scheinbaren Bezugswörtern übergeordnete Funktion. Meistens verwendet man das Partizip Perfekt Passiv als dominantes Partizip. \textbf{(Hierzu würde ich noch mehr schreiben! Dass das Bezugswort vom Partizip gefordert wird, z.B. (je nach Variante eben, und die einzelnen Varianten dann genauer beleuchten usw.))} \textbf{Im Deutschen wird das Partizip in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das im Lateinischen regierende Substantiv als Genetiv abhängt.}\footnote{Vgl. NM, S. 717 f., § 502.}\\
+Beim sogenannten dominanten Partizip trägt nicht das Substantiv, sondern das in Kasus, Numerus und Genus übereinstimmenden Partizip die Hauptbedeutung; das Partizip ,dominiert` daher sozusagen sein Bezugswort. Aus diesem Grund wird das dominante Partizip im Deutschen in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das im Lateinischen regierende Substantiv als Genetiv abhängt. Meistens verwendet man das Partizip Perfekt Passiv als dominantes Partizip.\footnote{Vgl. NM, S. 717 f., § 502.}\\
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
-Beispielsatz: \\
-\textit{ab urbe condita Roma viguit.}
+Das dominante Partizip soll zunächst am Beispielsatz \textit{ab urbe condita Roma viguit} betrachtet werden. Da der Restsatz \textit{Roma viguit} auch ohne die Partizipialkonstruktion Sinn ergibt, muss letztere wie beim Abl. abs. ein ADJ zum finiten Satz sein. Als nächstes ergibt sich aufgrund der Präposition \textit{ab} eine Präpositionalphrase, von der widerum Partizip und Bezugswort abhängen.
 
 \subsection{dom Part - Geigers Variante 1}
+Nun sieht das dominante Partizip \textit{condita} rein formal zunächst aus wie ein attributives Partizip zum Bezugswort \textit{urbe} \textbf{(?) +vgl NM}, weswegen man eine NP mit \textit{urbe} als Kopf konstruieren könnte (siehe Variante 1). Das Partizip wäre somit seinem Bezugswort untergeordnet. Da das Subjekt des Partizips aus der übergeordneten Struktur -- in diesem Fall von der NP mit Kopf \textit{urbe} -- bezieht, müsste das Partizip eine X-Rolle erhalten; da ein XCOMP zum Bezugswort -- in diesem Fall \textit{urbe} -- nicht zu rechtfertigen wäre \textbf{(??? weil es dann von urbe gefordert werden müsste? oder wieso eig?)}, bliebe für das Partizip -- hier \textit{condita} -- nur die Rolle des XADJ. Die zugehörigen c- und f-Strukturen sähen demnach wie folgt aus:
 
 \begin{singlespace}
 \Tree [.S 
@@ -869,11 +869,10 @@ Beispielsatz: \\
 						[\qroof{condita}.VP\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)} ]
 					] 
 				]
-				]				
-			] 	
+			]				
+		] 	
 		[\qroof{Roma}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} viguit ]	
-		]
 	]\\
 \newline
 \end{singlespace}
@@ -923,7 +922,18 @@ SUBJ &  \tikzmark{Ziel} \] \] \tikzmark{Start} & $\qquad$ & $\qquad$  \\
 \] \\
 \]
 \end{avm}
+\newline
+\newline
 \end{singlespace}
+
+Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass der Satz \textit{ab urbe Roma viguit} korrekt wäre. Das stimmt zwar formal - ist jedoch semantisch sinnfrei.
+
+Da das Partizip seine Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen. Das Bezugswort wird demnach vom Prädikat des Partizips gefordert.
+
+Beispielsatz: \\
+\textit{ab urbe condita Roma viguit.}
+
+
 
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:Start) to[out=10,in=0,looseness=2.4]  (pic cs:Ziel);
