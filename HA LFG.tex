@@ -853,7 +853,9 @@ GEN & n \] \\
 Beim sogenannten dominanten Partizip trägt nicht das Substantiv, sondern das in Kasus, Numerus und Genus übereinstimmenden Partizip die Hauptbedeutung; das Partizip ,dominiert` daher sozusagen sein Bezugswort. Aus diesem Grund wird das dominante Partizip im Deutschen in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das im Lateinischen regierende Substantiv als Genetiv abhängt. Meistens verwendet man das Partizip Perfekt Passiv als dominantes Partizip.\footnote{Vgl. NM, S. 717 f., § 502.}\\
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
-Das dominante Partizip soll zunächst am Beispielsatz \textit{ab urbe condita Roma viguit} betrachtet werden. Da der Restsatz \textit{Roma viguit} auch ohne die Partizipialkonstruktion Sinn ergibt, muss letztere wie beim Abl. abs. ein ADJ zum finiten Satz sein. Als nächstes ergibt sich aufgrund der Präposition \textit{ab} eine Präpositionalphrase, von der widerum Partizip und Bezugswort abhängen.
+Der Lexikoneintrag zum Partizip der Konstruktion unterscheidet sich nicht wesentlich von den vorherigen.
+\textbf{ (ich glaub wir brauchen hier echt nich nochmal nen Lexikoneintrag...)} \\
+Das dominante Partizip soll zunächst am Beispielsatz \textit{ab urbe condita Roma viguit} betrachtet werden. Da der Restsatz \textit{Roma viguit} auch ohne die Partizipialkonstruktion Sinn ergibt, muss letztere wie beim Abl. abs. ein ADJ zum finiten Satz sein. Als nächstes ergibt sich aufgrund der Präposition \textit{ab} eine Präpositionalphrase, von der wiederum Partizip und Bezugswort abhängen.
 
 \subsection{dom Part - Geigers Variante 1}
 Nun sieht das dominante Partizip \textit{condita} rein formal zunächst aus wie ein attributives Partizip zum Bezugswort \textit{urbe} \textbf{(?) +vgl NM}, weswegen man eine NP mit \textit{urbe} als Kopf konstruieren könnte (siehe Variante 1). Das Partizip wäre somit seinem Bezugswort untergeordnet. Da das Subjekt des Partizips aus der übergeordneten Struktur -- in diesem Fall von der NP mit Kopf \textit{urbe} -- bezieht, müsste das Partizip eine X-Rolle erhalten; da ein XCOMP zum Bezugswort -- in diesem Fall \textit{urbe} -- nicht zu rechtfertigen wäre \textbf{(??? weil es dann von urbe gefordert werden müsste? oder wieso eig?)}, bliebe für das Partizip -- hier \textit{condita} -- nur die Rolle des XADJ. Die zugehörigen c- und f-Strukturen sähen demnach wie folgt aus:
@@ -929,12 +931,29 @@ SUBJ &  \tikzmark{Ziel} \] \] \tikzmark{Start} & $\qquad$ & $\qquad$  \\
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:Start) to[out=10,in=0,looseness=2.4]  (pic cs:Ziel);
 
-Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass der Satz \textit{ab urbe Roma viguit} korrekt wäre. Das stimmt zwar formal - ist jedoch semantisch sinnfrei. Eine semantisch sinnvollere Darstellung ergibt sich, wenn das Bezugswort vom Prädikat des Partizips gefordert wird; da das Partizip sein Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen.
-
-
-
-
 \subsection{dom Part - Geigers Variante 2 (findet er besser)}
+Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass der Satz \textit{ab urbe Roma viguit} korrekt wäre. Das stimmt zwar formal -- ist jedoch semantisch sinnfrei. Eine semantisch sinnvollere Darstellung ergibt sich, wenn das Bezugswort vom Prädikat des Partizips gefordert wird; da das Partizip sein Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen. Somit würde die Partizipialkonstruktion von einer VP mit dem Kopf \textit{condita} abhängen; das Bezugsnomen \textit{urbe} wäre dann schlicht das Subjekt der Partizipialkonstruktion.
+\\ Es ergeben sich demnach folgende Syntaxregeln:
+\subsubsection{Syntaxregeln}
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c }
+  S & $\rightarrow$ & PP & NP\textsubscript{1} & V\\
+   & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$ADJ)} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+		    PP & $\rightarrow$ & P' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+  				  P' & $\rightarrow$ & P & VP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
+					    VP & $\rightarrow$ & V' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+		  				  V' & $\rightarrow$ & V & NP\textsubscript{2} \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
+		   					 NP\textsubscript{2} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{1} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+\end{tabular} 
+\end{singlespace}
+
 
 \begin{singlespace}
 \Tree [.S 
@@ -960,7 +979,7 @@ Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeute
 \[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
 SUBJ & ``Roma'' \\
 ADJ & \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
-OBJ & \[ PRED &  \rm ‘condor \q<SUBJ\q>’\\
+OBJ & \[ PRED &  \rm ‘condo \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
