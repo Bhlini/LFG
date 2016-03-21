@@ -179,24 +179,7 @@ $\qquad$ & $[7.2]$ \: ($\uparrow$GEN) & = & f \\
 
 \subsubsection{PC substantiviert}
 
-\begin{singlespace}
-\begin{tabular}{ l  l  l  l  } 
-\textbf{petentibus}: & $[1]$ \:  ($\uparrow$PRED) & = & `peto$\langle$(SUBJ, OBJ, OBL\textsubscript{SOURCE}) $\mid$ \\
-$\qquad$ & $\qquad$ & $\qquad$ & $\qquad$ \: (SUBJ, OBJ, OBL\textsubscript{LOC}) $\mid$ \\
-$\qquad$ & $\qquad$ & $\qquad$ & $\qquad$ \:  (SUBJ, OBJ, OBL\textsubscript{PURPOSE}) $\rangle$'\tablefootnote{Die Aufgeführten Möglichkeiten entsprechen in obiger Reihenfolge den Beispielsätzen \textit{petere auxilium ab aliquo}; \textit{petere hostes in Gallia}; und \textit{petere ab aliquo ut Donaldum Trumpum occidat} \textbf{(Vgl. RHH §119 und § 234)}.} \\  
-%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
-$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
-$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & - \\
-$\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & present \\ 
-$\qquad$ & $[6]$ \:  ($\uparrow$CASE) & = & \{abl $\mid$ dat\} \\
-$\qquad$ & $[7]$ \:  ($\uparrow$NUM) & = & pl \\
-$\qquad$ & $[8]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
-\end{tabular}
-\newline
-\newline
-\end{singlespace}
 
-\footnotetext[16]{Die Aufgeführten Möglichkeiten entsprechen in obiger Reihenfolge den Beispielsätzen \textit{petere auxilium ab aliquo}; \textit{petere hostes in Gallia}; und \textit{petere ab Donaldo Trumpo ut se munere candidatorium abdicet}.} 
 
 \subsubsection{dom Part Geig}
 
@@ -394,20 +377,7 @@ S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
 \subsubsection{substantiviertes PC}
 \textbf{Variante 1: XCOMP}
 
-\begin{singlespace}
-\begin{tabular}{ l  l  c  c  c  c }
-  S & $\rightarrow$ & VP & NP\textsubscript{1} & V\\
-   & $\qquad$ & \textsuperscript{($\uparrow$XCOMP) = $\downarrow$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-		    VP & $\rightarrow$ & V' \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-  				  V' & $\rightarrow$ & NP\textsubscript{2} & V \\
-   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   					 NP\textsubscript{2} & $\rightarrow$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP\textsubscript{1} & $\rightarrow$ & N' \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-\end{tabular} 
-\end{singlespace}
+
 
 
 \textbf{Variante 2: OBJ}
@@ -747,7 +717,7 @@ OBL\textsubscript{LOC} & \[``in campo''\] \]  &            $\qquad$\\
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
-\section{PARTICIPIUM CONJUNCTUM (substantiviert)}
+\section{substantiviertes Partizip - Variante 1 (XCOMP)}
 
 Da Partizipien einige Eigenschaften der Adjektive übernehmen, können sie wie diese substantiviert werden und die Rolle eines Substantives übernehmen. Der Neue Menge bezeichnet auch das substantivierte Partizip als rein attributiv. Da das Vorhandensein eines Bezugswortes für die LFG jedoch einen erheblichen Unterschied darstellt, wird das substantivierte Partizip in dieser Arbeit gesondert aufgeführt.\footnote{Vgl. NM, S. 713, § 498.} \\
 \textbf{+ klassisch selten / weniger häufig als PC, Abl abs, AcP} \\
@@ -755,23 +725,63 @@ Da Partizipien einige Eigenschaften der Adjektive übernehmen, können sie wie d
 
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
-* XCOMP oder OBJ\\
-	* XCOMP: Neuer Menge Variante! man nimmt an, dass das eigentlich Objekt fehlt, zu dem dem das -- dann attributiv aufzufassende -- Partizip kongruent ist (dann als missing object und so); somit würde man sich immer ein nur ausgelassenes Bezugswort des Partizips hinzudenken \\
-	* OBJ haben uns für OBJ entschieden, weil das Partizip ja eben substantiviert ist, und damit nicht einem "fehlenden" Bezugswort untergeordnet. Andere Variante bietet aus Sicht der LFG keinen Mehrwert, würde aber durch hinzugedachte Wörter die Sache unnötig verkomplizieren
+Die Umsetzung des substantivierten Partizips in die LFG-Struktur soll anhand des Beispielsatzes \textit{auxilium petentibus Caesar parcit} veranschaulicht werden.
 
+Der Lexikoneintrag des Partizips lautet wie folgt:
+\begin{singlespace}
+\begin{tabular}{ l  l  l  l  } 
+\textbf{petentibus}: & $[1]$ \:  ($\uparrow$PRED) & = & `peto$\langle$(SUBJ, OBJ, OBL\textsubscript{SOURCE}) $\mid$ \\
+$\qquad$ & $\qquad$ & $\qquad$ & $\qquad$ \: (SUBJ, OBJ, OBL\textsubscript{LOC}) $\mid$ \\
+$\qquad$ & $\qquad$ & $\qquad$ & $\qquad$ \:  (SUBJ, OBJ, OBL\textsubscript{PURPOSE}) $\rangle$'\tablefootnote{Die Aufgeführten Möglichkeiten entsprechen in obiger Reihenfolge den Beispielsätzen \textit{petere auxilium ab aliquo}; \textit{petere hostes in Gallia}; und \textit{petere ab aliquo ut Donaldum Trumpum occidat} \textbf{(Vgl. RHH §119 und § 234)}.} \\  
+%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
+$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & - \\
+$\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & present \\ 
+$\qquad$ & $[6]$ \:  ($\uparrow$CASE) & = & \{abl $\mid$ dat\} \\
+$\qquad$ & $[7]$ \:  ($\uparrow$NUM) & = & pl \\
+$\qquad$ & $[8]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
+\end{tabular}
+\newline
+\newline
+\end{singlespace}
 
-Beispielsatz: \\
-\textit{auxilium petentibus Caesar parcit.} \\
+\footnotetext[16]{Die Aufgeführten Möglichkeiten entsprechen in obiger Reihenfolge den Beispielsätzen \textit{petere auxilium ab aliquo}; \textit{petere hostes in Gallia}; und \textit{petere ab Donaldo Trumpo ut se munere candidatorium abdicet}.} 
 
 \subsection{Variante 1: XCOMP}
+Folgt man dem Neuen Menge\footnote{Vgl. NM \textbf{§ ??}} und betrachtet das substantivierte Partizip (\textit{petentibus}) als Attribut zu einem sozusagen fehlenden Bezugswort -- in diesem Fall also etwa \textit{eis} oder \textit{viris} -- so würde die Partizipialkonstruktion in der Rolle eines XCOMP zu diesem Bezugswort stehen; das Bezugswort selbst wäre dann das Objekt des Hauptsatzprädikats \textit{parcit}. Dieses fehlende Objekt wird in der c-Struktur unten durch ,,?'' bezeichnet. Da vom substantivierten Partizip petentibus in unserem Beispiel noch ein Nomen in Objektfunktion abhängt, spaltet sich die Partizipial-VP noch einmal in V und NP auf. Es ergeben sich folgende Syntaxregeln, c- und f-Strukturen\\
+
+
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c }
+  S & $\rightarrow$ & NP\textsubscript{1} & NP\textsubscript{2} & V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+		NP\textsubscript{1} & $\rightarrow$ & N' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+  		  N' & $\rightarrow$ & N & VP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$XCOMP) = $\downarrow$} \\		    
+		    VP & $\rightarrow$ & V' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+  				  V' & $\rightarrow$ & NP\textsubscript{3} & V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+   					 NP\textsubscript{3} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{2} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+\end{tabular} 
+\end{singlespace}
 
 \begin{singlespace}
 \Tree [.S 
-		[.VP{\textsubscript{$\downarrow$ = ($\uparrow$XCOMP)}}
-			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
-					[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
-					[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
-		]
+		[.NP{\textsubscript{$\downarrow$ = ($\uparrow$OBJ)}}
+			[.{N'\textsubscript{$\uparrow$=$\downarrow$}}
+					[.N\textsubscript{$\uparrow$=$\downarrow$} \textit{?} ]
+					[.VP\textsubscript{($\uparrow$XCOMP)=$\downarrow$}  
+						[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
+							[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
+							[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
+						]
+					]
+		]	
 			]
 		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} parcit ]	
@@ -809,8 +819,11 @@ GEN & n \\
 \end{singlespace}
 
 \newpage
-\section{PARTICIPIUM CONJUNCTUM (substantiviert)}
-\subsection{Variante 2: OBJ}
+\section{subst. Partizip - Variante 2 (OBJ)}
+
+* XCOMP oder OBJ\\
+	* XCOMP: Neuer Menge Variante! man nimmt an, dass das eigentlich Objekt fehlt, zu dem dem das -- dann attributiv aufzufassende -- Partizip kongruent ist (dann als missing object und so); somit würde man sich immer ein nur ausgelassenes Bezugswort des Partizips hinzudenken \\
+	* OBJ haben uns für OBJ entschieden, weil das Partizip ja eben substantiviert ist, und damit nicht einem "fehlenden" Bezugswort untergeordnet. Andere Variante bietet aus Sicht der LFG keinen Mehrwert, würde aber durch hinzugedachte Wörter die Sache unnötig verkomplizieren
 
 \begin{singlespace}
 \Tree [.S 
@@ -997,7 +1010,7 @@ GEN  & f \] \] \] \]
 \end{singlespace}
 
 \subsection{dom Part - meine Variante}
-Nun war zu klassischen Zeiten jedoch die präpositionslose Variante des dominanten Partizips vorherrschend,\footnote{Vgl. LHS \textbf{§ ???}} weswegen auch hierzu ein Beispielsatz betrachtet werden soll: \textit{libertate amissa doleo.} Formal ist diese Konstruktion kaum vom Abl. abs. zu unterscheiden; der Satz könnte schließlich auch bedeuten: "Ich trauere wegen der verlorenen Freiheit". Korrekter, da näher an der lateinischen Bedeutung, wäre jedoch die Übersetzung: "Ich trauere wegen des Verlusts der Freiheit." Um diesem -- wenn hier auch semantisch geringen -- Unterschied gerecht zu werden, sollte auch hier in der LFG-Darstellung die Dominanz des Partizips über sein Bezugswort deutlich werden. Auch hier ist daher die gesamte Partizipialkonstruktion ein ADJ zum finiten Prädikat und das Bezugsnomen darin seinem Partizip unterstellt. Der Unterschied zu Variante 2 oben ergibt sich lediglich aus dem Fehlen der Präposition.
+Nun war zu klassischen Zeiten jedoch die präpositionslose Variante des dominanten Partizips vorherrschend,\footnote{Vgl. LHS \textbf{§ ???}} weswegen auch hierzu ein Beispielsatz betrachtet werden soll: \textit{libertate amissa doleo.} Formal ist diese Konstruktion im Ablativ kaum vom Abl. abs. zu unterscheiden; der Satz könnte schließlich auch bedeuten: "Ich trauere wegen der verlorenen Freiheit". Korrekter, da näher an der lateinischen Bedeutung, wäre jedoch die Übersetzung: "Ich trauere wegen des Verlusts der Freiheit." Um diesem -- wenn hier auch semantisch geringen -- Unterschied gerecht zu werden, sollte auch hier in der LFG-Darstellung die Dominanz des Partizips über sein Bezugswort deutlich werden. Auch hier ist daher die gesamte Partizipialkonstruktion ein ADJ zum finiten Prädikat und das Bezugsnomen darin seinem Partizip unterstellt. Der Unterschied zu Variante 2 oben ergibt sich lediglich aus dem Fehlen der Präposition.
 
 \subsubsection{Syntaxregeln}
 Letzteres wird auch in den Syntaxregeln deutlich:
