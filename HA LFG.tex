@@ -952,8 +952,11 @@ Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeute
     NP\textsubscript{1} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
 \end{tabular} 
+\newline
 \end{singlespace}
 
+\subsubsection{c- und f-Strukturen}
+Daraus, sowie aus dem hier nicht extra aufgeführten Lexikoneintrag, gehen gemäß der obigen Überlegungen folgende c- und f-Strukturen hervor:
 
 \begin{singlespace}
 \Tree [.S 
@@ -994,8 +997,27 @@ GEN  & f \] \] \] \]
 \end{singlespace}
 
 \subsection{dom Part - meine Variante}
-Beispielsatz: \\
-\textit{libertate amissa doleo.} \\
+Nun war zu klassischen Zeiten jedoch die präpositionslose Variante des dominanten Partizips vorherrschend,\footnote{Vgl. LHS \textbf{§ ???}} weswegen auch hierzu ein Beispielsatz betrachtet werden soll: \textit{libertate amissa doleo.} Formal ist diese Konstruktion kaum vom Abl. abs. zu unterscheiden; der Satz könnte schließlich auch bedeuten: "Ich trauere wegen der verlorenen Freiheit". Korrekter, da näher an der lateinischen Bedeutung, wäre jedoch die Übersetzung: "Ich trauere wegen des Verlusts der Freiheit." Um diesem -- wenn hier auch semantisch geringen -- Unterschied gerecht zu werden, sollte auch hier in der LFG-Darstellung die Dominanz des Partizips über sein Bezugswort deutlich werden. Auch hier ist daher die gesamte Partizipialkonstruktion ein ADJ zum finiten Prädikat und das Bezugsnomen darin seinem Partizip unterstellt. Der Unterschied zu Variante 2 oben ergibt sich lediglich aus dem Fehlen der Präposition.
+
+\subsubsection{Syntaxregeln}
+Letzteres wird auch in den Syntaxregeln deutlich:
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c }
+  S & $\rightarrow$ & VP & V\\
+   & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$ADJ)} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+	    VP & $\rightarrow$ & V' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+			  V' & $\rightarrow$ & NP& V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} &\textsuperscript{$\uparrow$ = $\downarrow$} \\
+		   					 NP & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+\end{tabular} 
+\newline
+\end{singlespace}
+
+\subsubsection{c- und f-Strukturen}
+Daraus, sowie aus dem hier nicht extra aufgeführten Lexikoneintrag, gehen gemäß der obigen Überlegungen folgende c- und f-Strukturen hervor:
+
 \begin{singlespace}
 \Tree [.S 
 		[.VP{\textsubscript{$\uparrow$=$\downarrow$}}
@@ -1006,7 +1028,7 @@ Beispielsatz: \\
 				]				 	
 			[.V'\textsubscript{$\uparrow$=$\downarrow$}
 				[\qroof{aegre}.NP\textsubscript{($\uparrow$ADJ)=$\downarrow$} ]
-				[.V\textsubscript{$\uparrow$=$\downarrow$} tuli ]	
+				[.V\textsubscript{$\uparrow$=$\downarrow$} doleo ]	
 			]	
 			]
 		]
