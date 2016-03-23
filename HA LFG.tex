@@ -148,16 +148,32 @@ XP $\rightarrow$  \{V , XP V, V XP\}\\
 
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c  c  c  c}
+S & $\rightarrow$ & V XP $\mid$ V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} \\
+%XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
+XP & $\rightarrow$ & \{ NP, & $\qquad$ & VP, & $\qquad$ & PP \}* \\
+   & $\qquad$ & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} &    $\qquad$ &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
+   NP & $\rightarrow$ & N &  $\qquad$ & \{PP,    & $\qquad$ & VP\}* & $\mid$ & N \\
+   & $\qquad$ & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+VP & $\rightarrow$ & V &  $\qquad$ & \{PP,    & $\qquad$ & NP\}* & $\mid$ & V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+PP & $\rightarrow$ & P &  $\qquad$ & \{VP,    & $\qquad$ & NP\}* & \\
+   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+\end{tabular}\\
+\newline
+\newline
+\newline
+\newline
+\end{singlespace}
+
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c  c  c  c}
 S & $\rightarrow$ & XP V XP & $\mid$ & V & $\mid$ & V XP & $\mid$ & XP V \\
    & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
 %XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
 XP & $\rightarrow$ & \{ NP, & $\qquad$ & VP, & $\qquad$ & PP \}* \\
    & $\qquad$ & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} &    $\qquad$ &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
-   NP & $\rightarrow$ & XP V XP & $\mid$ & V & $\mid$ & V XP & $\mid$ & XP V \\
-   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
-   S & $\rightarrow$ & XP V XP & $\mid$ & V & $\mid$ & V XP & $\mid$ & XP V \\
-   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
-   S & $\rightarrow$ & XP V XP & $\mid$ & V & $\mid$ & V XP & $\mid$ & XP V \\
+   NP & $\rightarrow$ & PP N PP & $\mid$ & N & $\mid$ & N PP & $\mid$ & PP N \\
    & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
 \end{tabular}\\
 \end{singlespace}
