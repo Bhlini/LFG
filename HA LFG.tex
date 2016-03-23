@@ -108,6 +108,7 @@ Da im Lateinischen im Gegensatz zu den modernen Sprachen die Wortstellung innerh
 
 Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschränkungen finden sich in den Lexikoneinträgen der konkreten Partizipialformen Angaben zur Bestimmung der Wortform. Diese umfassen bei den Partizipien Kasus, Numerus, Genus, \textbf{Verbform} (``mood", d.h. hier stets Partizip (``part''), Zeitverhältnis (``reltense'', abgekürzt für ``relative tense'') und Genus verbi\footnote{Diese Art der Aktiv-Passiv-Unterscheidung stellt ein Problem bei Deponentien dar, deren Diathese aktiv ist, während ihr Genus verbi, also die rein morphologische Form, im Passiv steht. Um den semantischen Funktionen der Deponentien gerecht zu werden, müssten die Lexikoneinträge zwischen Diathese und Genus verbi differenzieren. Dies würde jedoch den Rahmen dieser Arbeit überschreiten, da es sich hierbei nicht um ein spezifisches Problem der Partizipialkonstruktionen handelt.} (wobei dem Attribut ``passive'' hierbei je nach Vorhandensein entweder den Wert ``+'' oder ``-'' erhält). \\
 
+*aktiv passiv (Morphologie ergibt sich aus passiver Verbform im Lexikoneintrag (z.b. mittor statt mitto), aktive oder passive Diathese (z.b. relevant bei Deponentien) ergibt sich duch das vorhandene oder fehlende Merkmal ``passive'')
 
 *Alles in der PRED-Klammer beeinflusst die Bildung des Prädikats
 
@@ -179,39 +180,21 @@ Lexikoneintrag wie folgt
 \subsubsection{Lexikoneintrag}
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
-\textbf{missum}: & $[1]$ \:  ($\uparrow$PRED) & = & `mitto$\langle$SUBJ, OBL\textsubscript{GOAL}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ NUM) & = & sg \\
-$\qquad$ & $[2.1]$ \:  \{(($\uparrow$ SUBJ GEN) & = & m \\ 
-$\qquad$ & $[2.2]$ \:  ($\uparrow$SUBJ CASE) & = & acc ) $\mid$\\
-$\qquad$ & $[2.3]$ \: (($\uparrow$SUBJ GEN) & = & n \\
-$\qquad$ & $[2.4]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ acc\} ) \}\\
-$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
-$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & + \\
-$\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & past \\
-$\qquad$ & $[6]$ \:  ($\uparrow$NUM) & = & sg \\
-$\qquad$ & $[7]$ \:  \{(($\uparrow$GEN) & = & m \\ 
-$\qquad$ & $[7.1]$ \:  ($\uparrow$CASE) & = & acc ) $\mid$\\
-$\qquad$ & $[7.2]$ \: (($\uparrow$GEN) & = & n \\
-$\qquad$ & $[7.3]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
-\end{tabular}
-\newline
-\newline
-\end{singlespace}
-
-
-
-\begin{singlespace}
-\begin{tabular}{ l  l  l  l  } 
-\textbf{missum}: & $[1]$ \:  ($\uparrow$PRED) & = & `mitto$\langle$SUBJ, OBJ, OBL\textsubscript{GOAL}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
-$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
-$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & + \\
-$\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & past \\
-$\qquad$ & $[6]$ \:  ($\uparrow$NUM) & = & sg \\
-$\qquad$ & $[7]$ \:  \{(($\uparrow$GEN) & = & m \\ 
-$\qquad$ & $[7.1]$ \:  ($\uparrow$CASE) & = & acc ) $\mid$\\
-$\qquad$ & $[7.2]$ \: (($\uparrow$GEN) & = & n \\
-$\qquad$ & $[7.3]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
+\textbf{missum}: & $[1]$ \:  ($\uparrow$PRED) & = & `mittor$\langle$SUBJ, OBL\textsubscript{GOAL}$\rangle$'\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)GF)\\
+$\qquad$ & $[3]$ \:  ($\uparrow$SUBJ NUM) & = & sg \\
+$\qquad$ & $[3.1]$ \:  \{(($\uparrow$ SUBJ GEN) & = & m \\ 
+$\qquad$ & $[3.2]$ \:  ($\uparrow$SUBJ CASE) & = & acc ) $\mid$\\
+$\qquad$ & $[3.3]$ \: (($\uparrow$SUBJ GEN) & = & n \\
+$\qquad$ & $[3.4]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ acc\} ) \}\\
+$\qquad$ & $[4]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[5]$ \:  ($\uparrow$PASSIVE) & = & + \\
+$\qquad$ & $[6]$ \:  ($\uparrow$RELTENSE) & = & past \\
+$\qquad$ & $[7]$ \:  ($\uparrow$NUM) & = & sg \\
+$\qquad$ & $[8]$ \:  \{(($\uparrow$GEN) & = & m \\ 
+$\qquad$ & $[8.1]$ \:  ($\uparrow$CASE) & = & acc ) $\mid$\\
+$\qquad$ & $[8.2]$ \: (($\uparrow$GEN) & = & n \\
+$\qquad$ & $[8.3]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 \end{tabular}
 \newline
 \newline
@@ -306,17 +289,23 @@ Beispielsatz:\\
 \subsubsection{Lexikoneintrag}
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
-\textbf{missi}: & $[1]$ \:  ($\uparrow$PRED) & = & `mitto$\langle$SUBJ, OBJ, OBL\textsubscript{GOAL}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)SUBJ) \\
-$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part \\
-$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & + \\
-$\qquad$ & $[5]$ \: ($\uparrow$RELTENSE) & = & past \\
-$\qquad$ & $[6]$ \:  \{(($\uparrow$NUM) & = & pl \\ 
-$\qquad$ & $[6.1]$ \:  ($\uparrow$CASE) & = & nom \\
-$\qquad$ & $[6.2]$ \:  ($\uparrow$GEN) & = & m) $\mid$\\
-$\qquad$ & $[6.3]$ \:  (($\uparrow$NUM) & = & sg \\ 
-$\qquad$ & $[6.4]$ \: ($\uparrow$CASE) & = & gen \\
-$\qquad$ & $[6.5]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n\} ) \} \\
+\textbf{missi}: & $[1]$ \:  ($\uparrow$PRED) & = & `mittor$\langle$SUBJ, OBL\textsubscript{GOAL}$\rangle$'\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)GF) \\
+$\qquad$ & $[3]$ \:  \{(($\uparrow$SUBJ NUM) & = & pl \\ 
+$\qquad$ & $[3.1]$ \:  ($\uparrow$SUBJ CASE) & = & nom \\
+$\qquad$ & $[3.2]$ \:  ($\uparrow$SUBJ GEN) & = & m) $\mid$\\
+$\qquad$ & $[3.3]$ \:  (($\uparrow$SUBJ NUM) & = & sg \\ 
+$\qquad$ & $[3.4]$ \: ($\uparrow$SUBJ CASE) & = & gen \\
+$\qquad$ & $[3.5]$ \:  ($\uparrow$SUBJ GEN) & = & \{m $\mid$ n\} ) \} \\
+$\qquad$ & $[4]$ \:  ($\uparrow$MOOD) & = & part \\
+$\qquad$ & $[5]$ \:  ($\uparrow$PASSIVE) & = & + \\
+$\qquad$ & $[6]$ \: ($\uparrow$RELTENSE) & = & past \\
+$\qquad$ & $[7]$ \:  \{(($\uparrow$NUM) & = & pl \\ 
+$\qquad$ & $[7.1]$ \:  ($\uparrow$CASE) & = & nom \\
+$\qquad$ & $[7.2]$ \:  ($\uparrow$GEN) & = & m) $\mid$\\
+$\qquad$ & $[7.3]$ \:  (($\uparrow$NUM) & = & sg \\ 
+$\qquad$ & $[7.4]$ \: ($\uparrow$CASE) & = & gen \\
+$\qquad$ & $[7.5]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n\} ) \} \\
 \end{tabular}
 \end{singlespace}
 
@@ -395,14 +384,18 @@ Beispielsatz:\\
 \subsubsection{Lexikoneintrag}
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
-\textbf{obiectam}: & $[1]$ \:  ($\uparrow$PRED) & = & `obicio$\langle$SUBJ, OBJ\textsubscript{LOC}'$\rangle$\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
-$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
-$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & + \\
-$\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & past \\
-$\qquad$ & $[6]$ \:  ($\uparrow$NUM) & = & sg \\
-$\qquad$ & $[7.1]$ \: ($\uparrow$CASE) & = & acc \\
-$\qquad$ & $[7.2]$ \: ($\uparrow$GEN) & = & f \\
+\textbf{obiectam}: & $[1]$ \:  ($\uparrow$PRED) & = & `obicior$\langle$SUBJ, OBJ\textsubscript{LOC}'$\rangle$\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)GF)\\
+$\qquad$ & $[3]$ \:  ($\uparrow$SUBJ NUM) & = & sg \\
+$\qquad$ & $[3.1]$ \: ($\uparrow$SUBJ CASE) & = & acc \\
+$\qquad$ & $[3.2]$ \: ($\uparrow$SUBJ GEN) & = & f \\
+$\qquad$ & $[3.1]$ \: ($\uparrow$OBJ CASE) & = & dat \\
+$\qquad$ & $[4]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[5]$ \:  ($\uparrow$PASSIVE) & = & + \\
+$\qquad$ & $[6]$ \:  ($\uparrow$RELTENSE) & = & past \\
+$\qquad$ & $[7]$ \:  ($\uparrow$NUM) & = & sg \\
+$\qquad$ & $[8.1]$ \: ($\uparrow$CASE) & = & acc \\
+$\qquad$ & $[8.2]$ \: ($\uparrow$GEN) & = & f \\
 \end{tabular}
 \newline
 \newline
@@ -497,25 +490,26 @@ Das Subjekt der untergeordneten Struktur ist das Objekt der dem XADJ übergeordn
 ($\downarrow$SUBJ) = ((OBJ$\uparrow$)XADJ) \textbf{???} \\
 
 \subsubsection{Lexikoneintrag}
-Der Lexikoneintrag des Partizips lautet wie folgt:
+Der Lexikoneintrag des Partizips lautet wie folgt:\footnote{Im Rahmen des Umfangs der Arbeit wird nur die für unseren Beispielsatz relevanten Argumente aufgezählt. Für andere mögliche Konstruktionen von \textit{petere} -- wie (SUBJ, OBJ, OBL\textsubscript{LOC})bzw. (SUBJ, OBJ, OBL\textsubscript{PURPOSE}) -- müssten eigene Lexikoneinträge erstellt werden.\textbf{(Vgl. RHH §119 und § 234)}.}
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
-\textbf{petentibus}: & $[1]$ \:  ($\uparrow$PRED) & = & `peto$\langle$(SUBJ, OBJ, OBL\textsubscript{SOURCE}) $\mid$ \\
-$\qquad$ & $\qquad$ & $\qquad$ & $\qquad$ \: (SUBJ, OBJ, OBL\textsubscript{LOC}) $\mid$ \\
-$\qquad$ & $\qquad$ & $\qquad$ & $\qquad$ \:  (SUBJ, OBJ, OBL\textsubscript{PURPOSE}) $\rangle$'\tablefootnote{Die Aufgeführten Möglichkeiten entsprechen in obiger Reihenfolge den Beispielsätzen \textit{petere auxilium ab aliquo}; \textit{petere hostes in Gallia}; und \textit{petere ab aliquo ut Donaldum Trumpum occidat} \textbf{(Vgl. RHH §119 und § 234)}.} \\  
-%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
-$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
-$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & - \\
-$\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & present \\ 
-$\qquad$ & $[6]$ \:  ($\uparrow$CASE) & = & \{abl $\mid$ dat\} \\
-$\qquad$ & $[7]$ \:  ($\uparrow$NUM) & = & pl \\
-$\qquad$ & $[8]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
+\textbf{petentibus}: & $[1]$ \:  ($\uparrow$PRED) & = & `peto$\langle$SUBJ, OBJ$\rangle$' \\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)GF)\\
+$\qquad$ & $[3.1]$ \:  ($\uparrow$SUBJ CASE) & = & \{abl $\mid$ dat\} \\
+$\qquad$ & $[3.2]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
+$\qquad$ & $[3.3]$ \:  ($\uparrow$SUBJ GEN) & = & \{m $\mid$ n $\mid$ f\} \\
+$\qquad$ & $[4]$ \:  ($\uparrow$OBJ CASE) & = & acc \\
+$\qquad$ & $[5]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[6]$ \:  ($\uparrow$PASSIVE) & = & - \\
+$\qquad$ & $[7]$ \:  ($\uparrow$RELTENSE) & = & present \\ 
+$\qquad$ & $[8]$ \:  ($\uparrow$CASE) & = & \{abl $\mid$ dat\} \\
+$\qquad$ & $[9]$ \:  ($\uparrow$NUM) & = & pl \\
+$\qquad$ & $[10]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
 \end{tabular}
 \newline
 \newline
 \end{singlespace}
 
-\footnotetext[16]{Die Aufgeführten Möglichkeiten entsprechen in obiger Reihenfolge den Beispielsätzen \textit{petere auxilium ab aliquo}; \textit{petere hostes in Gallia}; und \textit{petere ab Donaldo Trumpo ut se munere candidatorium abdicet}.} 
 
 \subsubsection{Syntaxregeln}
 \begin{singlespace}
@@ -566,7 +560,7 @@ PRON-TYPE & mis \\
 CASE & dat \\
 NUM & pl \\
 GEN & m \]\tikzmark{alpha} \\
-XCOMP & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
+XADJ & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
 MOOD & part \\
 PASSIVE & - \\
 RELTENSE & present \\
@@ -593,6 +587,27 @@ In der obigen Variante würde man sich also immer ein nur ausgelassenes Bezugswo
 \subsubsection{Einschränkungen}
 \subsubsection{Lexikoneintrag}
 *wie oben, mit einzigem Unterschied ...
+
+\begin{singlespace}
+\begin{tabular}{ l  l  l  l  } 
+\textbf{petentibus}: & $[1]$ \:  ($\uparrow$PRED) & = & `peto$\langle$SUBJ, OBJ$\rangle$' \\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ PRED) & = & `pro' \\
+$\qquad$ & $[2.1]$ \:  ($\uparrow$SUBJ PRON-TYPE) & = & missing \\
+$\qquad$ & $[2.2]$ \:  ($\uparrow$SUBJ CASE) & = & \{abl $\mid$ dat\} \\
+$\qquad$ & $[2.3]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
+$\qquad$ & $[2.4]$ \:  ($\uparrow$SUBJ GEN) & = & \{m $\mid$ n $\mid$ f\} \\
+$\qquad$ & $[3]$ \:  ($\uparrow$OBJ CASE) & = & acc \\
+$\qquad$ & $[4]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[5]$ \:  ($\uparrow$PASSIVE) & = & - \\
+$\qquad$ & $[6]$ \:  ($\uparrow$RELTENSE) & = & present \\ 
+$\qquad$ & $[7]$ \:  ($\uparrow$CASE) & = & \{abl $\mid$ dat\} \\
+$\qquad$ & $[8]$ \:  ($\uparrow$NUM) & = & pl \\
+$\qquad$ & $[9]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
+\end{tabular}
+\newline
+\newline
+\end{singlespace}
+
 
 \subsubsection{Syntaxregeln}
 Syntaxregeln sehen wie folgt aus: \\
@@ -741,15 +756,21 @@ Es ergeben sich demnach folgende Syntaxregeln,  c- und f-Strukturen:
 
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
-\textbf{condita}: & $[1]$ \:  ($\uparrow$PRED) & = & `condo$\langle$SUBJ, OBJ, OBL\textsubscript{LOC}$\rangle$'\\
-%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
-$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
-$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & + \\
-$\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & past \\
-$\qquad$ & $[6]$ \:  \{(($\uparrow$GEN) & = & f \\ 
-$\qquad$ & $[6.1]$ \:  ($\uparrow$NUM) & = & sg \\
-$\qquad$ & $[6.2]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
-$\qquad$ & $[6.2]$ \: (($\uparrow$GEN) & = & n \\
+\textbf{condita}: & $[1]$ \:  ($\uparrow$PRED) & = & `condor$\langle$SUBJ$\rangle$'\\
+%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((ADJ$\uparrow$)GF)\\
+$\qquad$ & $[5]$ \:  \{(($\uparrow$SUBJ GEN) & = & f \\ 
+$\qquad$ & $[5.1]$ \:  ($\uparrow$SUBJ NUM) & = & sg \\
+$\qquad$ & $[5.2]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
+$\qquad$ & $[5.2]$ \: (($\uparrow$SUBJ GEN) & = & n \\
+$\qquad$ & $[6.3]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
+$\qquad$ & $[6.4]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ acc\} ) \}\\
+$\qquad$ & $[2]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[3]$ \:  ($\uparrow$PASSIVE) & = & + \\
+$\qquad$ & $[4]$ \:  ($\uparrow$RELTENSE) & = & past \\
+$\qquad$ & $[5]$ \:  \{(($\uparrow$GEN) & = & f \\ 
+$\qquad$ & $[5.1]$ \:  ($\uparrow$NUM) & = & sg \\
+$\qquad$ & $[5.2]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
+$\qquad$ & $[5.2]$ \: (($\uparrow$GEN) & = & n \\
 $\qquad$ & $[6.3]$ \:  ($\uparrow$NUM) & = & pl \\
 $\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 \end{tabular}
