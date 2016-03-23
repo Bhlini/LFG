@@ -140,26 +140,25 @@ Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschr
 
 \subsubsection{Allgemeines zu den Syntaxregeln}
 *Funktion der Syntaxregeln; Grund, Vorteile; anders als bei früheren Ansätzen (welche?!) wurde viel auf die Lexikoneinträge ausgelagert, um die Syntaxregeln weitgehend überschaubar zu halten. Dennoch sind hier nur die für die Partizipialkonstruktionen relevanten Regeln angegeben, da alles Weitere den Rahmen dieser Arbeit sprengen würde. Dabei wurde im Hinblick auf den effizienzorientierten Ansatz der LFG auf weitgehende Anwendbarkeit der Regeln auf verschiedenste Partizipialkonstruktionen geachtet. \\
-*Part trotz nominaler Eigenschaften als V (beste Lösung \textbf{(wieso?)} )
+*Part trotz nominaler Eigenschaften als V (beste Lösung \textbf{(wieso?)} ) \\
+
+S  $\rightarrow$  \{V, V  XP AP, V AP XP, XP V AP, AP V XP, XP AP V, AP XP V\}\\
+S  $\rightarrow$  \{V , XP V, V XP\}\\
+XP $\rightarrow$  \{V , XP V, V XP\}\\
 
 \begin{singlespace}
-\begin{tabular}{ l  l  c  c  c  c }
-S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
-   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP\textsubscript{1} & $\rightarrow$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    VP & $\rightarrow$ & V' \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-  	  V' & $\rightarrow$ & PP & V & \\
-   & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{GOAL}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   		 PP & $\rightarrow$ & P' \\
-	& $\qquad$   & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    		P' & $\rightarrow$ & P & NP\textsubscript{3} \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
- 		   NP\textsubscript{3} & $\rightarrow$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP\textsubscript{2} & $\rightarrow$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+\begin{tabular}{ l  l  c  c  c  c  c  c  c}
+S & $\rightarrow$ & XP V XP & $\mid$ & V & $\mid$ & V XP & $\mid$ & XP V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
+%XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
+XP & $\rightarrow$ & \{ NP, & $\qquad$ & VP, & $\qquad$ & PP \}* \\
+   & $\qquad$ & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} &    $\qquad$ &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
+   NP & $\rightarrow$ & XP V XP & $\mid$ & V & $\mid$ & V XP & $\mid$ & XP V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
+   S & $\rightarrow$ & XP V XP & $\mid$ & V & $\mid$ & V XP & $\mid$ & XP V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
+   S & $\rightarrow$ & XP V XP & $\mid$ & V & $\mid$ & V XP & $\mid$ & XP V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &    $\qquad$ &\textsuperscript{$\uparrow$ = $\downarrow$} & $\qquad$ & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} \\
 \end{tabular}\\
 \end{singlespace}
 
