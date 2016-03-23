@@ -142,9 +142,13 @@ Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschr
 *Funktion der Syntaxregeln; Grund, Vorteile; anders als bei früheren Ansätzen (welche?!) wurde viel auf die Lexikoneinträge ausgelagert, um die Syntaxregeln weitgehend überschaubar zu halten. Dennoch sind hier nur die für die Partizipialkonstruktionen relevanten Regeln angegeben, da alles Weitere den Rahmen dieser Arbeit sprengen würde. Dabei wurde im Hinblick auf den effizienzorientierten Ansatz der LFG auf weitgehende Anwendbarkeit der Regeln auf verschiedenste Partizipialkonstruktionen geachtet. \\
 *Part trotz nominaler Eigenschaften als V (beste Lösung \textbf{(wieso?)} ) \\
 
-S  $\rightarrow$  \{V, V  XP AP, V AP XP, XP V AP, AP V XP, XP AP V, AP XP V\}\\
-S  $\rightarrow$  \{V , XP V, V XP\}\\
-XP $\rightarrow$  \{V , XP V, V XP\}\\
+%S  $\rightarrow$  \{V, V  XP AP, V AP XP, XP V AP, AP V XP, XP AP V, AP XP V\}\\
+%S  $\rightarrow$  \{V , XP V, V XP\}\\
+%XP $\rightarrow$  \{V , XP V, V XP\}\\
+
+*allgemein für Latein
+* Der Aspekt der Reihenfolge wird hier außer acht gelassen, da die erschöpfende Notation aller Alternativen den Rahmen dieser Arbeit bei Weitem übersteigen würde.
+*Ausnahme Gen-Attribut (könnte man der Einfachheit halber hier als PP auffassen)
 
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c  c  c  c}
@@ -162,6 +166,38 @@ PP & $\rightarrow$ & P &  \{VP,     & NP\}* \\
 \end{tabular}\\
 \newline
 \newline
+\newline
+\newline
+\end{singlespace}
+
+\subsubsection{HÄUFIGE SYNTAXREGELN - keine Ahnung}
+*Häufiger finden sich in dieser Arbeit die folgenden Auflösungen
+
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c }
+    NP & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    VP & $\rightarrow$ & PP & V & \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+   		 PP & $\rightarrow$ & P & NP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
+       NP & $\rightarrow$ & N & VP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} \\
+		    VP & $\rightarrow$ & V & NP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$ }  \\
+		    VP & $\rightarrow$ & NP & V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+		    PP & $\rightarrow$ & P & VP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
+	    VP & $\rightarrow$ &  NP& V \\
+   & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} &\textsuperscript{$\uparrow$ = $\downarrow$} \\
+   S\textsubscript{part} & $\rightarrow$ & NP & V'\\
+   & \textsuperscript{$\qquad$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+
+  S & $\rightarrow$ & NP\textsubscript{1} & VP & V\\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{($\uparrow$XCOMP) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{1} & $\rightarrow$ & N \\
+\end{tabular} 
 \newline
 \newline
 \end{singlespace}
@@ -260,10 +296,8 @@ S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
 \Tree [.S 
 		[\qroof{legatum}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
 		[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
-			[.{V'\textsubscript{$\uparrow$=$\downarrow$}}
 				[\qroof{in Galliam}.PP\textsubscript{($\uparrow$OBL\textsubscript{GOAL})=$\downarrow$} ]
 				[.V\textsubscript{$\uparrow$=$\downarrow$} missum ]						
-			] 
 		] 
 		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} revocat ]	
