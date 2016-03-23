@@ -111,7 +111,6 @@ Die in dieser Arbeit unter dem Titel ``Einschränkungen'' festgehaltenen Bedingu
 
 Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschränkungen finden sich in den Lexikoneinträgen der konkreten Partizipialformen Angaben zur Bestimmung der Wortform. Diese umfassen bei den Partizipien Kasus, Numerus, Genus, \textbf{Verbform} (,,MOOD''), d.h. hier stets Partizip (,,PART''), Zeitverhältnis (,,RELTENSE'', abgekürzt für ,,relative tense'') und Diathese (wobei das Attribut ,,PASSIVE'' entweder den Wert ,,+'' oder ,,-'' erhält).\footnote{Das Genus verbi, d.h. die rein morphologische Erscheinung in entweder aktiver oder passiver Form, ergibt sich aus der Grundform -- hier in Anlehnung an gängige lateinische Wörterbücher stets die erste Person Singular Präsens Indikativ -- des Prädikats des Partizips im Lexikoneintrag, wie z.B. \textit{mittor} statt \textit{mitto}. Durch diese Notierung stellen auch Deponentien kein Problem für die LFG dar, deren Diathese aktiv ist, während ihre morphologische Form im Passiv steht.} \\
 
-*aktiv passiv 
 
 *Alles in der PRED-Klammer beeinflusst die Bildung des Prädikats
 
@@ -140,8 +139,29 @@ Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschr
 %$\neg$
 
 \subsubsection{Allgemeines zu den Syntaxregeln}
+*Funktion der Syntaxregeln; Grund, Vorteile; anders als bei früheren Ansätzen (welche?!) wurde viel auf die Lexikoneinträge ausgelagert, um die Syntaxregeln weitgehend überschaubar zu halten. Dennoch sind hier nur die für die Partizipialkonstruktionen relevanten Regeln angegeben, da alles Weitere den Rahmen dieser Arbeit sprengen würde. Dabei wurde im Hinblick auf den effizienzorientierten Ansatz der LFG auf weitgehende Anwendbarkeit der Regeln auf verschiedenste Partizipialkonstruktionen geachtet. \\
 *Part trotz nominaler Eigenschaften als V (beste Lösung \textbf{(wieso?)} )
 
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c }
+S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{1} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    VP & $\rightarrow$ & V' \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+  	  V' & $\rightarrow$ & PP & V & \\
+   & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{GOAL}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+   		 PP & $\rightarrow$ & P' \\
+	& $\qquad$   & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    		P' & $\rightarrow$ & P & NP\textsubscript{3} \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
+ 		   NP\textsubscript{3} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    NP\textsubscript{2} & $\rightarrow$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+\end{tabular}\\
+\end{singlespace}
 
 %S $\rightarrow$ NP \, VP \: XP\\
 
