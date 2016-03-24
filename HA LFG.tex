@@ -150,19 +150,47 @@ Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschr
 * Der Aspekt der Reihenfolge wird hier außer acht gelassen, da die erschöpfende Notation aller Alternativen den Rahmen dieser Arbeit bei Weitem übersteigen würde.
 *Ausnahme Gen-Attribut (könnte man der Einfachheit halber hier als PP auffassen)
 
+*VPs können nur Partizipialien (Partizipien und Gerundium und Gerundivum) und Infinitive sein! (wird hier so definiert)
+
+*Da Adjektive, Adverbien und Pronominaladjektive (u.a. bei Snijder (\textbf{QUELLE} s. 7) )unter ``Determiner'' gefasst), Subjunktionen, Konjunktionen in dieser Arbeit nicht von Bedeutung sind, wird in den folgenden Syntaxregeln nicht darauf eingegangen. 
+
+* Mehrere Vs bzw. Ns können in derselben übergeordneten Struktur nur vorkommen, wenn sie beigeordnet sind.
+
+\begin{singlespace}
+\begin{tabular}{ l  l  l  c  c  c  c }
+GF & $\equiv$ & \{ARG-GF $\mid$ ADJ-GF\} \\
+ARG-GF & $\equiv$ & \{SUBJ $\mid$ OBJ $\mid$\ OBJ\textsubscript{$\theta$} $\mid$ OBL\textsubscript{$\theta$} $\mid$ OBL\textsubscript{$\theta$} OBJ $\mid$ ADJ $\in$ OBJ\} \\
+ADJ-GF & $\equiv$ & \{ADJ $\in$ $\mid$ XADJ $\in$\} \\
+\end{tabular}\\
+\end{singlespace}
+
+\textbf{Variante 1 - Disjunktivität beachtet (in Anlehnung an Snijder}
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c  c  c  c}
-S & $\rightarrow$ & V XP $\mid$ & V \\
-   & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+S & $\rightarrow$ & [\{V & $\mid$ & VP & $\mid$ & NP & $\mid$ & PP \}*] ,\\
+  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & & \textsuperscript{($\uparrow$OBL$\theta$ $\mid$  ADJ-GF) = $\downarrow$} \\
+  $\qquad$ & $\qquad$ & [ (XP) & (\{ V & $\mid$ & NP \})& (XP)]* \\
+  & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$} \\
+  XP & $\rightarrow$ & \{ NP, &  VP, & PP \}* \\
+\end{tabular}\\
+\newline
+\newline
+\end{singlespace}
+
+\textbf{Variante 2 - Disjunktivität nicht beachtet}
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c  c  c  c}
+S & $\rightarrow$ & V, & XP $\mid$ & V \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
 %XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
 XP & $\rightarrow$ & \{ NP, &  VP, & PP \}* \\
-   & $\qquad$ & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
-   NP & $\rightarrow$ & N &  \{PP,    &  VP\}* $\mid$ & N \\
-   & $\qquad$ & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
+   NP & $\rightarrow$ & N &  \{PP,  &  VP\}* $\mid$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
 VP & $\rightarrow$ & V  & \{PP,     & NP\}* $\mid$ & V \\
-   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
 PP & $\rightarrow$ & P &  \{VP,     & NP\}* \\
-   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
 \end{tabular}\\
 \newline
 \newline
@@ -266,27 +294,21 @@ $\qquad$ & $[8.3]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 %((XADJ$\uparrow$)OBJ) = ($\uparrow$SUBJ) \\
 
 \subsubsection{Syntaxregeln}
-*blabla Syntax
+*Der Satz ist grammatikalisch korrekt, da die konkreten Syntaxregeln, die hier beispielhaft aufgeschlüsselt sind, sich aus den oben genannten allgemeinen Regeln ergeben.
 
 
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c }
-S & $\rightarrow$ & NP\textsubscript{1} & VP & NP\textsubscript{2} & V\\
+S & $\rightarrow$ & NP\textsubscript{1} & VP & NP & V\\
    & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP\textsubscript{1} & $\rightarrow$ & N \\
+    NP & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    VP & $\rightarrow$ & V' \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-  	  V' & $\rightarrow$ & PP & V & \\
+    VP & $\rightarrow$ & PP & V & \\
    & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{GOAL}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
    		 PP & $\rightarrow$ & P' \\
 	& $\qquad$   & \textsuperscript{$\uparrow$ = $\downarrow$} \\
     		P' & $\rightarrow$ & P & NP\textsubscript{3} \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
- 		   NP\textsubscript{3} & $\rightarrow$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-    NP\textsubscript{2} & $\rightarrow$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
 \end{tabular}\\
 \end{singlespace}
 
@@ -887,6 +909,8 @@ GEN  & f \] \] \] \]
 \subsection{Version ohne Präpositionalphrase}
 \subsubsection{Vorüberlegungen zur Umsetzung in der LFG}
 Nun war zu klassischen Zeiten jedoch die präpositionslose Variante des dominanten Partizips vorherrschend,\footnote{Vgl. LHS \textbf{§ ???}} weswegen auch hierzu ein Beispielsatz betrachtet werden soll: \textit{libertate amissa doleo.} Formal ist diese Konstruktion im Ablativ kaum vom Abl. abs. zu unterscheiden; der Satz könnte schließlich auch bedeuten: "Ich trauere wegen der verlorenen Freiheit". Korrekter, da näher an der lateinischen Bedeutung, wäre jedoch die Übersetzung: "Ich trauere wegen des Verlusts der Freiheit." Um diesem -- wenn hier auch semantisch geringen -- Unterschied gerecht zu werden, sollte auch hier in der LFG-Darstellung die Dominanz des Partizips über sein Bezugswort deutlich werden. Auch hier ist daher die gesamte Partizipialkonstruktion ein ADJ zum finiten Prädikat und das Bezugsnomen darin seinem Partizip unterstellt. Der Unterschied zu Variante 2 oben ergibt sich lediglich aus dem Fehlen der Präposition.
+\textbf{neu}
+Da lateinische Partizipialkonstruktionen jedoch stets als VP definiert werden, haben sie ohnehin V als Kopf; daher kann die besondere Dominanz des Partizips nach unserer Darstellungsweise nicht gesondert hervorgehoben werden. Dies wäre ein Argument, die Partizipialkonstruktionen als gesonderte Partizipialphrasen darzustellen. \textbf{(auch wegen der nominalen Eigenschaften der Partizipien) in Schlussfolgerung + Diese Darstellungsweise wurde in dieser Arbeit bereits in Anfängen versucht, nämlich bei der c-Struktur-Darstellung des Abl. abs. als S\textsubscript{part}.}
 
 \subsubsection{Lexikoneintrag}
 \begin{singlespace}
@@ -1001,12 +1025,12 @@ $\qquad$ & $[7]$ \: ($\uparrow$GEN) & = & \{m $\mid$ f $\mid$ n\} \\
 \end{singlespace}
 
 \subsection{Syntaxregeln}
-Somit muss die Losgelöstheit der Ablativus-absolutus-Konstruktion in den Syntaxregeln festehalten werden.
+Somit muss die Losgelöstheit der Ablativus-absolutus-Konstruktion in den Syntaxregeln festehalten werden. Dies geschieht, indem der Abl. abs. in einem gesonderten Satz, hier bezeichnet als S\textsubscript{part}, dargestellt wird und die Funktion eines Adjunkts erhält. Wir haben uns für diese Variante entschieden, da durch die bloße Bezeichnung als VP nicht zur Geltung kommen würde, dass der Abl. abs. d
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c }
    S\textsubscript & $\rightarrow$ & S\textsubscript{part} & XP & V\\
    & $\qquad$ & \textsuperscript{ $\downarrow$ $\in$ ($\uparrow$ADJ)} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   S\textsubscript{part} & $\rightarrow$ & NP\textsubscript{2} & V'\\
+   S\textsubscript{part} & $\rightarrow$ & NP & V'\\
    & \textsuperscript{$\qquad$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
    NP\textsubscript{2} & $\rightarrow$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
@@ -1041,7 +1065,7 @@ Somit muss die Losgelöstheit der Ablativus-absolutus-Konstruktion in den Syntax
 \begin{avm}
 \[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
 SUBJ & \["Caesar" \]\\
-ADJ & \{ \[PRED &  \rm ‘vinco \q<SUBJ, OBL\textsubscript{LOC}\q>’\\
+ADJ & \{ \[PRED &  \rm ‘vincor \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -1052,7 +1076,7 @@ SUBJ & \[PRED & `barbarus' \\
 CASE & abl \\
 NUM & pl \\
 GEN & m \\ \] \\
-OBL\textsubscript{LOC} & \[``in Gallia''\] \]\\
+ADJ & \{\[``in Gallia''\] \} \] \\
 \}
 \]
 \end{avm}
