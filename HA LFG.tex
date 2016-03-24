@@ -183,13 +183,13 @@ S & $\rightarrow$ & [\{V & $\mid$ & VP & $\mid$ & NP & $\mid$ & PP \}*] ,\\
 S & $\rightarrow$ & V, & XP $\mid$ & V \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
 %XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
-XP & $\rightarrow$ & \{ NP, &  VP, & PP \}* \\
+XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
    & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
-   NP & $\rightarrow$ & N &  \{PP,  &  VP\}* $\mid$ & N \\
+   NP & $\rightarrow$ & N &  \{PP $\mid$  &  VP\}* $\mid$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-VP & $\rightarrow$ & V  & \{PP,     & NP\}* $\mid$ & V \\
+VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-PP & $\rightarrow$ & P &  \{VP,     & NP\}* \\
+PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
 \end{tabular}\\
 \newline
@@ -197,6 +197,8 @@ PP & $\rightarrow$ & P &  \{VP,     & NP\}* \\
 \newline
 \newline
 \end{singlespace}
+
+* \textbf{In der Menge werden oder-Striche verwendet anstatt wie oft üblich Kommata, da das Komma in diesem Kontext zu einem "shuffle operator" umdefiniert wurde (vgl. Snijder) ERKLÄREN!}
 
 Im Lateinischen ist in aller Regel V der Kopf von S.\footnote{Eine Ausnahme könnte eventuell der nominale Ablativus absolutus bilden, dessen Kopf nach logischer Betrachtung N sein müsste. Vgl. \textbf{GRAMMATIK} und vgl. \textbf{Falk, S. 64}.}
 *keine feste Wortstellung / Platz des Prädikats --> nicht IP
