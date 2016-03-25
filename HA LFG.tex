@@ -196,8 +196,10 @@ XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
 VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+   PP & $\rightarrow$ & P, & VP $\mid$  & P,   & NP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+%PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
+ %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
 \end{tabular}\\
 \newline
 \newline
@@ -574,7 +576,7 @@ Die Umsetzung des substantivierten Partizips in die LFG-Struktur soll anhand des
 
 
 \subsection{Variante 1: das Partizip als XADJ zum OBJ}
-Folgt man dem Neuen Menge\footnote{Vgl. NM \textbf{§ ??}} und betrachtet das substantivierte Partizip (\textit{petentibus}) als Attribut zu einem sozusagen fehlenden Bezugswort -- in diesem Fall also etwa \textit{eis} oder \textit{viris} -- so würde die Partizipialkonstruktion in der Rolle eines XADJ zu diesem Bezugswort stehen; das Bezugswort selbst wäre dann das Objekt des Hauptsatzprädikats \textit{parcit}. Dieses fehlende Objekt wird in der c-Struktur unten durch ,,?'' bezeichnet. Da vom substantivierten Partizip petentibus in unserem Beispiel noch ein Nomen in Objektfunktion abhängt, spaltet sich die Partizipial-VP noch einmal in V und NP auf. Es ergeben sich folgende Syntaxregeln, c- und f-Strukturen:\\
+Folgt man dem Neuen Menge\footnote{Vgl. NM \textbf{§ ??}} und betrachtet das substantivierte Partizip (\textit{petentibus}) als Attribut zu einem sozusagen fehlenden Bezugswort -- in diesem Fall also etwa \textit{eis} oder \textit{viris} -- so würde die Partizipialkonstruktion in der Rolle eines XADJ zu diesem Bezugswort stehen; das Bezugswort selbst wäre dann das Objekt des Hauptsatzprädikats \textit{parcit}. Dieses fehlende Objekt wird in der c-Struktur unten durch ,,mis'' (für ,,missing'', ,,fehlend'') bezeichnet. Da vom substantivierten Partizip petentibus in unserem Beispiel noch ein Nomen in Objektfunktion abhängt, spaltet sich die Partizipial-VP noch einmal in V und NP auf. \textbf{(eher zu PC, da das früher erwähnt wird)}
 
 \subsubsection{Einschränkungen}
 \textbf{Variante 1: XADJ}:\\
@@ -602,6 +604,19 @@ $\qquad$ & $[10]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
 \newline
 \end{singlespace}
 
+Da im Lateinischen die Verben die Kasus ihrer Objekte bestimmen, muss im Lexikoneintrag des Prädikats der übergeordneten Struktur festgelegt sein, dass sein Objekt im Dativ steht: \\
+\begin{singlespace}
+\begin{tabular}{ l  l  l  l  } 
+\textbf{parcit}: & $[1]$ \:  ($\uparrow$PRED) & = & `parco$\langle$SUBJ, OBJ$\rangle$' \\
+$\qquad$ & $\qquad$ & . \\
+$\qquad$ & $\qquad$ & . \\
+$\qquad$ & $\qquad$ & . \\
+$\qquad$ & $[2]$ \:  ($\uparrow$OBJ CASE) & = & dat \\
+\end{tabular}
+\newline
+\newline
+\end{singlespace}
+
 
 %\subsubsection{Syntaxregeln}
 %\begin{singlespace}
@@ -624,11 +639,13 @@ $\qquad$ & $[10]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
 %\end{singlespace}
 
 \subsubsection{c-Struktur}
+Es ergeben sich folgende c- und f-Strukturen:\\
+
 \begin{singlespace}
 \Tree [.S 
-		[.NP{\textsubscript{$\downarrow$ = ($\uparrow$OBJ)}}
-			[.N\textsubscript{$\uparrow$=$\downarrow$} \textit{?} ]
-			[.VP\textsubscript{($\uparrow$XADJ)=$\downarrow$}  
+		[.NP{\textsubscript{($\uparrow$OBJ)=$\downarrow$}}
+			[.N\textsubscript{$\uparrow$=$\downarrow$} \textit{mis} ]
+			[.VP\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}  
 				[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
 				[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 				
 			]
@@ -641,14 +658,14 @@ $\qquad$ & $[10]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
 \subsubsection{f-Struktur}
 \begin{singlespace}
 \begin{avm}
-\[ PRED &  \rm ‘parco \q<SUBJ, OBJ\textsubscript{REC}\q>’\\
+\[ PRED &  \rm ‘parco \q<SUBJ, OBJ\q>’\\
 SUBJ & \[``Caesar'' \] \\
-OBJ\textsubscript{REC} & \[PRED & `pro' \\
+OBJ & \[PRED & `pro' \\
 PRON-TYPE & mis \\
 CASE & dat \\
 NUM & pl \\
 GEN & m \]\tikzmark{alpha} \\
-XADJ & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
+XADJ & \{ \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
 MOOD & part \\
 PASSIVE & - \\
 RELTENSE & present \\
@@ -660,7 +677,7 @@ OBJ & \[PRED & `auxilium' \\
 CASE & acc \\
 NUM & sg \\
 GEN & n \\
-\] \]  &            $\qquad$ \\
+\] \] \} &            $\qquad$ \\
 \]
 \end{avm}
 \tikz[remember picture,overlay] 
@@ -1124,7 +1141,7 @@ Das Partizip und sein Bezugswort stehen auch beim AcP im selben Kasus, Numerus u
 Wie auch hier der Name der Konstruktion vermuten lässt, stehen beim AcP Partizip und Bezugswort im Akkusativ:\footnote{Vgl. KSt S. 763, § 137,2a.} \\
 ($\uparrow$CASE) = acc \\
 ($\uparrow$SUBJ CASE) = acc \\
-Das Bezugswort des Partizips ist das Objekt der dem XCOMP übergeordneten Struktur: \\
+Das Bezugswort des Partizips ist das Objekt der dem XCOMP übergeordneten Struktur: (kann ja nur OBJ sein wegen Akk) \\
 	($\uparrow$SUBJ) = ((XCOMP$\uparrow$)OBJ) \\
 %($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ) (?) \\
 
@@ -1138,7 +1155,7 @@ $\neg$ ($\uparrow$RELTENSE) = future \\
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
 \textbf{iacentem}: & $[1]$ \: ($\uparrow$PRED) & = & `iaceo$\langle$SUBJ, OBL\textsubscript{LOC}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)GF)\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XCOMP$\uparrow$)OBJ)\\
 $\qquad$ & $[5]$ \: ($\uparrow$SUBJ CASE) & = & acc \\
 $\qquad$ & $[6]$ \: ($\uparrow$SUBJ NUM) & = & sg \\
 $\qquad$ & $[7]$ \: ($\uparrow$SUBJ GEN) & = & \{m $\mid$ f\} \\
@@ -1150,17 +1167,26 @@ $\qquad$ & $[6]$ \: ($\uparrow$NUM) & = & sg \\
 $\qquad$ & $[7]$ \: ($\uparrow$GEN) & = & \{m $\mid$ f\} \\
 \end{tabular}\\
 \newline
-Im Lexikoneintrag des Prädikats der dem AcP-XCOMP übergeordneten Struktur müsste, wie oben erwähnt, zunächst spezifiziert sein, dass es ein XCOMP zu sich nehmen kann, und im Folgenden die Bedingungen, die dieses XCOMP erfüllen muss:\\
-\textbf{video}: $\langle$SUBJ, OBJ, XCOMP$\rangle$\\
-($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ)\\
-($\uparrow$OBJ CASE) = acc\\
-
-Alternative:
-video: $\langle$SUBJ, OBJ, COMP$\rangle$\\
-($\uparrow$COMP SUBJ) = `pro'\\
-($\uparrow$COMP SUBJ KNG) = ($\uparrow$OBJ KNG)\\
-
 \end{singlespace}
+Im Lexikoneintrag des Prädikats der dem AcP-XCOMP übergeordneten Struktur -- hier vidit -- müsste, wie oben erwähnt, zunächst spezifiziert sein, dass es ein XCOMP zu sich nehmen kann, und im Folgenden die Bedingungen, die dieses XCOMP erfüllen muss: \\
+\begin{singlespace}
+\begin{tabular}{ l  l  l  l  } 
+\textbf{vidit}: & $[1]$ \: ($\uparrow$PRED) & = & `video$\langle$SUBJ, OBJ, XCOMP$\rangle$'\\
+$\qquad$ & $\qquad$ & . \\
+$\qquad$ & $\qquad$ & . \\
+$\qquad$ & $\qquad$ & . \\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ XCOMP) & = & ($\uparrow$OBJ)\\
+$\qquad$ & $[2.1]$ \: ($\uparrow$XCOMP CASE) & = & acc \\
+$\qquad$ & $[3]$ \: ($\uparrow$OBJ CASE) & = & acc \\
+\end{tabular}\\
+\newline
+\end{singlespace}
+
+%Alternative:
+%video: $\langle$SUBJ, OBJ, COMP$\rangle$\\
+%($\uparrow$COMP SUBJ) = `pro'\\
+%($\uparrow$COMP SUBJ KNG) = ($\uparrow$OBJ KNG)\\
+
 
 %\subsection{Syntaxregeln}
 
