@@ -171,18 +171,18 @@ ADJ-GF & $\equiv$ & \{ADJ $\in$ $\mid$ XADJ $\in$\} \\
 \end{tabular}\\
 \end{singlespace}
 
-\textbf{Variante 1 - Disjunktivität beachtet (in Anlehnung an Snijder}
-\begin{singlespace}
-\begin{tabular}{ l  l  c  c  c  c  c  c  c}
-S & $\rightarrow$ & [\{V & $\mid$ & VP & $\mid$ & NP & $\mid$ & PP \}*] ,\\
-  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & & \textsuperscript{($\uparrow$OBL$\theta$ $\mid$  ADJ-GF) = $\downarrow$} \\
-  $\qquad$ & $\qquad$ & [ (XP) & (\{ V & $\mid$ & NP \})& (XP)]* \\
-  & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$} \\
-  XP & $\rightarrow$ & \{ NP, &  VP, & PP \}* \\
-\end{tabular}\\
-\newline
-\newline
-\end{singlespace}
+%\textbf{Variante 1 - Disjunktivität beachtet (in Anlehnung an Snijder}
+%\begin{singlespace}
+%\begin{tabular}{ l  l  c  c  c  c  c  c  c}
+%S & $\rightarrow$ & [\{V & $\mid$ & VP & $\mid$ & NP & $\mid$ & PP \}*] ,\\
+ % & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & & \textsuperscript{($\uparrow$OBL$\theta$ $\mid$  ADJ-GF) = $\downarrow$} \\
+  %$\qquad$ & $\qquad$ & [ (XP) & (\{ V & $\mid$ & NP \})& (XP)]* \\
+  %& $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & & \textsuperscript{($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$} \\
+ % XP & $\rightarrow$ & \{ NP, &  VP, & PP \}* \\
+%\end{tabular}\\
+%\newline
+%\newline
+%\end{singlespace}
 
 \textbf{Variante 2 - Disjunktivität nicht beachtet}
 \begin{singlespace}
@@ -192,8 +192,8 @@ S & $\rightarrow$ & V, & XP $\mid$ & V \\
 %XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
 XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
    & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
-   NP & $\rightarrow$ & N &  \{PP $\mid$  &  VP\}* $\mid$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+   NP & $\rightarrow$ & N &  \{XP\}* $\mid$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
 VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
 PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
@@ -1088,6 +1088,13 @@ ADJ & \{\[``in Gallia''\] \} \] \\
 \section{der Accusativus cum Participio}
 Bei den Verben der unmittelbaren sinnlichen Wahrnehmung, oft bei \textit{videre} und \textit{audire}, sowie bei den Verben des Darstellens und Einführens, besonders bei \textit{facere} und \textit{inducere}, steht die satzwertige Ergänzung oft in Verbindung mit einem Objekt \textbf{und dem Partizip Präsens Aktiv im Akkusativ (Lex-Eintrag, nicht doppeln)}. Man nennt diese Verbindung Accusativus cum Participio (AcP).\footnote{Vgl. KSt, S. 763, § 137,2a; Vgl. NM, S. 714, § 499.}\\
 \textbf{+ prädikativ} \\
+Der AcP ist von einem Verb der unmittelbaren sinnlichen Wahrnehmung oder von \textit{facere} bzw. \textit{inducere} im Sinne von ‚in einem Werk, in einem Drama darstellen, (auftreten) lassen‘ abhängig.\footnote{Vgl. NM S. 714, § 499. Vgl. auch KSt S. 763, § 137,2a.} \\ 
+
+\textbf{beim KsT heißt es: Zweitens wird das Partizip in prädikativem Sinne zur Ergänzung eines Verbalbegriffes gebraucht. Dieser Fall tritt ein: a) "Beshreibung des 'normalen AcPs' b) bei den Verben habeo und teneo in Verbindung mit dem PPP, entweder allein oder mit einem Objekte, um einen aus einer vollendeten Handlung hervorgegangenen Zusatnd oder bleibenden Besitz zu bezeichnen}
+
+\textbf{NM: Das PPP findet sich zur Umschreibung des Perfekts zusammen mit finiten Verbformen von \textit{habere} bzw. \textit{tenere} und bezeichnet dann einen dauernden Zustand oder bleibenden Besitz.}
+
+\footnote{Vgl. KSt S. 763, § 137,2a. Vgl. auch NM S. 763, § 137. \textbf{Vgl. auch LHS S. 387-88 § 207 c; auch KSt S. 763, § 137,2b? tenere + habere mit PPP?}} \\
 \textbf{+ ähnlich dem AcI} \\
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
@@ -1102,7 +1109,7 @@ Bei den Verben der unmittelbaren sinnlichen Wahrnehmung, oft bei \textit{videre}
 	\textbf{*für XCOMP spricht:} semantisch großer Unterschied (andere Bedeutung als PC wegen Verben der Wahrnehmung, würde dem Sinn der Konstruktion sonst nicht gerecht werden); facere / inducere; analog zu AcI -> also haben wir uns dafür entschieden \\
 
 \subsection{Einschränkungen}
-Die AcP-Konstruktion erfüllt im Satz stets die Funktion eines XCOMP: \\
+Da das Partizip im AcP eine Ergänzung des Verbalbegriffs ist, erfüllt es im Satz stets die Funktion eines XCOMP: \\
 ($\uparrow$XCOMP) = $\downarrow$ \\
 Das Partizip und sein Bezugswort stehen auch beim AcP im selben Kasus, Numerus und Genus:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
 ($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
@@ -1112,12 +1119,8 @@ Wie auch hier der Name der Konstruktion vermuten lässt, stehen beim AcP Partizi
 Das Bezugswort des Partizips ist das Objekt der dem XCOMP übergeordneten Struktur: \\
 	($\uparrow$SUBJ) = ((XCOMP$\uparrow$)OBJ) \\
 %($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ) (?) \\
-Der AcP ist von einem Verb der unmittelbaren sinnlichen Wahrnehmung oder von \textit{facere} bzw. \textit{inducere} im Sinne von ‚in einem Werk, in einem Drama darstellen, (auftreten) lassen‘ abhängig.\footnote{Vgl. NM S. 714, § 499. Vgl. auch KSt S. 763, § 137,2a.} \\
-Das Partizip ist beim AcP meist ein PPA, selten ein PPP. 
 
-beim KsT heißt es: Zweitens wird das Partizip in prädikativem Sinne zur Ergänzung eines Verbalbegriffes gebraucht. Dieser Fall tritt ein: a) "Beshreibung des 'normalen AcPs' b) bei den Verben habeo und teneo in Verbindung mit dem PPP, entweder allein oder mit einem Objekte, um einen aus einer vollendeten Handlung hervorgegangenen Zusatnd oder bleibenden Besitz zu bezeichnen
-
-Das PPP findet sich zur Umschreibung des Perfekts zusammen mit finiten Verbformen von \textit{habere} bzw. \textit{tenere} und bezeichnet dann einen dauernden Zustand oder bleibenden Besitz. Auch dies muss über den Lexikoneintrag des Prädikats der überge:\footnote{Vgl. KSt S. 763, § 137,2a. Vgl. auch NM S. 763, § 137. \textbf{Vgl. auch LHS S. 387-88 § 207 c; auch KSt S. 763, § 137,2b? tenere + habere mit PPP?}} \\
+Das Partizip ist beim AcP meist ein PPA, selten ein PPP. \\
 %($\uparrow$XCOMP RELTENSE) = present   \\
 $\neg$ ($\uparrow$RELTENSE) = future \\
 	
