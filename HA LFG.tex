@@ -184,6 +184,8 @@ ADJ-GF & $\equiv$ & \{ADJ $\in$ $\mid$ XADJ $\in$\} \\
 %\newline
 %\end{singlespace}
 
+* \textbf{welche grammatikalischen Funktionen jede dieser Phrasen wann einnehmen kann, also  ob ne NP unter ner VP z.B. SUBJ, OBJ, usw. sein kann... ich glaub es geht nämlich bei uns SUBJ und OBJ (nich sicher), und ADJ, aber OBL ja z.B. nich... oder? Geht COMP? Naja, solche Überlegungen jedenfalls, dann könnten wir nämlich das "ADJ-GF oder ARG-GF" ein bisschen konkretisieren}
+
 \textbf{Variante 2 - Disjunktivität nicht beachtet}
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c  c  c  c}
@@ -686,7 +688,7 @@ GEN & n \\
 \end{singlespace}
 
 \subsection{Variante 2: das Partizip als OBJ}
-In der obigen Variante würde man sich also immer ein nur ausgelassenes Bezugswort des Partizips hinzudenken. Dies verkompliziert unserer Ansicht nach die Anlegenheit und bietet keinen Mehrwert. Da das Partizip substantiviert ist, und somit eben gerade keinem Bezugswort untergeordnet, haben wir uns für die folgende Variante entschieden, deren c-Struktur sichtbar unkomplizierter ist. Dabei ist das Partizip Kopf der Partizipialphrase VP und somit alleiniges Objekt des Hauptsatz-Prädikats \textit{parcit}. In diesem Fall überwiegen zwar die nominalen Eigenschaften des Partizips, die Bezeichnung `VP' wird jedoch um der Konsistenz willen beibehalten.
+In der obigen Variante würde folglich ein ausgelassenes Bezugswort des Partizips angenommen werden. Dies ist jedoch weder notwendig noch bietet es einen Mehrwert. Da das Partizip substantiviert ist, und somit eben gerade keinem Bezugswort untergeordnet, haben wir uns für die folgende Variante entschieden, deren c-Struktur sichtbar unkomplizierter ist. Dabei ist das Partizip Kopf der Partizipialphrase VP und somit alleiniges Objekt des Hauptsatz-Prädikats \textit{parcit}. In diesem Fall überwiegen zwar die nominalen Eigenschaften des Partizips, die Bezeichnung `VP' wird jedoch um der Konsistenz willen beibehalten.
 
 
 \subsubsection{Einschränkungen}
@@ -767,12 +769,39 @@ GEN & n \] \\
 
 \newpage
 \section{das dominante Partizip}
-Beim sogenannten dominanten Partizip trägt nicht das Substantiv, sondern das in Kasus, Numerus und Genus übereinstimmenden Partizip die Hauptbedeutung; das Partizip ,dominiert` daher sozusagen sein Bezugswort. Aus diesem Grund wird das dominante Partizip im Deutschen in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das im Lateinischen regierende Substantiv als Genetiv abhängt. Meistens verwendet man das Partizip Perfekt Passiv als dominantes Partizip.\footnote{Vgl. NM, S. 717 f., § 502.}\\
+Beim sogenannten dominanten Partizip trägt nicht das Substantiv, sondern das in Kasus, Numerus und Genus übereinstimmenden Partizip die Hauptbedeutung; das Partizip ,dominiert` daher sein Bezugswort.
+%Beim sogenannten dominanten Partizip ,dominiert` das Partizip sein Bezugswort, weswegen der Hauptfokus auf dem Partizip liegt.
+Aus diesem Grund wird das dominante Partizip im Deutschen in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das im Lateinischen regierende Substantiv als Genetiv abhängt. Meistens verwendet man das Partizip Perfekt Passiv als dominantes Partizip.\footnote{Vgl. NM, S. 717 f., § 502.}\\
 
 \subsection{Version mit Präpositionalphrase}
 \subsubsection{Vorüberlegungen zur Umsetzung in der LFG}
-Der Lexikoneintrag zum Partizip der Konstruktion unterscheidet sich nicht wesentlich von den vorherigen.
-\textbf{ (ich glaub wir brauchen hier echt nich nochmal nen Lexikoneintrag...)} \\
+%Der Lexikoneintrag zum Partizip der Konstruktion unterscheidet sich nicht wesentlich von den vorherigen.
+%\textbf{ (ich glaub wir brauchen hier echt nich nochmal nen Lexikoneintrag...)} \\
+Wir gehen von folgendem Lexikoneintrag von \textit{condita} aus:
+\begin{singlespace}
+\begin{tabular}{ l  l  l  l  } 
+\textbf{condita}: & $[1]$ \:  ($\uparrow$PRED) & = & `condor$\langle$SUBJ$\rangle$'\\
+%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((ADJ$\uparrow$)GF)\\
+$\qquad$ & $[5]$ \:  \{(($\uparrow$SUBJ GEN) & = & f \\ 
+$\qquad$ & $[5.1]$ \:  ($\uparrow$SUBJ NUM) & = & sg \\
+$\qquad$ & $[5.2]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
+$\qquad$ & $[5.2]$ \: (($\uparrow$SUBJ GEN) & = & n \\
+$\qquad$ & $[6.3]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
+$\qquad$ & $[6.4]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ acc\} ) \}\\
+$\qquad$ & $[2]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[3]$ \:  ($\uparrow$PASSIVE) & = & + \\
+$\qquad$ & $[4]$ \:  ($\uparrow$RELTENSE) & = & past \\
+$\qquad$ & $[5]$ \:  \{(($\uparrow$GEN) & = & f \\ 
+$\qquad$ & $[5.1]$ \:  ($\uparrow$NUM) & = & sg \\
+$\qquad$ & $[5.2]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
+$\qquad$ & $[5.2]$ \: (($\uparrow$GEN) & = & n \\
+$\qquad$ & $[6.3]$ \:  ($\uparrow$NUM) & = & pl \\
+$\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
+\end{tabular}
+\newline
+\newline
+\end{singlespace}
+
 Das dominante Partizip soll zunächst am Beispielsatz \textit{ab urbe condita Roma viguit} betrachtet werden. Da der Restsatz \textit{Roma viguit} auch ohne die Partizipialkonstruktion Sinn ergibt, muss letztere wie beim Abl. abs. ein ADJ zum finiten Satz sein. Als nächstes ergibt sich aufgrund der Präposition \textit{ab} eine Präpositionalphrase, von der wiederum Partizip und Bezugswort abhängen.
 
 %\subsubsection{Variante 1 -- Partizip als attributives XADJ}
@@ -781,13 +810,13 @@ Nun sieht das dominante Partizip \textit{condita} rein formal zunächst aus wie 
 \textbf{c-Struktur}
 \begin{singlespace}
 \Tree [.S 
-		[.PP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
+		[.PP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)}}
 			[.P'\textsubscript{$\uparrow$=$\downarrow$} 
 				[.P\textsubscript{$\uparrow$=$\downarrow$} ab ] 
 				[.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}
 					[.N'\textsubscript{$\uparrow$=$\downarrow$} 
 						[.N\textsubscript{$\uparrow$=$\downarrow$} urbe ]
-						[\qroof{condita}.VP\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)} ]
+						[\qroof{condita}.VP\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} ]
 					] 
 				]
 			]				
@@ -855,7 +884,6 @@ SUBJ &  \tikzmark{Ziel} \] \] \tikzmark{Start} & $\qquad$ & $\qquad$  \\
 Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass der Satz \textit{ab urbe Roma viguit} korrekt wäre. Das stimmt zwar formal -- ist jedoch semantisch sinnfrei. Eine semantisch sinnvollere Darstellung ergibt sich, wenn das Bezugswort vom Prädikat des Partizips gefordert wird; da das Partizip sein Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen. Somit würde die Partizipialkonstruktion von einer VP mit dem Kopf \textit{condita} abhängen; das Bezugsnomen \textit{urbe} wäre dann schlicht das Subjekt der Partizipialkonstruktion.
 
 \subsubsection{Lexikoneintrag}
-Es ergeben sich demnach folgende Syntaxregeln,  c- und f-Strukturen: 
 
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
@@ -944,27 +972,6 @@ Nun war zu klassischen Zeiten jedoch die präpositionslose Variante des dominant
 \textbf{neu}
 Da lateinische Partizipialkonstruktionen jedoch stets als VP definiert werden, haben sie ohnehin V als Kopf; daher kann die besondere Dominanz des Partizips nach unserer Darstellungsweise nicht gesondert hervorgehoben werden. Dies wäre ein Argument, die Partizipialkonstruktionen als gesonderte Partizipialphrasen darzustellen. \textbf{(auch wegen der nominalen Eigenschaften der Partizipien) in Schlussfolgerung + Diese Darstellungsweise wurde in dieser Arbeit bereits in Anfängen versucht, nämlich bei der c-Struktur-Darstellung des Abl. abs. als S\textsubscript{part}.}
 
-\subsubsection{Lexikoneintrag}
-\begin{singlespace}
-\begin{tabular}{ l  l  l  l  } 
-\textbf{amissa}: & $[1]$ \:  ($\uparrow$PRED) & = & `amitto$\langle$SUBJ, OBJ, OBL\textsubscript{LOC}$\rangle$'\\
-%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)OBJ)\\
-$\qquad$ & $[3]$ \:  ($\uparrow$MOOD) & = & part\\
-$\qquad$ & $[4]$ \:  ($\uparrow$PASSIVE) & = & + \\
-$\qquad$ & $[5]$ \:  ($\uparrow$RELTENSE) & = & past \\
-$\qquad$ & $[6]$ \:  \{(($\uparrow$GEN) & = & f \\ 
-$\qquad$ & $[6.1]$ \:  ($\uparrow$NUM) & = & sg \\
-$\qquad$ & $[6.2]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
-$\qquad$ & $[6.2]$ \: (($\uparrow$GEN) & = & n \\
-$\qquad$ & $[6.3]$ \:  ($\uparrow$NUM) & = & pl \\
-$\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
-\end{tabular}
-\newline
-\newline
-\end{singlespace}
-
-"Der Unterschied zu Variante 2 oben ergibt sich lediglich aus dem Fehlen der Präposition." - Letzteres wird auch in den Syntaxregeln deutlich.
-
 %\subsubsection{Syntaxregeln}
 %\begin{singlespace}
 %\begin{tabular}{ l  l  c  c  c  c }
@@ -981,7 +988,8 @@ $\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 %\end{singlespace}
 
 \subsubsection{c-Struktur}
-Daraus, sowie aus dem hier nicht extra aufgeführten Lexikoneintrag, gehen gemäß der obigen Überlegungen folgende c- und f-Strukturen hervor:
+%Der Lexikoneintrag von \textit{condita} bleibt selbstverständlich unverändert. 
+Es ergeben sich folgende c- und f-Strukturen:
 
 \begin{singlespace}
 \Tree [.S 
