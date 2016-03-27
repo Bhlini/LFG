@@ -109,6 +109,7 @@ Im Folgenden sollen das rein attributive Partizip, das substantivierte Partizip,
 
 
 * lexikalisch und funktional (bedeutet...) \\
+* Unifikationsgrammatik (vgl Nolda) \\
 * Ebenen getrennt: \\
 * aus Lexikoneinträgen und Syntaxregeln ergibt sich eine c-Struktur, was für \textit{constituent structure} steht; dies ist die Darstellung der oberflächlichen Organisation der einzelnen Satzbestandteile, vergleichbar mit den Syntaxbäumen der generativen Grammatik (?). Durch den Vorgang des Mappings (???) werden Informationen aus den Lexikoneinträgen benutzt, um die Rollen der Satzglieder -- wie beispielsweise Subjekt und Objekt -- den Inhalten der einzelnen c-Struktur-Knoten zuzuordnen. Daraus ergeben sich die annotierte c-Struktur sowie die sogenannte funktionelle Beschreibung, eine Gleichung, deren Minimallösung schließlich die f-Struktur -- oder \textit{functional structure} -- darstellt.\footnote{Vgl. Skript S. 8-17.} Diese Strukturen / Schritte werden im Folgenden genauer betrachtet.
 
@@ -122,8 +123,13 @@ Die in dieser Arbeit unter dem Titel ``Einschränkungen'' festgehaltenen Bedingu
 
 \subsubsection{Allgemeines zu den Lexikoneinträgen}
 
-Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschränkungen finden sich in den Lexikoneinträgen der konkreten Partizipialformen Angaben zur Bestimmung der Wortform. Diese umfassen bei den Partizipien Kasus, Numerus, Genus, \textbf{Verbform} (,,MOOD''), d.h. hier stets Partizip (,,PART''), Zeitverhältnis (,,RELTENSE'', abgekürzt für ,,relative tense'') und Diathese (wobei das Attribut ,,PASSIVE'' entweder den Wert ,,+'' oder ,,-'' erhält).\footnote{Das Genus verbi, d.h. die rein morphologische Erscheinung in entweder aktiver oder passiver Form, ergibt sich aus der Grundform -- hier in Anlehnung an gängige lateinische Wörterbücher stets die erste Person Singular Präsens Indikativ -- des Prädikats des Partizips im Lexikoneintrag, wie z.B. \textit{mittor} statt \textit{mitto}. Durch diese Notierung stellen auch Deponentien kein Problem für die LFG dar, deren Diathese aktiv ist, während ihre morphologische Form im Passiv steht.} \\
+Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschränkungen finden sich in den Lexikoneinträgen der konkreten Partizipialformen Angaben zur Bestimmung der Wortform. Diese umfassen bei den Partizipien Kasus, Numerus, Genus, \textbf{Verbform} (,,MOOD'')\footnote{Hierbei leitet sich ,,MOOD'' genaugenommen von ,,Modus'' her. Obwohl unter Modus in der Regel die Unterscheidung Indikativ - Konjunktiv verstanden wird, kann diese Bezeichnung hier 	auch im Zusammenhang mit Partizipien verwendet werden, da sich die Eigenschaften `Partizip' und `Indikativ' bzw. `Konjunktiv' gegenseitig ausschließen.}, d.h. hier stets Partizip (,,PART''), Zeitverhältnis (,,RELTENSE'', abgekürzt für ,,relative tense'') und Diathese (wobei das Attribut ,,PASSIVE'' entweder den Wert ,,+'' oder ,,-'' erhält).\footnote{Das Genus verbi, d.h. die rein morphologische Erscheinung in entweder aktiver oder passiver Form, ergibt sich aus der Grundform -- hier in Anlehnung an gängige lateinische Wörterbücher stets die erste Person Singular Präsens Indikativ -- des Prädikats des Partizips im Lexikoneintrag, wie z.B. \textit{mittor} statt \textit{mitto}. Durch diese Notierung stellen auch Deponentien kein Problem für die LFG dar, deren Diathese aktiv ist, während ihre morphologische Form im Passiv steht.} \\
 
+* in nicht-konfigurationalen Sprachen, "die eine
+relativ freie Wortstellung zulassen, kommt der Gewinnung von
+Dependenzinformation durch die Strukturanalyse besondere
+Bedeutung zu, während in konfigurationalen Sprachen wie dem Englischen sich
+diese Information in der Regel direkt aus der Wortstellung gewinnen läßt."
 
 *Der Subkategorisierungsrahmen -- gekennzeichnet durch $\langle$ $\rangle$ -- gibt diejenigen Argumente des Prädikats an, die von ihm gefordert werden.
 * Subkategorisierungsrahmen eines Prädikats = Menge der Ergänzungen, die ein Verb hat
@@ -227,6 +233,11 @@ VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
 
 Im Lateinischen ist in aller Regel V der Kopf von S.\footnote{Eine Ausnahme könnte eventuell der nominale Ablativus absolutus bilden, dessen Kopf nach logischer Betrachtung N sein müsste. Vgl. \textbf{GRAMMATIK} und vgl. \textbf{Falk, S. 64}.}
 *keine feste Wortstellung / Platz des Prädikats --> nicht IP
+
+\textbf{die formal schwierige Frage der Koordination nicht berücksichtigt - man muss einfach davon ausgehen, dass jede Phrase auch über Aufzählungen ausgeweitet werden
+kann - dazu braucht man aber spezielle Formalismen, die für Snijders
+Problem wohl irrelevant waren}
+
 
 \subsubsection{HÄUFIGE SYNTAXREGELN - keine Ahnung}
 *Häufiger finden sich in dieser Arbeit die folgenden Auflösungen
