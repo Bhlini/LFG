@@ -108,10 +108,9 @@ Im Folgenden sollen das rein attributive Partizip, das substantivierte Partizip,
 \subsection{Die Lexikalisch-Funktionale Grammatik}
 
 
-``In diesem Grammatikmodell werden je nach den Bestandteilen und Einheiten innerhalb eines Satzes Verbindungen zwischen den Äußerungsteilen hergestellt, die den Erwerbsstufen zugeordnet werden. Die Abfolge ergibt sich bei dieser Grundlegung daraus, dass sich der Informationsaustausch auf immer größere sprachliche Einheiten von zunächst isolierten Lexemen über Wortgruppen, z.B. Nominalphrasen, bis hin zu Sätzen erstreckt. Dieser Ansatz bringt morphologische Mittel wie die Mehrfachkodierung von Kasussuffixen innerhalb und zwischen nominalen Wortgruppen und der Verbalmorphologie mit syntaktischen Rollen in Verbindung. Die Verbindung ist eher mechanisch und auf Beziehungen innerhalb von Sätzen begrenzt.''
-Grießhaber, Wilhelm: Linguistische Grundlagen und Lernermerkmale bei der Profilanalyse, in: Martina Rost-Roth (Hrsg.): DAZ. Spracherwerb und Sprachförderung. Deutsch als Zweitsprache, S. 21. 
-
-
+* lexikalisch und funktional (bedeutet...) \\
+* Ebenen getrennt: \\
+* aus Lexikoneinträgen und Syntaxregeln ergibt sich eine c-Struktur, was für \textit{constituent structure} steht; dies ist die Darstellung der oberflächlichen Organisation der einzelnen Satzbestandteile, vergleichbar mit den Syntaxbäumen der generativen Grammatik (?). Durch den Vorgang des Mappings (???) werden Informationen aus den Lexikoneinträgen benutzt, um die Rollen der Satzglieder -- wie beispielsweise Subjekt und Objekt -- den Inhalten der einzelnen c-Struktur-Knoten zuzuordnen. Daraus ergeben sich die annotierte c-Struktur sowie die sogenannte funktionelle Beschreibung, eine Gleichung, deren Minimallösung schließlich die f-Struktur, oder functional structure, darstellt. Diese Strukturen / Schritte werden im Folgenden genauer betrachtet.
 
 \subsubsection{Allgemeines zu den Einschränkungen}
 Um die syntaktischen Korrektheit der ausgegebenen Sätze zu gewährleisten, müssen für die verschiedenen grammatikalischen Konstruktionen zunächst spezifische Bedingungen festgelegt werden.
@@ -127,6 +126,8 @@ Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschr
 
 
 *Der Subkategorisierungsrahmen -- gekennzeichnet durch $\langle$ $\rangle$ -- gibt diejenigen Argumente des Prädikats an, die von ihm gefordert werden.
+* Subkategorisierungsrahmen eines Prädikats = Menge der Ergänzungen, die ein Verb hat
+* Hinsichtlich des Subkategorisierungsrahmens eines Prädikats bei passiven Verben muss berücksichtigt werden, dass die Funktion des Subjekts hierbei nicht wie in aktiven Konstruktionen der semantischen Rolle agens entspricht. //...Subjekts hierbei der semantischen Rolle des Objekts entspricht.
 
 *evt. Bsp.-Lex von PFA
 
@@ -282,6 +283,8 @@ Partizipien können als Vertreter von Adverbialsätzen aufgefasst werden und ste
 * irgendwo mal erklären, dass wir ``Funktion'' einerseits normalsprachlich und andererseits als LFG-Terminus verwenden...?
 
 * die P'-Knoten haben wir schon vor dem Gespräch mit Geiger fast immer mit Dreieck umgangen, die waren nur in den Syntaxregeln... vielleicht können wir einfach einmal am Anfang irgendwo anmerken, das erste Mal wenn das vorkommt eben, dass ne Präposition und ihr Objekt immer zusammenstehen müssen, und dass wir hier Postpositionen außer acht lassen wegen ihres deutlich geringeren Vorkommens und weil es nich relevant is im Moment, und dass das deswegen hier mit Dreieck abgekürzt wird... und dann können wir auf die Snijder verweisen
+
+* "je konfigurationaler die Sprache, desto mehr nicht-maximale Projektionsknoten (X'-Knoten) sind erforderlich"... wiesoooo??? (hat Geiger gesagt)
 
 \subsection{allgemeine Vorüberlegungen zur Umsetzung in der LFG}
 Die Konstruktion des PC erfüllt im Satz immer die syntaktische Funktion des XADJ: \\ 
@@ -539,7 +542,7 @@ $\qquad$ & $[9]$ \: ($\uparrow$GEN) & = & f \\
 				[.N\textsubscript{$\uparrow$=$\downarrow$} insulam ]		
 				[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$XADJ)}}
 						[.V\textsubscript{$\uparrow$=$\downarrow$} obiectam ] 
-						[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{DAT})=$\downarrow$} ]
+						[\qroof{portui}.NP\textsubscript{($\uparrow$OBJ\textsubscript{LOC})=$\downarrow$} ]
 				]
 				]
 		[.V\textsubscript{$\uparrow$=$\downarrow$} tenuit ]	
@@ -749,7 +752,7 @@ $\qquad$ & $[9]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
 \subsubsection{c-Struktur}
 \begin{singlespace}
 \Tree [.S 
-		[.VP{\textsubscript{($\uparrow$OBJ\textsubscript{REC}) = $\downarrow$}}
+		[.VP{\textsubscript{($\uparrow$OBJ) = $\downarrow$}}
 					[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
 					[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
 		]
@@ -1271,7 +1274,11 @@ OBL\textsubscript{LOC} & \[``in campo''\] \]  &            $\qquad$\\
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:topic) to[out=0,in=0,looseness=3]  (pic cs:object);
 
+\section{Zusammenfassung und Ausblick}
+... \\
 
+*--> LFG bietet evt. auch hinsichtlich des Spracherwerbs Vorteile: ``In diesem Grammatikmodell werden je nach den Bestandteilen und Einheiten innerhalb eines Satzes Verbindungen zwischen den Äußerungsteilen hergestellt, die den Erwerbsstufen zugeordnet werden. Die Abfolge ergibt sich bei dieser Grundlegung daraus, dass sich der Informationsaustausch auf immer größere sprachliche Einheiten von zunächst isolierten Lexemen über Wortgruppen, z.B. Nominalphrasen, bis hin zu Sätzen erstreckt. Dieser Ansatz bringt morphologische Mittel wie die Mehrfachkodierung von Kasussuffixen innerhalb und zwischen nominalen Wortgruppen und der Verbalmorphologie mit syntaktischen Rollen in Verbindung. Die Verbindung ist eher mechanisch und auf Beziehungen innerhalb von Sätzen begrenzt.''
+Grießhaber, Wilhelm: Linguistische Grundlagen und Lernermerkmale bei der Profilanalyse, in: Martina Rost-Roth (Hrsg.): DAZ. Spracherwerb und Sprachförderung. Deutsch als Zweitsprache, S. 21. 
 %\end{singlespace}
 %\bibliographystyle{plain}
 \pagebreak
