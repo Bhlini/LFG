@@ -185,7 +185,7 @@ Partizipien die übrigen Argumente der Konstruktion fordern.\\
 
 *VPs können nur Partizipialien (Partizipien und Gerundium und Gerundivum) und Infinitive sein! (wird hier so definiert)
 
-*Da Adjektive, Adverbien und Pronominaladjektive (u.a. bei Snijder (\textbf{QUELLE} s. 7) )unter ``Determiner'' gefasst), Subjunktionen, Konjunktionen in dieser Arbeit nicht von Bedeutung sind, wird in den folgenden Syntaxregeln nicht darauf eingegangen. 
+*Da Adjektive, Adverbien und Pronominaladjektive (u.a. bei Snijder (\textbf{QUELLE} s. 7) )unter ``Determiner'' gefasst), Subjunktionen, Konjunktionen in dieser Arbeit nicht von Bedeutung sind, wird in den folgenden Syntaxregeln und auch im Weiteren nicht darauf eingegangen. \textbf{Satzkomplemente (SCOMP) sind nicht von Verbkomplementen (VCOMP) zu unterscheiden?! ???}
 
 * Mehrere Vs bzw. Ns können in derselben übergeordneten Struktur nur vorkommen, wenn sie beigeordnet sind.
 
@@ -212,11 +212,54 @@ ADJ-GF & $\equiv$ & \{ADJ $\in$ $\mid$ XADJ $\in$\} \\
 
 * \textbf{welche grammatikalischen Funktionen jede dieser Phrasen wann einnehmen kann, also  ob ne NP unter ner VP z.B. SUBJ, OBJ, usw. sein kann... ich glaub es geht nämlich bei uns SUBJ und OBJ (nich sicher), und ADJ, aber OBL ja z.B. nich... oder? Geht COMP? Naja, solche Überlegungen jedenfalls, dann könnten wir nämlich das "ADJ-GF oder ARG-GF" ein bisschen konkretisieren}
 
-\textbf{Variante 2 - Disjunktivität nicht beachtet}
+\textbf{Variante 2 - neu, mit zusätzlichen Beschränkungen}
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c  c  c  c}
 S & $\rightarrow$ & V, & XP $\mid$ & V \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+      & $\qquad$ & \textsuperscript{($\uparrow$FIN)} & &  \textsuperscript{($\uparrow$FIN)}\\
+%XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
+XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
+   & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} &\textsuperscript{($\uparrow$XADJ) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ) = $\downarrow$} \\
+    & $\qquad$ & \textsuperscript{($\downarrow$CASE) = nom} & &  \\
+    & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ) = $\downarrow$} &  \textsuperscript{($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$} \\
+       & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$OBL) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+         & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$ADJ) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+           & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$COMP) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+   NP & $\rightarrow$ & N &  \{XP\}* $\mid$ & N \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+   PP & $\rightarrow$ & P, & VP $\mid$  & P,   & NP \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+%PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
+ %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+\end{tabular}\\
+\newline
+\newline
+\newline
+\newline
+\end{singlespace}
+
+--> vgl. Rohrer S. 54 unten: Wir können existenzielle Bedingungen für das Merkmal FIN dazunehmen!
+
+- ein V, das direkt von S (nicht S-part) dominiert wird, muss immer eine
+finite Verbform sein (d.h. muss als Wert von "MOOD" Indikativ, Konjunktiv oder
+ Imperativ haben)
+- SUBJ CASE dieses finiten V ist immer Nominativ (was eben beim "Subjekt"
+(Bezugsnomen) eines Partizips nicht der Fall sein muss)
+- ein V, das von einer VP dominiert wird, kann kein finites Verb sein //
+muss ein Partizip, Infinitv oder Gerund sein (d.h. muss als Wert von "MOOD"
+"part", "inf" oder "gerund" bzw. "gerundiv" haben)
+- ein V, das von S-part dominiert wird, muss ein Partizip sein (d.h. muss
+als Wert von "MOOD" "part" haben)
+
+\textbf{Variante 2 - alt}
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c  c  c  c}
+S & $\rightarrow$ & V, & XP $\mid$ & V \\
+   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+      & $\qquad$ & \textsuperscript{($\uparrow$FIN)} & &  \textsuperscript{($\uparrow$FIN)}\\
 %XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
 XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
    & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
@@ -235,21 +278,9 @@ VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
 \newline
 \end{singlespace}
 
---> vgl. Rohrer S. 54 unten: Wir können existenzielle Bedingungen für das Merkmal FIN dazunehmen!
 
 
-- ein V, das direkt von S (nicht S-part) dominiert wird, muss immer eine
-finite Verbform sein (d.h. muss als Wert von "MOOD" Indikativ, Konjunktiv oder
- Imperativ haben)
-- SUBJ CASE dieses finiten V ist immer Nominativ (was eben beim "Subjekt"
-(Bezugsnomen) eines Partizips nicht der Fall sein muss)
-- ein V, das von einer VP dominiert wird, kann kein finites Verb sein //
-muss ein Partizip, Infinitv oder Gerund sein (d.h. muss als Wert von "MOOD"
-"part", "inf" oder "gerund" bzw. "gerundiv" haben)
-- ein V, das von S-part dominiert wird, muss ein Partizip sein (d.h. muss
-als Wert von "MOOD" "part" haben)
-
-
+* sagen, dass wir Disjunktivität nicht beachten!
 
 * \textbf{In der Menge werden oder-Striche verwendet anstatt wie oft üblich Kommata, da das Komma in diesem Kontext zu einem "shuffle operator" umdefiniert wurde (vgl. Snijder) ERKLÄREN!}
 
@@ -353,7 +384,7 @@ Die konkreten Lexikoneinträge finden sich bei der Betrachtung der spezifischen 
 \subsubsection{Redundanz- bzw. Default-Regeln}
 vgl. Rohrer S. 23-24:
 
-Anstatt existenzielle Bedingungen zu den Syntaxregeln hinzuzufügen, könnte man stattdessen auch sogenannt Redundanz- bzw. Default-Regeln definieren, die über dem Lexikon operieren. (UNTERSCHIED? VOR- / NACHTEILE?)
+Anstatt zusätzliche (existenzielle?) Bedingungen /Forderungen zu den Syntaxregeln hinzuzufügen, könnte man stattdessen auch sogenannt Redundanz- bzw. Default-Regeln definieren, die über dem Lexikon operieren. (UNTERSCHIED? VOR- / NACHTEILE?)
 
 Natürlich können wir nicht alle Regeln dieser Art auflisten, aber eben diejenigen, die für unsere konkreten
 Phänomene relevant sind.
@@ -372,7 +403,7 @@ muss ein Partizip, Infinitv oder Gerund sein (d.h. muss als Wert von "MOOD"
 - ein V, das von S-part dominiert wird, muss ein Partizip sein (d.h. muss
 als Wert von "MOOD" "part" haben)
 
-
+Wir haben uns hier der einfacheren Darstellung wegen für die Beschränkungen innerhalb der Syntaxregeln entschieden.
 
 \subsubsection{Allgemeines zur c-Struktur}
 \subsubsection{Allgemeines zur f-Struktur}
