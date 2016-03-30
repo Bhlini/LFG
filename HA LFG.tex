@@ -114,6 +114,8 @@ Im Folgenden sollen das rein attributive Partizip, das substantivierte Partizip,
 * aus Lexikoneinträgen und Syntaxregeln ergibt sich eine c-Struktur, was für \textit{constituent structure} steht; dies ist die Darstellung der oberflächlichen Organisation der einzelnen Satzbestandteile, vergleichbar mit den Syntaxbäumen der generativen Grammatik (?). Durch den Vorgang des Mappings (???) werden Informationen aus den Lexikoneinträgen benutzt, um die Rollen der Satzglieder -- wie beispielsweise Subjekt und Objekt -- den Inhalten der einzelnen c-Struktur-Knoten zuzuordnen. Daraus ergeben sich die annotierte c-Struktur sowie die sogenannte funktionelle Beschreibung, eine Gleichung, deren Minimallösung schließlich die f-Struktur -- oder \textit{functional structure} -- darstellt.\footnote{Vgl. Skript S. 8-17.} Diese Strukturen / Schritte werden im Folgenden genauer betrachtet.
 
 \subsubsection{Allgemeines zu den Einschränkungen}
+\textbf{BEI LEXIKONEINTRÄGEN UND EINSCHRÄNKUNGEN WEGEN PFEILEN GUCKEN!!! (vgl. Rohrer S. 54) --> muss manchmal nach unten zeigen!}
+
 Um die syntaktischen Korrektheit der ausgegebenen Sätze zu gewährleisten, müssen für die verschiedenen grammatikalischen Konstruktionen zunächst spezifische Bedingungen festgelegt werden.
 % ``Zugleich unterliegen die möglichen natürlichen Sprachen gewissen Einschränkungen was die mögliche Verkettung von Wörtern zu Sätzen betrifft." (Skript S. 4)
 Da im Lateinischen im Gegensatz zu den modernen Sprachen die Wortstellung innerhalb eines Satzes nicht explizit festgelegt ist \textbf{(stimmt das als Grund?)},\footnote{Die gewöhnliche Wortstellung im Lateinischen ist zwar Subjekt – Objekt – Prädikat, jedoch wird diese, vor allem aus Gründen der Betonung und des Wohlklangs, nur selten streng eingehalten. Vgl. LHS S. 397, § 212.} muss der Großteil dieser Bedingungen nicht wie üblicherweise in den Syntaxregeln, sondern im Lexikoneintrag festgelegt werden.
@@ -138,13 +140,13 @@ Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort kongruent se
 Da das Bezugswort eines PC in jedem Fall eine grammatikalische Funktion der übergeordneten Struktur ist,\footnote{Vgl. KSt S. 771, § 138,5a.} nimmt das PC die grammatikalische Funktion XADJ an. Das Subjekt eines Partizips in XADJ-Funktion ist somit eine grammatikalische Funktion der übergeordneten grammatikalischen Funktion (in der Regel S): \\
 ($\uparrow$XADJ SUBJ) = ((GF$\uparrow$)GF) \\
 Partizipien in allen Kasus können in einer PC-Konstruktion auftreten, auch wenn Genitiv und Ablativ hierbei seltener vorkommen als die übrigen Kasus. Dies bedeutet, dass das Partizip in einer XADJ-Funktion in jedem Kasus vorkommen kann: \\
-($\uparrow$XADJ CASE) = nom $\mid$ gen $\mid$ acc $\mid$ dat $\mid$ abl \\
+($\downarrow$XADJ CASE) = nom $\mid$ gen $\mid$ acc $\mid$ dat $\mid$ abl \\
 
 %ABL. ABS.:
 Da der Abl. abs. jedoch vom Restsatz semantisch und syntaktisch losgelöst ist, darf sein Bezugswort keine grammatikalische Funktion der übergeordneten Struktur (in aller Regel S) sein. Der dem Partizip eines Abl. abs. kommt daher unumgänglich die Funktion ADJ zu. Somit kann geschlussfolgert werden, dass ein Partizip, welches Element eines ADJ ist, immer im Ablativ steht: \\
-($\uparrow$ADJ CASE) = abl \\
+($\downarrow$ADJ CASE) = abl \\
 Dasselbe trifft auch auf sein Bezugswort zu: \\
-($\uparrow$SUBJ ADJ CASE) = abl \\
+($\downarrow$SUBJ ADJ CASE) = abl \\
 Da sich diese Arbeit ausschließlich auf das klassische Latein Caesars und Ciceros bezieht, gilt für die folgenden Betrachtungen die Annahme, dass im Abl. abs. kein Partizip Futur Aktiv (PFA) verwendet wird.\footnote{Vgl. KSt. S. 760, § 136,4c oder NM S. 771, § 469.}\\
 $\neg$ ($\uparrow$(RELTENSE)S\textsubscript{part}) = future \\
 
@@ -157,51 +159,13 @@ Ein AcP kann, wie weiter unten (Abschnitt?) deutlich wird, am besten als XCOMP z
 Wenn das Partizip ein XCOMP der übergeordneten grammatikalischen Funktion ist, ist sein Bezugswort das Objekt dieser dem XCOMP übergeordneten Struktur: \\ ??
 ($\uparrow$SUBJ XCOMP) = ((XCOMP$\uparrow$)OBJ) \\
 Partizip und Bezugswort stehen dabei im Akkusativ: \\
-($\uparrow$XCOMP CASE) = acc \\
-($\uparrow$XCOMP SUBJ CASE) = acc \\
+($\downarrow$XCOMP CASE) = acc \\
+($\downarrow$XCOMP SUBJ CASE) = acc \\
 Das Partizip ist in diesem Fall meist ein PPA, selten ein PPP. Mit Sicherheit kann daher gesagt werden, dass kein PFA in einem Partizip mit XCOMP-Funktion auftauchen kann: \\
 %($\uparrow$XCOMP RELTENSE) = present   \\
-$\neg$ ($\uparrow$(RELTENSE)XCOMP) = future \\
+$\neg$ ($\downarrow$(RELTENSE)XCOMP) = future \\
 
-\subsubsection{Allgemeines zu den Lexikoneinträgen}
 
-Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschränkungen finden sich in den Lexikoneinträgen der konkreten Partizipialformen Angaben zur Bestimmung der Wortform. Diese umfassen bei den Partizipien Kasus, Numerus, Genus, \textbf{Verbform} (,,MOOD'')\footnote{Hierbei leitet sich ,,MOOD'' genaugenommen von ,,Modus'' her. Obwohl unter Modus in der Regel die Unterscheidung Indikativ - Konjunktiv verstanden wird, kann diese Bezeichnung hier 	auch im Zusammenhang mit Partizipien verwendet werden, da sich die Eigenschaften `Partizip' und `Indikativ' bzw. `Konjunktiv' gegenseitig ausschließen.}, d.h. hier stets Partizip (,,PART''), Zeitverhältnis (,,RELTENSE'', abgekürzt für ,,relative tense'') und Diathese (wobei das Attribut ,,PASSIVE'' entweder den Wert ,,+'' oder ,,-'' erhält).\footnote{Das Genus verbi, d.h. die rein morphologische Erscheinung in entweder aktiver oder passiver Form, ergibt sich aus der Grundform -- hier in Anlehnung an gängige lateinische Wörterbücher stets die erste Person Singular Präsens Indikativ -- des Prädikats des Partizips im Lexikoneintrag, wie z.B. \textit{mittor} statt \textit{mitto}. Durch diese Notierung stellen auch Deponentien kein Problem für die LFG dar, deren Diathese aktiv ist, während ihre morphologische Form im Passiv steht.} \\
-
-* in nicht-konfigurationalen Sprachen, "die eine
-relativ freie Wortstellung zulassen, kommt der Gewinnung von
-Dependenzinformation durch die Strukturanalyse besondere
-Bedeutung zu, während in konfigurationalen Sprachen wie dem Englischen sich
-diese Information in der Regel direkt aus der Wortstellung gewinnen läßt."
-
-*Der Subkategorisierungsrahmen -- gekennzeichnet durch $\langle$ $\rangle$ -- gibt diejenigen Argumente des Prädikats an, die von ihm gefordert werden.
-* Subkategorisierungsrahmen eines Prädikats = Menge der Ergänzungen, die ein Verb hat
-* Hinsichtlich des Subkategorisierungsrahmens eines Prädikats bei passiven Verben muss berücksichtigt werden, dass die Funktion des Subjekts hierbei nicht wie in aktiven Konstruktionen der semantischen Rolle agens entspricht. //...Subjekts hierbei der semantischen Rolle des Objekts entspricht.
-
-*evt. Bsp.-Lex von PFA
-
-Die konkreten Lexikoneinträge finden sich bei der Betrachtung der spezifischen Partizipialkonstruktionen.
-
-%Im Folgenden sollen exemplarische Lexikoneinträge zu den Partizipien \textit{missum} (für das PC in Objektstellung), \textit{missi} (für das PC in Subjektstellung), \textit{victis} (für den Abl. abs.) und \textit{iaecentem} für den AcP aufgeführt werden.
-
-%\subsection{Zeichen}
-
-%$\theta$
-
-%$\mid$
-
-%$\neq$
-
-%$\in$
-
-%$\ni$
-
-%$\vdash$
-
-%$\subset$
-
-%$\ast$
-
-%$\neg$
 
 \subsubsection{Allgemeines zu den Syntaxregeln}
 *Funktion der Syntaxregeln; Grund, Vorteile; anders als bei früheren Ansätzen (welche?!) wurde viel auf die Lexikoneinträge ausgelagert, um die Syntaxregeln weitgehend überschaubar zu halten. Dennoch sind hier nur die für die Partizipialkonstruktionen relevanten Regeln angegeben, da alles Weitere den Rahmen dieser Arbeit sprengen würde. Dabei wurde im Hinblick auf den effizienzorientierten Ansatz der LFG auf weitgehende Anwendbarkeit der Regeln auf verschiedenste Partizipialkonstruktionen geachtet. \\
@@ -271,6 +235,22 @@ VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
 \newline
 \end{singlespace}
 
+--> vgl. Rohrer S. 54 unten: Wir können existenzielle Bedingungen für das Merkmal FIN dazunehmen!
+
+
+- ein V, das direkt von S (nicht S-part) dominiert wird, muss immer eine
+finite Verbform sein (d.h. muss als Wert von "MOOD" Indikativ, Konjunktiv oder
+ Imperativ haben)
+- SUBJ CASE dieses finiten V ist immer Nominativ (was eben beim "Subjekt"
+(Bezugsnomen) eines Partizips nicht der Fall sein muss)
+- ein V, das von einer VP dominiert wird, kann kein finites Verb sein //
+muss ein Partizip, Infinitv oder Gerund sein (d.h. muss als Wert von "MOOD"
+"part", "inf" oder "gerund" bzw. "gerundiv" haben)
+- ein V, das von S-part dominiert wird, muss ein Partizip sein (d.h. muss
+als Wert von "MOOD" "part" haben)
+
+
+
 * \textbf{In der Menge werden oder-Striche verwendet anstatt wie oft üblich Kommata, da das Komma in diesem Kontext zu einem "shuffle operator" umdefiniert wurde (vgl. Snijder) ERKLÄREN!}
 
 Im Lateinischen ist in aller Regel V der Kopf von S.\footnote{Eine Ausnahme könnte eventuell der nominale Ablativus absolutus bilden, dessen Kopf nach logischer Betrachtung N sein müsste. Vgl. \textbf{GRAMMATIK} und vgl. \textbf{Falk, S. 64}.}
@@ -327,6 +307,72 @@ Problem wohl irrelevant waren}
 %($\uparrow$OBJ) = $\downarrow$\\
 
 *evt. Bsp. - Syntaxregeln von objekt-PC
+
+\subsubsection{Allgemeines zu den Lexikoneinträgen}
+
+\textbf{BEI LEXIKONEINTRÄGEN UND EINSCHRÄNKUNGEN WEGEN PFEILEN GUCKEN!!! (vgl. Rohrer S. 54) --> muss manchmal nach unten zeigen!}
+
+Neben diesen für die Partizipialkonstruktionen im Allgemeinen gültigen Einschränkungen finden sich in den Lexikoneinträgen der konkreten Partizipialformen Angaben zur Bestimmung der Wortform. Diese umfassen bei den Partizipien Kasus, Numerus, Genus, \textbf{Verbform} (,,MOOD'')\footnote{Hierbei leitet sich ,,MOOD'' genaugenommen von ,,Modus'' her. Obwohl unter Modus in der Regel die Unterscheidung Indikativ - Konjunktiv verstanden wird, kann diese Bezeichnung hier 	auch im Zusammenhang mit Partizipien verwendet werden, da sich die Eigenschaften `Partizip' und `Indikativ' bzw. `Konjunktiv' gegenseitig ausschließen.}, d.h. hier stets Partizip (,,PART''), Zeitverhältnis (,,RELTENSE'', abgekürzt für ,,relative tense'') und Diathese (wobei das Attribut ,,PASSIVE'' entweder den Wert ,,+'' oder ,,-'' erhält).\footnote{Das Genus verbi, d.h. die rein morphologische Erscheinung in entweder aktiver oder passiver Form, ergibt sich aus der Grundform -- hier in Anlehnung an gängige lateinische Wörterbücher stets die erste Person Singular Präsens Indikativ -- des Prädikats des Partizips im Lexikoneintrag, wie z.B. \textit{mittor} statt \textit{mitto}. Durch diese Notierung stellen auch Deponentien kein Problem für die LFG dar, deren Diathese aktiv ist, während ihre morphologische Form im Passiv steht.} \\
+
+* in nicht-konfigurationalen Sprachen, "die eine
+relativ freie Wortstellung zulassen, kommt der Gewinnung von
+Dependenzinformation durch die Strukturanalyse besondere
+Bedeutung zu, während in konfigurationalen Sprachen wie dem Englischen sich
+diese Information in der Regel direkt aus der Wortstellung gewinnen läßt."
+
+*Der Subkategorisierungsrahmen -- gekennzeichnet durch $\langle$ $\rangle$ -- gibt diejenigen Argumente des Prädikats an, die von ihm gefordert werden.
+* Subkategorisierungsrahmen eines Prädikats = Menge der Ergänzungen, die ein Verb hat
+* Hinsichtlich des Subkategorisierungsrahmens eines Prädikats bei passiven Verben muss berücksichtigt werden, dass die Funktion des Subjekts hierbei nicht wie in aktiven Konstruktionen der semantischen Rolle agens entspricht. //...Subjekts hierbei der semantischen Rolle des Objekts entspricht.
+
+*evt. Bsp.-Lex von PFA
+
+Die konkreten Lexikoneinträge finden sich bei der Betrachtung der spezifischen Partizipialkonstruktionen.
+
+%Im Folgenden sollen exemplarische Lexikoneinträge zu den Partizipien \textit{missum} (für das PC in Objektstellung), \textit{missi} (für das PC in Subjektstellung), \textit{victis} (für den Abl. abs.) und \textit{iaecentem} für den AcP aufgeführt werden.
+
+%\subsection{Zeichen}
+
+%$\theta$
+
+%$\mid$
+
+%$\neq$
+
+%$\in$
+
+%$\ni$
+
+%$\vdash$
+
+%$\subset$
+
+%$\ast$
+
+%$\neg$
+
+\subsubsection{Redundanz- bzw. Default-Regeln}
+vgl. Rohrer S. 23-24:
+
+Anstatt existenzielle Bedingungen zu den Syntaxregeln hinzuzufügen, könnte man stattdessen auch sogenannt Redundanz- bzw. Default-Regeln definieren, die über dem Lexikon operieren. (UNTERSCHIED? VOR- / NACHTEILE?)
+
+Natürlich können wir nicht alle Regeln dieser Art auflisten, aber eben diejenigen, die für unsere konkreten
+Phänomene relevant sind.
+Auch wenn diese Regeln nicht unbedingt notwendig sind, so könnten sie
+unseres Erachtens nach die Erzeugung der c-Struktur aus den Syntaxregeln
+beschleunigen, die durch die Bezeichnung der Partizipien als "V" erschwert
+wurde.
+- ein V, das direkt von S (nicht S-part) dominiert wird, muss immer eine
+finite Verbform sein (d.h. muss als Wert von "MOOD" Indikativ, Konjunktiv oder
+ Imperativ haben)
+- SUBJ CASE dieses finiten V ist immer Nominativ (was eben beim "Subjekt"
+(Bezugsnomen) eines Partizips nicht der Fall sein muss)
+- ein V, das von einer VP dominiert wird, kann kein finites Verb sein //
+muss ein Partizip, Infinitv oder Gerund sein (d.h. muss als Wert von "MOOD"
+"part", "inf" oder "gerund" bzw. "gerundiv" haben)
+- ein V, das von S-part dominiert wird, muss ein Partizip sein (d.h. muss
+als Wert von "MOOD" "part" haben)
+
+
 
 \subsubsection{Allgemeines zur c-Struktur}
 \subsubsection{Allgemeines zur f-Struktur}
