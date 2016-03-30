@@ -92,7 +92,7 @@
 Diese Arbeit beschäftigt sich mit der Beschreibung lateinischer Partizipialkonstruktionen mithilfe / im Rahmen / nach dem System der lexikalisch-funktionalen Grammatik (LFG). Die LFG ist eine Anfang der 1980er Jahre vor allem aus der Generativen Grammatik Noam Chomskys hervorgegangene Theorie zur Beschreibung der Syntax natürlicher Sprachen.\footnote{Vgl. Skript, S. 4.} Zu ihren wichtigsten Begründern zählen Joan Bresnan und Ronald Kaplan, wobei auch Mary Dalrymple, ... und ... Falk bedeutsame Beiträge zu ihrer Weiterentwicklung geleistet haben.
 % nicht zu vergessen unsere Arbeit, hö.
 %Wie andere generative Theorien versucht sie darzustellen, wie aus der endlichen Anzahl an Wörtern einer Sprache eine unendliche Menge -- grammatisch korrekter -- Sätze erzeugt werden kann. 
-Ihre Regeln sollen sowohl die Erzeugung einer unendliche Menge grammatisch korrekter Sätze aus der endlichen Anzahl an Wörtern einer Sprache erklären /repräsentieren als auch ungrammatische Sätze als solche erkennen. Daher ist die LFG auch als Grammatikformalismus für die Computerlinguistik interessant, wobei sie der computergestützten (??) Prüfung von Sätzen hinsichtlich ihrer Grammatikalität sowie der Generation neuer grammatischer Sätze dienen soll / kann.\footnote{Vgl. Skript, S. 4.}
+Ihre Regeln sollen sowohl die Erzeugung einer unendliche Menge grammatisch korrekter Sätze aus der endlichen Anzahl an Wörtern einer Sprache erklären /repräsentieren als auch ungrammatische Sätze als solche erkennen.\footnote{Vgl. Skript S. 18.} Daher ist die LFG auch als Grammatikformalismus für die Computerlinguistik interessant, wobei sie der computergestützten (??) Prüfung von Sätzen hinsichtlich ihrer Grammatikalität sowie der Generation neuer grammatischer Sätze dienen soll / kann.\footnote{Vgl. Skript, S. 4.}
 Da sich die Forschung im Bereich der LFG hinsichtlich der lateinischen Sprache bislang noch in ihren Grundzügen / Anfängen befindet, soll in dieser Arbeit die Darstellung der im Lateinischen sehr prävalenten Partizipialkonstruktionen nach den Grundsätzen (?? Regeln? Prinzipien? Konzept?) der LFG beleuchtet werden. // ...sollen in dieser Arbeit Vorschläge bezüglich ... unterbreitet werden. Da dies das Verständnis des grundlegenden Aufbaus lateinischer Partizipialkonstruktionen voraussetzt, werden diese verschiedenen Konstruktionen  -- anschließend an eine nähere Einführung in die Thematik und Terminologie der LFG -- stets kurz erklärt, bevor sie in das Gerüst der LFG eingefügt werden. (Letzeres geschieht anhand von Beispielsätzen und beinhaltet auch Erläuterungen zu verschiedenen Ansätzen und diversen Schwierigkeiten bei der Umsetzung.)
 
 \section{Einführung in Thematik und Terminologie}
@@ -120,6 +120,50 @@ Da im Lateinischen im Gegensatz zu den modernen Sprachen die Wortstellung innerh
 %Sie sollen zunächst für das PC, den Abl. abs. und den AcP als allgemeine Einschränkungen für die jeweiligen Partizipien definiert werden.
 
 Die in dieser Arbeit unter dem Titel ``Einschränkungen'' festgehaltenen Bedingungen sind jedoch nicht Teil der LFG, sondern dienen lediglich dem besseren Verständnis der lateinischen Grammatik, das für diese Arbeit unerlässlich ist. Diese Einschränkungen sollen zunächst allgemein anhand von Lexikoneinträgen eines Partizips x definiert werden. 
+
+* --> als Default- oder Redundanzregeln festlegen! \\
+* \textbf{Diese Default- oder Redundanzregeln können aber nur für Partizipialkonstruktionen i.A. definiert werden, oder? Oder wo würde man sonst festlegen, wann was ein Abl. abs. ist oder ein subst. Part?} \\
+* --> \textbf{in dem Fall (allgemeine Regeln) wird es beim subst. Part. schwierig, da das kein BZW braucht (bei Variante OBJ); kann man dann irgendwo was mit nem c oder so machen, oder in der Regel sowas hinzufügen wie "oder SUBJ = pro und PRON-TYPE mis"... ??}
+
+PC:
+Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort kongruent sei:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
+Dieses Bezugswort des Partizips ist eine grammatikalische Funktion der dem XADJ übergeordneten Struktur, und somit Element des Hauptsatzes:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+($\uparrow$SUBJ) = ((XADJ$\uparrow$)GF) \\
+
+SUBST PART:
+\textbf{Variante 1: XADJ}:\\
+Das Subjekt der untergeordneten Struktur ist das Objekt der dem XADJ übergeordneten Struktur (welches fehlt): \\
+($\downarrow$SUBJ) = ((OBJ$\uparrow$)XADJ) \textbf{???} \\
+
+ABL ABS:
+Da der Restsatz (S\textsubscript{fin}) auch ohne den Abl. abs. noch Sinn ergeben würde,  steht er in der Funktion eines ADJ: \\
+($\uparrow$ADJ) = $\downarrow$ \\
+Auch beim Abl. abs. muss das Partizip in Kasus, Numerus und Genus mit seinem Bezugswort übereinstimmen:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
+Sowohl Partizip als auch Bezugswort stehen stets im Ablativ:\footnote{Vgl. KSt S. 771, § 138,5b.} \\
+($\uparrow$CASE) = abl \\
+($\uparrow$SUBJ CASE) = abl \\
+Da das Bezugswort des Partizips im Abl. abs. keine Rolle im übergeordneten Satz spielen darf, ist es keine grammatikalische Funktion der dem XADJ übergeordneten Struktur. Der Abl. abs. ist daher vom finiten Satz losgelöst:\footnote{Vgl. KSt S. 771, § 138,5b.} \\
+$\neg$ ($\uparrow$SUBJ) = ((ADJ$\uparrow$)GF) \\
+Da sich diese Arbeit ausschließlich auf das klassische Latein Caesars und Ciceros bezieht, gilt für die folgenden Betrachtungen die Annahme, dass im Abl. abs. kein Partizip Futur Aktiv (PFA) verwendet wird.\footnote{Vgl. KSt. S. 760, § 136,4c oder NM S. 771, § 469.}\\
+$\neg$ ($\uparrow$RELTENSE) = future \\
+
+ACP:
+Da das Partizip im AcP eine Ergänzung des Verbalbegriffs ist, erfüllt es im Satz stets die Funktion eines XCOMP: \\
+($\uparrow$XCOMP) = $\downarrow$ \\
+Das Partizip und sein Bezugswort stehen auch beim AcP im selben Kasus, Numerus und Genus:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
+Wie auch hier der Name der Konstruktion vermuten lässt, stehen beim AcP Partizip und Bezugswort im Akkusativ:\footnote{Vgl. KSt S. 763, § 137,2a.} \\
+($\uparrow$CASE) = acc \\
+($\uparrow$SUBJ CASE) = acc \\
+Das Bezugswort des Partizips ist das Objekt der dem XCOMP übergeordneten Struktur: (kann ja nur OBJ sein wegen Akk) \\
+	($\uparrow$SUBJ) = ((XCOMP$\uparrow$)OBJ) \\
+%($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ) (?) \\
+
+Das Partizip ist beim AcP meist ein PPA, selten ein PPP. \\
+%($\uparrow$XCOMP RELTENSE) = present   \\
+$\neg$ ($\uparrow$RELTENSE) = future \\
 
 \subsubsection{Allgemeines zu den Lexikoneinträgen}
 
@@ -301,12 +345,11 @@ Partizipien können als Vertreter von Adverbialsätzen aufgefasst werden und ste
 Die Konstruktion des PC erfüllt im Satz immer die syntaktische Funktion des XADJ: \\ 
 ($\uparrow$XADJ) = $\downarrow$ \\
 
-\subsection{Einschränkungen}
-
-Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort kongruent sei:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
-($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
-Dieses Bezugswort des Partizips ist eine grammatikalische Funktion der dem XADJ übergeordneten Struktur, und somit Element des Hauptsatzes:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
-($\uparrow$SUBJ) = ((XADJ$\uparrow$)GF) \\
+%\subsection{Einschränkungen}
+%Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort kongruent sei:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+%($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
+%Dieses Bezugswort des Partizips ist eine grammatikalische Funktion der dem XADJ übergeordneten Struktur, und somit Element des Hauptsatzes:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+%($\uparrow$SUBJ) = ((XADJ$\uparrow$)GF) \\
 
 \subsection{das objektabhängige Participium coniunctum}
 Beispielsatz:\\
@@ -607,10 +650,10 @@ Die Umsetzung des substantivierten Partizips in die LFG-Struktur soll anhand des
 \subsection{Variante 1: das Partizip als XADJ zum OBJ}
 Folgt man dem Neuen Menge\footnote{Vgl. NM \textbf{§ ??}} und betrachtet das substantivierte Partizip (\textit{petentibus}) als Attribut zu einem sozusagen fehlenden Bezugswort -- in diesem Fall also etwa \textit{eis} oder \textit{viris} -- so würde die Partizipialkonstruktion in der Rolle eines XADJ zu diesem Bezugswort stehen; das Bezugswort selbst wäre dann das Objekt des Hauptsatzprädikats \textit{parcit}. Dieses fehlende Objekt wird in der c-Struktur unten durch ,,mis'' (für ,,missing'', ,,fehlend'') bezeichnet. Da vom substantivierten Partizip petentibus in unserem Beispiel noch ein Nomen in Objektfunktion abhängt, spaltet sich die Partizipial-VP noch einmal in V und NP auf. \textbf{(eher zu PC, da das früher erwähnt wird)}
 
-\subsubsection{Einschränkungen}
-\textbf{Variante 1: XADJ}:\\
-Das Subjekt der untergeordneten Struktur ist das Objekt der dem XADJ übergeordneten Struktur (welches fehlt): \\
-($\downarrow$SUBJ) = ((OBJ$\uparrow$)XADJ) \textbf{???} \\
+%\subsubsection{Einschränkungen}
+%\textbf{Variante 1: XADJ}:\\
+%Das Subjekt der untergeordneten Struktur ist das Objekt der dem XADJ übergeordneten Struktur (welches fehlt): \\
+%($\downarrow$SUBJ) = ((OBJ$\uparrow$)XADJ) \textbf{???} \\
 
 \subsubsection{Lexikoneintrag}
 Der Lexikoneintrag des Partizips lautet wie folgt:\footnote{Im Rahmen des Umfangs der Arbeit wird nur die für unseren Beispielsatz relevanten Argumente aufgezählt. Für andere mögliche Konstruktionen von \textit{petere} -- wie (SUBJ, OBJ, OBL\textsubscript{LOC})bzw. (SUBJ, OBJ, OBL\textsubscript{PURPOSE}) -- müssten eigene Lexikoneinträge erstellt werden.\textbf{(Vgl. RHH §119 und § 234)}.}
@@ -718,7 +761,7 @@ GEN & n \\
 In der obigen Variante würde folglich ein ausgelassenes Bezugswort des Partizips angenommen werden. Dies ist jedoch weder notwendig noch bietet es einen Mehrwert. Da das Partizip substantiviert ist, und somit eben gerade keinem Bezugswort untergeordnet, haben wir uns für die folgende Variante entschieden, deren c-Struktur sichtbar unkomplizierter ist. Dabei ist das Partizip Kopf der Partizipialphrase VP und somit alleiniges Objekt des Hauptsatz-Prädikats \textit{parcit}. In diesem Fall überwiegen zwar die nominalen Eigenschaften des Partizips, die Bezeichnung `VP' wird jedoch um der Konsistenz willen beibehalten.
 
 
-\subsubsection{Einschränkungen}
+%\subsubsection{Einschränkungen}
 \subsubsection{Lexikoneintrag}
 *wie oben, mit einzigem Unterschied ...
 
@@ -1062,17 +1105,17 @@ Beispielsatz: \\
  
 
 \subsection{Einschränkungen}
-Da der Restsatz (S\textsubscript{fin}) auch ohne den Abl. abs. noch Sinn ergeben würde,  steht er in der Funktion eines ADJ: \\
-($\uparrow$ADJ) = $\downarrow$ \\
-Auch beim Abl. abs. muss das Partizip in Kasus, Numerus und Genus mit seinem Bezugswort übereinstimmen:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
-($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
-Sowohl Partizip als auch Bezugswort stehen stets im Ablativ:\footnote{Vgl. KSt S. 771, § 138,5b.} \\
-($\uparrow$CASE) = abl \\
-($\uparrow$SUBJ CASE) = abl \\
-Da das Bezugswort des Partizips im Abl. abs. keine Rolle im übergeordneten Satz spielen darf, ist es keine grammatikalische Funktion der dem XADJ übergeordneten Struktur. Der Abl. abs. ist daher vom finiten Satz losgelöst:\footnote{Vgl. KSt S. 771, § 138,5b.} \\
-$\neg$ ($\uparrow$SUBJ) = ((ADJ$\uparrow$)GF) \\
-Da sich diese Arbeit ausschließlich auf das klassische Latein Caesars und Ciceros bezieht, gilt für die folgenden Betrachtungen die Annahme, dass im Abl. abs. kein Partizip Futur Aktiv (PFA) verwendet wird.\footnote{Vgl. KSt. S. 760, § 136,4c oder NM S. 771, § 469.}\\
-$\neg$ ($\uparrow$RELTENSE) = future \\
+%Da der Restsatz (S\textsubscript{fin}) auch ohne den Abl. abs. noch Sinn ergeben würde,  steht er in der Funktion eines ADJ: \\
+%($\uparrow$ADJ) = $\downarrow$ \\
+%Auch beim Abl. abs. muss das Partizip in Kasus, Numerus und Genus mit seinem Bezugswort übereinstimmen:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+%($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
+%Sowohl Partizip als auch Bezugswort stehen stets im Ablativ:\footnote{Vgl. KSt S. 771, § 138,5b.} \\
+%($\uparrow$CASE) = abl \\
+%($\uparrow$SUBJ CASE) = abl \\
+%Da das Bezugswort des Partizips im Abl. abs. keine Rolle im übergeordneten Satz spielen darf, ist es keine grammatikalische Funktion der dem XADJ übergeordneten Struktur. Der Abl. abs. ist daher vom finiten Satz losgelöst:\footnote{Vgl. KSt S. 771, § 138,5b.} \\
+%$\neg$ ($\uparrow$SUBJ) = ((ADJ$\uparrow$)GF) \\
+%Da sich diese Arbeit ausschließlich auf das klassische Latein Caesars und Ciceros bezieht, gilt für die folgenden Betrachtungen die Annahme, dass im Abl. abs. kein Partizip Futur Aktiv (PFA) verwendet wird.\footnote{Vgl. KSt. S. 760, § 136,4c oder NM S. 771, § 469.}\\
+%$\neg$ ($\uparrow$RELTENSE) = future \\
 
 %($\uparrow$RELTENSE (ADJ)) $\neq$ future \\
 %$\neg$ ($\downarrow$PRED) = ($\uparrow$GF PRED) \\
@@ -1171,20 +1214,20 @@ Verben der Wahrnehmung, wie sie im AcI und AcP vorkommen, erfordern im Lateinisc
 Letztere verleiht dem Satzgefüge eine enorme Bedeutungserweiterung, da sie satzwertig ist. --> XCOMP und nicht XADJ
 
 \subsection{Einschränkungen}
-Da das Partizip im AcP eine Ergänzung des Verbalbegriffs ist, erfüllt es im Satz stets die Funktion eines XCOMP: \\
-($\uparrow$XCOMP) = $\downarrow$ \\
-Das Partizip und sein Bezugswort stehen auch beim AcP im selben Kasus, Numerus und Genus:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
-($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
-Wie auch hier der Name der Konstruktion vermuten lässt, stehen beim AcP Partizip und Bezugswort im Akkusativ:\footnote{Vgl. KSt S. 763, § 137,2a.} \\
-($\uparrow$CASE) = acc \\
-($\uparrow$SUBJ CASE) = acc \\
-Das Bezugswort des Partizips ist das Objekt der dem XCOMP übergeordneten Struktur: (kann ja nur OBJ sein wegen Akk) \\
-	($\uparrow$SUBJ) = ((XCOMP$\uparrow$)OBJ) \\
+%Da das Partizip im AcP eine Ergänzung des Verbalbegriffs ist, erfüllt es im Satz stets die Funktion eines XCOMP: \\
+%($\uparrow$XCOMP) = $\downarrow$ \\
+%Das Partizip und sein Bezugswort stehen auch beim AcP im selben Kasus, Numerus und Genus:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
+%($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
+%Wie auch hier der Name der Konstruktion vermuten lässt, stehen beim AcP Partizip und Bezugswort im Akkusativ:\footnote{Vgl. KSt S. 763, § 137,2a.} \\
+%($\uparrow$CASE) = acc \\
+%($\uparrow$SUBJ CASE) = acc \\
+%Das Bezugswort des Partizips ist das Objekt der dem XCOMP übergeordneten Struktur: (kann ja nur OBJ sein wegen Akk) \\
+%	($\uparrow$SUBJ) = ((XCOMP$\uparrow$)OBJ) \\
 %($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ) (?) \\
 
-Das Partizip ist beim AcP meist ein PPA, selten ein PPP. \\
+%Das Partizip ist beim AcP meist ein PPA, selten ein PPP. \\
 %($\uparrow$XCOMP RELTENSE) = present   \\
-$\neg$ ($\uparrow$RELTENSE) = future \\
+%$\neg$ ($\uparrow$RELTENSE) = future \\
 	
 
 \subsection{Lexikoneintrag}
