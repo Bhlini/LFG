@@ -123,42 +123,43 @@ Die in dieser Arbeit unter dem Titel ``Einschränkungen'' festgehaltenen Bedingu
 
 * --> als Default- oder Redundanzregeln festlegen! \\
 * \textbf{Diese Default- oder Redundanzregeln können aber nur für Partizipialkonstruktionen i.A. definiert werden, oder? Oder wo würde man sonst festlegen, wann was ein Abl. abs. ist oder ein subst. Part?} \\
-* --> \textbf{in dem Fall (allgemeine Regeln) wird es beim subst. Part. schwierig, da das kein BZW braucht (bei Variante OBJ); kann man dann irgendwo was mit nem c oder so machen, oder in der Regel sowas hinzufügen wie "oder SUBJ = pro und PRON-TYPE mis"... ??}
+* --> \textbf{in dem Fall (allgemeine Regeln) wird es beim subst. Part. schwierig, da das kein BZW braucht (bei Variante OBJ); kann man dann irgendwo was mit nem c oder so machen, oder in der Regel sowas hinzufügen wie "oder SUBJ = pro und PRON-TYPE mis"... ??} \\
 
-PC:
+%Die grammatikalische Funktion einer Partizipialkonstruktion -- und daher des Partizips, welches Kopf jeder Partizipialkonstruktion ist -- ist immer entweder ein XADJ, ein ADJ oder ein XCOMP: \\
+Die grammatikalische Funktion jedes Partizips, welches Teil einer finiten Verbform ist, ist immer entweder ein XADJ, ein ADJ oder ein XCOMP der übergeordneten grammatikalischen Funktion: \\
+($\uparrow$GF) = ((XADJ$\uparrow$)GF) $\mid$ ((ADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF) \textbf{???} \\ 
+(ich denk da wir diese Regeln ja immer im Zusammenhang mit Partizipien formulieren, müssen wir nich überall noch ,,part'' einfügen, das ist ja im Endeffekt eh ne Implementierungssache; würde ich so eben auch in ner Fußnote vermerken, um auf der sicheren Seite zu sein)
+
+%PC:
 Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort kongruent sei:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
 ($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
-\textbf{--> aber nur, wenn es ein SUBJ (BZW) gibt! --> einfach keine existenzielle Gleichung machen, sodass es nicht existieren MUSS?}
+\textbf{--> aber nur, wenn es ein SUBJ (BZW) gibt! --> einfach keine existenzielle Gleichung machen, sodass es nicht existieren MUSS?} \\
 
-Das Bezugswort des Partizips in den Kasus Nominativ, (Genitiv), Akkusativ und Dativ ist in jedem Fall eine grammatikalische Funktion der übergeordneten Struktur, und somit Element des Hauptsatzes:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
-($\uparrow$SUBJ) = ((GF$\uparrow$)GF) \\
+Da das Bezugswort eines PC in jedem Fall eine grammatikalische Funktion der übergeordneten Struktur ist,\footnote{Vgl. KSt S. 771, § 138,5a.} nimmt das PC die grammatikalische Funktion XADJ an. Das Subjekt eines Partizips in XADJ-Funktion ist somit eine grammatikalische Funktion der übergeordneten grammatikalischen Funktion (in der Regel S): \\
+($\uparrow$XADJ SUBJ) = ((GF$\uparrow$)GF) \\
+Partizipien in allen Kasus können in einer PC-Konstruktion auftreten, auch wenn Genitiv und Ablativ hierbei seltener vorkommen als die übrigen Kasus. Dies bedeutet, dass das Partizip in einer XADJ-Funktion in jedem Kasus vorkommen kann: \\
+($\uparrow$XADJ CASE) = nom $\mid$ gen $\mid$ acc $\mid$ dat $\mid$ abl \\
 
-Die grammatikalische Funktion einer Partizipialkonstruktion ist immer entweder ein XADJ, ein ADJ oder ein XCOMP: \\
-($\uparrow$GF) = ((XADJ$\uparrow$)GF) $\mid$ ((ADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF) \textbf{???} \\
-
-Für ein Bezugswort im Ablativ kann keine derartige Aussage getroffen werden, da es sowohl innerhalb einer PC- als auch einer Abl.-abs.-Konstruktion vorkommen kann, und in letzterem Falle eben gerade keine grammatikalische Funktion der übergeordneten Struktur wäre. \\
-
---> vielleicht sowas wie "Wenn das Partizip Element eines ADJ ist, steht es immer im Ablativ"?
+%ABL. ABS.:
+Für ein Bezugswort im Ablativ kann keine derartige Aussage getroffen werden, da es sowohl innerhalb einer PC- als auch einer Abl.-abs.-Konstruktion vorkommen kann, und in letzterem Falle eben gerade keine grammatikalische Funktion der übergeordneten Struktur wäre.
+--> vielleicht sowas wie "Wenn das Partizip Element eines ADJ ist, steht es immer im Ablativ"? \\
 ($\uparrow$ADJ CASE) = abl \textbf{???} \\
-(ich denk da wir diese Regeln ja immer im Zusammenhang mit Partizipien formulieren, müssen wir nich überall noch ,,part'' einfügen, das ist ja im Endeffekt eh ne Implementierungssache)
-
-SUBST PART:
-\textbf{Variante 1: XADJ}:\\
-Falls das Subjekt fehlt, wie beim substantivierten Partizip, ist es ein XADJ zur übergeordneten grammatikalischen Funktion, welche ebenfalls fehlt): \\
-($\uparrow$SUBJ\textsubscript{mis}) = ((GF\textsubscript{mis}$\uparrow$)XADJ) \textbf{???} \\
-
-ABL ABS:
-Da der Restsatz (S\textsubscript{fin}) auch ohne den Abl. abs. noch Sinn ergeben würde,  steht S\textsubscript{part} in der Funktion eines ADJ: \\
-($\uparrow$ADJ) = $\downarrow$ \\
-
+Dasselbe trifft auch auf sein Bezugswort zu: \\
+($\uparrow$SUBJ ADJ CASE) = abl \textbf{???} \\
 Da sich diese Arbeit ausschließlich auf das klassische Latein Caesars und Ciceros bezieht, gilt für die folgenden Betrachtungen die Annahme, dass im Abl. abs. kein Partizip Futur Aktiv (PFA) verwendet wird.\footnote{Vgl. KSt. S. 760, § 136,4c oder NM S. 771, § 469.}\\
 $\neg$ ($\uparrow$(RELTENSE)S\textsubscript{part}) = future \\
 
+(SUBST PART: Variante 1: XADJ:) \\
+Falls kein Subjekt erkennbar vorhanden ist, wie beim substantivierten Partizip, ist das ,fehlende' / logische Subjekt ein XADJ zur übergeordneten grammatikalischen Funktion, welche ebenfalls fehlt): \\
+($\uparrow$SUBJ\textsubscript{mis}) = ((GF\textsubscript{mis}$\uparrow$)XADJ) \textbf{???} \\
 
+%AcP
 --> Wenn das Partizip ein XCOMP der übergeordneten grammatikalischen Funktion ist, ist sein Bezugswort das Objekt dieser dem XCOMP übergeordneten Struktur: \\ ??
 ($\uparrow$SUBJ XCOMP) = ((XCOMP$\uparrow$)OBJ) \\
 %($\uparrow$XCOMP SUBJ) = ($\uparrow$OBJ) (?) \\
-
+Partizip und Bezugswort stehen hierbei im Akkusativ: \\
+($\uparrow$XCOMP CASE) = acc \\
+($\uparrow$XCOMP SUBJ CASE) = acc \\
 --> Wenn das Partizip ein XCOMP der übergeordneten grammatikalischen Funktion ist, ist es meist ein PPA, selten ein PPP: \\
 %($\uparrow$XCOMP RELTENSE) = present   \\
 $\neg$ ($\uparrow$(RELTENSE)XCOMP) = future \\
