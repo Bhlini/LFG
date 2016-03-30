@@ -220,12 +220,14 @@ S & $\rightarrow$ & V, & XP $\mid$ & V \\
       & $\qquad$ & \textsuperscript{($\uparrow$FIN)} & &  \textsuperscript{($\uparrow$FIN)}\\
 %XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
 XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
-   & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} &\textsuperscript{($\uparrow$XADJ) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ) = $\downarrow$} \\
+   & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} &\textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ) = $\downarrow$} \\
     & $\qquad$ & \textsuperscript{($\downarrow$CASE) = nom} & &  \\
-    & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ) = $\downarrow$} &  \textsuperscript{($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$} \\
-       & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$OBL) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
-         & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$ADJ) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
-           & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$COMP) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+    & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\mid$ ($\uparrow$OBJ) = $\downarrow$} &  \textsuperscript{$\mid$ ($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$} \\
+       & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$} & \textsuperscript{$\mid$ ($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$} & \\
+         & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$ADJ) = $\downarrow$} & \textsuperscript{$\mid$ ($\uparrow$ADJ) = $\downarrow$} &  \\
+           & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$COMP) = $\downarrow$} & \textsuperscript{$\mid$ ($\uparrow$COMP) = $\downarrow$} &  \\
+             & $\qquad$ & & \textsuperscript{$\mid$ ($\uparrow$XADJ) = $\downarrow$} &  \\
+               & $\qquad$ & & \textsuperscript{$\mid$ ($\uparrow$XCOMP) = $\downarrow$} &  \\
    NP & $\rightarrow$ & N &  \{XP\}* $\mid$ & N \\
    & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
 VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
