@@ -210,9 +210,47 @@ ADJ-GF & $\equiv$ & \{ADJ $\in$ $\mid$ XADJ $\in$\} \\
 %\newline
 %\end{singlespace}
 
-* \textbf{welche grammatikalischen Funktionen jede dieser Phrasen wann einnehmen kann, also  ob ne NP unter ner VP z.B. SUBJ, OBJ, usw. sein kann... ich glaub es geht nämlich bei uns SUBJ und OBJ (nich sicher), und ADJ, aber OBL ja z.B. nich... oder? Geht COMP? Naja, solche Überlegungen jedenfalls, dann könnten wir nämlich das "ADJ-GF oder ARG-GF" ein bisschen konkretisieren}
+* \textbf{Wir schreiben die Regeln erstmal ohne Grammatikfunktionen auf, sagen dann in nem Satz, dass die Grammatikfunktionen hier auch dazugeschrieben werden sollten (+ gewisse weitere Beschränkungen u.U.), da eben eine NP unter ner NP nicht deren Subjekt sein kann (plus vielleicht noch 1-2 Beispiele um zu zeigen, dass wir's kapiert haben xD) und machen dann die ersten zwei Zeilen von den Regeln beispielhaft mit den Anmerkungen, einfach dass man sieht, aha, so könnte das dann aussehen (die hab ich schon gemacht, also wäre das kein extra Aufwand)}
 
-\textbf{Variante 2 - neu, mit zusätzlichen Beschränkungen}
+\begin{singlespace}
+\begin{tabular}{ l  l  c  c  c  c  c  c  c}
+S & $\rightarrow$ & V & , & XP & $\mid$ & V \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+%      & $\qquad$ & \textsuperscript{($\uparrow$FIN)} & &  \textsuperscript{($\uparrow$FIN)}\\
+%XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
+XP & $\rightarrow$ & \{ NP & $\mid$ &  VP & $\mid$ & PP \}* \\
+%   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
+   NP & $\rightarrow$ & N & & \{XP\}* & $\mid$ & N \\
+ %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+VP & $\rightarrow$ & V & & \{PP & $\mid$     & NP\}* & $\mid$ & V \\
+ %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+   PP & $\rightarrow$ & P & , & VP & $\mid$  & P & ,   & NP \\
+  % & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+%PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
+ %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+\end{tabular}\\
+\newline
+\end{singlespace}
+
+\begin{tabular}{ l  l  c  c  c  c  c  c  c}
+S & $\rightarrow$ & [V , XP] & $\mid$ & V \\
+XP & $\rightarrow$ & \{ NP & $\mid$ &  VP & $\mid$ & PP \}* \\
+   NP & $\rightarrow$ & [N \{XP\}*] & $\mid$ & N \\
+VP & $\rightarrow$ & [V \{PP & $\mid$ & NP\}*] & $\mid$ & V \\
+   PP & $\rightarrow$ & [P, VP] & $\mid$ & [P, NP] \\
+\end{tabular}\\
+\newline
+
+\begin{tabular}{ l  l  c  c  c  c  c  c  c}
+S & $\rightarrow$ & [V , XP] $\mid$ V \\
+XP & $\rightarrow$ & \{ NP $\mid$  VP $\mid$ PP \}* \\
+   NP & $\rightarrow$ & [N \{XP\}*] $\mid$ N \\
+VP & $\rightarrow$ & [V \{PP $\mid$ NP\}*] $\mid$ V \\
+   PP & $\rightarrow$ & [P, VP] $\mid$ [P, NP] \\
+\end{tabular}\\
+\newline
+
+\textbf{mit zusätzlichen Beschränkungen}
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c  c  c  c}
 S & $\rightarrow$ & V, & XP $\mid$ & V \\
@@ -228,12 +266,12 @@ XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
            & $\qquad$ & \textsuperscript{$\mid$ ($\uparrow$COMP) = $\downarrow$} & \textsuperscript{$\mid$ ($\uparrow$COMP) = $\downarrow$} &  \\
              & $\qquad$ & & \textsuperscript{$\mid$ ($\uparrow$XADJ) = $\downarrow$} &  \\
                & $\qquad$ & & \textsuperscript{$\mid$ ($\uparrow$XCOMP) = $\downarrow$} &  \\
-   NP & $\rightarrow$ & N &  \{XP\}* $\mid$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-   PP & $\rightarrow$ & P, & VP $\mid$  & P,   & NP \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+%   NP & $\rightarrow$ & N &  \{XP\}* $\mid$ & N \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+%VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+%   PP & $\rightarrow$ & P, & VP $\mid$  & P,   & NP \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
 %PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
  %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
 \end{tabular}\\
@@ -242,6 +280,26 @@ VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
 \newline
 \newline
 \end{singlespace}
+
+%\textbf{Variante 2 - alt}
+%\begin{singlespace}
+%\begin{tabular}{ l  l  c  c  c  c  c  c  c}
+%S & $\rightarrow$ & V, & XP $\mid$ & V \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
+%      & $\qquad$ & \textsuperscript{($\uparrow$FIN)} & &  \textsuperscript{($\uparrow$FIN)}\\
+%XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
+%XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
+%   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
+%   NP & $\rightarrow$ & N &  \{XP\}* $\mid$ & N \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+%VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
+%   PP & $\rightarrow$ & P, & VP $\mid$  & P,   & NP \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+%PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
+ %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
+%\end{tabular}\\
+%\end{singlespace}
 
 --> vgl. Rohrer S. 54 unten: Wir können existenzielle Bedingungen für das Merkmal FIN dazunehmen!
 
@@ -255,32 +313,6 @@ muss ein Partizip, Infinitv oder Gerund sein (d.h. muss als Wert von "MOOD"
 "part", "inf" oder "gerund" bzw. "gerundiv" haben)
 - ein V, das von S-part dominiert wird, muss ein Partizip sein (d.h. muss
 als Wert von "MOOD" "part" haben)
-
-\textbf{Variante 2 - alt}
-\begin{singlespace}
-\begin{tabular}{ l  l  c  c  c  c  c  c  c}
-S & $\rightarrow$ & V, & XP $\mid$ & V \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
-      & $\qquad$ & \textsuperscript{($\uparrow$FIN)} & &  \textsuperscript{($\uparrow$FIN)}\\
-%XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
-XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
-   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
-   NP & $\rightarrow$ & N &  \{XP\}* $\mid$ & N \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-   PP & $\rightarrow$ & P, & VP $\mid$  & P,   & NP \\
-   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
-%PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
- %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
-\end{tabular}\\
-\newline
-\newline
-\newline
-\newline
-\end{singlespace}
-
-
 
 * sagen, dass wir Disjunktivität nicht beachten!
 
