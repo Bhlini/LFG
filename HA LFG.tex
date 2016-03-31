@@ -136,6 +136,14 @@ Die grammatikalische Funktion jedes Partizips, welches Teil einer finiten Verbfo
 ($\uparrow$GF) = ((XADJ$\uparrow$)GF) $\mid$ ((ADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF) \textbf{???} \\ 
 (ich denk da wir diese Regeln ja immer im Zusammenhang mit Partizipien formulieren, müssen wir nich überall noch ,,part'' einfügen, das ist ja im Endeffekt eh ne Implementierungssache; würde ich so eben auch in ner Fußnote vermerken, um auf der sicheren Seite zu sein)
 
+--> ($\downarrow$CASE) = nom $\Rightarrow$ ($\uparrow$SUBJ) = $\downarrow$ bedeutet, dass WENN der Kasus einer NP Nominativ ist, diese NP die GF des SUBJ erhält.
+
+
+
+
+
+
+($\downarrow$CASE) = nom $\Rightarrow$ ($\uparrow$SUBJ) = $\downarrow$
 %PC:
 Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort kongruent sei:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
 ($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
@@ -144,24 +152,38 @@ Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort kongruent se
 Da das Bezugswort eines PC in jedem Fall eine grammatikalische Funktion der übergeordneten Struktur ist,\footnote{Vgl. KSt S. 771, § 138,5a.} nimmt das PC die grammatikalische Funktion XADJ an. Das Subjekt eines Partizips in XADJ-Funktion ist somit eine grammatikalische Funktion der übergeordneten grammatikalischen Funktion (in der Regel S): \\
 ($\uparrow$XADJ SUBJ) = ((GF$\uparrow$)GF) \\
 Partizipien in allen Kasus können in einer PC-Konstruktion auftreten, auch wenn Genitiv und Ablativ hierbei seltener vorkommen als die übrigen Kasus. Dies bedeutet, dass das Partizip in einer XADJ-Funktion in jedem Kasus vorkommen kann: \\
-($\downarrow$XADJ CASE) = nom $\mid$ gen $\mid$ acc $\mid$ dat $\mid$ abl \\
+($\downarrow$XADJ CASE) = \{nom $\mid$ gen $\mid$ acc $\mid$ dat $\mid$ abl\} \\
+\textbf{bzw. andersrum formuliert, vgl. Skript, S. 48:} \\
+($\downarrow$CASE) = nom $\Rightarrow$ ($\uparrow$XADJ)= $\downarrow$ \\
+$\mid$ ($\downarrow$CASE) = gen $\Rightarrow$ ($\uparrow$XADJ)= $\downarrow$ \\
+$\mid$ ($\downarrow$CASE) = dat $\Rightarrow$ ($\uparrow$XADJ)= $\downarrow$ \\
+$\mid$ ($\downarrow$CASE) = acc $\Rightarrow$ \{($\uparrow$XCOMP) $\mid$ ($\uparrow$XADJ)\}= $\downarrow$ \\
+$\mid$ ($\downarrow$CASE) = abl $\Rightarrow$ \{($\uparrow$XADJ) $\mid$ ($\uparrow$ADJ)\}= $\downarrow$ \\
+
+\textbf{--> wir müssen nochmal gucken, wie herum es definiert sein sollte... bzw. einfach Geiger fragen xD ich glaub das untere ist besser, denn wir nehmen ja die Partizip-Formen und gucken, welchen Kasus das hat, und gucken dann, wo wir es einsetzen können (und LFG soll ja angeblich auch den mentalen Prozess der Sprachverarbeitung darstellen xD)}
 
 %ABL. ABS.:
 Da der Abl. abs. jedoch vom Restsatz semantisch und syntaktisch losgelöst ist, darf sein Bezugswort keine grammatikalische Funktion der übergeordneten Struktur (in aller Regel S) sein. Der dem Partizip eines Abl. abs. kommt daher unumgänglich die Funktion ADJ zu. Somit kann geschlussfolgert werden, dass ein Partizip, welches Element eines ADJ ist, immer im Ablativ steht: \\
 ($\downarrow$ADJ CASE) = abl \\
 Dasselbe trifft auch auf sein Bezugswort zu: \\
 ($\downarrow$SUBJ ADJ CASE) = abl \\
+\textbf{oder:} \\
+($\uparrow$CASE) = abl $\Rightarrow$ ($\uparrow$SUBJ CASE) = abl \textbf{?}\\
 Da sich diese Arbeit ausschließlich auf das klassische Latein Caesars und Ciceros bezieht, gilt für die folgenden Betrachtungen die Annahme, dass im Abl. abs. kein Partizip Futur Aktiv (PFA) verwendet wird.\footnote{Vgl. KSt. S. 760, § 136,4c oder NM S. 771, § 469.}\\
 $\neg$ ($\uparrow$(RELTENSE)S\textsubscript{part}) = future \\
 
 (SUBST PART: Variante 1: XADJ:) \\
-Falls kein Subjekt erkennbar vorhanden ist, wie beim substantivierten Partizip, ist das ,fehlende' / logische Subjekt ein XADJ zur übergeordneten grammatikalischen Funktion, welche ebenfalls fehlt): \\
+Falls kein Subjekt erkennbar vorhanden ist, wie beim substantivierten Partizip, ist das ,fehlende' / logische Subjekt ein XADJ zur übergeordneten grammatikalischen Funktion, welche ebenfalls fehlt: \\
 ($\uparrow$SUBJ\textsubscript{mis}) = ((GF\textsubscript{mis}$\uparrow$)XADJ) \textbf{???} \\
+\textbf{oder:} \\
+($\downarrow$SUBJ) = mis $\Rightarrow$ ($\uparrow$SUBJ) = ((GF\textsubscript{mis}$\uparrow$)XADJ) \textbf{?}\\
 
 %AcP
 Ein AcP kann, wie weiter unten (Abschnitt?) deutlich wird, am besten als XCOMP zur übergeordneten grammatikalischen Funktion beschrieben werden.
 Wenn das Partizip ein XCOMP der übergeordneten grammatikalischen Funktion ist, ist sein Bezugswort das Objekt dieser dem XCOMP übergeordneten Struktur: \\ ??
 ($\uparrow$SUBJ XCOMP) = ((XCOMP$\uparrow$)OBJ) \\
+\textbf{oder:} \\
+($\uparrow$(GF)V) = ($\uparrow$XCOMP) $\Rightarrow$ ($\uparrow$SUBJ XCOMP) = ((XCOMP$\uparrow$)OBJ) \textbf{?} \\
 Partizip und Bezugswort stehen dabei im Akkusativ: \\
 ($\downarrow$XCOMP CASE) = acc \\
 ($\downarrow$XCOMP SUBJ CASE) = acc \\
@@ -451,6 +473,12 @@ muss ein Partizip, Infinitv oder Gerund sein (d.h. muss als Wert von "MOOD"
 als Wert von "MOOD" "part" haben)
 
 Wir haben uns hier der einfacheren Darstellung wegen für die Beschränkungen innerhalb der Syntaxregeln entschieden.
+
+Skript, S. 48: ,,Die erstere Verfahrensweise, bei der die morphologischen Eigenschaften der Nominalphrasen Bezugspunkt der GF-Bestimmung sind, wird als lexozentrische Funktionsassoziierung bezeichnet, sie ist namentlich in Bresnan (2001) ausgeführt. Von lexozentrische Funktionsassoziierung wird weiterhin auch dann gesprochen, wenn die Grammatische Funktion durch morphologische Kongruenzmerkmale bestimmt wird. Beide Varianten können miteinander kombiniert sein, wie das im Deutschen mit Rücksicht auf das Subjekt der Fall ist. ... Wenn wir nun die Funktion aus dem
+Kasus folgern sollen, dann können wir dies durch ein Konditional ausdrücken''
+--> ($\downarrow$CASE) = nom $\Rightarrow$ ($\uparrow$SUBJ) = $\downarrow$ bedeutet, dass WENN der Kasus einer NP Nominativ ist, diese NP die GF des SUBJ erhält.
+--> im Bezug auf das finite Verb würde das bei uns gehen, oder? beim Partizip-Verb ja eben nich
+ABER: wir können diese ,,Konditionale'' bei den Einschränkungen verwenden, glaub ich!
 
 \subsubsection{Allgemeines zur c-Struktur}
 \subsubsection{Allgemeines zur f-Struktur}
