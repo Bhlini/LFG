@@ -111,7 +111,11 @@ Im Folgenden sollen das rein attributive Partizip, das substantivierte Partizip,
 * lexikalisch und funktional (bedeutet...) \\
 * Unifikationsgrammatik (vgl Nolda) \\
 * Ebenen getrennt: \\
-* aus Lexikoneinträgen und Syntaxregeln ergibt sich eine c-Struktur, was für \textit{constituent structure} steht; dies ist die Darstellung der oberflächlichen Organisation der einzelnen Satzbestandteile, vergleichbar mit den Syntaxbäumen der generativen Grammatik (?). Durch den Vorgang des Mappings (???) werden Informationen aus den Lexikoneinträgen benutzt, um die Rollen der Satzglieder -- wie beispielsweise Subjekt und Objekt -- den Inhalten der einzelnen c-Struktur-Knoten zuzuordnen. Daraus ergeben sich die annotierte c-Struktur sowie die sogenannte funktionelle Beschreibung, eine Gleichung, deren Minimallösung schließlich die f-Struktur -- oder \textit{functional structure} -- darstellt.\footnote{Vgl. Skript S. 8-17.} Diese Strukturen / Schritte werden im Folgenden genauer betrachtet.
+* prozeduraler Charakter der LFG, Repräsentation mentaler Prozesse usw (vgl. Rohrer) --> Prozess wird beschrieben! Führt über... aus Syntaxregeln ergibt sich eine c-Struktur, was für \textit{constituent structure} steht; dies ist die Darstellung der oberflächlichen Organisation der einzelnen Satzbestandteile, vergleichbar mit den Syntaxbäumen der generativen Grammatik (?). In der c-Struktur sind auch die möglichen an den jeweiligen Knotenpunkten einzusetzenden grammatikalischen Funktionen -- so z.B. Satzglieder, wie beispielsweise Subjekt und Objekt -- annotiert. Mithilfe dieser Annotationen, sowie aus den Lexikoneinträgen und gegebenenfalls weiteren Regeln (Redundanz- bzw. Defaultregeln), wird die f-Struktur aufgebaut.\footnote{Wie dieses Mapping der c- auf die f-Struktur im Einzelnen funktioniert, wird weiter unten dargestellt (Abschnitt?!). Vgl. Skript S. 8-17.} Diese Strukturen / Schritte werden im Folgenden genauer betrachtet.
+
+% Dieses Mapping der c- auf die f-Struktur funktioniert im Einzelnen über die Durchnummerierung der c-Struktur-Knoten ??? (muss man das nich schon vorher wissen, um die Pfeile zu machen?!) genannt sogenannte funktionelle Beschreibung, eine Gleichung, deren Minimallösung schließlich die f-Struktur -- oder \textit{functional structure} -- darstellt.\footnote{Vgl. Skript S. 8-17.} Diese Strukturen / Schritte werden im Folgenden genauer betrachtet.
+
+
 
 \subsubsection{Allgemeines zu den Einschränkungen}
 \textbf{BEI LEXIKONEINTRÄGEN UND EINSCHRÄNKUNGEN WEGEN PFEILEN GUCKEN!!! (vgl. Rohrer S. 54) --> muss manchmal nach unten zeigen!}
@@ -316,7 +320,7 @@ als Wert von "MOOD" "part" haben)
 
 * sagen, dass wir Disjunktivität nicht beachten!
 
-* \textbf{In der Menge werden oder-Striche verwendet anstatt wie oft üblich Kommata, da das Komma in diesem Kontext zu einem "shuffle operator" umdefiniert wurde (vgl. Snijder) ERKLÄREN!}
+* \textbf{In der Menge werden vertikale Disjunktions-Striche verwendet (vgl. Skript S. 26) anstatt wie oft üblich Kommata, da das Komma in diesem Kontext zu einem "shuffle operator" umdefiniert wurde (vgl. Snijder) ERKLÄREN!}
 
 Im Lateinischen ist in aller Regel V der Kopf von S.\footnote{Eine Ausnahme könnte eventuell der nominale Ablativus absolutus bilden, dessen Kopf nach logischer Betrachtung N sein müsste. Vgl. \textbf{GRAMMATIK} und vgl. \textbf{Falk, S. 64}.}
 *keine feste Wortstellung / Platz des Prädikats --> nicht IP
@@ -389,9 +393,16 @@ diese Information in der Regel direkt aus der Wortstellung gewinnen läßt."
 * Subkategorisierungsrahmen eines Prädikats = Menge der Ergänzungen, die ein Verb hat
 * Hinsichtlich des Subkategorisierungsrahmens eines Prädikats bei passiven Verben muss berücksichtigt werden, dass die Funktion des Subjekts hierbei nicht wie in aktiven Konstruktionen der semantischen Rolle agens entspricht. //...Subjekts hierbei der semantischen Rolle des Objekts entspricht.
 
-*evt. Bsp.-Lex von PFA
+* Mengenklammern, Disjunktions-Striche usw. erklären... vgl. Skript S. 26: ``bei gegebenem Attribut verschiedene Werte festgelegt werden können. ... Bei fixem Kasus und Numerus kann der Artikel dem zwei Spezifikationen des Merkmals GEN
+liefern, die sich in der erforderlichen Übereinstimmung mit dem respektiven Nomen bewähren
+müssen. Dieser Alternation wird im Lexikoneintrag des Artikels durch eine disjunktive
+Definition des GEN-Attributs Rechnung getragen.''
+
+
+* Bsp.-Lex von PFA
 
 Die konkreten Lexikoneinträge finden sich bei der Betrachtung der spezifischen Partizipialkonstruktionen.
+
 
 %Im Folgenden sollen exemplarische Lexikoneinträge zu den Partizipien \textit{missum} (für das PC in Objektstellung), \textit{missi} (für das PC in Subjektstellung), \textit{victis} (für den Abl. abs.) und \textit{iaecentem} für den AcP aufgeführt werden.
 
@@ -1133,7 +1144,7 @@ $\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 \begin{avm}
 \[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
 SUBJ & ``Roma'' \\
-ADJ & \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
+ADJ & \{ \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
 OBJ & \[ PRED &  \rm ‘condo \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
@@ -1144,7 +1155,7 @@ GEN & f \\
 SUBJ & \[PRED & `urbs' \\
 CASE & abl \\
 NUM & sg \\
-GEN  & f \] \] \] \]
+GEN  & f \] \] \] \} \]
 \end{avm}\\
 \end{singlespace}
 
