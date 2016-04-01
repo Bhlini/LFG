@@ -36,15 +36,6 @@
 \usepackage{tikz}
 \usetikzlibrary{tikzmark,positioning}
 \usepackage{avm}
-\DeclareBibliographyCategory{primary}
-\DeclareBibliographyCategory{secondary}
-\DeclareBibliographyCategory{online}
-\addtocategory{primary}{lucil1, lucil2, original, seneca66}
-\addtocategory{secondary}{hachmann1995, bartsch, becker1893sittlichen, cancik, inwood, edwards, motto, becker1893sittlichen}
-\addtocategory{online}{philatinFLU, philatinAUDIS}
-\defbibheading{primary}{\subsection*{Textausgaben und Kommentare}}
-\defbibheading{secondary}{\subsection*{Sekundärliteratur}}
-\defbibheading{online}{\subsection*{Online Ressourcen}}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,20 +53,15 @@
 %\setcounter{page}{1}
 % The introduction
 
-\nocite{lucil1}
-\nocite{lucil2} 
-\nocite{original}
-\nocite{seneca66} 
-\nocite{hachmann1995} 
-\nocite{bartsch}  
-\nocite{philatinFLU} 
-\nocite{becker1893sittlichen} 
-\nocite{cancik} 
-\nocite{inwood}
-\nocite{edwards}
-\nocite{motto} 
-\nocite{becker1893sittlichen}
-\nocite{philatinAUDIS}
+\nocite{Menge}
+\nocite{LHS}
+\nocite{KSt}
+\nocite{Rohrer}
+\nocite{Skript}
+\nocite{Dal}
+\nocite{Falk}
+\nocite{Bresnan}
+
 
 % AVM Referenz http://nlp.stanford.edu/manning/tex/avm-doc.pdf
 %https://github.com/Bhlini/LFG
@@ -108,12 +94,6 @@ Im Folgenden sollen das rein attributive Partizip, das substantivierte Partizip,
 \subsection{Die Lexikalisch-Funktionale Grammatik}
 
 
-* lexikalisch und funktional (bedeutet...) \\
-* Unifikationsgrammatik (vgl Nolda) \\
-* Ebenen getrennt: \\
-* prozeduraler Charakter der LFG, Repräsentation mentaler Prozesse usw (vgl. Rohrer) --> Prozess wird beschrieben! Führt über... aus Syntaxregeln ergibt sich eine c-Struktur, was für \textit{constituent structure} steht; dies ist die Darstellung der oberflächlichen Organisation der einzelnen Satzbestandteile, vergleichbar mit den Syntaxbäumen der generativen Grammatik (?). In der c-Struktur sind auch die möglichen an den jeweiligen Knotenpunkten einzusetzenden grammatikalischen Funktionen -- so z.B. Satzglieder, wie beispielsweise Subjekt und Objekt -- annotiert. Mithilfe dieser Annotationen, sowie aus den Lexikoneinträgen und gegebenenfalls weiteren Regeln (Redundanz- bzw. Defaultregeln), wird die f-Struktur aufgebaut.\footnote{Wie dieses Mapping der c- auf die f-Struktur im Einzelnen funktioniert, wird weiter unten dargestellt (Abschnitt?!). Vgl. Skript S. 8-17.} Diese Strukturen / Schritte werden im Folgenden genauer betrachtet.
-
-% Dieses Mapping der c- auf die f-Struktur funktioniert im Einzelnen über die Durchnummerierung der c-Struktur-Knoten ??? (muss man das nich schon vorher wissen, um die Pfeile zu machen?!) genannt sogenannte funktionelle Beschreibung, eine Gleichung, deren Minimallösung schließlich die f-Struktur -- oder \textit{functional structure} -- darstellt.\footnote{Vgl. Skript S. 8-17.} Diese Strukturen / Schritte werden im Folgenden genauer betrachtet.
 
 
 
@@ -140,7 +120,7 @@ Partizipien die übrigen Argumente der Konstruktion fordern.\\
 
 *VPs können nur Partizipialien (Partizipien und Gerundium und Gerundivum) und Infinitive sein! (wird hier so definiert)
 
-*Da Adjektive, Adverbien und Pronominaladjektive (u.a. bei Snijder (\textbf{QUELLE} s. 7) )unter ``Determiner'' gefasst), sowie Nebensätze aller Art\footnote{Gemeint sind hier lateinische Nebensätze. Während Partizipialkonstruktionen im Deutschen zwar in der Regel durch Gliedsätze wiedergegeben werden, sind sie im Lateinischen Teil des Hauptsatzes.} -- und damit auch Subjunktionen und Konjunktionen -- in dieser Arbeit nicht von Bedeutung sind, wird in den folgenden Syntaxregeln und auch im Weiteren nicht darauf eingegangen. \textbf{Satzkomplemente (SCOMP) sind nicht von Verbkomplementen (VCOMP) zu unterscheiden?! ???}
+*Da Adjektive, Adverbien und Pronominaladjektive (u.a. bei Snijder (\textbf{QUELLE} s. 7) )unter ``Determiner'' gefasst), sowie die Diskursfunktionen TOPIC und FOCUS,\footnote{Überlegungen diesbezüglich im Deutschen finden sich in Skript, S. 76-84 und 94-101.} sowie Nebensätze aller Art\footnote{Gemeint sind hier lateinische Nebensätze. Während Partizipialkonstruktionen im Deutschen zwar in der Regel durch Gliedsätze wiedergegeben werden, sind sie im Lateinischen Teil des Hauptsatzes.} -- und damit auch Subjunktionen\footnote{Überlegungen diesbezüglich im Deutschen finden sich in Skript, S. 103-119.} und Konjunktionen\footnote{Überlegungen diesbezüglich im Deutschen finden sich in Skript, S. 120-136.} -- in dieser Arbeit nicht von Bedeutung sind, wird in den folgenden Syntaxregeln und auch im Weiteren nicht darauf eingegangen. \textbf{Satzkomplemente (SCOMP) sind nicht von Verbkomplementen (VCOMP) zu unterscheiden?! ???}
 
 * Mehrere Vs bzw. Ns können in derselben übergeordneten Struktur nur vorkommen, wenn sie beigeordnet sind.
 
@@ -394,7 +374,7 @@ Die in dieser Arbeit unter dem Titel ``Einschränkungen'' festgehaltenen Bedingu
 * --> \textbf{in dem Fall (allgemeine Regeln) wird es beim subst. Part. schwierig, da das kein BZW braucht (bei Variante OBJ); kann man dann irgendwo was mit nem c oder so machen, oder in der Regel sowas hinzufügen wie "oder SUBJ = pro und PRON-TYPE mis"... ??} \\
 \newline
 
-vgl. Rohrer S. 23-24:
+(vgl. \cite[S. 23-4]{Rohrer}):
 sogenannt Redundanz- bzw. Default-Regeln definieren, die über dem Lexikon operieren
 
 Anstatt dieser Redundanz- bzw. Default-Regeln könnte man auch zusätzliche (existenzielle?) Bedingungen /Forderungen zu den Syntaxregeln hinzuzufügen, wie Bresnan und Kaplan beschreiben (1982:210; zitiert aus Rohrer, S. 54) und wie oben bereits exemplarisch gezeigt wurde. Wir haben uns aufgrund der leichteren Verständlichkeit für den Leser für die schriftliche Erklärung in Redundanz- bzw. Default-Regeln an dieser Stelle entschieden.
@@ -601,6 +581,8 @@ MODE & ind \\
 
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:aim) to[out=0,in=0,looseness=3.5]  (pic cs:start);
+
+Die doppelten Anführungszeichen (``'') dienen der Abkürzung einer f-Struktur, deren Attribut-Wert-Paare entweder klar oder für den zu erklärenden Punkt nicht von Bedeutung sind.\footnote{Vgl. Falk, S. 59. Einem verarbeitenden (Parser?) Programm müssten selbstverständlich alle Attribut-Wert-Paare bekannt sein; diese Abkürzung soll lediglich dem Leser zugute kommen.}
 
 \newpage
 \subsection{das subjektabhängige Participium coniunctum}
@@ -1504,6 +1486,6 @@ Grießhaber, Wilhelm: Linguistische Grundlagen und Lernermerkmale bei der Profil
 %\bibliographystyle{plain}
 \pagebreak
 \section*{Literaturverzeichnis}
-\bibbycategory
 \addcontentsline{toc}{section}{Literaturverzeichnis}
+\printbibliography
 \end{document}
