@@ -332,6 +332,29 @@ Definition des GEN-Attributs Rechnung getragen.''
 
 * Bsp.-Lex von PFA
 
+\begin{singlespace}
+\begin{tabular}{ l  l  l  l  } 
+\textbf{moritura}: & V \\
+$\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `morior$\langle$SUBJ, OBL\textsubscript{GOAL}$\rangle$'\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF)\}\\
+$\qquad$ & $[3]$ \:  ($\uparrow$SUBJ NUM) & =\textsubscript{c} & sg \\
+$\qquad$ & $[3.1]$ \:  \{(($\uparrow$ SUBJ GEN) & =\textsubscript{c} & m \\ 
+$\qquad$ & $[3.2]$ \:  ($\uparrow$SUBJ CASE) & =\textsubscript{c} & acc ) $\mid$\\
+$\qquad$ & $[3.3]$ \: (($\uparrow$SUBJ GEN) & =\textsubscript{c} & n \\
+$\qquad$ & $[3.4]$ \:  ($\uparrow$SUBJ CASE) & =\textsubscript{c} & \{nom $\mid$ acc\} ) \}\\
+$\qquad$ & $[4]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[5]$ \:  ($\uparrow$PASSIVE) & = & + \\
+$\qquad$ & $[6]$ \:  ($\uparrow$RELTENSE) & = & past \\
+$\qquad$ & $[7]$ \:  ($\uparrow$NUM) & = & sg \\
+$\qquad$ & $[8]$ \:  \{(($\uparrow$GEN) & = & m \\ 
+$\qquad$ & $[8.1]$ \:  ($\uparrow$CASE) & = & acc ) $\mid$\\
+$\qquad$ & $[8.2]$ \: (($\uparrow$GEN) & = & n \\
+$\qquad$ & $[8.3]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
+\end{tabular}
+\newline
+\newline
+\end{singlespace}
+
 Die konkreten Lexikoneinträge finden sich bei der Betrachtung der spezifischen Partizipialkonstruktionen.
 
 
@@ -410,6 +433,7 @@ ABER: wir können diese ,,Konditionale'' bei den Einschränkungen verwenden, gla
 %Die grammatikalische Funktion einer Partizipialkonstruktion -- und daher des Partizips, welches Kopf jeder Partizipialkonstruktion ist -- ist immer entweder ein XADJ, ein ADJ oder ein XCOMP: \\
 Die grammatikalische Funktion jedes Partizips, welches Teil einer finiten Verbform ist, ist immer entweder ein XADJ, ein ADJ oder ein XCOMP der übergeordneten grammatikalischen Funktion: \\
 ($\uparrow$GF) = ((XADJ$\uparrow$)GF) $\mid$ ((ADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF) \textbf{???} \\ 
+\textbf{--> oh shit, subst. Part. Variante 2... das ist es Objekt -.- argh. Das auch noch hinzufügen? + evt anmerken, dass das für die XADJ-Variante spricht? --> oh, bei dom Part mit Präposition ist es auch OBJ...dann wohl OBJ noch hinzufügen, was}
 (ich denk da wir diese Regeln ja immer im Zusammenhang mit Partizipien formulieren, müssen wir nich überall noch ,,part'' einfügen, das ist ja im Endeffekt eh ne Implementierungssache; würde ich so eben auch in ner Fußnote vermerken, um auf der sicheren Seite zu sein...einfach, dass sich das alles auf VPs bezieht, die nicht direkt von S dominiert werden)
 
 %PC:
@@ -492,7 +516,7 @@ Lexikoneintrag wie folgt
 \begin{tabular}{ l  l  l  l  } 
 \textbf{missum}: & V \\
 $\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `mittor$\langle$SUBJ, OBL\textsubscript{GOAL}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)GF)\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF)\} \\
 $\qquad$ & $[3]$ \:  ($\uparrow$SUBJ NUM) & =\textsubscript{c} & sg \\
 $\qquad$ & $[3.1]$ \:  \{(($\uparrow$ SUBJ GEN) & =\textsubscript{c} & m \\ 
 $\qquad$ & $[3.2]$ \:  ($\uparrow$SUBJ CASE) & =\textsubscript{c} & acc ) $\mid$\\
@@ -691,7 +715,7 @@ Beispielsatz:\\
 \begin{tabular}{ l  l  l  l  } 
 \textbf{obiectam}: &  & V \\
 $\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `obicior$\langle$SUBJ, OBJ\textsubscript{LOC}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)GF)\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF)\} \\
 $\qquad$ & $[2.1]$ \:  ($\uparrow$SUBJ NUM) & = & sg \\
 $\qquad$ & $[2.2]$ \: ($\uparrow$SUBJ CASE) & = & acc \\
 $\qquad$ & $[2.3]$ \: ($\uparrow$SUBJ GEN) & = & f \\
@@ -797,7 +821,7 @@ Der Lexikoneintrag des Partizips lautet wie folgt:\footnote{Im Rahmen des Umfang
 \begin{tabular}{ l  l  l  l  } 
 \textbf{petentibus}: & V \\
 $\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `peto$\langle$SUBJ, OBJ$\rangle$' \\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XADJ$\uparrow$)GF)\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((ADJ$\uparrow$)GF)\} \\
 $\qquad$ & $[3.1]$ \:  ($\uparrow$SUBJ CASE) & = & \{abl $\mid$ dat\} \\
 $\qquad$ & $[3.2]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
 $\qquad$ & $[3.3]$ \:  ($\uparrow$SUBJ GEN) & = & \{m $\mid$ n $\mid$ f\} \\
@@ -1268,7 +1292,7 @@ Obige, für den Abl. abs. gültige Einschränkungen können jedoch nicht im Lexi
 \begin{tabular}{ l  l  l  l  } 
 \textbf{victis}: & V \\
 $\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `vincor$\langle$SUBJ$\rangle$'\\
-%$\qquad$ & $[2]$ \: $\neg$ ($\uparrow$SUBJ) & = & ((ADJ$\uparrow$)GF) \\
+$\qquad$ & $[2]$ \: $\neg$ ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((ADJ$\uparrow$)GF)\} \\
 $\qquad$ & $[5]$ \: ($\uparrow$SUBJ CASE) & = & \{dat $\mid$ abl\} \\
 $\qquad$ & $[6]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
 $\qquad$ & $[7]$ \: ($\uparrow$SUBJ GEN) & = & \{m $\mid$ f $\mid$ n\} \\
@@ -1381,7 +1405,7 @@ Letztere verleiht dem Satzgefüge eine enorme Bedeutungserweiterung, da sie satz
 \begin{tabular}{ l  l  l  l  } 
 \textbf{iacentem}: & V \\ 
 $\qquad$ & $[1]$ \: ($\uparrow$PRED) & = & `iaceo$\langle$SUBJ, OBL\textsubscript{LOC}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((XCOMP$\uparrow$)OBJ)\\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF)\} \\
 $\qquad$ & $[5]$ \: ($\uparrow$SUBJ CASE) & = & acc \\
 $\qquad$ & $[6]$ \: ($\uparrow$SUBJ NUM) & = & sg \\
 $\qquad$ & $[7]$ \: ($\uparrow$SUBJ GEN) & = & \{m $\mid$ f\} \\
