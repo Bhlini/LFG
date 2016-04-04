@@ -154,6 +154,12 @@ VP & $\rightarrow$ & [V \{PP $\mid$ NP\}*] $\mid$ V \\
 \end{tabular}\\
 \newline
 
+Die erste Regel besagt, dass S durch entweder das Symbol V und das Symbol XP ersetzt wird oder nur durch das Symbol V. Der vertikale Disjunktionsstrich | denotiert dabei die ,entweder-oder‘-Beziehung, die eckigen Klammern sollen lediglich zeigen, dass V und XP gemeinsam die linke Seite der Disjunktion bilden. V bezeichnet ein finites Verbalelement, XP wird in der Zeile darunter definiert als eine Menge an Nominalphrasen (NP), Verbalphrasen (VP) und präpositionale Phrasen (PP). Die geschweiften Klammern in Zeile zwei umschließen eine Menge. Der Asterisk dahinter ist ein Kleene-Stern, der die vorangehende Menge zu einer Kleenschen Hülle um definiert; in einer solchen Kleenschen Hülle können die einzelnen Elemente beliebig oft -- also auch zum Beispiel gar nicht -- und in beliebiger Reihenfolge vorkommen.\footnote{In der Menge werden hier Disjunktionsstriche verwendet anstatt wie oft üblich Kommata, da das Komma in diesem Kontext als shuffle operator definiert wurde; vgl. \cite[26]{Skript};\cite[7??14??]{Snijders}.} Auch die Reihenfolge von V und XP wird durch das zwischen diesen beiden Elementen stehende Komma offen gelassen; dieses Komma fungiert hier als sogenannter ,shuffle operator‘. Stünde das Komma nicht dort, müsste XP stets V folgen. Zusammengenommen erlauben die Regeln der ersten und zweiten Zeile also beispielsweise, dass ein Satz aus einer Nominalphrase, einem finiten Verbalelement V und einer weiteren Nominalphrase besteht. Die Tatsache, dass diese nur eine von einer Vielzahl an möglichen Auflösungen von S ist, ist wiederum der weitgehend freien Wortstellung des Lateinischen geschuldet.\footnote{Vgl. \cite[19]{Rohrer}.}
+
+In den Zeilen 3 bis 5 werden die jeweiligen Expansionsmöglichkeiten von NP, VP und PP beschrieben. Eine Nominalphrase besteht also, allgemein gesprochen, aus entweder einem lexikalischen Element der Kategorie N – d.h. aus einem Nomen -- und einer beliebigen, ungeordneten Menge an NPs, VPs und PPs, oder aber nur aus einem Nomen. Die möglichen Expansionen einer Verbalphrase unterscheiden sich von denen der Nominalphrase lediglich darin, dass eine Verbalphrase keine weiteren Verbalphrase untergeordnet sein kann. Die Notation der Expansionsmöglichkeiten einer präpositionale Phrase enthalten keine Kleensche Hülle, da in einer präpositionale Phrase stets zumindest ein Element einer VP oder NP direkt vor (bzw. nach) einer Präposition (bzw. Postposition) stehen muss.\footnote{Diese Regeln erheben keinen Anspruch an Vollständigkeit. So sind beispielsweise die im Lateinischen häufig auftretenden diskontinuierlichen Phrasen aus Gründen der Relevanz für diese Arbeit außer acht gelassen; mehr Informationen hierzu finden sich bei \cite{Snijders}. Ebenso werden, abgesehen von den präpositionale Phrasen, Fälle, in denen auch im Lateinischen die Wortstellung eine Rolle spielt, wie beispielsweise beim konzessiven Konjunktiv \textbf{(?) und ?? (Geiger Dokumente)}, nicht beachtet. Auch die formal schwierige Frage der Koordination kann hier nicht berücksichtigt werden.}
+
+Bei der Erzeugung der c-Struktur dienen die Syntaxregeln dazu, Dominanzverhältnisse -- und oftmals, jedoch nicht hier, auch Präzedenzverhältnisse -- zwischen den Konstituenten herzustellen.\footnote{Vgl. \cite[19]{Rohrer}.} Jedes hier aufgeführte lexikalische Element und jede Phrase kann einen Konstituenten in der c-Struktur bezeichnen. Mehr dazu im Abschnitt ??.
+
 \textbf{GRAMMATIKALISCHE FUNKTIONEN!}
 \begin{singlespace}
 \begin{tabular}{ l  l  l  c  c  c  c }
@@ -226,9 +232,6 @@ XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
  %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
 %\end{tabular}\\
 %\end{singlespace}
-
-•	Die erste Regel muss das Anfangssymbol S durch NP VP ersetzen. [...]Wir wollen nun die Regeln für die Expansion der NP schreiben. (Rohrer S. 18)
-
 
 
 \subsubsection{HÄUFIGE SYNTAXREGELN - evt lieber ein Beispiel beim obj-Part?}
