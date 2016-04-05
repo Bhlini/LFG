@@ -98,20 +98,20 @@ All diese Regeln dienen dazu, die Erzeugung ungrammatischer funktionaler Struktu
 
 Beide syntaktischen Strukturen -- c- und f-Struktur -- sind notwendig für die korrekte Analyse eines Satzes und stehen in einem Korrespondenzverhältnis zueinander, wie im Weiteren deutlich werden wird.\footnote{Vgl. \cite[3]{Dal}; \cite[4]{Skript}.} Die beiden Strukturen repräsentieren unterschiedliche Aspekte linguistischer Organisation.\footnote{Vgl. \cite[1]{Dal}.} Die c-Struktur ist die konkrete Darstellung hierarchischer Organisation von Wörtern und Phrasen, vergleichbar mit den Syntaxbäumen kontextfreier Grammatiken.\footnote{Vgl. \cite[7]{Dal}; \cite[13]{Rohrer}.} Die f-Struktur hingegen beschreibt auf abstrakter Ebene die funktionellen Beziehungen zwischen grammatikalischen Strukturen -- vorerst können hierunter Satzglieder verstanden werden.\footnote{Vgl. \cite[7]{Dal}; \cite[4]{Skript}.} Über die Relationen der unterschiedlichen Regeln und Strukturen zueinander soll hier bereits kurz ein Überblick anhand der Analyse eines Satzes gegeben werden.\footnote{Diese Beschreibungen, wie auch alle folgenden hinsichtlich des Aufbauprozesses der Strukturen, beschränken sich auf die Analyse von Sätzen. Für die Generation neuer Sätze laufen diese Prozesse teilweise in anderer Reihenfolge ab.}
 
-Zuerst werden die allgemeingültigen Syntaxregeln auf einen Satz angewandt. Darin sind auch die je nach Position / Abhängigkeit möglichen grammatikalischen Funktionen -- so z.B. Satzglieder -- verzeichnet.\footnote{So kann eine NP, die direkt von S dominiert wird, beispielsweise SUBJ sein und im Nominativ stehen, während dies für eine NP, die von einer anderen NP dominiert wird, nicht möglich ist.} Aus der Anwendung der Syntaxregeln auf den Satz ergibt sich die c-Struktur, bzw. mehrere an dieser Stelle möglichen Varianten davon. Die grammatikalischen Funktionen aus den Syntaxregeln werden an den jeweils passenden Knoten annotiert. Nun muss eine mit der c-Struktur korrespondierende f-Struktur erstellt werden. In der annotierten c-Struktur werden nun zusammengehörige Strukturen erfasst und die Knoten entsprechend bezeichnet; hierbei werden die funktionalen Annotationen sowie Informationen aus den Lexikoneinträgen und gegebenenfalls weiteren überlexikalischen Regeln miteinbezogen. In Gleichungen mit diesen Knoten-Bezeichnungen, genannt funktionale Beschreibungen, werden die c-Struktur-Knoten den f-Strukturen in einem viele-zu-eins-Verhältnis zugeordnet. \textbf{(QUELLE Rohrer)} Die Minimallösung dieser funktionalen Gleichungen ist schließlich die f-Struktur.
+Zuerst werden die allgemeingültigen Syntaxregeln auf einen Satz angewandt. Darin sind auch die je nach Position / Abhängigkeit möglichen grammatikalischen Funktionen -- so z.B. Satzglieder -- verzeichnet.\footnote{So kann eine NP, die direkt von S dominiert wird, beispielsweise SUBJ sein und im Nominativ stehen, während dies für eine NP, die von einer anderen NP dominiert wird, nicht möglich ist.} Aus der Anwendung der Syntaxregeln auf den Satz ergibt sich die c-Struktur, bzw. mehrere an dieser Stelle möglichen Varianten davon. Die grammatikalischen Funktionen aus den Syntaxregeln werden an den jeweils passenden Knoten annotiert. Nun muss eine mit der c-Struktur korrespondierende f-Struktur erstellt werden. In der annotierten c-Struktur werden nun zusammengehörige Strukturen erfasst und die Knoten entsprechend bezeichnet; hierbei werden die funktionalen Annotationen sowie Informationen aus den Lexikoneinträgen und gegebenenfalls weiteren überlexikalischen Regeln miteinbezogen. In Gleichungen mit diesen Knoten-Bezeichnungen, genannt funktionale Beschreibungen, werden die c-Struktur-Knoten den f-Strukturen in einem viele-zu-eins-Verhältnis zugeordnet.\footnote{Vgl. \cite[9]{Skript}.} Die Minimallösung dieser funktionalen Gleichungen ist schließlich die f-Struktur.
 Die einzelnen Strukturen sollen nun im Folgenden genauer betrachtet werden.
 
 \subsubsection{Allgemeines zu den Syntaxregeln}
-Die Syntaxregeln, oder Phrasenstrukturregeln, sind der Startpunkt der Analyse eines Satzes in der LFG. Diese Regeln sind allgemein und müssen für alle Sätze einer Sprache gelten.\footnote{Vgl. \cite[47]{Dal}.} Dies ist möglich, da in der LFG, anders als in früheren Ansätzen,\footnote{Ein Beispiel hierfür wäre eine kontextfreie Grammatik nach Chomsky.} viele für die Erzeugung der Satzstruktur notwendigen Bedingungen in das Lexikon ausgelagert wurden. Durch sie wird die grammatikalisch korrekte Verkettung von Wörtern zu Phrasen und Phrasen zu einem Satz schematisch angegeben/gewährleistet. Die Darstellung erfolgt allerdings von den größeren Elementen hin zu den kleineren, d.h. vom Satz über die Phrasen bis hin zu den Wörtern. 
+Die Syntaxregeln -- oder Phrasenstrukturregeln -- sind der Startpunkt der Analyse eines Satzes in der LFG. Diese Regeln müssen für alle Sätze einer Sprache allgemein gültig sein.\footnote{Vgl. \cite[47]{Dal}.} Dies ist möglich, da in der LFG, anders als in früheren Ansätzen,\footnote{Ein Beispiel hierfür wäre eine kontextfreie Grammatik nach Chomsky.} viele für die Erzeugung der Satzstruktur notwendigen Bedingungen in das Lexikon ausgelagert werden. Durch die Sytaxregeln wird die grammatikalisch korrekte Verkettung von Wörtern zu Phrasen und Phrasen zu einem Satz schematisch gewährleistet. Die Darstellung erfolgt allerdings von den größeren Elementen hin zu den kleineren, d.h. vom Satz über die Phrasen bis hin zu den Wörtern. 
 
-Die Phrasen im Lateinischen, mit denen wir uns hier beschäftigen, sind nach den lexikalischen Kategorien benannt, die von ihnen dominiert werden.\footnote{Vgl. \cite[53; 58-9]{Dal}; \cite[15]{Rohrer} Genauer sollte hier statt von Dominanz von Projektion gesprochen werden (?); Näheres hierzu findet sich weiter unten (bei der Besprechung von???). Es existieren auch funktionale Köpfe, auf die in dieser Arbeit jedoch nicht eingegangen wird. (siehe Fußnote??).} Die lexikalischen Kategorien, die für das Lateinische angenommen werden können, sind N(omen), V(erb), P(räposition), A(djektiv) und Adv(erb). \footnote{Vgl. \cite[52]{Dal}.}  Um eine konkrete Phrase zu generalisieren, muss klar sein, was ihr (lexikalischer) Kopf ist /welches lexikalische Element sie dominiert; sodann können die Phrasen als beispielsweise Nominalphrasen (NP), Verbalphrasen (VP) oder Präpositionalphrasen (PP) klassifiziert werden.\footnote{Vgl. \cite[47]{Dal}.} Das dominante lexikalische Element wird als ,,Kopf‘‘ einer Phrase der gleichen /derselben Kategorie angesehen.\footnote{Vgl. \cite[15]{Rohrer}.} 
+,,Generalisierungen konkreter Phrasen führen zu ihrer Klassifikation als beispielsweise Nominalphrasen, Verbalphrasen, je nachdem, welches lexikalische Element die Phrase dominiert.\footnote{\cite[47]{Dal}; \cite[53; 58-9]{Dal}; vgl. \cite[15]{Rohrer}.} Die lexikalischen Kategorien, die für das Lateinische angenommen werden können, sind N(omen), V(erb), P(räposition), A(djektiv) und Adv(erb).\footnote{Vgl. \cite[52]{Dal}.}
 
-Die Syntax des Lateinischen, wie die einer Vielzahl weiterer Sprachen, organisiert sich um ein finites Verb herum.\footnote{Vgl. \cite[53]{Dal}. Im Lateinischen ist in aller Regel V der Kopf von S. Eine Ausnahme könnte eventuell der nominale Ablativus absolutus bilden, dessen Kopf nach logischer Betrachtung N sein müsste -- vgl. \cite[???]{Menge}? und \cite[64]{Falk}. Wenn man jedoch die Abl-abs-Konstruktion S\textsubscript{part} unterordnet (?), wie wir es hier tun, ergibt sich kein Problem hinsichtlich S an sich.}
-Das Lateinische ist eine nicht-konfigurationale Sprache, denn es lässt eine weitgehend freie Wortstellung zu, da die grammatikalische Funktion eines Wortes/Konstituenten durch dessen morphologische Form bestimmt ist, und nicht etwa durch die Konfiguration der Konstituenten in der c-Struktur.\footnote{Vgl. \cite[19]{Rohrer}; \cite[65]{Dal}. In Sprachen, in denen dieses finite Verbalelement stets in einer bestimmten Position im Satz vorkommt, wird seine dominierende Phrase als IP, für inflectional phrase, bezeichnet. I ist dabei eine funktionale, keine lexikalische, Kategorie. Eine andere funktionelle Kategorie, C, für complementizer phrase, existiert zwar auch im Lateinischen, wird jedoch in dieser Arbeit aus Platzgründen außer Acht gelassen. Vgl. \cite[53; 65]{Dal}.} So ist im Lateinischen die Wortform ,,canem‘‘ stets Akkusativ-Objekt, egal an welcher Position im Satz es sich befindet. Daher ist der Kopf eines jeden Satzes/einer jeden Phrase im Lateinischen die Kategorie ,,S‘‘.\footnote{Die Kategorie S wird nach Bloomfield (first name?) als ,,exozentrisch‘‘ bezeichnet, der sie den sogenannten endozentrischen Kategorien gegenüberstellt, die lexikalische Köpfe besitzen; vgl. \cite[64]{Dal}.} Die Phrasen bzw. lexikalischen Konstituenten, in die S zerfällt -- die sogenannten Töchter von S -- können somit frei umgestellt werden.\footnote{Vgl. \cite[64-65]{Dal}.} \textbf{soll das hier noch mit rein?,,S ist eine c-Struktur-Kategorie, die ein Prädikat zusammen mit irgend einem oder allen seiner Argumente enthält, inklusive des Subjekts“ (Dalrymple, S. 64) (Was ist aber mit ADJ? Und müssen nicht eig alle Argumente enthalten sein?!)}
+Die Syntax des Lateinischen organisiert sich, wie bei einer Vielzahl weiterer Sprachen, organisiert sich um ein finites Verb.\footnote{Vgl. \cite[53]{Dal}. Im Lateinischen ist in aller Regel V der Kopf von S. Eine Ausnahme könnte eventuell der nominale Ablativus absolutus bilden, dessen Kopf nach logischer Betrachtung N sein müsste -- vgl. \cite[???]{Menge}? und \cite[64]{Falk}. Wenn man jedoch die Abl-abs-Konstruktion S\textsubscript{part} unterordnet (?), wie wir es hier tun, ergibt sich kein Problem hinsichtlich S an sich.}
+Das Lateinische ist eine nicht-konfigurationale Sprache: Es lässt eine weitgehend freie Wortstellung zu, da die grammatikalische Funktion eines Wortes durch dessen morphologische Form bestimmt ist, und nicht durch die Konfiguration der Konstituenten in der c-Struktur.\footnote{Vgl. \cite[19]{Rohrer}; \cite[65]{Dal}. In Sprachen, in denen dieses finite Verbalelement stets in einer bestimmten Position im Satz vorkommt, wird seine dominierende Phrase als IP, für inflectional phrase, bezeichnet. I ist dabei eine funktionale, keine lexikalische, Kategorie. Eine andere funktionelle Kategorie, C, für complementizer phrase, existiert zwar auch im Lateinischen, wird jedoch in dieser Arbeit aus Platzgründen außer Acht gelassen. Vgl. \cite[53; 65]{Dal}.} So ist im Lateinischen die Wortform \textit{canem} stets Akkusativ-Objekt, gleichgültig an welcher Position im Satz es sich befindet. Aufgrund dieser Gegebenheiten ist der Kopf eines jeden Satzes im Lateinischen die Kategorie ,,S‘‘.\footnote{Die Kategorie S wird nach Bloomfield (first name?) als ,,exozentrisch‘‘ bezeichnet, der sie den sogenannten endozentrischen Kategorien gegenüberstellt, die lexikalische Köpfe besitzen; vgl. \cite[64]{Dal}.} Die Klassifikation als S erlaubt die freie Umstellung der Töchter von S. Diese Töchter sind ein Prädikat mit seinen Argumtenten, inklusive des Subjekts und gegebenenfalls optionale Konstituenten.\footnote{Vgl. \cite[64-65]{Dal}.}
 
-Aus all dem Bisherigen ergibt sich, dass S, je nach Sprache, aus einer bestimmten Menge von Phrasen und lexikalischen Elementen besteht. In den Syntaxregeln wird dieser Zusammenhang durch ,,kontextfreie Ersetzungsregeln der Form ,ersetze a durch b‘ (konventionell geschrieben: ,a $\rightarrow$ b‘)‘‘ beschrieben.\footnote{Siehe \cite[18]{Rohrer}.}
+Folglich besteht S aus einer bestimmten Menge von Phrasen und lexikalischen Elementen. In den Syntaxregeln wird dieser Zusammenhang durch ,,kontextfreie Ersetzungsregeln der Form ,ersetze a durch b‘ (konventionell geschrieben: ,a $\rightarrow$ b‘)‘‘ beschrieben.\footnote{Siehe \cite[18]{Rohrer}.}
 
-Auch wenn die Syntaxregeln der LFG verglichen mit früheren Ansätzen weitgehend überschaubar sind, werden hier nur die für die Partizipialkonstruktionen relevanten Regeln angegeben, da alles Weitere den Rahmen dieser Arbeit sprengen würde.\footnote{Da Adjektive, Adverbien und Pronominaladjektive (zu denen sich u.a. bei Snijder unter dem Begriff ,,Determiner‘‘ weitere Informationen finden (S. 7)), sowie Nebensätze aller Art  -- und damit auch Subjunktionen und Konjunktionen -- in dieser Arbeit nicht von Bedeutung sind, wird in den folgenden Syntaxregeln und auch im Weiteren nicht darauf eingegangen. Letzteres bezieht sich auf lateinische Nebensätze: Während Partizipialkonstruktionen im Deutschen zwar in der Regel durch Gliedsätze wiedergegeben werden, sind sie im Lateinischen Teil des Hauptsatzes. Überlegungen bezüglich der Subjunktionen im Deutschen finden sich unter \cite[103-119]{Skript}, zu den Konjunktionen im Deutschen unter \cite[120-136]{Skript}.} 
+Auch wenn die Syntaxregeln der LFG verglichen mit früheren Ansätzen weitgehend überschaubar sind, werden hier nur die für die Partizipialkonstruktionen relevanten Regeln angegeben, da alles Weitere den Rahmen dieser Arbeit sprengen würde:\footnote{Da Adjektive, Adverbien und Pronominaladjektive (zu denen sich u.a. bei Snijder unter dem Begriff ,,Determiner‘‘ weitere Informationen finden (S. 7)), sowie Nebensätze aller Art  -- und damit auch Subjunktionen und Konjunktionen -- in dieser Arbeit nicht von Bedeutung sind, wird in den folgenden Syntaxregeln und auch im Weiteren nicht darauf eingegangen. Letzteres bezieht sich auf lateinische Nebensätze: Während Partizipialkonstruktionen im Deutschen zwar in der Regel durch Gliedsätze wiedergegeben werden, sind sie im Lateinischen Teil des Hauptsatzes. Überlegungen bezüglich der Subjunktionen im Deutschen finden sich unter \cite[103-119]{Skript}, zu den Konjunktionen im Deutschen unter \cite[120-136]{Skript}.} 
 
 %\textbf{Wir schreiben die Regeln erstmal ohne Grammatikfunktionen auf, sagen dann in nem Satz, dass die Grammatikfunktionen hier auch dazugeschrieben werden sollten (+ gewisse weitere Beschränkungen u.U.), da eben eine NP unter ner NP nicht deren Subjekt sein kann (plus vielleicht noch 1-2 Beispiele um zu zeigen, dass wir's kapiert haben xD) und machen dann die ersten zwei Zeilen von den Regeln beispielhaft mit den Anmerkungen, einfach dass man sieht, aha, so könnte das dann aussehen (die hab ich schon gemacht, also wäre das kein extra Aufwand)}
 
@@ -153,22 +153,16 @@ VP & $\rightarrow$ & [V & &  XP] & $\mid$ & V \\
 %\end{tabular}\\
 %\newline
 
-Die erste Regel besagt, dass S durch entweder das Symbol V und das Symbol XP ersetzt wird oder nur durch das Symbol V. Der vertikale Disjunktionsstrich | denotiert dabei die ,entweder-oder‘-Beziehung, die eckigen Klammern sollen lediglich zeigen, dass V und XP gemeinsam die linke Seite der Disjunktion bilden. V bezeichnet ein finites Verbalelement, XP wird in der Zeile darunter definiert als eine Menge an Nominalphrasen (NP), Verbalphrasen (VP) und präpositionale Phrasen (PP). Die geschweiften Klammern in Zeile zwei umschließen eine Menge. Der Asterisk dahinter ist ein Kleene-Stern, der die vorangehende Menge zu einer Kleenschen Hülle um definiert; in einer solchen Kleenschen Hülle können die einzelnen Elemente beliebig oft -- also auch zum Beispiel gar nicht -- und in beliebiger Reihenfolge vorkommen.\footnote{In der Menge werden hier Disjunktionsstriche verwendet anstatt wie oft üblich Kommata, da das Komma in diesem Kontext als shuffle operator definiert wurde; vgl. \cite[26]{Skript};\cite[7??14??]{Snijders}.} Auch die Reihenfolge von V und XP wird durch das zwischen diesen beiden Elementen stehende Komma offen gelassen; dieses Komma fungiert hier als sogenannter ,shuffle operator‘. Stünde das Komma nicht dort, müsste XP stets V folgen. Zusammengenommen erlauben die Regeln der ersten und zweiten Zeile also beispielsweise, dass ein Satz aus einer Nominalphrase, einem finiten Verbalelement V und einer weiteren Nominalphrase besteht. Die Tatsache, dass diese nur eine von einer Vielzahl an möglichen Auflösungen von S ist, ist wiederum der weitgehend freien Wortstellung des Lateinischen geschuldet.\footnote{Vgl. \cite[19]{Rohrer}.}
+Die erste Regel besagt, dass S entweder durch V und XP ersetzt wird oder nur durch V. Der vertikale Disjunktionsstrich $\mid$ denotiert dabei die ,entweder-oder‘-Beziehung, die eckigen Klammern sollen lediglich zeigen, dass V und XP als Einheit zusammengefasst werden und den ersten Teil der Disjunktion bilden. Die Reihenfolge von V und XP wird durch das zwischen diesen beiden Elementen stehende Komma offen gelassen; dieses Komma fungiert hier als sogenannter ,shuffle operator‘. Stünde das Komma nicht dort, müsste XP stets V folgen. V bezeichnet ein finites Verbalelement, XP wird in der Zeile darunter definiert als eine Menge an Nominalphrasen (NP), Verbalphrasen (VP) und Präpositionalphrasen (PP). Die geschweiften Klammern in Zeile zwei umschließen eine Menge. Der Asterisk ist ein Kleene-Stern, der die vorangehende Menge zu einer Kleenschen Hülle um definiert; in einer solchen Kleenschen Hülle können die einzelnen Elemente beliebig oft -- also zum Beispiel auch überhaupt nicht -- und in beliebiger Reihenfolge vorkommen.\footnote{In der Menge werden hier Disjunktionsstriche verwendet anstatt wie oft üblich Kommata, da das Komma in diesem Kontext als shuffle operator definiert wurde; vgl. \cite[26]{Skript};\cite[7??14??]{Snijders}.} Zusammengenommen erlauben die Regeln der ersten und zweiten Zeile also, dass ein Satz beispielsweise aus einer Nominalphrase, einem finiten Verbalelement V und einer weiteren Nominalphrase besteht. Die Tatsache, dass diese nur eine von vielen möglichen Auflösungen von S ist, wird wiederum der weitgehend freien Wortstellung des Lateinischen geschuldet.\footnote{Vgl. \cite[19]{Rohrer}.}
 
-In den Zeilen 3 bis 5 werden die jeweiligen Expansionsmöglichkeiten von NP, VP und PP beschrieben. Eine Nominalphrase besteht also, allgemein gesprochen, aus entweder einem lexikalischen Element der Kategorie N – d.h. aus einem Nomen -- und einer beliebigen, ungeordneten Menge an NPs, VPs und PPs, oder aber nur aus einem Nomen. Die möglichen Expansionen einer Verbalphrase unterscheiden sich von denen der Nominalphrase lediglich darin, dass eine Verbalphrase keine weiteren Verbalphrase untergeordnet sein kann. Die Notation der Expansionsmöglichkeiten einer präpositionale Phrase enthalten keine Kleensche Hülle, da in einer präpositionale Phrase stets zumindest ein Element einer VP oder NP direkt vor (bzw. nach) einer Präposition (bzw. Postposition) stehen muss.\footnote{Diese Regeln erheben keinen Anspruch an Vollständigkeit. So sind beispielsweise die im Lateinischen häufig auftretenden diskontinuierlichen Phrasen aus Gründen der Relevanz für diese Arbeit außer acht gelassen; mehr Informationen hierzu finden sich bei \cite{Snijders}. Ebenso werden, abgesehen von den präpositionale Phrasen, Fälle, in denen auch im Lateinischen die Wortstellung eine Rolle spielt, wie beispielsweise beim konzessiven Konjunktiv \textbf{(?) und ?? (Geiger Dokumente)}, nicht beachtet. Auch die formal schwierige Frage der Koordination kann hier nicht berücksichtigt werden.}
-
-Bei der Erzeugung der c-Struktur dienen die Syntaxregeln dazu, Dominanzverhältnisse -- und oftmals, jedoch nicht hier, auch Präzedenzverhältnisse -- zwischen den Konstituenten herzustellen.\footnote{Vgl. \cite[19]{Rohrer}.} Jedes hier aufgeführte lexikalische Element und jede Phrase kann einen Konstituenten in der c-Struktur bezeichnen. Mehr dazu im Abschnitt ??.
-
+In den Zeilen 3 bis 5 werden die jeweiligen Expansionsmöglichkeiten von NP, VP und PP beschrieben. Eine Nominalphrase besteht also im Allgemeinen entweder aus einem lexikalischen Element der Kategorie N – d.h. aus einem Nomen -- und einer beliebigen, ungeordneten Menge an NPs, VPs und PPs, oder aber nur aus einem Nomen.  Die Notation der Expansionsmöglichkeiten einer präpositionale Phrase enthält keine Kleensche Hülle, da in einer präpositionale Phrase stets zumindest ein Element einer VP oder NP direkt nach (bzw. vor) einer Präposition (bzw. Postposition) stehen muss.\footnote{Diese Regeln erheben keinen Anspruch auf Vollständigkeit. So werden beispielsweise die im Lateinischen häufig auftretenden diskontinuierlichen Phrasen aus Gründen der Relevanz für diese Arbeit außer acht gelassen; mehr Informationen hierzu finden sich bei \cite{Snijders}. Ebenso werden, abgesehen von den präpositionale Phrasen, Fälle, in denen auch im Lateinischen die Wortstellung eine Rolle spielt, wie beispielsweise beim konzessiven Konjunktiv \textbf{(?) und ?? (Geiger Dokumente)}, nicht beachtet. Auch die formal schwierige Frage der Koordination kann hier nicht berücksichtigt werden.}
 
 Zu beachten ist, dass Partizipialien – d.h. Partizipien, Infinitve und Gerundialien -- in dieser Arbeit als V bezeichnet werden. Dies macht insofern Sinn, dass die Prädikate der Partizipien die übrigen Argumente der Partizipialkonstruktion fordern. Im Lateinischen ist V stets der Kopf von S; da die Partizipialkonstruktionen im Lateinischen satzwertig sind, ist die Bezeichnung der Partizipien als V angemessen.\footnote{Allerdings werden in den späteren Ausführungen die Partizipialkonstruktionen -- abgesehen vom Ablativus absolutus -- nicht explizit als S bezeichnet, um ihre Zugehörigkeit zum Rest des Satzes anzuzeigen.}\\
-
 \textbf{WAS WAREN DIE GRÜNDE DAGEGEN?! einfachere Syntaxregeln, nominale Eigenschaften der Partizipien (durch Bezeichnung nicht gekennzeichnet)}
 
-•	\textbf{ÜBERPRÜFEN: * Mehrere Vs bzw. Ns können in derselben übergeordneten Struktur nur vorkommen, wenn sie beigeordnet sind. --> ABER WIR SCHLIEßEN KOORDINATION JA AUS; tun wir das auch in den Regeln wirklich?}
+Allerdings sind die Syntaxregeln so wie hier dargestellt noch nicht komplett; es fehlen die Annotationen der grammatikalischen Funktionen, die ein Konstituent an der jeweiligen Position einnehmen kann. Eine der Stärken der LFG besteht darin, dass durch diese funktionalen Annotationen die Menge der Syntaxregeln stark reduziert wird. In der LFG wird ein universelles Inventar an grammatikalischen Funktionen angenommen; dieses umfasst im Allgemeinen Subjekt (SUBJ), Objekt (OBJ), thematisch restringiertes Objekt (OBJ\textsubscript{$\theta$}), Oblique (OBL\textsubscript{$\theta$}), Komplement (COMP) und Adjunkt (ADJ).\footnote{Vgl. \cite[9]{Dal}. Neben den grammatikalischen Funktionen gibt es auch Diskursfunktionen; vgl. \cite[28; 76-84; 94-101]{Skript}. Auf diese wird in dieser Arbeit nicht eingegangen.} Diese Funktionen können auf verschiedene Art und Weise nach bestimmten Gemeinsamkeiten bzw. Unterschieden klassifiziert werden.\footnote{Vgl. \cite[56-8]{Falk}.} 
 
-Allerdings sind die Syntaxregeln so wie hier dargestellt noch nicht komplett; es fehlen die Annotationen der grammatikalischen Funktionen, die ein Konstituent an der jeweiligen Position einnehmen kann. Eine der Stärken der LFG besteht darin, durch diese funktionalen Annotationen die Menge der Syntaxregeln stark reduziert wird. In der LFG wird ein universelles Inventar an grammatikalischen Funktionen angenommen; dieses umfasst grob Subjekt (SUBJ), Objekt (OBJ), thematisch restringiertes Objekt (OBJ\textsubscript{$\theta$}), Oblique (OBL\textsubscript{$\theta$}), Komplement (COMP) und Adjunkt (ADJ).\footnote{Vgl. \cite[9]{Dal}. Neben den grammatikalischen Funktionen gibt es auch Diskursfunktionen; vgl. \cite[28; 76-84; 94-101]{Skript}. Auf diese wird in dieser Arbeit nicht eingegangen.} Diese Funktionen können auf verschiedene Art und Weise nach bestimmten Gemeinsamkeiten bzw. Unterschieden klassifiziert werden.\footnote{Vgl. \cite[56-8]{Falk}.} 
-
-Ein wichtiger Unterschied besteht zwischen den vom Prädikat regierbaren Funktionen einerseits, und ADJ und XADJ andererseits. \footnote{Vgl. \cite[56]{Falk}.} Wie bei der Besprechung der Lexikoneinträge deutlich werden wird, fordert das Prädikat seine Argumente; daher werden die begehbaren Funktionen auch Argument-Funktionen (ARG-GF oder AF) genannt.\footnote{Vgl. \cite[28]{Skript}; \cite[58]{Falk}.} Da Adjunkte keinerlei syntaktische Wichtigkeit für die Grammatikalität eines Satzes besitzen, werden sie nicht vom Prädikat gefordert; sie können als Adjunkt-Funktionen (ADJ-GF) bezeichnet werden.\footnote{Vgl. \cite[10-1]{Dal}; \cite[38]{Skript}.} Attributive Adjektive und Adverbien beispielsweise treten immer in der Funktion eines ADJ auf, Präpositionalphrasen häufig.\footnote{Vgl. \cite[38]{Skript}. Mehr Informationen zu Adjunkten finden sich beispielsweise in \cite[61-2]{Falk}.} Diese grundlegende Unterscheidung der grammatikalischen Funktionen in Argument- und Adjunkte-Funktionen können folgendermaßen formelhaft dargestellt werden:\footnote{Die Element-Zeichen werden bei der Betrachtung der f-Struktur erklärt.}
+Ein wichtiger Unterschied besteht zwischen den vom Prädikat regierbaren Funktionen einerseits, und ADJ und XADJ andererseits. \footnote{Vgl. \cite[56]{Falk}.} Wie bei der Besprechung der Lexikoneinträge deutlich werden wird, fordert das Prädikat seine Argumente; daher werden die regierbaren Funktionen auch Argument-Funktionen (ARG-GF oder AF) genannt.\footnote{Vgl. \cite[28]{Skript}; \cite[58]{Falk}.} Da Adjunkte keinerlei syntaktische Wichtigkeit für die Grammatikalität eines Satzes besitzen, werden sie nicht vom Prädikat gefordert; sie können als Adjunkt-Funktionen (ADJ-GF) bezeichnet werden.\footnote{Vgl. \cite[10-1]{Dal}; \cite[38]{Skript}.} Attributive Adjektive und Adverbien beispielsweise treten immer in der Funktion eines ADJ auf, Präpositionalphrasen häufig.\footnote{Vgl. \cite[38]{Skript}. Mehr Informationen zu Adjunkten finden sich beispielsweise in \cite[61-2]{Falk}.} Diese grundlegende Unterscheidung der grammatikalischen Funktionen in Argument- und Adjunkt-Funktionen können folgendermaßen formelhaft dargestellt werden:\footnote{Die Element-Zeichen werden bei der Betrachtung der f-Struktur erklärt.}
 
 \begin{singlespace}
 \begin{tabular}{ l  l  l  c  c  c  c }
@@ -182,7 +176,7 @@ Weiter ist den Funktionen COMP, XCOMP und XADJ eigen, dass sie stets satzwertige
 
 Ein weiterer Unterschied besteht zwischen den semantisch unrestringierten Funktionen (\textbf{nochmal nachgucken bei Dalrymple welche das alles sind, S. 10; 15-17!}) einerseits und OBJ\textsubscript{$\theta$} und OBL\textsubscript{$\theta$} andererseits. Sprachen erlauben in aller Regel nur ein thematisch unrestringiertes Objekt, jedoch ein oder mehrere thematisch beschränkte.\footnote{Vgl. \cite[21]{Dal}.} Während OBJ im Lateinischen das direkte Objekt bezeichnet,\footnote{Der Kasus des direkten Objekts ist im Lateinischen vom Verb abhängig und muss im Lexikoneintrag des entsprechenden Verbs festgelegt werden. Vgl. \cite[30]{Skript}.} wird OBJ\textsubscript{$\theta$} für das indirekte Objekt verwendet – beispielsweise ,tibi‘ in ,dono tibi librum‘, wobei ,librum‘ das direkte Objekt ist (??).\footnote{\cite[30]{Skript} bestätigt diese Zuteilung für das Deutsche. Dort finden sich auch nähere Erklärungen hierzu. Welche Verben ein indirektes Objekt zu sich nehmen muss ebenfalls in den jeweiligen Lexikoneinträgen festgelegt werden; die Hinzunahme eines indirekten Objekts muss auch in den c-Struktur-Annotationen erlaubt sein.}  Der Index $\theta$ wird in der konkreten Verwendung durch eine Abkürzung der semantischen Rolle ersetzt,\footnote{Vgl. \cite[32]{Skript}; \cite[21]{Rohrer}.} im obigen Beispiel also durch ,rec‘, für ,receiver‘. Oblique-Argumente zeigen ihre semantische Rolle stets an;\footnote{Vgl. \cite[26]{Dal}.} Präpositionale Phrasen beispielsweise erfüllen häufig die Funktionen OBL\textsubscript{goal} oder OBL\textsubscript{loc}.
 
-Unter Einbeziehung der grammatikalischen Funktionen sähen die Syntaxregeln in etwa folgendermaßen aus:
+Unter Einbeziehung der grammatikalischen Funktionen sähen die Syntaxregeln etwa folgendermaßen aus:
 %\textbf{Variante 1 - Disjunktivität beachtet (in Anlehnung an Snijder}
 %\begin{singlespace}
 %\begin{tabular}{ l  l  c  c  c  c  c  c  c}
@@ -294,9 +288,11 @@ Diese funktionalen Annotationen zeigen beispielsweise an, welche grammatikalisch
 
 \subsubsection{Allgemeines zur c-Struktur}
 
+Bei der Erzeugung der c-Struktur dienen die Syntaxregeln dazu, Dominanzverhältnisse -- und oftmals, jedoch nicht hier, auch Präzedenzverhältnisse -- zwischen den Konstituenten herzustellen.\footnote{Vgl. \cite[19]{Rohrer}.} Jedes hier aufgeführte lexikalische Element und jede Phrase kann einen Konstituenten in der c-Struktur bezeichnen. 
+
 Aus den Syntaxregeln (und dem Lexikon???) kann die c-Struktur erzeugt werden. (vgl.: ,,Die Baumstruktur (1) kann durch eine Grammatik erzeugt werden, die aus einer Menge von Ersetzungsregeln und einem Lexikon besteht‘‘)\footnote{Vgl. \cite[6]{Skript}.} In der LFG repräsentiert die c-Struktur primär die oberflächliche, konkrete Konfiguration der Satz-Konstituenten.\footnote{Vgl. \cite[47]{Dal}. Überlegungen über Kriterien für Konstituenten finden sich in \cite[48-9]{Dal}.} In ihr ist sowohl die hierarchische Dominanz der Konstituenten als auch die lineare Reihenfolge der lexikalischen Elemente sichtbar.\footnote{Vgl. \cite[7]{Dal}; \cite[13]{Rohrer}.} Diese lexikalischen Elemente befinden sich auf der untersten Ebene der c-Struktur -- sie bilden sozusagen die Blätter des Syntaxbaums.\footnote{Vgl. \cite[7]{Dal}. Hier können nur einzelne, vollständige Wörter stehen, d.h. keine Phrasen oder Affixe.} \textbf{(wird im Skript anders gesehen:,,gehen durch Ersetzung eines terminalen Knotens gleicher Kategorie in die C-Struktur ein‘‘\footnote{Vgl. \cite[63]{Skript}.}} Direkt über ihnen steht ein terminaler c-Struktur-Knoten gleicher lexikalischer (?) Kategorie.\footnote{das ein lexikalisch Element von mehreren c-Struktur-Knoten dominiert wird, ist ausgeschlossen; vgl. \cite[63]{Skript}.}
 
-Oberhalb der terminalen Knoten, die aus lexikalischen (bzw. im allgemeinen auch aus funktionalen) Kategorien bestehen, finden sich eine bis mehrere Ebenen nicht-terminaler Knoten, welche aus den Konstituenten-Kategorien – S, NP, VP, etc. -- bestehen. Diese Konstituenten-Kategorien werden als Projektionen der lexikalischen (bzw. funktionalen) Kategorien angesehen; das Wort, das dabei die beherrschende Rolle spielt \textbf{(semantisch oder syntatktisch??)} wird als Kopf dieses Konstituenten bezeichnet.\footnote{Vgl. \cite[13; 15]{Rohrer}.} So ist beispielsweise eine VP also eine Projektion des Verbs (V), wobei V der Kopf der Phrase ist. S kann ebenfalls als Projektion des Verbs betrachtet werden, jedoch auf einer noch höheren Ebene als die VP.\footnote{Vgl. \cite[15]{Rohrer}.}
+Oberhalb der terminalen Knoten, die aus lexikalischen\footnote{Es existieren auch funktionale Kategorien mit funktionalen Köpfen; auf diese wird in dieser Arbeit jedoch nicht eingegangen.} Kategorien bestehen, finden sich eine bis mehrere Ebenen nicht-terminaler Knoten, welche aus den Konstituenten-Kategorien – S, NP, VP, etc. -- bestehen. Diese Konstituenten-Kategorien werden als Projektionen der lexikalischen Kategorien angesehen; das Wort, das dabei die beherrschende Rolle spielt \textbf{(semantisch oder syntatktisch??)} wird als Kopf dieses Konstituenten bezeichnet.\footnote{Vgl. \cite[13; 15]{Rohrer}.} So ist beispielsweise eine VP also eine Projektion des Verbs (V), wobei V der Kopf der Phrase ist. S kann ebenfalls als Projektion des Verbs betrachtet werden, jedoch auf einer noch höheren Ebene als die VP.\footnote{Vgl. \cite[15]{Rohrer}.}
 
 -->	Zwischenprojektionen
 
@@ -452,7 +448,7 @@ ABER: wir können diese ,,Konditionale'' bei den Einschränkungen verwenden, gla
 \footnote{Auf weitere Funktionsspezifikationen neben denen der Partizipien bzw. Partizipialkonstruktionen kann im Rahmen dieser Arbeit nicht eingegangen werden. Sie werden für das Deutsche beispielsweise in Skript, S. 48-51 behandelt.}
 
 %Die grammatikalische Funktion einer Partizipialkonstruktion -- und daher des Partizips, welches Kopf jeder Partizipialkonstruktion ist -- ist immer entweder ein XADJ, ein ADJ oder ein XCOMP: \\
-Die grammatikalische Funktion jedes Partizips, welches nicht Teil einer finiten Verbform ist, ist immer entweder ein XADJ, ein ADJ oder ein XCOMP der übergeordneten grammatikalischen Funktion: \\
+Die grammatikalische Funktion jedes Partizips in einer Partizipialkonstruktion,\footnote{Ausgenommen sind hier das dominante Partizip in Abhängigkeit von einer Präposition und je nach Umsetzung das substantivierte Partizip.} welches nicht Teil einer finiten Verbform ist, ist immer entweder ein XADJ, ein ADJ oder ein XCOMP der übergeordneten grammatikalischen Funktion: \\
 ($\uparrow$GF) = ($\uparrow$XADJ) $\mid$ ($\uparrow$ADJ) $\mid$ ($\uparrow$XCOMP) \textbf{???} \\ 
 %($\uparrow$GF) = ($\uparrow$XADJ) $\mid$ ((ADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF) \textbf{???} \\ 
 *Pfeile davor oder dahinter?! inside-out?! :( \\
@@ -844,7 +840,92 @@ Da Partizipien einige Eigenschaften der Adjektive übernehmen,  können sie wie 
 Die Umsetzung des substantivierten Partizips in die LFG-Struktur soll anhand des Beispielsatzes \textit{auxilium petentibus Caesar parcit} veranschaulicht werden.
 
 
-\subsection{Variante 1: das Partizip als XADJ zum OBJ}
+
+\subsection{Variante 1: das Partizip als OBJ}
+In der obigen Variante würde folglich ein ausgelassenes Bezugswort des Partizips angenommen werden. Dies ist jedoch weder notwendig noch bietet es einen Mehrwert. Da das Partizip substantiviert ist, und somit eben gerade keinem Bezugswort untergeordnet, haben wir uns für die folgende Variante entschieden, deren c-Struktur sichtbar unkomplizierter ist. Dabei ist das Partizip Kopf der Partizipialphrase VP und somit alleiniges Objekt des Hauptsatz-Prädikats \textit{parcit}. In diesem Fall überwiegen zwar die nominalen Eigenschaften des Partizips, die Bezeichnung `VP' wird jedoch um der Konsistenz willen beibehalten.
+
+
+%\subsubsection{Einschränkungen}
+\subsubsection{Lexikoneintrag}
+*wie oben, mit einzigem Unterschied ...
+
+\begin{singlespace}
+\begin{tabular}{ l  l  l  l  } 
+\textbf{petentibus}: & V \\
+$\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `peto$\langle$SUBJ, OBJ$\rangle$' \\
+$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ PRED) & = & `pro' \\
+$\qquad$ & $[2.1]$ \:  ($\uparrow$SUBJ PRON-TYPE) & = & missing \\
+$\qquad$ & $[2.2]$ \:  ($\uparrow$SUBJ CASE) & = & \{abl $\mid$ dat\} \\
+$\qquad$ & $[2.3]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
+$\qquad$ & $[2.4]$ \:  ($\uparrow$SUBJ GEN) & = & \{m $\mid$ n $\mid$ f\} \\
+$\qquad$ & $[3]$ \:  ($\uparrow$OBJ CASE) & = & acc \\
+$\qquad$ & $[4]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[4]$ \:  ($\uparrow$FIN) & = & - \\
+$\qquad$ & $[5]$ \:  ($\uparrow$PASSIVE) & = & - \\
+$\qquad$ & $[6]$ \:  ($\uparrow$RELTENSE) & = & present \\ 
+$\qquad$ & $[7]$ \:  ($\uparrow$CASE) & = & \{abl $\mid$ dat\} \\
+$\qquad$ & $[8]$ \:  ($\uparrow$NUM) & = & pl \\
+$\qquad$ & $[9]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
+\end{tabular}
+\newline
+\newline
+\end{singlespace}
+
+
+%\subsubsection{Syntaxregeln}
+%Syntaxregeln sehen wie folgt aus: \\
+%\begin{singlespace}
+%\begin{tabular}{ l  l  c  c  c  c }
+ % S & $\rightarrow$ & VP & NP\textsubscript{1} & V\\
+  % & $\qquad$ & \textsuperscript{($\uparrow$OBJ\textsubscript{REC}) = $\downarrow$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+%		    VP & $\rightarrow$ & V' \\
+ %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+  %				  V' & $\rightarrow$ & NP\textsubscript{2} & V \\
+   %& $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+   	%				 NP\textsubscript{2} & $\rightarrow$ & N \\
+%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+ %   NP\textsubscript{1} & $\rightarrow$ & N' \\
+  % & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
+%\end{tabular} 
+%\end{singlespace}
+
+\subsubsection{c-Struktur}
+\begin{singlespace}
+\Tree [.S 
+		[.VP{\textsubscript{($\uparrow$OBJ) = $\downarrow$}}
+					[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
+					[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
+		]
+		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
+		[.V\textsubscript{$\uparrow$=$\downarrow$} parcit ]	
+	]
+\end{singlespace}
+
+\subsubsection{f-Struktur}
+\begin{singlespace}
+\begin{avm}
+\[ PRED &  \rm ‘parco \q<SUBJ, OBJ\textsubscript{REC}\q>’\\
+SUBJ & \[``Caesar'' \] \\
+OBJ\textsubscript{REC} & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
+MOOD & part \\
+PASSIVE & - \\
+RELTENSE & present \\
+CASE & dat \\
+NUM & pl \\
+GEN & m \\
+SUBJ & \[PRED & `pro' \\
+PRON-TYPE  & mis \] \\
+OBJ & \[PRED & `auxilium' \\
+CASE & acc \\
+NUM & sg \\
+GEN & n \] \\
+\] \]
+\end{avm}
+\end{singlespace}
+
+\subsection{Variante 2: das Partizip als XADJ zum OBJ}
+Das Hauptroblem bei der erstgenannten Variante ergibt sich dadurch, dass durch das komplett fehlende Bezugswort bei der Implementierung/Formulierung der Redundanz- und Default-Regeln Probleme auftreten. Des Weiteren erfüllen die Partizipialkonstruktionen in der Regel die grammatikalischen Funktionen eines XADJ, XCOMP oder ADJ; die Klassifikation als OBJ in der obigen Überlegung würde daher eine Ausnahme darstellen. Daher entspricht die Einordnung als XADJ dem aufgestellten Konzept.
+
 Folgt man dem Neuen Menge\footnote{Vgl. NM \textbf{§ ??}} und betrachtet das substantivierte Partizip (\textit{petentibus}) als Attribut zu einem sozusagen fehlenden Bezugswort -- in diesem Fall also etwa \textit{eis} oder \textit{viris} -- so würde die Partizipialkonstruktion in der Rolle eines XADJ zu diesem Bezugswort stehen; das Bezugswort selbst wäre dann das Objekt des Hauptsatzprädikats \textit{parcit}. Dieses fehlende Objekt wird in der c-Struktur unten durch ,,mis'' (für ,,missing'', ,,fehlend'') bezeichnet. Da vom substantivierten Partizip petentibus in unserem Beispiel noch ein Nomen in Objektfunktion abhängt, spaltet sich die Partizipial-VP noch einmal in V und NP auf. \textbf{(eher zu PC, da das früher erwähnt wird)}
 
 %\subsubsection{Einschränkungen}
@@ -958,88 +1039,6 @@ GEN & n \\
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:alpha) to[out=0,in=0,looseness=2.5]  (pic cs:omega);
     
-\end{singlespace}
-
-\subsection{Variante 2: das Partizip als OBJ}
-In der obigen Variante würde folglich ein ausgelassenes Bezugswort des Partizips angenommen werden. Dies ist jedoch weder notwendig noch bietet es einen Mehrwert. Da das Partizip substantiviert ist, und somit eben gerade keinem Bezugswort untergeordnet, haben wir uns für die folgende Variante entschieden, deren c-Struktur sichtbar unkomplizierter ist. Dabei ist das Partizip Kopf der Partizipialphrase VP und somit alleiniges Objekt des Hauptsatz-Prädikats \textit{parcit}. In diesem Fall überwiegen zwar die nominalen Eigenschaften des Partizips, die Bezeichnung `VP' wird jedoch um der Konsistenz willen beibehalten.
-
-
-%\subsubsection{Einschränkungen}
-\subsubsection{Lexikoneintrag}
-*wie oben, mit einzigem Unterschied ...
-
-\begin{singlespace}
-\begin{tabular}{ l  l  l  l  } 
-\textbf{petentibus}: & V \\
-$\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `peto$\langle$SUBJ, OBJ$\rangle$' \\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ PRED) & = & `pro' \\
-$\qquad$ & $[2.1]$ \:  ($\uparrow$SUBJ PRON-TYPE) & = & missing \\
-$\qquad$ & $[2.2]$ \:  ($\uparrow$SUBJ CASE) & = & \{abl $\mid$ dat\} \\
-$\qquad$ & $[2.3]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
-$\qquad$ & $[2.4]$ \:  ($\uparrow$SUBJ GEN) & = & \{m $\mid$ n $\mid$ f\} \\
-$\qquad$ & $[3]$ \:  ($\uparrow$OBJ CASE) & = & acc \\
-$\qquad$ & $[4]$ \:  ($\uparrow$MOOD) & = & part\\
-$\qquad$ & $[4]$ \:  ($\uparrow$FIN) & = & - \\
-$\qquad$ & $[5]$ \:  ($\uparrow$PASSIVE) & = & - \\
-$\qquad$ & $[6]$ \:  ($\uparrow$RELTENSE) & = & present \\ 
-$\qquad$ & $[7]$ \:  ($\uparrow$CASE) & = & \{abl $\mid$ dat\} \\
-$\qquad$ & $[8]$ \:  ($\uparrow$NUM) & = & pl \\
-$\qquad$ & $[9]$ \:  ($\uparrow$GEN) & = & \{m $\mid$ n $\mid$ f\} \\
-\end{tabular}
-\newline
-\newline
-\end{singlespace}
-
-
-%\subsubsection{Syntaxregeln}
-%Syntaxregeln sehen wie folgt aus: \\
-%\begin{singlespace}
-%\begin{tabular}{ l  l  c  c  c  c }
- % S & $\rightarrow$ & VP & NP\textsubscript{1} & V\\
-  % & $\qquad$ & \textsuperscript{($\uparrow$OBJ\textsubscript{REC}) = $\downarrow$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-%		    VP & $\rightarrow$ & V' \\
- %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-  %				  V' & $\rightarrow$ & NP\textsubscript{2} & V \\
-   %& $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   	%				 NP\textsubscript{2} & $\rightarrow$ & N \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
- %   NP\textsubscript{1} & $\rightarrow$ & N' \\
-  % & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-%\end{tabular} 
-%\end{singlespace}
-
-\subsubsection{c-Struktur}
-\begin{singlespace}
-\Tree [.S 
-		[.VP{\textsubscript{($\uparrow$OBJ) = $\downarrow$}}
-					[\qroof{auxilium}.NP\textsubscript{($\uparrow$OBJ)=$\downarrow$} ]
-					[.V\textsubscript{$\uparrow$=$\downarrow$} petentibus ] 
-		]
-		[\qroof{Caesar}.NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$} ]
-		[.V\textsubscript{$\uparrow$=$\downarrow$} parcit ]	
-	]
-\end{singlespace}
-
-\subsubsection{f-Struktur}
-\begin{singlespace}
-\begin{avm}
-\[ PRED &  \rm ‘parco \q<SUBJ, OBJ\textsubscript{REC}\q>’\\
-SUBJ & \[``Caesar'' \] \\
-OBJ\textsubscript{REC} & \[PRED &  \rm ‘peto \q<SUBJ, OBJ\q>’\\
-MOOD & part \\
-PASSIVE & - \\
-RELTENSE & present \\
-CASE & dat \\
-NUM & pl \\
-GEN & m \\
-SUBJ & \[PRED & `pro' \\
-PRON-TYPE  & mis \] \\
-OBJ & \[PRED & `auxilium' \\
-CASE & acc \\
-NUM & sg \\
-GEN & n \] \\
-\] \]
-\end{avm}
 \end{singlespace}
 
 \newpage
