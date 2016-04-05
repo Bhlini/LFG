@@ -224,7 +224,7 @@ XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
 \newline
 \end{singlespace}
 
-Diese funktionalen Annotationen zeigen beispielsweise an, welche grammatikalischen Funktionen eine NP, die direkt von S dominiert wird, einnehmen kann; sie besagen auch, dass ihr Kasus, wenn sie an dieser Position als Subjekt auftritt, Nominativ sein muss. Auf die Annotation ($\downarrow$FIN) = + wird im Abschnitt ,,Redundanz- und Defaultregeln'' näher eingegangen werden. Diese Annotationen sind hier jedoch nur exemplarisch dargestellt, da die erschöpfende Notation aller möglichen grammatikalischen Funktionen für jeden Konstituenten den Rahmen dieser Arbeit bei Weitem überschreiten würde. So müsste z.B. die XP in den obigen Regeln konkret in NP, VP und PP getrennt dargestellt werden, damit gezeigt werden könnte, dass eine NP, die direkt von S dominiert wird, andere grammatikalische Funktionen erfüllen kann als eine NP, die von einer anderen NP, VP oder PP dominiert wird; so kann beispielsweise das Subjekt einer PC-VP in allen Kasus vorkommen, nicht nur im Nominativ.
+Diese funktionalen Annotationen zeigen beispielsweise an, welche grammatikalischen Funktionen eine NP, die direkt von S dominiert wird, einnehmen kann; sie besagen auch, dass ihr Kasus, wenn sie an dieser Position als Subjekt auftritt, Nominativ sein muss. Die Pfeile werden bei der Betrachtung der c-Struktur verständlich werden; auf die Annotation ($\downarrow$FIN) = + wird im Abschnitt ,,Redundanz- und Defaultregeln'' näher eingegangen werden. Diese Annotationen sind hier jedoch nur exemplarisch dargestellt, da die erschöpfende Notation aller möglichen grammatikalischen Funktionen für jeden Konstituenten den Rahmen dieser Arbeit bei Weitem überschreiten würde. So müsste z.B. die XP in den obigen Regeln konkret in NP, VP und PP getrennt dargestellt werden, damit gezeigt werden könnte, dass eine NP, die direkt von S dominiert wird, andere grammatikalische Funktionen erfüllen kann als eine NP, die von einer anderen NP, VP oder PP dominiert wird; so kann beispielsweise das Subjekt einer PC-VP in allen Kasus vorkommen, nicht nur im Nominativ.
 
 %\textbf{Variante 2 - alt}
 %\begin{singlespace}
@@ -293,6 +293,19 @@ Diese funktionalen Annotationen zeigen beispielsweise an, welche grammatikalisch
 %($\uparrow$OBJ) = $\downarrow$\\
 
 \subsubsection{Allgemeines zur c-Struktur}
+
+\begin{singlespace}
+\Tree [.S 
+		[\qroof{Caesar}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
+		[\qroof{barbaros}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ]
+		[.VP{\textsubscript{$\uparrow$=$\downarrow$}}
+			[\qroof{in Gallia}.PP\textsubscript{$\downarrow$ $\in$($\uparrow$ADJ)} ]
+			[.V\textsubscript{$\uparrow$=$\downarrow$} vicit ]						
+		] 	
+	]
+\end{singlespace}
+
+\textit{Caesar barbaros in Gallia vicit.}
 
 \subsubsection{Allgemeines zu den Lexikoneinträgen}
 
