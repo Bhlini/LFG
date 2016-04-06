@@ -81,7 +81,7 @@ Diese Arbeit beschäftigt sich mit der Beschreibung lateinischer Partizipialkons
 %Wie andere generative Theorien versucht sie darzustellen, wie aus der endlichen Anzahl an Wörtern einer Sprache eine unendliche Menge -- grammatisch korrekter -- Sätze erzeugt werden kann. 
 Ihre Regeln sollen sowohl die Erzeugung einer unendliche Menge grammatisch korrekter Sätze aus der endlichen Anzahl an Wörtern einer Sprache erfassen als auch ungrammatische Sätze als solche erkennen.\footnote{Vgl. Skript S. 18.} Daher ist die LFG auch als Grammatikformalismus für die Computerlinguistik interessant, wobei sie der automatisierten Prüfung von Sätzen hinsichtlich ihrer Grammatikalität sowie der Generation neuer grammatischer Sätze dienen soll.\footnote{Vgl. Skript, S. 4.}
 
-Da sich die Forschung im Bereich der LFG hinsichtlich der lateinischen Sprache bislang noch in ihren Anfängen befindet, soll in dieser Arbeit die Darstellung der im Lateinischen sehr prävalenten Partizipialkonstruktionen im Konzept der LFG beleuchtet werden. Dabei ist die Kenntnis des grundlegenden Aufbaus lateinischer Partizipialkonstruktionen unabdingbar. Deshalb werden -- nach einer Einführung in Thematik und Terminologie der LFG -- diese verschiedenen Konstruktionen kurz erklärt, bevor sie anhand von Beispielsätzen in das Gerüst der LFG eingefügt werden. Hierbei werden auch verschiedene Ansätzen und diverse Schwierigkeiten bei der Umsetzung erläutert.
+Da sich die Forschung im Bereich der LFG hinsichtlich der lateinischen Sprache bislang noch in ihren Anfängen befindet, soll in dieser Arbeit die Darstellung der im Lateinischen sehr prävalenten Partizipialkonstruktionen im Konzept der LFG beleuchtet werden. Dabei ist die Kenntnis des grundlegenden Aufbaus lateinischer Partizipialkonstruktionen unabdingbar. Deshalb werden -- nach einer Einführung in Thematik und Terminologie der LFG -- diese verschiedenen Konstruktionen kurz erklärt, bevor sie anhand von Beispielsätzen in das Gerüst der LFG eingefügt werden. Dazu sollen die jeweiligen Lexikoneinträge, c- und f-Strukturen aufgeführt werden. Auch werden verschiedene Ansätzen und diverse Schwierigkeiten bei der Umsetzung der einzelnen Konstruktionen erläutert. 
 
 \section{Einführung in Thematik und Terminologie}
 \subsection{Partizipien}
@@ -504,14 +504,11 @@ Das Partizip ist im AcP meist ein PPA, selten ein PPP. Mit Sicherheit kann daher
 \subsubsection{Allgemeines zur f-Struktur}
 
 \section{das Participium coniunctum}
-Partizipien können als Vertreter von Adverbialsätzen aufgefasst werden und stehen dabei für Temporal-, Kausal-, Modal-, Kondizional- und Konzessivsätze. Das Partizip ist hierbei mit seinem Bezugswort verbunden, welches in einem der fünf Kasus Bestandteil des Hauptsatzes und gleichzeitig Subjekt des Nebensatzes ist. Partizip und Bezugswort stimmen daher in Kasus, Numerus und Genus überein. Diese Partizipialkonstruktion bezeichnet man als PC, welches sowohl attributiv als auch prädikativ verwendet werden kann.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5a; Vgl. NM, S. 715, § 500.} \\
-* irgendwo mal erklären, dass wir ``Funktion'' einerseits normalsprachlich und andererseits als LFG-Terminus verwenden...?
-
-* die P'-Knoten haben wir schon vor dem Gespräch mit Geiger fast immer mit Dreieck umgangen, die waren nur in den Syntaxregeln... vielleicht können wir einfach einmal am Anfang irgendwo anmerken, das erste Mal wenn das vorkommt eben, dass ne Präposition und ihr Objekt immer zusammenstehen müssen, und dass wir hier Postpositionen außer acht lassen wegen ihres deutlich geringeren Vorkommens und weil es nich relevant is im Moment, und dass das deswegen hier mit Dreieck abgekürzt wird... und dann können wir auf die Snijder verweisen
-
-* "je konfigurationaler die Sprache, desto mehr nicht-maximale Projektionsknoten (X'-Knoten) sind erforderlich"... wiesoooo??? (hat Geiger gesagt)
+Partizipien können als Vertreter von Adverbialsätzen aufgefasst werden und stehen dabei für Temporal-, Kausal-, Modal-, Kondizional- und Konzessivsätze. Das Partizip ist hierbei mit seinem Bezugswort verbunden, mit dem es daher in Kasus, Numerus und Genus übereinstimmt. Wenn das Bezugswort des Partizips Bestandteil des Hauptsatzes und gleichzeitig Subjekt des Nebensatzes ist, bezeichnet man diese Konstruktion als Participium coniunctum. Partizip und Bezugswort können dabei in einem der fünf Kasus  auftreten. Das Partizip kann sowohl attributiv als auch prädikativ verwendet werden.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5a; Vgl. NM, S. 715, § 500.} \\
+%* irgendwo mal erklären, dass wir ``Funktion'' einerseits normalsprachlich und andererseits als LFG-Terminus verwenden...?
 
 \subsection{allgemeine Vorüberlegungen zur Umsetzung in der LFG}
+Das Partizip erhält in der Konstruktion eines PC immer die syntaktische Funktion eines XADJ, da sein Bezugswort eine grammatikalische Funktion der übergeordneten Struktur ist und das Partizip vom Prädikat nicht gefordert wird. 
 Die Konstruktion des PC erfüllt im Satz immer die syntaktische Funktion des XADJ: \\ 
 ($\uparrow$XADJ) = $\downarrow$ \\
 
