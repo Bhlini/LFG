@@ -514,28 +514,22 @@ GEN & m \]\\
 OBJ & \[ PRED & `barbarus' \\
 CASE & acc \\
 NUM & pl \\
-GEN & m \]\tikzmark{go} \\
-ADJ & \{ \[PRED &  \rm ‘in'\\
-MOOD & part \\
-PASSIVE & + \\
-RELTENSE & past \\
+GEN & m \] \\
+ADJ & \{ \[PRED &  \rm ‘in \q<OBJ\q>'\\
+OBJ & \[PRED & ‘schola' \\
 CASE & acc \\
 NUM & sg \\
-GEN & m \\
-SUBJ &  \tikzmark{stop} \\
-OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
-\} &            $\qquad$ \\
-TENSE & present \\
+GEN & f \] \\
+\] \} \\
+TENSE & past \\
 NUM & sg \\
 PERS & 3 \\
 PASSIVE & - \\
-MODE & ind \\
+MOOD & ind \\
 \]
 \end{avm}
+\newline
 \end{singlespace}
-
-\tikz[remember picture,overlay] 
-    \draw[<-] (pic cs:go) to[out=0,in=0,looseness=3.5]  (pic cs:stop);
 
 
 Die doppelten Anführungszeichen (``'') dienen der Abkürzung einer f-Struktur, deren Attribut-Wert-Paare entweder klar oder für den zu erklärenden Punkt nicht von Bedeutung sind.\footnote{Vgl. Falk, S. 59. Einem verarbeitenden (Parser?) Programm müssten selbstverständlich alle Attribut-Wert-Paare bekannt sein; diese Abkürzung soll lediglich dem Leser zugute kommen.}
