@@ -501,6 +501,43 @@ Das Partizip ist im AcP meist ein PPA, selten ein PPP. Mit Sicherheit kann daher
 \subsubsection{f-Struktur}
 
 \textbf{konkrete Struktur}
+Die f-Struktur des einfachen Beispielsatzes von vorhin, \textit{Caesar barbaros in Gallia vicit}, wird hier zum besseren Verständnis kurz aufgeführt: \\
+
+\begin{singlespace}
+\begin{avm}
+
+\[ PRED &  \rm ‘vinco \q<SUBJ, OBJ\q>'\\
+SUBJ & \[PRED & `Caesar' \\
+CASE & nom \\
+NUM & sg \\
+GEN & m \]\\
+OBJ & \[ PRED & `barbarus' \\
+CASE & acc \\
+NUM & pl \\
+GEN & m \]\tikzmark{go} \\
+ADJ & \{ \[PRED &  \rm ‘in'\\
+MOOD & part \\
+PASSIVE & + \\
+RELTENSE & past \\
+CASE & acc \\
+NUM & sg \\
+GEN & m \\
+SUBJ &  \tikzmark{stop} \\
+OBL\textsubscript{GOAL} & \[``in scholam''\] \]\\
+\} &            $\qquad$ \\
+TENSE & present \\
+NUM & sg \\
+PERS & 3 \\
+PASSIVE & - \\
+MODE & ind \\
+\]
+\end{avm}
+\end{singlespace}
+
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:go) to[out=0,in=0,looseness=3.5]  (pic cs:stop);
+
+
 Die doppelten Anführungszeichen (``'') dienen der Abkürzung einer f-Struktur, deren Attribut-Wert-Paare entweder klar oder für den zu erklärenden Punkt nicht von Bedeutung sind.\footnote{Vgl. Falk, S. 59. Einem verarbeitenden (Parser?) Programm müssten selbstverständlich alle Attribut-Wert-Paare bekannt sein; diese Abkürzung soll lediglich dem Leser zugute kommen.}
 
 \section{Participium coniunctum}
