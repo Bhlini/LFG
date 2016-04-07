@@ -321,9 +321,9 @@ Eine beispielhafte c-Struktur eines lateinischen Satzes ist zur Veranschaulichun
 
 \textit{Caesar barbaros in Gallia vicit.} \\
 
-\textbf{konkrete Beschreibung} \\
-•	Dreiecke und Präposition erläutern \\
-•	steht so bei Syntaxregeln, darauf kann man Bezug nehmen bzgl. P‘ : „... da in einer präpositionale Phrase stets zumindest ein Element einer VP oder NP direkt nach (bzw. vor) einer Präposition (bzw. Postposition) stehen muss.“ \cite[??]{Snijders}
+Die terminalen Knoten \textit{barbaros}, textit{in}, textit{Gallia} und textit{vicit} repräsentieren die lexikalischen Elemente in ihrer linearen Reihenfolge. Darüber befinden sich, wie bei barbaros ersichtlich wird, Knoten, die mit der lexikalischen Kategorie des darunter stehenden lexikalischen Elements bezeichnet werden. So werden textit{barbaros} von N, textit{in} von P, textit{Gallia} von N und textit{vicit} von V dominiert. Für eine einfachere und übersichtlichere Darstellung können diese Knoten in einem Dreieck zusammengefasst dargestellt werden, wie bei textit{Gallia} ersichtlich wird. Oberhalb dieser Knoten finden sich eine bis mehrere Ebenen Knoten der Konstituenten-Kategorien, über N also NP. Zwischen der lexikalischen Kategorie P und ihrer Maximalprojektion PP findet sich die Zwischenprojektion P‘. Trotz des Prinzips der Ökonomie des Ausdrucks wird bei einer PP diese Zwischenprojektionsebene gekennzeichnet,  da in einer Präpositionalphrase auf eine Präposition direkt eine VP oder NP folgen muss./footnote{Vgl. \cite{Snijders}.} So werden P und NP von der Zwischenprojektion P‘, P‘ wiederum von seiner Maximalprojektion PP dominiert. Für V ist gemäß den Syntaxregeln keine weitere Projektion nötig. NP, PP und V werden letztlich von S dominiert.
+
+Daneben erhalten die Knoten funktionale Annotationen. Dabei sind die Knoten, die mit der lexikalischen Kategorie des darunter stehenden lexikalischen Elements bezeichnet werden, durch das triviale Schema $\uparrow$ = $\downarrow$ gekennzeichnet, da das lexikalische Element, wie beispielsweise textit{barbaros}, seine gesamte funktionale Information direkt nach oben weitergibt. Die Annotationen zu den Knoten der Konstituenten-Kategorien geben deren konkrete grammatikalischen Funktionen nach oben: So stellen die NP, die textit{barbaros} enthält, das Objekt von S, die PP das Adjunkt von S, und die NP, die textit{Gallia} beinhaltet, das Objekt von P dar.
 
 
 \subsubsection{Lexikoneinträge}
@@ -510,7 +510,7 @@ Die f-Struktur des einfachen Beispielsatzes von vorhin, \textit{Caesar barbaros 
 
 \[ PRED &  \rm ‘vinco \q<SUBJ, OBJ\q>'\\
 SUBJ & \[PRED & `pro' \\
-PRON-TYPE & mis\]\\
+PRON-TYPE & mis \] \\
 OBJ & \[ PRED & `barbarus' \\
 CASE & acc \\
 NUM & pl \\
@@ -534,15 +534,14 @@ MOOD & ind \\
 So etwas könnten wir mit unserem Beispielsatz machen dann: 
 ,,Diese F-Struktur drückt aus, daß der Satz ein Prädikat enthält, welches das Vorkommen zweier Grammatischer Funktionen, nämlich eines Subjekts und eines Objekts verlangt, weiterhin, daß das Prädikat die Tempusbestimmung Perfekt hat. Schließlich wird ausgedrückt welchen semantischen Gehalt die als Subjekt und Objekt figurierenden Ergänzungen haben und bezüglich des Objekts, daß es indefinit ist. Es sei hier betont, daß die F-Struktur keinerlei kategoriale Bestimmungen enthält. So wird zwar das Prädikat im gegebenen Satz durch ein lexikalisches Element der Kategorie Verb gebildet. Dies ist für den Gehalt der F-Struktur jedoch irrelevant. [...] F-Strukturen sind Mengen von Attribut-Wert-Paaren und stets nach dem Muster der allgemeinen Form ... konstruiert.'' (Skript, S. 7)
 
-Die doppelten Anführungszeichen (``'') dienen der Abkürzung einer f-Struktur, deren Attribut-Wert-Paare entweder klar oder für den zu erklärenden Punkt nicht von Bedeutung sind.\footnote{Vgl. Falk, S. 59. Einem verarbeitenden (Parser?) Programm müssten selbstverständlich alle Attribut-Wert-Paare bekannt sein; diese Abkürzung soll lediglich dem Leser zugute kommen.}
+Die doppelten Anführungszeichen (``'') dienen der Abkürzung einer f-Struktur, deren Attribut-Wert-Paare entweder klar oder für den zu erklärenden Punkt nicht von Bedeutung sind.\footnote{Vgl. Falk, S. 59. Einem verarbeitenden (Michael? Parser?) Programm müssten selbstverständlich alle Attribut-Wert-Paare bekannt sein; diese Abkürzung soll lediglich dem Leser zugute kommen.}
 
 \section{Participium coniunctum}
 Partizipien können als Vertreter von Adverbialsätzen aufgefasst werden und stehen dabei für Temporal-, Kausal-, Modal-, Kondizional- und Konzessivsätze. Das Partizip ist hierbei mit seinem Bezugswort verbunden, mit dem es daher in Kasus, Numerus und Genus übereinstimmt. Wenn das Bezugswort des Partizips Bestandteil des Hauptsatzes und gleichzeitig Subjekt des Nebensatzes ist, bezeichnet man diese Konstruktion als Participium coniunctum. Partizip und Bezugswort können dabei in einem der fünf Kasus  auftreten. Das Partizip kann sowohl attributiv als auch prädikativ verwendet werden.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5a; Vgl. NM, S. 715, § 500.} \\
 %* irgendwo mal erklären, dass wir ``Funktion'' einerseits normalsprachlich und andererseits als LFG-Terminus verwenden...?
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
-Das Partizip erhält in der Konstruktion eines PC immer die syntaktische Funktion eines XADJ, da sein Bezugswort eine grammatikalische Funktion der übergeordneten Struktur ist. Da das Partizip vom Prädikat nicht gefordert wird, kann es nicht als XCOMP klassifiziert werden.
-($\uparrow$XADJ) = $\downarrow$ \\
+Das Partizip erhält in der Konstruktion eines PC immer die syntaktische Funktion eines XADJ, da sein Bezugswort eine grammatikalische Funktion der übergeordneten Struktur ist. Aufgrund der prädikativen Verwendungsmöglichkeit des Partizips hängt die Partizipialkonstruktion direkt von S ab. Da das Partizip jedoch nicht vom Prädikat gefordert wird, kann es nicht als XCOMP klassifiziert werden.
 Im Übrigen gelten die in den Redundanz- und Default-Regeln genannten Bedingungen der Kongruenz zwischen Partizip und Bezugswort.
 
 %\subsection{Einschränkungen}
@@ -620,6 +619,7 @@ S & $\rightarrow$ & NP & VP & NP & V\\
 \end{singlespace}
 
 \subsubsection{f-Struktur}
+In dieser f-Struktur werden alle benötigten Attribut-Wert-Paare aufgelistet; im weiteren Verlauf werden nurmehr die für unsere Arbeit wichtigen Paare genannt.
 \begin{singlespace}
 \begin{avm}
 
@@ -632,8 +632,9 @@ OBJ & \[ PRED & `legatus' \\
 CASE & acc \\
 NUM & sg \\
 GEN & m \]\tikzmark{aim} \\
-XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
+XADJ & \{ \[PRED &  \rm ‘mittor \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
 MOOD & part \\
+FIN & - \\
 PASSIVE & + \\
 RELTENSE & past \\
 CASE & acc \\
@@ -646,7 +647,8 @@ TENSE & present \\
 NUM & sg \\
 PERS & 3 \\
 PASSIVE & - \\
-MODE & ind \\
+MOOD & ind \\
+FIN & + \\
 \]
 \end{avm}
 \end{singlespace}
@@ -655,7 +657,7 @@ MODE & ind \\
     \draw[<-] (pic cs:aim) to[out=0,in=0,looseness=3.5]  (pic cs:start);
 
 \subsection{Subjektabhängiges Participium coniunctum}
-Wie der Name impliziert, bestimmt das Partizip beim subjektabhängigen PC das Subjekt des Hauptsatzes näher, weshalb beide den Nominativ als Kasus einnehmen. Die Umsetzungen dieser Variante des PC in den Formalismus der LFG werden an einem Beispielsatz veranschaulicht:
+Wie der Name impliziert, bestimmt das Partizip beim subjektabhängigen PC das Subjekt des Hauptsatzes näher, weshalb beide den Nominativ als Kasus einnehmen. Die Umsetzung dieser Variante des PC in den Formalismus der LFG unterscheidet sich nur in der grammatikalischen Funktion des Bezugsworts. Sie wird an einem Beispielsatz veranschaulicht:
 \textit{milites in Galliam missi hostes vicerunt.}
 
 \subsubsection{Lexikoneintrag}
@@ -731,7 +733,7 @@ SUBJ & \[ PRED & `miles' \\
 CASE & nom \\
 NUM & pl \\
 GEN & m \]\tikzmark{meow} \\
-XADJ & \{ \[PRED &  \rm ‘mitto \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
+XADJ & \{ \[PRED &  \rm ‘mittor \q<SUBJ, OBL\textsubscript{GOAL}\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -815,7 +817,7 @@ OBJ & \[PRED & `insula' \\
 CASE & acc \\
 NUM & sg \\
 GEN & f \]\tikzmark{a} \\
-XADJ & \{ \[PRED &  \rm ‘obicio \q<SUBJ, OBJ\textsubscript{DAT}\q>’\\
+XADJ & \{ \[PRED &  \rm ‘obicior \q<SUBJ, OBJ\textsubscript{DAT}\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -846,7 +848,7 @@ Das Vorhanden- bzw. Nichtvorhandensein eines Bezugswortes stellt in der LFG eine
 Die Umsetzung des substantivierten Partizips in die LFG-Struktur soll anhand des Beispielsatzes \textit{auxilium petentibus Caesar parcit} veranschaulicht werden.
 
 \subsection{Variante 1: Partizip ohne Bezugswort}
-Da das substantivierte Partizip die Rolle eines Substantivs übernimmt, kann es analog zu anderen NPs grammatikalische Funktionen wie beispielsweise SUBJ oder OBJ annehmen. Daher ist es keinem Bezugswort untergeordnet. Dabei ist das Partizip Kopf der Partizipialphrase VP und somit alleiniges Objekt des Hauptsatz-Prädikats \textit{parcit}. In diesem Fall überwiegen zwar die nominalen Eigenschaften des Partizips, die Bezeichnung VP wird jedoch um der Konsistenz willen beibehalten. Ein Vorteil dieser Variante besteht in der sichtbar unkomplizierteren c-Struktur.
+Da das substantivierte Partizip die Rolle eines Substantivs übernimmt, kann es analog zu anderen NPs grammatikalische Funktionen wie beispielsweise SUBJ oder OBJ annehmen. Daher ist es keinem Bezugswort untergeordnet und somit direkt von S abhängig. Dabei ist das Partizip Kopf der Partizipialphrase VP und somit alleiniges Objekt des Hauptsatz-Prädikats \textit{parcit}. In diesem Fall überwiegen zwar die nominalen Eigenschaften des Partizips, die Bezeichnung VP wird jedoch um der Konsistenz willen beibehalten. Ein Vorteil dieser Variante besteht in der sichtbar unkomplizierteren c-Struktur.
 
 %\subsubsection{Einschränkungen}
 \subsubsection{Lexikoneintrag}
@@ -926,7 +928,7 @@ GEN & n \] \\
 %In der obigen Variante würde folglich ein ausgelassenes Bezugswort des Partizips angenommen werden.
 Das Hauptroblem bei der erstgenannten Variante ergibt sich dadurch, dass durch das komplett fehlende Bezugswort bei der Implementierung/Formulierung der Redundanz- und Default-Regeln Probleme auftreten. Des Weiteren erfüllen die Partizipialkonstruktionen in der Regel die grammatikalischen Funktionen eines XADJ, XCOMP oder ADJ; die Klassifikation als OBJ in der obigen Überlegung würde daher eine Ausnahme darstellen.
 
-Folgt man dem NM und betrachtet die Verwendung des substantivierten Partizips als rein attributiv,\footnote{Vgl. NM, S. 713, § 498.} muss man das Partizip (\textit{petentibus}) als Attribut zu einem sozusagen fehlenden Bezugswort betrachten -- in diesem Fall also etwa \textit{eis} oder \textit{viris}. So steht die Partizipialkonstruktion in Analogie zum rein attributiven PC in der Rolle eines XADJ; das Bezugswort selbst ist dann in unserem Beispiesatz das Objekt des Hauptsatzprädikats \textit{parcit}. Dieses als lexikalisches Element fehlende Objekt wird in der c-Struktur mit \textit{mis} (für ,,missing'', ,,fehlend'') bezeichnet.  
+Folgt man dem NM und betrachtet die Verwendung des substantivierten Partizips als rein attributiv,\footnote{Vgl. NM, S. 713, § 498.} muss man das Partizip (\textit{petentibus}) als Attribut zu einem sozusagen fehlenden Bezugswort betrachten -- in diesem Fall also etwa \textit{eis} oder \textit{viris}. So steht die Partizipialkonstruktion in Analogie zum rein attributiven PC in der Rolle eines XADJ in Abhängigkeit von einer NP; das Bezugswort selbst ist dann in unserem Beispiesatz das Objekt des Hauptsatzprädikats \textit{parcit}. Dieses als lexikalisches Element fehlende Objekt wird in der c-Struktur mit \textit{mis} (für ,,missing'', ,,fehlend'') bezeichnet.  
 Die Einordnung als XADJ entspricht zudem dem in den allgemeinen Regeln aufgestellten Konzept.
 %\subsubsection{Einschränkungen}
 %\textbf{Variante 1: XADJ}:\\
@@ -1039,18 +1041,15 @@ Beim sogenannten dominanten Partizip trägt nicht das Substantiv, sondern das in
 %Beim sogenannten dominanten Partizip ,dominiert` das Partizip sein Bezugswort, weswegen der Hauptfokus auf dem Partizip liegt.
 Aus diesem Grund wird das dominante Partizip im Deutschen in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das im Lateinischen regierende Substantiv als Genitiv abhängt. Meistens verwendet man das Partizip Perfekt Passiv als dominantes Partizip.\footnote{Vgl. NM, S. 717 f., § 502.}\\
 
-\subsubsection{Vorüberlegungen zur Umsetzung in der LFG}
+\subsection{Vorüberlegungen zur Umsetzung in der LFG}
 %Der Lexikoneintrag zum Partizip der Konstruktion unterscheidet sich nicht wesentlich von den vorherigen.
 %\textbf{ (ich glaub wir brauchen hier echt nich nochmal nen Lexikoneintrag...)} \\
-Das dominante Partizip soll zunächst einmal in Abhängigkeit von einer Präpositionalphrase anhand des Beispielsatzes \textit{ab urbe condita Roma viguit}, danach ohne derartige Abhängigkeit am Beispielsatz \textit{libertate amissa doleo}betrachtet werden. Da der Restsatz \textit{Roma viguit} bzw. \textit{doleo} auch ohne die Partizipialkonstruktion Sinn ergibt, muss letztere wie beim Abl. abs. ein ADJ zum finiten Satz sein.
+Das dominante Partizip soll zunächst einmal in Abhängigkeit von einer Präpositionalphrase anhand des Beispielsatzes \textit{ab urbe condita Roma viguit}, danach ohne derartige Abhängigkeit am Beispielsatz \textit{libertate amissa doleo} betrachtet werden. Da der Restsatz \textit{Roma viguit} bzw. \textit{doleo} auch ohne die Partizipialkonstruktion Sinn ergibt, muss letztere wie beim Abl. abs. ein ADJ zum finiten Satz sein.
 
 \subsection{Version 1: Partizip in Abhängigkeit einer Präpositionalphrase}
 %\subsubsection{Variante 1 -- Partizip als attributives XADJ}
-Nun sieht das dominante Partizip \textit{condita} rein formal zunächst aus wie ein attributives Partizip zum Bezugswort \textit{urbe} \textbf{(?) +vgl NM}, weswegen man eine NP mit \textit{urbe} als Kopf konstruieren könnte (siehe Variante 1). Das Partizip wäre somit seinem Bezugswort untergeordnet. Da das Subjekt des Partizips aus der übergeordneten Struktur -- in diesem Fall von der NP mit Kopf \textit{urbe} -- bezieht, müsste das Partizip eine X-Rolle erhalten; da ein XCOMP zum Bezugswort -- in diesem Fall \textit{urbe} -- nicht zu rechtfertigen wäre \textbf{(??? weil es dann von urbe gefordert werden müsste? oder wieso eig?)}, bliebe für das Partizip -- hier \textit{condita} -- nur die Rolle des XADJ. Die zugehörigen c- und f-Strukturen sähen demnach wie folgt aus:
+Nun sieht das dominante Partizip \textit{condita} rein formal aus wie ein attributives Partizip zum Bezugswort \textit{urbe},\footnote{Vgl. NM S. 717, §502.} weswegen eine NP mit \textit{urbe} als Kopf anzunehmen wäre (siehe \textbf{ABBILDUNG 1}). Das Partizip wäre somit seinem Bezugswort untergeordnet. Es würde dann, analog zum attributiven PC, als XADJ klassifiziert werden. Aufgrund des Vorhandenseins der Präposition hängt die gesamte Konstruktion in diesem Fall von einer PP ab. Da das Prädikat \textit{viguit} neben dem Subjekt keine weiteren Argumente fordert, wird die PP als ADJ eingestuft. Die zugehörigen c- und f-Strukturen sähen demnach wie folgt aus:
 
-Als nächstes ergibt sich aufgrund der Präposition \textit{ab} eine Präpositionalphrase, von der wiederum Partizip und Bezugswort abhängen.
-
-\textbf{c-Struktur}
 \begin{singlespace}
 \Tree [.S 
 		[.PP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)}}
@@ -1070,7 +1069,8 @@ Als nächstes ergibt sich aufgrund der Präposition \textit{ab} eine Präpositio
 \newline
 \end{singlespace}
 
-\textbf{f-Struktur}
+\textbf{ABBILDUNG BENNENEN UND VERLINKEN}
+
 \begin{singlespace}
 \begin{avm}
 \[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
@@ -1080,7 +1080,7 @@ OBJ & \[ PRED & `urbs' \tikzmark{begin} \\
 CASE & abl \\
 NUM & sg \\
 GEN & f  \\
-XADJ & \[PRED &  \rm ‘condo \q<SUBJ\q>’\\
+XADJ & \[PRED &  \rm ‘condor \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -1123,10 +1123,10 @@ SUBJ &  \tikzmark{Ziel} \] \] \tikzmark{Start} & $\qquad$ & $\qquad$  \\
 \tikz[remember picture,overlay] 
     \draw[<-] (pic cs:Start) to[out=10,in=0,looseness=2.4]  (pic cs:Ziel);
 
-%\subsubsection{Variante 2 -- Partizip in tatsächlich dominanter Position}
-Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass der Satz \textit{ab urbe Roma viguit} korrekt wäre. Das stimmt zwar formal -- ist jedoch semantisch sinnfrei. Eine semantisch sinnvollere Darstellung ergibt sich, wenn das Bezugswort vom Prädikat des Partizips gefordert wird; da das Partizip sein Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen. Somit würde die Partizipialkonstruktion von einer VP mit dem Kopf \textit{condita} abhängen; das Bezugsnomen \textit{urbe} wäre dann schlicht das Subjekt der Partizipialkonstruktion.
 
-\textbf{+ widerspricht allg. Lexikoneintrag (?)}
+%\subsubsection{Variante 2 -- Partizip in tatsächlich dominanter Position}
+Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass auch das als XADJ klassifizierte Partizip fehlen könnte; somit wäre der Satz \textit{ab urbe Roma viguit} grammatikalisch korrekt. Das stimmt zwar formal -- ist jedoch semantisch sinnfrei. Eine semantisch sinnvollere Darstellung ergibt sich, wenn das Bezugswort vom Prädikat des Partizips gefordert wird; da das Partizip sein Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen. Somit würde die Partizipialkonstruktion von einer VP mit dem Kopf \textit{condita} abhängen; das Bezugsnomen \textit{urbe} wäre dann schlicht das Subjekt der Partizipialkonstruktion.
+Aus diesen Gründen müssen die zuvor aufgestellten Strukturen korrigiert werden. Zunächst soll hierzu kurz der Lexikoneintrag des Partizips dargeboten werden.
 
 \subsubsection{Lexikoneintrag}
 
@@ -1198,7 +1198,7 @@ $\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \}\\
 \[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
 SUBJ & ``Roma'' \\
 ADJ & \{ \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
-OBJ & \[ PRED &  \rm ‘condo \q<SUBJ\q>’\\
+OBJ & \[ PRED &  \rm ‘condor \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -1213,10 +1213,12 @@ GEN  & f \] \] \] \} \]
 \end{singlespace}
 
 \subsection{Version 2: Partizip ohne Abhängigkeit}
-\subsubsection{Vorüberlegungen zur Umsetzung in der LFG}
-Nun war zu klassischen Zeiten jedoch die präpositionslose Variante des dominanten Partizips vorherrschend,\footnote{Vgl. LHS \textbf{§ ???}} weswegen auch hierzu ein Beispielsatz betrachtet werden soll: \textit{libertate amissa doleo.} Formal ist diese Konstruktion im Ablativ kaum vom Abl. abs. zu unterscheiden; der Satz könnte schließlich auch bedeuten: ``Ich trauere wegen der verlorenen Freiheit''. Korrekter, da näher an der lateinischen Bedeutung, wäre jedoch die Übersetzung: ``Ich trauere wegen des Verlusts der Freiheit.'' Um diesem -- wenn hier auch semantisch geringen -- Unterschied gerecht zu werden, sollte auch hier in der LFG-Darstellung die Dominanz des Partizips über sein Bezugswort deutlich werden. \textbf{(diese Erklärung evt. schon früher (?) )} Auch hier ist daher die gesamte Partizipialkonstruktion ein ADJ zum finiten Prädikat und das Bezugsnomen darin seinem Partizip unterstellt. Der Unterschied zu Variante 2 oben ergibt sich lediglich aus dem Fehlen der Präposition.
-\textbf{neu}
-Da lateinische Partizipialkonstruktionen jedoch stets als VP definiert werden, haben sie ohnehin V als Kopf; daher kann die besondere Dominanz des Partizips nach unserer Darstellungsweise nicht gesondert hervorgehoben werden. Dies wäre ein Argument, die Partizipialkonstruktionen als gesonderte Partizipialphrasen darzustellen. \textbf{(auch wegen der nominalen Eigenschaften der Partizipien) in Schlussfolgerung + Diese Darstellungsweise wurde in dieser Arbeit bereits in Anfängen versucht, nämlich bei der c-Struktur-Darstellung des Abl. abs. als S\textsubscript{part}.}
+Nun war zu klassischen Zeiten jedoch die präpositionslose Variante des dominanten Partizips vorherrschend,\footnote{Vgl. LHS \textbf{§ ???}} weswegen auch hierzu ein Beispielsatz betrachtet werden soll: \textit{libertate amissa doleo.} Formal ist diese Konstruktion im Ablativ kaum vom Abl. abs. zu unterscheiden; die Differenzt liegt lediglich darin, dass die Dominanz des Partizips in der vorliegenden Konstruktion stärker hervorgehoben wird. Um diesem -- wenn auch semantisch geringen -- Unterschied gerecht zu werden, sollte auch in der LFG-Darstellung die Dominanz des Partizips über sein Bezugswort deutlich werden. 
+Da lateinische Partizipialkonstruktionen jedoch ohnehin stets V als Kopf tragen,\footnote{Dies ist auch beim S\textsubscript{part} der Abl. abs.-Konstruktion der Fall, wie in Abschnitt ?? deutlich wird.} kann die besondere Dominanz des Partizips nach unserer Darstellungsweise nicht hervorgehoben werden. 
+%Dies wäre ein Argument, die Partizipialkonstruktionen als gesonderte Partizipialphrasen darzustellen. \textbf{(auch wegen der nominalen Eigenschaften der Partizipien) in Schlussfolgerung + Diese Darstellungsweise wurde in dieser Arbeit bereits in Anfängen versucht, nämlich bei der c-Struktur-Darstellung des Abl. abs. als S\textsubscript{part}.}
+Auch hier ist, ebenso wie in der obigen Variante, das Bezugsnomen seinem Partizip unterstellt und die gesamte Partizipialkonstruktion in der Funktion eines ADJ. Da hier keine Präposition vorhanden ist, und die Partizipialkonstruktion syntaktisch und semantisch vom finiten Verb losgelöst ist, hängt das ADJ direkt von S ab.
+
+\textbf{S-part?!}
 
 %\subsubsection{Syntaxregeln}
 %\begin{singlespace}
@@ -1233,10 +1235,33 @@ Da lateinische Partizipialkonstruktionen jedoch stets als VP definiert werden, h
 %\newline
 %\end{singlespace}
 
-\subsubsection{c-Struktur}
-%Der Lexikoneintrag von \textit{condita} bleibt selbstverständlich unverändert. 
-Es ergeben sich folgende c- und f-Strukturen:
+\subsubsection{Lexikoneintrag}
+\begin{singlespace}
+\begin{tabular}{ l  l  l  l  } 
+\textbf{amissa}: & V \\
+$\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `amittor$\langle$SUBJ$\rangle$'\\
+%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & ((ADJ$\uparrow$)GF)\\
+$\qquad$ & $[5]$ \:  \{(($\uparrow$SUBJ GEN) & = & f \\ 
+$\qquad$ & $[5.1]$ \:  ($\uparrow$SUBJ NUM) & = & sg \\
+$\qquad$ & $[5.2]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
+$\qquad$ & $[5.2]$ \: (($\uparrow$SUBJ GEN) & = & n \\
+$\qquad$ & $[6.3]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
+$\qquad$ & $[6.4]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ acc\} ) \}\\
+$\qquad$ & $[2]$ \:  ($\uparrow$MOOD) & = & part\\
+$\qquad$ & $[4]$ \:  ($\uparrow$FIN) & = & - \\
+$\qquad$ & $[3]$ \:  ($\uparrow$PASSIVE) & = & + \\
+$\qquad$ & $[4]$ \:  ($\uparrow$RELTENSE) & = & past \\
+$\qquad$ & $[5]$ \:  \{(($\uparrow$GEN) & = & f \\ 
+$\qquad$ & $[5.1]$ \:  ($\uparrow$NUM) & = & sg \\
+$\qquad$ & $[5.2]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ abl\} ) $\mid$\\
+$\qquad$ & $[5.2]$ \: (($\uparrow$GEN) & = & n \\
+$\qquad$ & $[6.3]$ \:  ($\uparrow$NUM) & = & pl \\
+$\qquad$ & $[6.4]$ \:  ($\uparrow$CASE) & = & \{nom $\mid$ acc\} ) \\
+\end{tabular}
+\newline
+\end{singlespace}
 
+\subsubsection{c-Struktur}
 \begin{singlespace}
 \Tree [.S 
 		[.VP{\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)}}
@@ -1254,7 +1279,7 @@ Es ergeben sich folgende c- und f-Strukturen:
 \[ PRED &  \rm ‘doleo \q<SUBJ\q>’\\
 SUBJ & \[PRED & `pro' \\
 PRON-Type & mis\] \\
-ADJ & \{ \[ PRED &  \rm ‘amitto \q<SUBJ\q>’\\
+ADJ & \{ \[ PRED &  \rm ‘amittor \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
 RELTENSE & past \\
@@ -1270,13 +1295,12 @@ GEN  & f \] \] \} \]
 
 
 \section{Ablativus absolutus}
-Wie beim PC vertritt auch die Partizipialkonstruktion des Ablativus absolutus einen Adverbialsatz, wobei das Bezugswort dem Subjekt, das Partizip dem Prädikat entspricht \textbf{(das kann eig weg wenn wir das in der Einführung lassen)}. Dabei wird das Bezugswort nicht vom Prädikat des finiten Satzes gefordert, und besitzt demnach keine eigene Satzgliedfunktion. Der Abl. abs. ist somit vom Rest des Satzes losgelöst, weswegen seine Satzgliedfunktion stets die der freien Angabe ist. \textbf{Partizip und Bezugswort stehen immer im Ablativ. (doppelt - bei Neugliederung beachten} Da dem Abl. abs. ein Adverbialsatz zugrunde liegt, ist sein Partizip prädikativ verwendet; dass es nicht als Attribut zu einem Nomen steht, wird zudem daran deutlich, dass der Satz bei Wegfall des Partizips grammatikalisch nicht mehr korrekt wäre. Der Ablativ ist im Lateinischen für diese Konstruktion gewählt, da dieser Kasus bereits ohne Partizip adverbiale Verhältnisse, beispielsweise der Zeit, bezeichnet.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5b; Vgl. NM, S. 718 f., § 503. Anstelle eines Partizips können auch bestimmte Nomina in den Ablativus absolutus treten. Auf dies kann im Rahmen des Umfangs dieser Arbeit, die sich auf Partizipialkonstruktionen konzentriert, nicht näher eingegangen werden. Vgl. NM, S. 720, § 504.} \\
+Wie beim PC vertritt auch die Partizipialkonstruktion des Ablativus absolutus einen Adverbialsatz, wobei das Bezugswort dem Subjekt, das Partizip dem Prädikat entspricht. Dabei wird das Bezugswort nicht vom Prädikat des finiten Satzes gefordert, und besitzt demnach keine eigene Satzgliedfunktion. Der Abl. abs. ist somit vom Rest des Satzes losgelöst, weswegen er stets eine freie Angabe darstellt. Partizip und Bezugswort stehen dabei immer im Ablativ. Da der Abl. abs. einen Adverbialsatz ersetzt, ist sein Partizip prädikativ verwendet; dass es nicht als Attribut zu einem Nomen steht, wird zudem daran deutlich, dass der Satz bei Wegfall des Partizips grammatikalisch nicht mehr korrekt wäre. Der Ablativ ist im Lateinischen für diese Konstruktion gewählt, da dieser Kasus bereits ohne Partizip adverbiale Verhältnisse, beispielsweise der Zeit, bezeichnet.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5b; Vgl. NM, S. 718 f., § 503. Anstelle eines Partizips können auch bestimmte Nomina in den Ablativus absolutus treten. Auf dies kann im Rahmen des Umfangs dieser Arbeit, die sich auf Partizipialkonstruktionen konzentriert, nicht näher eingegangen werden. Vgl. NM, S. 721, § 504.} \\
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
-Beispielsatz: \\
-\textit{barbaris in Gallia victis Caesar gaudet.} \\
-
-* wichtig: trotz S-part-Bezeichnung kein Nebensatz im eigentlichen Sinne!
+Aufgrund der syntaktischen Losgelöstheit der Partizipialkonstruktion vom Rest des Satzes nimmt die gesamte Konstruktion die Funktion eines ADJ an. Im Gegensatz zu den vorherigen Partizipialkonstruktionen wird der Abl. abs. nicht als VP, sondern als S\textsubscript{part} benannt.\footnote{Es ist zu beachten, dass der Abl. abs. trotz der Bezeichnung als S\textsubscript{part} kein Nebensatz im eigentlichen Sinne ist. Der Zusatz ,part' soll dies kennzeichnen.}
+Wir haben uns für diese Variante entschieden, da durch die bloße Bezeichnung als VP nicht zur Geltung kommen würde, dass der Abl. abs. aufgrund der ausschließlich prädikativen Verwendung seines Partizips nur durch einen adverbialen Gliedsatz ersetzt werden kann und sowohl sein Subjekt als auch sein Prädikat innerhalb desselben Knotens enthalten sind -- und nicht wie beispielsweise beim PC das Subjekt aus der übergeordneten Struktur bezogen werden muss; sowohl das Partizip als V als auch das Bezugswort als NP sind S\textsubscript{part} untergeordnet. Zudem wird durch diese Bezeichnung die vollkommene syntaktische und semantische Losgelöstheit sowie die Unterscheidung zum dominanten Partizip deutlicher.
+Diese Überlegungen sollen am Beispiel des Satzes \textit{barbaris in Gallia victis Caesar gaudet} in die Praxis umgesetzt werden.
 
 %\subsection{Einschränkungen}
 %Da der Restsatz (S\textsubscript{fin}) auch ohne den Abl. abs. noch Sinn ergeben würde,  steht er in der Funktion eines ADJ: \\
@@ -1295,12 +1319,12 @@ Beispielsatz: \\
 %$\neg$ ($\downarrow$PRED) = ($\uparrow$GF PRED) \\
 
 \subsection{Lexikoneintrag}
-Obige, für den Abl. abs. gültige Einschränkungen können jedoch nicht im Lexikoneintrag der Partizipien festgehalten werden, da Partizipien im Ablativ auch in anderen Partizipialkonstruktionen vorkommen; ist ein Partizip wie \textit{victis} beispielsweise teil eines PC, ist sein Subjekt eine grammatikalische Funktion der der Partizipialkonstruktion übergeordneten Struktur.
+%Obige, für den Abl. abs. gültige Einschränkungen können jedoch nicht im Lexikoneintrag der Partizipien festgehalten werden, da Partizipien im Ablativ auch in anderen Partizipialkonstruktionen vorkommen; ist ein Partizip wie \textit{victis} beispielsweise teil eines PC, ist sein Subjekt eine grammatikalische Funktion der der Partizipialkonstruktion übergeordneten Struktur.
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
 \textbf{victis}: & V \\
 $\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `vincor$\langle$SUBJ$\rangle$'\\
-$\qquad$ & $[2]$ \: $\neg$ ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((ADJ$\uparrow$)GF)\} \\
+%$\qquad$ & $[2]$ \: $\neg$ ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((ADJ$\uparrow$)GF)\} \\
 $\qquad$ & $[5]$ \: ($\uparrow$SUBJ CASE) & = & \{dat $\mid$ abl\} \\
 $\qquad$ & $[6]$ \:  ($\uparrow$SUBJ NUM) & = & pl \\
 $\qquad$ & $[7]$ \: ($\uparrow$SUBJ GEN) & = & \{m $\mid$ f $\mid$ n\} \\
@@ -1315,7 +1339,7 @@ $\qquad$ & $[7]$ \: ($\uparrow$GEN) & = & \{m $\mid$ f $\mid$ n\} \\
 \end{singlespace}
 
 \subsection{Syntaxregeln}
-Somit muss die Losgelöstheit der Ablativus-absolutus-Konstruktion in den Syntaxregeln festgehalten werden. Dies geschieht, indem der Abl. abs. in einem gesonderten Satz, hier bezeichnet als S\textsubscript{part}, dargestellt wird und die Funktion eines Adjunkts erhält. Wir haben uns für diese Variante entschieden, da durch die bloße Bezeichnung als VP nicht zur Geltung kommen würde, dass der Abl. abs. nur durch einen adverbialen Gliedsatz ersetzt werden kann und sowohl sein Subjekt als auch sein Prädikat innerhalb desselben Knotens enthalten sind (und nicht wie beispielsweise beim PC das Subjekt aus der übergeordneten Struktur bezogen werden muss).\footnote{Vergleiche auch die diesbezüglichen Anmerkungen in der Schlussfolgerung dieser Arbeit.} Die oben genannten Syntaxregeln müssen daher erweitert werden: \\
+Die Losgelöstheit der Ablativus-absolutus-Konstruktion muss in den Syntaxregeln festgehalten werden. Die anfangs genannten Syntaxregeln müssen daher erweitert werden: \\
 \begin{singlespace}
 \begin{tabular}{ l  l  c  c  c  c }
    S\textsubscript & $\rightarrow$ & S\textsubscript{part} & NP & V\\
@@ -1327,10 +1351,15 @@ Somit muss die Losgelöstheit der Ablativus-absolutus-Konstruktion in den Syntax
 
 \subsection{c-Struktur}
 \begin{singlespace}
-\Tree [.S\textsubscript{fin} 
+\Tree [.S
 		[.S{\textsubscript{part} \textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)}}
 			[\qroof{barbaris}.NP{\textsubscript{($\uparrow$SUBJ)=$\downarrow$}}	]
-			[\qroof{in Gallia}.PP\textsubscript{($\downarrow$ $\in$ $\uparrow$ADJ)} ]
+			[.PP\textsubscript{$\downarrow$ $\in$ ($\uparrow$ADJ)} 
+					[.P'\textsubscript{$\uparrow$=$\downarrow$} 
+						[.P\textsubscript{$\uparrow$=$\downarrow$} in ]
+						[\qroof{Gallia}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ]
+					]
+				]		 
 			[.V\textsubscript{$\uparrow$=$\downarrow$} victis ]
 		]							
 		[\qroof{Caesar}.{NP\textsubscript{($\uparrow$SUBJ)=$\downarrow$}} ] 
@@ -1342,7 +1371,7 @@ Somit muss die Losgelöstheit der Ablativus-absolutus-Konstruktion in den Syntax
 \begin{singlespace}
 \begin{avm}
 \[ PRED &  \rm ‘gaudeo \q<SUBJ\q>’\\
-SUBJ & \["Caesar" \]\\
+SUBJ & \[``Caesar'' \]\\
 ADJ & \{ \[PRED &  \rm ‘vincor \q<SUBJ\q>’\\
 MOOD & part \\
 PASSIVE & + \\
@@ -1360,9 +1389,8 @@ ADJ & \{\[``in Gallia''\] \} \] \\
 \end{avm}
 \end{singlespace}
 
-
 \section{Accusativus cum Participio}
-Bei den Verben der unmittelbaren sinnlichen Wahrnehmung, oft bei \textit{videre} und \textit{audire}, sowie bei den Verben des Darstellens und Einführens, besonders bei \textit{facere} und \textit{inducere} -- im Sinne von ,in einem Werk, in einem Drama darstellen, (auftreten) lassen' -- steht die satzwertige Ergänzung oft in Verbindung mit einem Objekt und dem PPA im Akkusativ. Die Verben \textit{habere} und \textit{tenere} stehen mit einem PPP. Das Objekt ist dabei optional. Man nennt diese Verbindung Accusativus cum Participio (AcP). Das Partizip wird dabei in prädikativem Sinn verwendet.\footnote{Vgl. KSt, S. 763, § 137,2 \textbf{(ich glaub es is ja jetzt 2 a und b, oder?)}; NM, S. 714, § 499.}\\
+Bei den Verben der unmittelbaren sinnlichen Wahrnehmung, oft bei \textit{videre} und \textit{audire}, sowie bei den Verben des Darstellens und Einführens, besonders bei \textit{facere} und \textit{inducere} -- im Sinne von ,in einem Werk, in einem Drama darstellen, (auftreten) lassen' -- steht die Partizipialkonstruktion oft in Verbindung mit einem Objekt und dem PPA im Akkusativ. Man nennt diese Verbindung Accusativus cum Participio (AcP). Das Partizip wird dabei in prädikativem Sinn verwendet.\footnote{Vgl. KSt, S. 763, § 137; NM, S. 714, §499.}\\
 
 
 %Der AcP ist von einem Verb der unmittelbaren sinnlichen Wahrnehmung oder von \textit{facere} bzw. \textit{inducere} im Sinne von ‚in einem Werk, in einem Drama darstellen, (auftreten) lassen‘ abhängig.\footnote{Vgl. NM S. 714, § 499. Vgl. auch KSt S. 763, § 137,2a.} \\ 
@@ -1375,21 +1403,9 @@ Bei den Verben der unmittelbaren sinnlichen Wahrnehmung, oft bei \textit{videre}
 
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
-* Beispielsatz: \\
-\textit{militem in campo iacentem vidit.} \\
-* da prädikativ: direkt von S abhängig, nicht z.B. von der NP \\
-* muss auf jeden Fall entweder XADJ oder XCOMP sein, da das Subjekt zum Prädikat der Struktur vom Prädikat der darüberliegenden Struktur (d.h. vom finiten Verb, "vidit") gefordert wird // da das Prädikat der AcP-Konstruktion, d.h. das Partizip, sein Subjekt aus der übergeordneten Struktur bezieht. \\
-* XCOMP oder XADJ?
-	
-	\textbf{*für XADJ spricht:} Restsatz ergibt auch so Sinn; analog zum PC;
-	
-	\textbf{*für XCOMP spricht:} semantisch großer Unterschied (andere Bedeutung als PC wegen Verben der Wahrnehmung, würde dem Sinn der Konstruktion sonst nicht gerecht werden); facere / inducere; analog zu AcI -> also haben wir uns dafür entschieden + wird also vom PRED gefordert\\
-	
-	--> AcI als XCOMP: siehe Skript S. 53!
-	
-Verben der Wahrnehmung, wie sie im AcI und AcP vorkommen, erfordern im Lateinischen eine Ergänzung, die sowohl durch ein bloßes Nomen, als auch durch eine Partizipialkonstruktion ausgedrückt werden kann. Da das Partizip einer AcI- oder auch AcP-Konstrukion eine Ergänzung des Verbalbegriffs ist, nimmt es die Funktion des XCOMP an. Formal sind AcI und AcP kaum auseinanderzuhalten; der Unterschied liegt in der Semantik: Während beim AcI der Inhalt der Verbalhandlung betont wird, liegt beim AcP der Nachdruck auf der sinnlichen Rezeption der Handlung oder eines Zustandes.\footnote:{Vgl. LHS S. 387, §207.} Diese Bedeutungsdifferenz kann jedoch nicht in der f-Struktur ausgedrückt werden.
+Da das Partizip der AcP-Konstruktion sein Subjekt aus der übergeordneten Struktur bezieht, muss es die Funktion entweder eines XADJ oder XCOMP annehmen. Für die Klassifikation als XADJ spricht, dass der Restsatz auch ohne das Partizip, analog zum PC, Sinn ergibt und grammatikalisch korrekt ist. Für die Einordnung als XCOMP hingegen spricht zum einen, dass Verben der Wahrnehmung, wie sie im AcI und AcP vorkommen, im Lateinischen eine Ergänzung erfordern; diese kann zwar auch durch ein bloßes Nomen, aber auch durch eine Partizipialkonstruktion ausgedrückt werden. Da das Partizip dann als Ergänzung vom Prädikat gefordert wird, muss es die Funktion eines XCOMP annehmen. Formal sind AcI- und AcP-Konstruktionen daher kaum auseinanderzuhalten;\footnote{\cite[53]{Skript} klassifiziert AcI-Konstruktionen im Deutschen ebenfalls als XCOMP.} der Unterschied liegt in der Semantik. Während beim AcI der Inhalt der Verbalhandlung betont wird, liegt beim AcP der Nachdruck auf der sinnlichen Rezeption einer Handlung oder eines Zustandes.\footnote{Vgl. LHS S. 387, §207.} Diese Bedeutungsdifferenz kann jedoch im Rahmen der LFG nicht ausgedrückt werden. Besonders bei den Verben des Darstellens und Einführens, wie \textit{facere} und \textit{inducere}, wird deutlich, dass die Ergänzung durch die AcP-Konstruktion vom Prädikat gefordert wird.
 
-Letztere verleiht dem Satzgefüge eine enorme Bedeutungserweiterung, da sie satzwertig ist. --> XCOMP und nicht XADJ
+Da das Partizip beim AcP prädikativ verwendet wird, und vor allem da es vom Hauptsatzprädikat gefordert wird, ist es direkt von S abhängig. Die vorangegangenen Überlegungen sollen nun an folgendem Beispielsatz veranschaulicht werden: \textit{militem in campo iacentem vidit.}
 
 %\subsection{Einschränkungen}
 %Da das Partizip im AcP eine Ergänzung des Verbalbegriffs ist, erfüllt es im Satz stets die Funktion eines XCOMP: \\
@@ -1414,7 +1430,7 @@ Letztere verleiht dem Satzgefüge eine enorme Bedeutungserweiterung, da sie satz
 \begin{tabular}{ l  l  l  l  } 
 \textbf{iacentem}: & V \\ 
 $\qquad$ & $[1]$ \: ($\uparrow$PRED) & = & `iaceo$\langle$SUBJ, OBL\textsubscript{LOC}$\rangle$'\\
-$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF)\} \\
+%$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF)\} \\
 $\qquad$ & $[5]$ \: ($\uparrow$SUBJ CASE) & = & acc \\
 $\qquad$ & $[6]$ \: ($\uparrow$SUBJ NUM) & = & sg \\
 $\qquad$ & $[7]$ \: ($\uparrow$SUBJ GEN) & = & \{m $\mid$ f\} \\
@@ -1429,7 +1445,7 @@ $\qquad$ & $[7]$ \: ($\uparrow$GEN) & = & \{m $\mid$ f\} \\
 \end{tabular}\\
 \newline
 \end{singlespace}
-Im Lexikoneintrag des Prädikats der dem AcP-XCOMP übergeordneten Struktur -- hier vidit -- müsste, wie oben erwähnt, zunächst spezifiziert sein, dass es ein XCOMP zu sich nehmen kann, und im Folgenden die Bedingungen, die dieses XCOMP erfüllen muss:\footnote{Vgl. auch Skript, s. 56.} \\
+Im Lexikoneintrag des Prädikats der dem XCOMP übergeordneten Struktur -- hier \textit{vidit} -- müsste, wie oben erwähnt, zunächst spezifiziert sein, dass es ein XCOMP zu sich nehmen kann. Zudem müssen dort auch die Bedingungen, die dieses XCOMP erfüllen muss, aufgelistet werden.\footnote{Vgl. \cite[56]{Skript}.} \\
 \begin{singlespace}
 \begin{tabular}{ l  l  l  l  } 
 \textbf{vidit}: & V \\
@@ -1478,8 +1494,13 @@ $\qquad$ & $[3]$ \: ($\uparrow$OBJ CASE) & = & acc \\
 \Tree [.S 
 		[\qroof{militem}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ] 
 		[.VP{\textsubscript{($\uparrow$XCOMP)=$\downarrow$}}
-			[\qroof{in campo}.PP\textsubscript{($\uparrow$OBL\textsubscript{LOC})=$\downarrow$} ]
-				[.V\textsubscript{$\uparrow$=$\downarrow$} iacentem ]
+			[.PP\textsubscript{($\uparrow$OBL\textsubscript{LOC})=$\downarrow$} 
+					[.P'\textsubscript{$\uparrow$=$\downarrow$} 
+						[.P\textsubscript{$\uparrow$=$\downarrow$} in ]
+						[\qroof{campo}.{NP\textsubscript{($\uparrow$OBJ)=$\downarrow$}} ]
+					]
+				]	
+			[.V\textsubscript{$\uparrow$=$\downarrow$} iacentem ]
 		] 
 		[.V\textsubscript{$\uparrow$=$\downarrow$} vidit ]	
 	]
@@ -1513,8 +1534,10 @@ OBL\textsubscript{LOC} & \[``in campo''\] \]  &            $\qquad$\\
 
 \section{Zusammenfassung und Ausblick}
 ... \\
-Auch aus psycholinguistischer Sicht bietet die LFG aufgrund der Prozeduralität und Lokalität hinsichtlich des Aufbaus ihrer Strukturen einen interessanten Ansatz.\footnote{Vgl. \cite[?]{Rohrer}.} --> * prozeduraler Charakter der LFG, Repräsentation mentaler Prozesse usw (vgl. Rohrer) --> Prozess wird beschrieben! Führt über... 
-
+*Es wurden Möglichkeiten aufgezeigt, die Partizipialkonstruktionen des Lateinischen in den Formalismus der LFG einzubinden. \\
+* Schwierigkeiten / problematische Fälle \\
+* Überlegung besteht, ob Partizipien als lexikalische Kategorie PART statt V \\
+* Auch aus psycholinguistischer Sicht bietet die LFG aufgrund der Prozeduralität und Lokalität hinsichtlich des Aufbaus ihrer Strukturen einen interessanten Ansatz.\footnote{Vgl. \cite[?]{Rohrer}.} --> * prozeduraler Charakter der LFG, Repräsentation mentaler Prozesse usw (vgl. Rohrer) --> Prozess wird beschrieben! Führt über... \\
 *--> LFG bietet evt. auch hinsichtlich des Spracherwerbs Vorteile: ``In diesem Grammatikmodell werden je nach den Bestandteilen und Einheiten innerhalb eines Satzes Verbindungen zwischen den Äußerungsteilen hergestellt, die den Erwerbsstufen zugeordnet werden. Die Abfolge ergibt sich bei dieser Grundlegung daraus, dass sich der Informationsaustausch auf immer größere sprachliche Einheiten von zunächst isolierten Lexemen über Wortgruppen, z.B. Nominalphrasen, bis hin zu Sätzen erstreckt. Dieser Ansatz bringt morphologische Mittel wie die Mehrfachkodierung von Kasussuffixen innerhalb und zwischen nominalen Wortgruppen und der Verbalmorphologie mit syntaktischen Rollen in Verbindung. Die Verbindung ist eher mechanisch und auf Beziehungen innerhalb von Sätzen begrenzt.''
 Grießhaber, Wilhelm: Linguistische Grundlagen und Lernermerkmale bei der Profilanalyse, in: Martina Rost-Roth (Hrsg.): DAZ. Spracherwerb und Sprachförderung. Deutsch als Zweitsprache, S. 21. 
 %\end{singlespace}
