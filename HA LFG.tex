@@ -79,9 +79,8 @@
 %http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html Zeichen
 
 \section{Einleitung}
-Diese Arbeit beschäftigt sich mit der Beschreibung lateinischer Partizipialkonstruktionen im System der lexikalisch-funktionalen Grammatik (LFG). Die LFG ist eine in den späten 1970er Jahren vor allem aus der Generativen Grammatik Noam Chomskys hervorgegangene Theorie zur Beschreibung der Syntax natürlicher Sprachen.\footnote{Vgl. \cite[4]{Skript}. Vgl. auch \cite[1]{Dal}; \cite[3]{Bresnan}.} Neben der Generativen Grammatik stützt sich die LFG auch auf strukturalistische und funktionale Ansätze.\footnote{Vgl. \cite[3]{Bresnan}.} Zu ihren wichtigsten Begründern zählen Joan Bresnan und Ronald Kaplan.
-% nicht zu vergessen unsere Arbeit, hö.
-%Wie andere generative Theorien versucht sie darzustellen, wie aus der endlichen Anzahl an Wörtern einer Sprache eine unendliche Menge -- grammatisch korrekter -- Sätze erzeugt werden kann. 
+Diese Arbeit beschäftigt sich mit der Beschreibung lateinischer Partizipialkonstruktionen im System der lexikalisch-funktionalen Grammatik (LFG). Die LFG ist eine in den späten 1970er Jahren vor allem aus der Generativen Grammatik Noam Chomskys hervorgegangene Theorie zur Beschreibung der Syntax natürlicher Sprachen.\footnote{Vgl. \cite[4]{Skript}. Vgl. auch \cite[1]{Dal}; \cite[3]{Bresnan}.} Neben der Generativen Grammatik stützt sich die LFG auch auf strukturalistische und funktionale Ansätze.\footnote{Vgl. \cite[3]{Bresnan}.} Wie andere generative Theorien versucht sie darzustellen, wie aus der endlichen Anzahl an Wörtern einer Sprache eine unendliche Menge -- grammatisch korrekter -- Sätze erzeugt werden kann. Zu ihren wichtigsten Begründern zählen Joan Bresnan und Ronald Kaplan.
+
 Die Regeln der LFG sollen sowohl die Erzeugung einer unendlichen Menge grammatisch korrekter Sätze aus der endlichen Anzahl an Wörtern einer Sprache ermöglichen als auch ungrammatische Sätze als solche erkennen.\footnote{Vgl. \cite[18]{Skript}.} Daher ist die LFG auch als Grammatikformalismus für die Computerlinguistik interessant, wobei sie der automatisierten Prüfung von Sätzen hinsichtlich ihrer Grammatikalität sowie der Generation neuer grammatischer Sätze dienen soll.\footnote{Vgl. \cite[18]{Skript}; \cite[vii]{Bresnan}.}
  
 Da sich die Forschung im Bereich der LFG hinsichtlich der lateinischen Sprache bislang noch in ihren Anfängen befindet, soll in dieser Arbeit die Darstellung der im Lateinischen sehr prävalenten Partizipialkonstruktionen im Konzept der LFG beleuchtet werden. Dabei ist die Kenntnis des grundlegenden Aufbaus lateinischer Partizipialkonstruktionen unabdingbar. Deshalb werden -- nach einer Einführung in Thematik und Terminologie der LFG -- diese verschiedenen Konstruktionen kurz erklärt, bevor sie anhand von Beispielsätzen in das Gerüst der LFG eingefügt werden. Dazu sollen die jeweiligen Lexikoneinträge, c- und f-Strukturen aufgeführt werden. Auch werden verschiedene Ansätzen und diverse Schwierigkeiten bei der Umsetzung der einzelnen Konstruktionen erläutert. 
@@ -123,10 +122,8 @@ Das Lateinische ist eine nicht-konfigurationale Sprache: Es lässt eine weitgehe
 Folglich besteht S aus einer bestimmten Menge von Phrasen und lexikalischen Elementen. In den Syntaxregeln wird dieser Zusammenhang durch ,,kontextfreie Ersetzungsregeln der Form ,ersetze a durch b‘ (konventionell geschrieben: ,a $\rightarrow$ b‘)‘‘ beschrieben.\footnote{Siehe \cite[18]{Rohrer}.}
 
 Auch wenn die Syntaxregeln der LFG verglichen mit früheren Ansätzen weitgehend überschaubar sind, werden hier nur die für die Partizipialkonstruktionen relevanten Regeln angegeben, da alles Weitere den Rahmen dieser Arbeit sprengen würde:\footnote{Da Adjektive, Adverbien und Pronominaladjektive (zu denen sich u.a. bei Snijder unter dem Begriff ,,Determiner‘‘ weitere Informationen finden (S. 7)), sowie Nebensätze aller Art  -- und damit auch Subjunktionen und Konjunktionen -- in dieser Arbeit nicht von Bedeutung sind, wird in den folgenden Syntaxregeln und auch im Weiteren nicht darauf eingegangen. Letzteres bezieht sich auf lateinische Nebensätze: Während Partizipialkonstruktionen im Deutschen zwar in der Regel durch Gliedsätze wiedergegeben werden, sind sie im Lateinischen Teil des Hauptsatzes. Überlegungen bezüglich der Subjunktionen im Deutschen finden sich unter \cite[103-119]{Skript}, zu den Konjunktionen im Deutschen unter \cite[120-136]{Skript}.} 
-
-%\textbf{Wir schreiben die Regeln erstmal ohne Grammatikfunktionen auf, sagen dann in nem Satz, dass die Grammatikfunktionen hier auch dazugeschrieben werden sollten (+ gewisse weitere Beschränkungen u.U.), da eben eine NP unter ner NP nicht deren Subjekt sein kann (plus vielleicht noch 1-2 Beispiele um zu zeigen, dass wir's kapiert haben xD) und machen dann die ersten zwei Zeilen von den Regeln beispielhaft mit den Anmerkungen, einfach dass man sieht, aha, so könnte das dann aussehen (die hab ich schon gemacht, also wäre das kein extra Aufwand)}
-
-%\begin{singlespace}
+\\
+\\
 \begin{tabular}{ l  l  c  c  c  c  c  c  c}
 S & $\rightarrow$ & [V & , & XP] & $\mid$ & V \\
 %   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
@@ -142,36 +139,13 @@ VP & $\rightarrow$ & [V & &  XP] & $\mid$ & V \\
   % & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
 %PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
  %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
-\end{tabular}\\
-\newline
-%\end{singlespace}
-
-%\begin{tabular}{ l  l  c  c  c  c  c  c  c}
-%S & $\rightarrow$ & [V , XP] & $\mid$ & V \\
-%XP & $\rightarrow$ & \{ NP & $\mid$ &  VP & $\mid$ & PP \}* \\
-%   NP & $\rightarrow$ & [N \{XP\}*] & $\mid$ & N \\
-%VP & $\rightarrow$ & [V \{PP & $\mid$ & NP\}*] & $\mid$ & V \\
-%   PP & $\rightarrow$ & [P, VP] & $\mid$ & [P, NP] \\
-%\end{tabular}\\
-%\newline
-
-%\begin{tabular}{ l  l  c  c  c  c  c  c  c}
-%S & $\rightarrow$ & [V , XP] $\mid$ V \\
-%XP & $\rightarrow$ & \{ NP $\mid$  VP $\mid$ PP \}* \\
-%   NP & $\rightarrow$ & [N \{XP\}*] $\mid$ N \\
-%VP & $\rightarrow$ & [V \{PP $\mid$ NP\}*] $\mid$ V \\
-%   PP & $\rightarrow$ & [P, VP] $\mid$ [P, NP] \\
-%\end{tabular}\\
-%\newline
+\end{tabular}\\ 
 
 Die erste Regel besagt, dass S entweder durch V und XP ersetzt wird oder nur durch V. Der vertikale Disjunktionsstrich $\mid$ denotiert dabei die ,entweder-oder‘-Beziehung, die eckigen Klammern sollen lediglich zeigen, dass V und XP als Einheit zusammengefasst werden und den ersten Teil der Disjunktion bilden. Die Reihenfolge von V und XP wird durch das zwischen diesen beiden Elementen stehende Komma offen gelassen; dieses Komma fungiert hier als sogenannter ,shuffle operator‘. Stünde das Komma nicht dort, müsste XP stets V folgen. V bezeichnet ein finites Verbalelement, XP wird in der Zeile darunter definiert als eine Menge an Nominalphrasen (NP), Verbalphrasen (VP) und Präpositionalphrasen (PP). Die geschweiften Klammern in Zeile zwei umschließen eine Menge. Der Asterisk ist ein Kleene-Stern, der die vorangehende Menge zu einer Kleenschen Hülle um definiert; in einer solchen Kleenschen Hülle können die einzelnen Elemente beliebig oft -- also zum Beispiel auch überhaupt nicht -- und in beliebiger Reihenfolge vorkommen.\footnote{In der Menge werden hier Disjunktionsstriche verwendet anstatt wie oft üblich Kommata, da das Komma in diesem Kontext als shuffle operator definiert wurde; vgl. \cite[26]{Skript}; \cite{Snijders}.} Zusammengenommen erlauben die Regeln der ersten und zweiten Zeile also, dass ein Satz beispielsweise aus einer Nominalphrase, einem finiten Verbalelement V und einer weiteren Nominalphrase besteht. Die Tatsache, dass diese nur eine von vielen möglichen Auflösungen von S ist, wird wiederum der weitgehend freien Wortstellung des Lateinischen geschuldet.\footnote{Vgl. \cite[19]{Rohrer}.}
 
 In den Zeilen 3 bis 5 werden die jeweiligen Expansionsmöglichkeiten von NP, VP und PP beschrieben. Eine Nominalphrase besteht also im Allgemeinen entweder aus einem lexikalischen Element der Kategorie N – d.h. aus einem Nomen -- und einer beliebigen, ungeordneten Menge an NPs, VPs und PPs, oder aber nur aus einem Nomen.  Die Notation der Expansionsmöglichkeiten einer präpositionale Phrase enthält keine Kleensche Hülle, da in einer präpositionale Phrase stets zumindest ein Element einer VP oder NP direkt nach (bzw. vor) einer Präposition (bzw. Postposition) stehen muss.\footnote{Diese Regeln erheben keinen Anspruch auf Vollständigkeit. So werden beispielsweise die im Lateinischen häufig auftretenden diskontinuierlichen Phrasen aus Gründen der Relevanz für diese Arbeit außer acht gelassen; mehr Informationen hierzu finden sich bei \cite{Snijders}. Ebenso werden, abgesehen von den präpositionale Phrasen, Fälle, in denen auch im Lateinischen die Wortstellung eine Rolle spielt, wie beispielsweise bei der Anfangsstellung bei Befehlen und Aufforderungen oder beim Konzessiv; vgl. NM S. 577, §422, nicht beachtet. Auch die formal schwierige Frage der Koordination kann hier nicht berücksichtigt werden.}
 
-Zu beachten ist, dass Partizipialien – d.h. Partizipien, Infinitve und Gerundialien -- in dieser Arbeit als V bezeichnet werden. Dies macht insofern Sinn, dass die Prädikate der Partizipien die übrigen Argumente der Partizipialkonstruktion fordern. Im Lateinischen ist V stets der Kopf von S; da die Partizipialkonstruktionen im Lateinischen satzwertig sind, ist die Bezeichnung der Partizipien als V angemessen.\footnote{Allerdings werden in den späteren Ausführungen die Partizipialkonstruktionen -- abgesehen vom Ablativus absolutus -- nicht explizit als S bezeichnet, um ihre Zugehörigkeit zum Rest des Satzes anzuzeigen.}\\
-%\textbf{WAS WAREN DIE GRÜNDE DAGEGEN?!} 
-%- einfachere Syntaxregeln, nominale Eigenschaften der Partizipien (durch Bezeichnung nicht gekennzeichnet)
-%- Partizipien als Part und nicht als V: die Partzipien, die in finiten Verbformen verwendet werden, wie amatus est oder so,wären ja weiterhin V --> Perfekt Passiv wäre dann als PPP + esse darstellbar in Morphologieregeln, was dem entspricht, wie es in Schulgrammatiken gelehrt wird.
+Zu beachten ist, dass Partizipialien – d.h. Partizipien, Infinitve und Gerundialien -- in dieser Arbeit als V bezeichnet werden. Dies macht insofern Sinn, dass die Prädikate der Partizipien die übrigen Argumente der Partizipialkonstruktion fordern. Im Lateinischen ist V stets der Kopf von S; da die Partizipialkonstruktionen im Lateinischen satzwertig sind, ist die Bezeichnung der Partizipien als V angemessen.\footnote{Allerdings werden in den späteren Ausführungen die Partizipialkonstruktionen -- abgesehen vom Ablativus absolutus -- nicht explizit als S bezeichnet, um ihre Zugehörigkeit zum Rest des Satzes anzuzeigen.}
 
 Allerdings sind die Syntaxregeln so wie hier dargestellt noch nicht komplett; es fehlen die Annotationen der grammatikalischen Funktionen, die ein Konstituent an der jeweiligen Position einnehmen kann. Eine der Stärken der LFG besteht darin, dass durch diese funktionalen Annotationen die Menge der Syntaxregeln stark reduziert wird.\footnote{Vgl. \cite[45]{Dal}.} In der LFG wird ein universelles Inventar an grammatikalischen Funktionen angenommen; dieses umfasst im Allgemeinen Subjekt (SUBJ), Objekt (OBJ), thematisch restringiertes Objekt (OBJ\textsubscript{$\theta$}), Oblique (OBL\textsubscript{$\theta$}), Komplement (COMP), ,offenes' Komplement (XCOMP), Adjunkt (ADJ) und ,offenes' Adjunkt (XADJ).\footnote{Vgl. \cite[9]{Dal}. Neben den grammatikalischen Funktionen gibt es auch Diskursfunktionen; vgl. \cite[28; 76-84; 94-101]{Skript}. Auf diese wird in dieser Arbeit nicht eingegangen.} Diese Funktionen sind im Allgemeinen nicht auf spezielle syntaktische Kategorien beschränkt und werden in verschiedenen Sprachen unterschiedlich realisiert.\footnote{Vgl. \cite[9-10]{Bresnan}.} Die genannten grammatikalischen Funktionen können auf verschiedene Art und Weise nach bestimmten Gemeinsamkeiten bzw. Unterschieden klassifiziert werden.\footnote{Vgl. \cite[56-8]{Falk}.} 
 
@@ -232,72 +206,6 @@ XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
 
 Diese funktionalen Annotationen zeigen beispielsweise an, welche grammatikalischen Funktionen eine NP, die direkt von S dominiert wird, einnehmen kann; sie besagen auch, dass ihr Kasus, wenn sie an dieser Position als Subjekt auftritt, Nominativ sein muss. Die Pfeile werden bei der Betrachtung der c-Struktur verständlich werden; auf die Annotation ($\downarrow$FIN) = + wird im Abschnitt ,,Redundanz- und Defaultregeln'' näher eingegangen werden. Diese Annotationen sind hier jedoch nur exemplarisch dargestellt, da die erschöpfende Notation aller möglichen grammatikalischen Funktionen für jeden Konstituenten den Rahmen dieser Arbeit bei Weitem überschreiten würde. So müsste z.B. die XP in den obigen Regeln konkret in NP, VP und PP getrennt dargestellt werden, damit gezeigt werden könnte, dass eine NP, die direkt von S dominiert wird, andere grammatikalische Funktionen erfüllen kann als eine NP, die von einer anderen NP, VP oder PP dominiert wird; so kann beispielsweise das Subjekt einer PC-VP in allen Kasus vorkommen, nicht nur im Nominativ.
 
-%\textbf{Variante 2 - alt}
-%\begin{singlespace}
-%\begin{tabular}{ l  l  c  c  c  c  c  c  c}
-%S & $\rightarrow$ & V, & XP $\mid$ & V \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &  \textsuperscript{$\uparrow$ = $\downarrow$} \\
-%      & $\qquad$ & \textsuperscript{($\uparrow$FIN)} & &  \textsuperscript{($\uparrow$FIN)}\\
-%XP & $\rightarrow$ & \{ NP & , & VP & , & PP \}* \\
-%XP & $\rightarrow$ & \{ NP $\mid$ &  VP $\mid$ & PP \}* \\
-%   & $\qquad$ & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} &\textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} \\
-%   NP & $\rightarrow$ & N &  \{XP\}* $\mid$ & N \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$}  & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-%VP & $\rightarrow$ & V  & \{PP $\mid$     & NP\}* $\mid$ & V \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$}\\
-%   PP & $\rightarrow$ & P, & VP $\mid$  & P,   & NP \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
-%PP & $\rightarrow$ & P &  \{VP $\mid$     & NP\}* \\
- %  & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$} & \textsuperscript{($\uparrow$ADJ-GF) = $\downarrow$ $\mid$ ($\uparrow$ARG-GF) = $\downarrow$}\\
-%\end{tabular}\\
-%\end{singlespace}
-
-
-
-%\subsubsection{HÄUFIGE SYNTAXREGELN - evt lieber ein Beispiel beim obj-Part?}
-%*Häufiger finden sich in dieser Arbeit die folgenden Auflösungen
-
-%\begin{singlespace}
-%\begin{tabular}{ l  l  c  c  c  c }
-%    NP & $\rightarrow$ & N \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} \\
- %   VP & $\rightarrow$ & PP & V & \\
-  % & $\qquad$ & \textsuperscript{($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$ } & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   %		 PP & $\rightarrow$ & P & NP \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
-  %     NP & $\rightarrow$ & N & VP \\
-  % & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{$\downarrow$ $\in$ ($\uparrow$XADJ)} \\
-	%	    VP & $\rightarrow$ & V & NP \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBL\textsubscript{$\theta$}) = $\downarrow$ }  \\
-%		    VP & $\rightarrow$ & NP & V \\
- %  & $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-	%	    PP & $\rightarrow$ & P & VP \\
-%   & $\qquad$ & \textsuperscript{$\uparrow$ = $\downarrow$} & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} \\
-%	    VP & $\rightarrow$ &  NP& V \\
- %  & $\qquad$ & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} &\textsuperscript{$\uparrow$ = $\downarrow$} \\
-  % S\textsubscript{part} & $\rightarrow$ & NP & V'\\
-  % & \textsuperscript{$\qquad$} & \textsuperscript{($\uparrow$SUBJ) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-
-  %S & $\rightarrow$ & NP\textsubscript{1} & VP & V\\
-   %& $\qquad$ & \textsuperscript{($\uparrow$OBJ) = $\downarrow$} & \textsuperscript{($\uparrow$XCOMP) = $\downarrow$} & \textsuperscript{$\uparrow$ = $\downarrow$} \\
-   % NP\textsubscript{1} & $\rightarrow$ & N \\
-%\end{tabular} 
-%\newline
-%\end{singlespace}
-
-
-%S $\rightarrow$ NP \, VP \: XP\\
-
-%S $\rightarrow$ NP \, VP \: V\\
-
-%S\textsubscript{part} $\rightarrow$ NP \: V'\\
-
-%S $\rightarrow$ NP \, VP \: V\\
-
-%S $\rightarrow$ NP \, VP \: V\\
-
-%($\uparrow$OBJ) = $\downarrow$\\
-
 \subsubsection{c-Struktur}
 Aus den Syntaxregeln, in der Regel unter Einbeziehung der Wortform und ihrer lexikalischen Kategorie aus dem Lexikon, kann die c-Struktur erzeugt werden.\footnote{Vgl. \cite[14]{Rohrer}; \cite[6]{Skript}.} In der LFG repräsentiert die c-Struktur primär die oberflächliche, konkrete Konfiguration der Satz-Konstituenten.\footnote{Vgl. \cite[47]{Dal}. Überlegungen über Kriterien für Konstituenten finden sich in \cite[48-9]{Dal}.} In ihr ist sowohl die hierarchische Dominanz der Konstituenten als auch die lineare Reihenfolge der lexikalischen Elemente sichtbar.\footnote{Vgl. \cite[7]{Dal}; \cite[13]{Rohrer}.} Die Dominanzverhältnisse -- und oftmals, jedoch nicht in den oben genannten Regeln, auch Präzedenzverhältnisse -- zwischen den Konstituenten werden durch die Syntaxregeln festgelegt.\footnote{Vgl. \cite[19]{Rohrer}.} Jedes dort aufgeführte lexikalische Element und jede Phrase kann einen Konstituenten in der c-Struktur bezeichnen. Jeder c-Struktur-Knoten stellt einen Konstituenten dar.\footnote{Vgl. \cite[5]{Skript}.} 
 
@@ -335,24 +243,19 @@ Die terminalen Knoten \textit{barbaros}, textit{in}, textit{Gallia} und textit{v
 
 Daneben erhalten die Knoten funktionale Annotationen. Dabei sind die Knoten, die mit der lexikalischen Kategorie des darunter stehenden lexikalischen Elements bezeichnet werden, durch das triviale Schema $\uparrow$ = $\downarrow$ gekennzeichnet, da das lexikalische Element, wie beispielsweise textit{barbaros}, seine gesamte funktionale Information direkt nach oben weitergibt. Die Annotationen zu den Knoten der Konstituenten-Kategorien geben deren konkrete grammatikalischen Funktionen nach oben: So stellen die NP, die textit{barbaros} enthält, das Objekt von S, die PP das Adjunkt von S, und die NP, die textit{Gallia} beinhaltet, das Objekt von P dar.
 
-
 \subsubsection{Lexikoneinträge}
 Wie oben erwähnt fließen beim Aufbau der c-Struktur eines konkreten Satzes Informationen aus dem Lexikon einer Sprache mit ein. Des Weiteren werden die Lexikoneinträgen -- gemeinsam mit den funktionalen Annotationen der c-Struktur  -- benötigt, um die f-Struktur aufzubauen.\footnote{Vgl. \cite[63]{Skript}.} Da im Lateinischen im Gegensatz zu den modernen Sprachen die Wortstellung innerhalb eines Satzes nicht explizit festgelegt ist,\footnote{Die gewöhnliche Wortstellung im Lateinischen ist zwar Subjekt – Objekt – Prädikat, jedoch wird diese, vor allem aus Gründen der Betonung und des Wohlklangs, nur selten streng eingehalten. Vgl. LHS, S. 397, §212.} muss der Großteil dieser Bedingungen nicht wie üblicherweise in den Syntaxregeln, sondern in den Lexikoneinträgen festgelegt werden.\footnote{Vgl. \cite[6]{Bresnan}.} Das Lexikon der LFG listet, anders als das anderer Grammatiktheorien, nicht nur Ausnahmen auf, sondern stellt einen grundlegenden Bestandteil der Theorie dar, der für die Analyse bzw. Erzeugung eines jeden Satzes vonnöten ist.\footnote{Vgl. \cite[3]{Dal}.} Jede einzelne Flexionsform eines Wortes erhält ihren eigenen Lexikoneintrag.\footnote{Tatsächlich werden im Lexikon auch die systematischen Beziehungen zwischen den lexikalischen Elementen durch Regeln zur morphologischen Umformung festgehalten (vgl. \cite[3]{Dal}). Vor allem die regelmäßigen Formen werden im Normalfall von einem Computerprogramm erzeugt (vgl. \cite[15]{Rohrer}). Bei \cite[63-76]{Skript} und \cite[20-21]{Rohrer} finden sich weitere Erklärungen zu diesen lexikalischen Regeln. Im Rahmen dieser Arbeit werden lediglich einige Beispiel-Lexikoneinträge dargestellt. Daher wird auch nicht auf andere Verwendungsmöglichkeiten der Partizipien eingegangen, wie beispielsweise in Verbindung mit einer Form von \textit{esse}.}
 
-
-
 % ``Zugleich unterliegen die möglichen natürlichen Sprachen gewissen Einschränkungen was die mögliche Verkettung von Wörtern zu Sätzen betrifft." (Skript S. 4)
-
-%Sie sollen zunächst für das PC, den Abl. abs. und den AcP als allgemeine Einschränkungen für die jeweiligen Partizipien definiert werden.
 
 Jeder Lexikoneintrag beinhaltet also die schriftliche bzw. lautliche Form des Wortes -- die gewöhnlich mit ,,PRED‘‘, für Prädikat, bezeichnet wird --, seine lexikalische Kategorie sowie diverse funktionale Spezifikationen.\footnote{Vgl. \cite[27; 33]{Rohrer}; \cite[16]{Skript}.} Die lexikalische Kategorie wird für die Zuordnung von Lexemen zu ihren möglichen terminalen c-Struktur-Knoten benötigt.\footnote{Vgl. \cite[63]{Skript}.} Die funktionalen Bestimmungen finden sich in der späteren f-Struktur wieder.
 
 Das Prädikat eines jeden Wortes im Lexikon fordert bestimmte syntaktische Argumente; diese entsprechen in der Valenzgrammatik der Menge der Ergänzungen, die ein Verb zu sich nehmen kann. Sie werden im sogenannten Subkategorisierungsrahmen -- gekennzeichnet durch $\langle$ $\rangle$ -- aufgeführt.\footnote{Vgl. \cite[7]{Dal}; \cite[70]{Skript}; \cite[27]{Rohrer}.} In diesem Subkategorisierungsrahmen können sämtliche grammatikalische Funktionen auftreten; da Adjunkte keine regierbaren Funktionen sind, tauchen sie in den Lexikoneinträgen nicht auf.\footnote{Vgl. \cite[27]{Rohrer}.} Die geforderten Argumente tauchen, sofern ihr Wert definiert werden muss, im Lexikoneintrag des fordernden Prädikats als Attribute -- stets auf der linken Seite aufgelistet -- auf. Jedes Attribut muss einen Wert erhalten, der es spezifiziert -- die Werte finden sich immer auf der rechten Seite.\footnote{Nähere Erklärungen zu Attribut-Wert-Paaren finden sich bei der Betrachtung der f-Struktur.} Ferner werden weitere Bestimmungen der Wortform durch zusätzliche Attribut-Wert-Paare definiert.\footnote{Die Komplemente, die ein spezifisches Prädikat zu sich nehmen kann, müssen je nach Konstituenten-Typ klassifiziert werden; so macht es einen Unterschied, ob ein Verb ein verbales Kompliment (VCOMP) oder eines, das einen Satz ersetzt (SCOMP), zu sich nehmen kann; vgl. \cite[22]{Rohrer}.}
 
 Bei der Erstellung der f-Struktur werden, im Lateinischen beginnend beim Verb, die Prädikate mitsamt all ihrer Funktionsbestimmungen in die f-Struktur übertragen.\footnote{Vgl. \cite[28]{Rohrer}.} Die Lexikoneinträge liefern somit einerseits große Teile des Inhalts der Strukturen über die Definition von Attribut-Wert-Paaren und schränken andererseits die als grammatisch geltenden Sätze ein.\footnote{Vgl. \cite[63]{Skript}.}  Taucht eine vom Prädikat geforderte grammatikalische Funktion nämlich nicht in der f-Struktur auf, so ist die Struktur unvollständig.\footnote{Vgl. \cite[28]{Rohrer}.} Letzteres wird bei der Besprechung der Besprechung der Wohlgeformtheits-Bedingungen der f-Struktur in Abschnitt 2.2.5 dieser Arbeit deutlicher werden.
-%\textit{Die Lexikoneinträge spezifizieren jedoch nicht die Verbindung konkreter Worte mit ihren grammatikalischen Funktionen; dies geschieht in der c-Struktur. (?? ,,Was die Lexikoneinträge nicht liefern, ist die Verbindung mit den grammatischen Funktionen (SUBJ, OBJ, OBJ2). Dies muss über die K-Strukturen gesteuert werden. Diese müssen durch funktionale Beschreibungen der Form ($\uparrow$SUBJ)=$\downarrow$ angereichert werden (funktionale Annotationen). Diese funktionalen Annotationen werden über die Syntaxregeln eingeführt.‘‘ (GN, Folie 11) )}
+%Die Lexikoneinträge spezifizieren jedoch nicht die Verbindung konkreter Worte mit ihren grammatikalischen Funktionen; dies geschieht in der c-Struktur. 
 
-Welche Attribute zur näheren Bestimmung einer syntaktischen Struktur benötigt werden, wird nach den linguistischen Erfordernissen einer Sprache bestimmt.\footnote{Vgl. \cite[8]{Skript}.} Bei den Partizipien umfassen die nötigen Angaben hinsichtlich der konkreten Wortform Kasus, Numerus, Genus, Verbform (,,MOOD'')\footnote{Hierbei leitet sich ,,MOOD'' genaugenommen von ,,Modus'' her. Obwohl unter Modus in der Regel die Unterscheidung Indikativ - Konjunktiv verstanden wird, kann diese Bezeichnung hier 	auch im Zusammenhang mit Partizipien verwendet werden, da sich die Eigenschaften `Partizip' und `Indikativ' bzw. `Konjunktiv' gegenseitig ausschließen.}, d.h. hier stets Partizip (,,PART''), Zeitverhältnis (,,RELTENSE'', abgekürzt für ,,relative tense'') und Diathese (wobei das Attribut ,,PASSIVE'' entweder den Wert ,,+'' oder ,,-'' erhält).\footnote{Das Genus verbi, d.h. die rein morphologische Erscheinung in entweder aktiver oder passiver Form, ergibt sich aus der Grundform -- hier in Anlehnung an gängige lateinische Wörterbücher stets die erste Person Singular Präsens Indikativ -- des Prädikats des Partizips im Lexikoneintrag, wie z.B. \textit{mittor} statt \textit{mitto}. Durch diese Notierung stellen auch Deponentien kein Problem für die LFG dar, deren Diathese aktiv ist, während ihre morphologische Form im Passiv steht.}
+Welche Attribute zur näheren Bestimmung einer syntaktischen Struktur benötigt werden, wird nach den linguistischen Erfordernissen einer Sprache bestimmt.\footnote{Vgl. \cite[8]{Skript}.} Bei den Partizipien umfassen die nötigen Angaben hinsichtlich der konkreten Wortform Kasus, Numerus, Genus, Verbform (,,MOOD'')\footnote{Hierbei leitet sich ,,MOOD'' genaugenommen von ,,Modus'' her. Obwohl unter Modus in der Regel die Unterscheidung Indikativ - Konjunktiv verstanden wird, kann diese Bezeichnung hier auch im Zusammenhang mit Partizipien verwendet werden, da sich die Eigenschaften `Partizip' und `Indikativ' bzw. `Konjunktiv' gegenseitig ausschließen.}, d.h. hier stets Partizip (,,PART''), Zeitverhältnis (,,RELTENSE'', abgekürzt für ,,relative tense'') und Diathese (wobei das Attribut ,,PASSIVE'' entweder den Wert ,,+'' oder ,,-'' erhält).\footnote{Das Genus verbi, d.h. die rein morphologische Erscheinung in entweder aktiver oder passiver Form, ergibt sich aus der Grundform -- hier in Anlehnung an gängige lateinische Wörterbücher stets die erste Person Singular Präsens Indikativ -- des Prädikats des Partizips im Lexikoneintrag, wie z.B. \textit{mittor} statt \textit{mitto}. Durch diese Notierung stellen auch Deponentien kein Problem für die LFG dar, deren Diathese aktiv ist, während ihre morphologische Form im Passiv steht.}
 
 %Liste der üblicherweise angenommenen f-strukturellen Merkmale/Argumente zusammen mit den (möglichen) Werten dieser Merkmale. (Dalrymple, S. 27-8)
 %das Merkmal Kasus (``CASE‘‘) beispielsweise ist mit bestimmten grammatikalischen Funktionen verbunden (--> so kann ein Subjekt nur den Wert `` Nominativ‘‘ (``nom‘‘) für das Merkmal CASE tragen). Merkmale wie TENSE spezifizieren die morphologische Form eines Arguments. (gekürzt zitiert) (Dalrymple, S. 27)
@@ -390,56 +293,25 @@ Die hier aufgeführten Eigenschaften eines Lexikoneintrages sollen durch die Bes
 
 [3-6] Durch das Auflisten weiterer Attribute und deren Werte wird die Verbform genau bestimmt: Dabei gibt der Wert ,,part‘‘ des Attributs MOOD an, dass es sich bei moritura um ein Partizip handelt. Da Partizipien keine finiten Verbformen sind, erhält das Attribut ,,FIN'', für finit, den Wert - (negativ). Das Attribut PASSIVE erhält in diesem Fall ebenfalls den Wert - , da die Diathese jedes Deponens aktiv ist,\footnote{Im speziellen Fall des PFA ist auch das morphologische Genus verbi aktiv.} und das Attribut RELTENSE erhält den Wert ,,future‘‘. Diese drei Attribut-Wert-Paare definieren \textit{moritura} somit als PFA. Die Attribute CASE, NUM und GEN komplettieren den Lexikoneintrag: Diese Werte geben an, dass die Verbform entweder im Nominativ oder Ablativ Singular Femininum oder im Nominativ oder Akkusativ Plural Neutrum stehen darf. Somit wird auch die Kasus-Numerus-Genus-Kongruenz zwischen Subjekt und Verbform erfüllt.
 
-%Im Folgenden sollen exemplarische Lexikoneinträge zu den Partizipien \textit{missum} (für das PC in Objektstellung), \textit{missi} (für das PC in Subjektstellung), \textit{victis} (für den Abl. abs.) und \textit{iaecentem} für den AcP aufgeführt werden.
-
-%\subsection{Zeichen}
-
-%$\theta$
-
-%$\mid$
-
-%$\neq$
-
-%$\in$
-
-%$\ni$
-
-%$\vdash$
-
-%$\subset$
-
-%$\ast$
-
-%$\neg$
-
 \subsubsection{Redundanz- bzw. Default-Regeln}
 Um die syntaktische Korrektheit der ausgegebenen Sätze zu gewährleisten, können zusätzlich zu den Lexikoneinträgen weitere Bedingungen festgelegt werden. Dies geschieht durch sogenannte Redundanz- bzw. Default-Regeln, die über dem Lexikon operieren\footnote{Vgl. \cite[23-4]{Rohrer}.} Hier werden diejenigen aufgelistet, die für die vorliegenden Phänomene relevant sind. Auch wenn diese Regeln nicht unbedingt notwendig sind, so können sie unseres Erachtens nach die Erzeugung der c-Struktur aus den Syntaxregeln beschleunigen, die durch die Klassifzierung der Partizipien als V erschwert
 wurde.
 
 Anstatt dieser Redundanz- bzw. Default-Regeln könnte man auch zusätzliche Bedingungen den Syntaxregeln anfügen, wie Bresnan und Kaplan beschreiben\footnote{Bresnan und Kaplan 1982, S. 210; zitiert nach \cite[54]{Rohrer}.} und wie in Abschnitt 2.2.1 dieser Arbeit bereits exemplarisch gezeigt wurde. Aufgrund der leichteren Verständlichkeit für den Leser erfolgt die Darstellung hier durch Redundanz- bzw. Default-Regeln. Auf eine formelhafte Darstellung wird an dieser Stelle verzichtet.
 
-%Die in dieser Arbeit unter dem Titel ``Einschränkungen'' festgehaltenen Bedingungen sind jedoch nicht Teil der LFG, sondern dienen lediglich dem besseren Verständnis der lateinischen Grammatik, das für diese Arbeit unerlässlich ist.
 Allgemein gilt, dass ein V, das direkt von S dominiert wird, immer eine
 finite Verbform ist; das Attribut FIN muss als Wert +, das Attribut MOOD den Wert Indikativ, Konjunktiv oder Imperativ erhalten.
 Der Kasus des Subjekts dieses finiten V ist immer Nominativ; zu beachten ist hier, dass dies beim Bezugswort eines Partizips, d.h. seinem Subjekt, nicht der der Fall ist.
 Ferner kann ein V, das von einer VP dominiert wird, kein finites Verb sein; es ist stets entweder ein Partizip, ein Infinitv oder ein Gerundial. Somit muss als Wert von FIN -, als Wert von MOOD part, inf, gerundium  oder gerundivum eingesetzt sein.
 Wenn V von S-part dominiert wird, muss es ein Partizip sein.
 
-%\textbf{Konditional-Gleichungen / lexozentrische Funktionsassoziierung /GF-Spezifikation} 
-
-%--> ($\downarrow$CASE) = nom $\Rightarrow$ ($\uparrow$SUBJ) = $\downarrow$ bedeutet, dass WENN der Kasus einer NP Nominativ ist, diese NP die GF des SUBJ erhält.
-%--> im Bezug auf das finite Verb würde das bei uns gehen, oder? beim Partizip-Verb ja eben nich
-%ABER: wir können diese ,,Konditionale'' bei den Einschränkungen verwenden, glaub ich!
 %\footnote{Auf weitere Funktionsspezifikationen neben denen der Partizipien bzw. Partizipialkonstruktionen kann im Rahmen dieser Arbeit nicht eingegangen werden. Sie werden für das Deutsche beispielsweise in Skript, S. 48-51 behandelt.}
 
-%Die grammatikalische Funktion einer Partizipialkonstruktion -- und daher des Partizips, welches Kopf jeder Partizipialkonstruktion ist -- ist immer entweder ein XADJ, ein ADJ oder ein XCOMP: \\
 Weitere allgemeine Regeln sollen nun anhand von Lexikoneinträgen eines Partizips x definiert werden.
 %Sie beziehen sich auf alle Partizipial-VPs, die nicht direkt von S dominiert werden.
 Die grammatikalische Funktion jedes Partizips in einer Partizipialkonstruktion, welches nicht Teil einer finiten Verbform ist, ist immer entweder ein XADJ, ein ADJ oder ein XCOMP der übergeordneten grammatikalischen Funktion:\footnote{Ausgenommen sind hier das dominante Partizip in Abhängigkeit von einer Präposition und je nach Umsetzung das substantivierte Partizip.} \\
 ($\uparrow$GF) = ($\uparrow$XADJ) $\mid$ ($\uparrow$ADJ) $\mid$ ($\uparrow$XCOMP)
-%($\uparrow$GF) = ($\uparrow$XADJ) $\mid$ ((ADJ$\uparrow$)GF) $\mid$ ((XCOMP$\uparrow$)GF) \textbf{???} \\ 
 
-%(ich denk da wir diese Regeln ja immer im Zusammenhang mit Partizipien formulieren, müssen wir nich überall noch ,,part'' einfügen, das ist ja im Endeffekt eh ne Implementierungssache; würde ich so eben auch in ner Fußnote vermerken, um auf der sicheren Seite zu sein...)
 Da das Bezugswort eines PC in jedem Fall eine grammatikalische Funktion der übergeordneten Struktur ist,\footnote{Vgl. KSt S. 771, § 138,5a.} nimmt das PC die grammatikalische Funktion XADJ an. Partizipien in allen Kasus können in einer PC-Konstruktion auftreten, auch wenn Genitiv und Ablativ hierbei seltener vorkommen als die übrigen Kasus. Dies bedeutet, dass das Partizip in einer XADJ-Funktion in jedem Kasus vorkommen kann. Selbiges gilt auch für das substantivierte Partizip -- sofern sein Subjekt als logisch vorhanden angenommen wird.
 
 Der Abl. abs. jedoch ist vom Restsatz semantisch und syntaktisch losgelöst, weswegen sein Bezugswort keine grammatikalische Funktion der übergeordneten Struktur (in aller Regel S) sein darf. Dem Partizip eines Abl. abs. kommt daher unumgänglich die Funktion des ADJ zu. Somit kann geschlussfolgert werden, dass ein Partizip, welches im Ablativ steht, neben der Funktion eines XADJ auch die Funktion eines ADJ annehmen kann. Auch das dominante Partizip nimmt aufgrund seiner syntaktischen Eigenständigkeit die Funktion eines ADJ an. Daher kann ein ADJ zudem in allen anderen Kasus, ausgenommen des Nominativs, vorkommen.
@@ -459,39 +331,17 @@ $\mid$ ($\downarrow$CASE) = acc $\Rightarrow$ \{($\uparrow$XADJ) $\mid$ ($\uparr
 $\mid$ ($\downarrow$CASE) = abl $\Rightarrow$ \{($\uparrow$XADJ) $\mid$ ($\uparrow$ADJ)\}= $\downarrow$ 
 
 %PC:
-Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort, d.h. mit seinem Subjekt, kongruent sein:\footnote{Vgl. KSt S. 771, §138,5a. Das substantivierte Partizip stellt, wenn sein Bezugswort als tatsächlich fehlend verstanden wird -- wie in Abschnitt 4.2 diskutiert --, einen Ausnahmefall dar. Da jedoch keine existenzielle Forderung an das Vorhandensein des Subjekts gestellt wird, werden hierfür keine gesonderten Regeln benötigt.} 
-%subst. Part. schwierig, da das kein BZW braucht (bei Variante OBJ); der Regel sowas hinzufügen wie ,,oder SUBJ = pro und PRON-TYPE mis"... ?? \\
-% Attribut SUBJ hat den Wert missing... \\}\\
+Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort, d.h. mit seinem Subjekt, kongruent sein:\footnote{Vgl. KSt S. 771, §138,5a. Das substantivierte Partizip stellt, wenn sein Bezugswort als tatsächlich fehlend verstanden wird -- wie in Abschnitt 4.2 diskutiert --, einen Ausnahmefall dar. Da jedoch keine existenzielle Forderung an das Vorhandensein des Subjekts gestellt wird, werden hierfür keine gesonderten Regeln benötigt.}\\ 
 ($\uparrow$KNG) = ($\uparrow$SUBJ KNG)\footnote{Diese Darstellung ist verkürzend, um eine weitere disjunktive Menge von Kasus-, Numerus- und Genus- Attributen zu vermeiden; vgl. \cite[49]{Skript}.}
-%bzw. ($\downarrow$KNG) = ($\uparrow$SUBJ KNG) (Pfeile angepasst nach Skript, S. 49, nicht sicher welches stimmt)\\
-
-%Das Subjekt eines Partizips in XADJ-Funktion ist somit eine grammatikalische Funktion der übergeordneten grammatikalischen Funktion (in der Regel S): \\
-%($\uparrow$XADJ SUBJ) = ((XADJ$\uparrow$)GF) \\
-
 
 Wenn das Partizip ein XADJ der übergeordneten grammatikalischen Funktion ist, ist sein Bezugswort eine grammatikalische Funktion dieser dem XADJ übergeordneten Struktur: \\
 ($\uparrow$SUBJ XADJ) = ((XADJ$\uparrow$)GF)
 
 Wenn das Partizip ein XCOMP der übergeordneten grammatikalischen Funktion ist, ist sein Bezugswort das Objekt dieser dem XCOMP übergeordneten Struktur: \\
 ($\uparrow$SUBJ XCOMP) = ((XCOMP$\uparrow$)OBJ) 
-%\textbf{oder:} \\ ($\uparrow$(GF)V) = ($\uparrow$XCOMP) $\Rightarrow$ ($\uparrow$SUBJ XCOMP) = ((XCOMP$\uparrow$)OBJ) \textbf{?} \\
 
 Wenn das Partizip ein ADJ der übergeordneten grammatikalischen Funktion ist, ist sein Bezugswort keine grammatikalische Funktion der dem ADJ übergeordneten Struktur: \\
 ($\uparrow$SUBJ ADJ) = ((ADJ$\uparrow$)GF)
-%(SUBST PART: Variante 1: XADJ:) \\
-%Falls kein Subjekt erkennbar vorhanden ist, wie beim substantivierten Partizip, ist das ,fehlende' / logische Subjekt ein XADJ zur übergeordneten grammatikalischen Funktion, welche ebenfalls fehlt: \\
-%($\uparrow$SUBJ\textsubscript{mis}) = ((GF\textsubscript{mis}$\uparrow$)XADJ) \textbf{???} \\
-%\textbf{oder:} \\
-%($\downarrow$SUBJ) = mis $\Rightarrow$ ($\uparrow$SUBJ) = ((GF\textsubscript{mis}$\uparrow$)XADJ) \textbf{?}\\
-
-
-%ABL. ABS.:
-%($\downarrow$ADJ CASE) = abl \\
-%Dasselbe trifft auch auf sein Bezugswort zu: \\
-%($\downarrow$SUBJ ADJ CASE) = abl \\
-%\textbf{oder:} \\
-%($\uparrow$CASE) = abl $\Rightarrow$ ($\uparrow$SUBJ CASE) = abl \textbf{?}\\
-
 
 Da sich diese Arbeit ausschließlich auf das klassische Latein Caesars und Ciceros bezieht, gilt für die folgenden Betrachtungen die Annahme, dass im Abl. abs. kein Partizip Futur Aktiv (PFA) verwendet wird.\footnote{Vgl. KSt. S. 760, §136,4c oder NM S. 771, §469.}\\
 %$\neg$ ($\uparrow$(RELTENSE ADJ) = future \\
@@ -500,12 +350,6 @@ Da sich diese Arbeit ausschließlich auf das klassische Latein Caesars und Cicer
 Das Partizip ist im AcP meist ein PPA, selten ein PPP. Mit Sicherheit kann daher gesagt werden, dass kein PFA in einem Partizip mit XCOMP-Funktion auftauchen kann: \\
 %($\uparrow$XCOMP RELTENSE) = present   \\
 ($\uparrow$RELTENSE) = future $\Rightarrow$ ($\uparrow$GF) $\neq$ ($\uparrow$XCOMP)
-
-%AcP
-
-%($\downarrow$XCOMP CASE) = acc \\
-%($\downarrow$XCOMP SUBJ CASE) = acc \\
-
 
 \subsubsection{f-Struktur}
 Unter Einbeziehung der Informationen aus den Lexikoneinträgen, der annotierten c-Struktur, und gegebenenfalls den Redundanz- und Default-Regeln kann schließlich die f-Struktur aufgebaut werden.\footnote{Vgl. \cite[13; 23]{Rohrer}; \cite[14]{Skript}.} Auch wenn Informationen aus der c-Struktur in die f-Struktur einfließen, ist keine der beiden Strukturen in der anderen vorhanden; beide existieren parallel und stellen unterschiedliche Aspekte des Aufbaus eines Satzes dar.\footnote{Vgl. \cite[26-7; 35]{Rohrer}; \cite[8]{Skript}.}
@@ -578,17 +422,10 @@ Das Mapping kann zudem die Erzeugung der f-Struktur aus der annotierten c-Strukt
 
 \section{Participium coniunctum}
 Partizipien können als Vertreter von Adverbialsätzen aufgefasst werden und stehen dabei für Temporal-, Kausal-, Modal-, Kondizional- und Konzessivsätze. Das Partizip ist hierbei mit seinem Bezugswort verbunden, mit dem es daher in Kasus, Numerus und Genus übereinstimmt. Wenn das Bezugswort des Partizips Bestandteil des Hauptsatzes und gleichzeitig Subjekt des Nebensatzes ist, bezeichnet man diese Konstruktion als Participium coniunctum. Partizip und Bezugswort können dabei in einem der fünf Kasus  auftreten. Das Partizip kann sowohl attributiv als auch prädikativ verwendet werden.\footnote{Vgl. KSt, S. 766, § 138,1 u. S. 771, § 138,5a; Vgl. NM, S. 715, § 500.} \\
-%* irgendwo mal erklären, dass wir ``Funktion'' einerseits normalsprachlich und andererseits als LFG-Terminus verwenden...?
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
 Das Partizip erhält in der Konstruktion eines PC immer die syntaktische Funktion eines XADJ, da sein Bezugswort eine grammatikalische Funktion der übergeordneten Struktur ist. Aufgrund der prädikativen Verwendungsmöglichkeit des Partizips hängt die Partizipialkonstruktion direkt von S ab. Da das Partizip jedoch nicht vom Prädikat gefordert wird, kann es nicht als XCOMP klassifiziert werden.
 Im Übrigen gelten die in den Redundanz- und Default-Regeln genannten Bedingungen der Kongruenz zwischen Partizip und Bezugswort.
-
-%\subsection{Einschränkungen}
-%Das Partizip muss in Kasus, Numerus und Genus mit seinem Bezugswort kongruent sei:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
-%($\uparrow$SUBJ KNG) = ($\uparrow$KNG)\\
-%Dieses Bezugswort des Partizips ist eine grammatikalische Funktion der dem XADJ übergeordneten Struktur, und somit Element des Hauptsatzes:\footnote{Vgl. KSt S. 771, § 138,5a.}\\
-%($\uparrow$SUBJ) = ((XADJ$\uparrow$)GF) \\
 
 \subsection{Objektabhängiges Participium coniunctum}
 Beim objektabhänigen PC bezieht sich das Partizip auf das Objekt des Hauptsatzes. In diesem Fall stehen Bezugswort und Partizip im Akkusativ. \\
