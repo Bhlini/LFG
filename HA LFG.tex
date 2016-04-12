@@ -45,7 +45,9 @@
 \setcounter{page}{2}
 \begingroup
 \flushbottom
+\begin{spacing}{1.25}
 \tableofcontents
+\end{spacing}
 \thispagestyle{empty}
 %\newpage
 \pagebreak
@@ -602,11 +604,11 @@ Lexikoneintrag, c- und f-Struktur sollen an folgendem Beispielsatz erarbeitet we
 \textbf{missum}: & V \\
 $\qquad$ & $[1]$ \:  ($\uparrow$PRED) & = & `mittor$\langle$SUBJ, OBL\textsubscript{GOAL}$\rangle$'\\
 %$\qquad$ & $[2]$ \:  ($\uparrow$SUBJ) & = & \{((XADJ$\uparrow$)OBJ) $\mid$ ((XCOMP$\uparrow$)OBJ)\} \\
-$\qquad$ & $[3]$ \:  ($\uparrow$SUBJ NUM) & =\textsubscript{c} & sg \\
-$\qquad$ & $[3.1]$ \:  \{(($\uparrow$ SUBJ GEN) & =\textsubscript{c} & m \\ 
-$\qquad$ & $[3.2]$ \:  ($\uparrow$SUBJ CASE) & =\textsubscript{c} & acc ) $\mid$\\
-$\qquad$ & $[3.3]$ \: (($\uparrow$SUBJ GEN) & =\textsubscript{c} & n \\
-$\qquad$ & $[3.4]$ \:  ($\uparrow$SUBJ CASE) & =\textsubscript{c} & \{nom $\mid$ acc\} ) \}\\
+$\qquad$ & $[3]$ \:  ($\uparrow$SUBJ NUM) & =  & sg \\
+$\qquad$ & $[3.1]$ \:  \{(($\uparrow$ SUBJ GEN) & = & m \\ 
+$\qquad$ & $[3.2]$ \:  ($\uparrow$SUBJ CASE) & = & acc ) $\mid$\\
+$\qquad$ & $[3.3]$ \: (($\uparrow$SUBJ GEN) & = & n \\
+$\qquad$ & $[3.4]$ \:  ($\uparrow$SUBJ CASE) & = & \{nom $\mid$ acc\} ) \}\\
 $\qquad$ & $[4]$ \:  ($\uparrow$MOOD) & = & part\\
 $\qquad$ & $[4]$ \:  ($\uparrow$FIN) & = & - \\
 $\qquad$ & $[5]$ \:  ($\uparrow$PASSIVE) & = & + \\
@@ -1111,32 +1113,7 @@ Nun sieht das dominante Partizip \textit{condita} rein formal aus wie ein attrib
 \newline
 \end{singlespace}
 
-\textbf{ABBILDUNG BENNENEN UND VERLINKEN}
-
-\begin{singlespace}
-\begin{avm}
-\[ PRED &  \rm ‘vigeo \q<SUBJ\q>’\\
-SUBJ & ``Roma'' \\
-ADJ & \[ PRED &  \rm ‘ab \q<OBJ\q>’\\
-OBJ & \[ PRED & `urbs' \tikzmark{begin} \\ 
-CASE & abl \\
-NUM & sg \\
-GEN & f  \\
-XADJ & \[PRED &  \rm ‘condor \q<SUBJ\q>’\\
-MOOD & part \\
-PASSIVE & + \\
-RELTENSE & past \\
-CASE & abl \\
-NUM & sg \\ 
-GEN & f  \\
-SUBJ &  \tikzmark{end} \] &            $\qquad$ \\
-\]  \\
-\] \]
-\end{avm}
-\end{singlespace}
-
-\tikz[remember picture,overlay] 
-    \draw[<-] (pic cs:begin) to[out=0,in=0,looseness=2.4]  (pic cs:end);
+\textbf{ABBILDUNG BENNENEN UND VERLINKEN M?}
     
 \begin{singlespace}    
 \begin{avm}
@@ -1154,17 +1131,15 @@ RELTENSE & past \\
 CASE & abl \\
 NUM & sg \\ 
 GEN & f  \\
-SUBJ &  \tikzmark{Ziel} \] \] \tikzmark{Start} & $\qquad$ & $\qquad$  \\
+SUBJ &  \tikzmark{Dawson} \] \] \tikzmark{Kimya} & $\qquad$ & $\qquad$  \\
 \] \\
 \]
+\tikz[remember picture,overlay] 
+    \draw[<-] (pic cs:Kimya) to[out=10,in=0,looseness=2.4]  (pic cs:Dawson);
 \end{avm}
 \newline
 \newline
 \end{singlespace}
-
-\tikz[remember picture,overlay] 
-    \draw[<-] (pic cs:Start) to[out=10,in=0,looseness=2.4]  (pic cs:Ziel);
-
 
 %\subsubsection{Variante 2 -- Partizip in tatsächlich dominanter Position}
 Da Adjunkte jedoch nach Belieben weggelassen werden können, würde dies bedeuten, dass auch das als XADJ klassifizierte Partizip fehlen könnte; somit wäre der Satz \textit{ab urbe Roma viguit} grammatikalisch korrekt. Das stimmt zwar formal -- ist jedoch semantisch sinnfrei. Eine semantisch sinnvollere Darstellung ergibt sich, wenn das Bezugswort vom Prädikat des Partizips gefordert wird; da das Partizip sein Bezugswort dominiert, sollte ihm in der LFG-Darstellung eine seinem Bezugswort übergeordnete Funktion zukommen. Somit würde die Partizipialkonstruktion von einer VP mit dem Kopf \textit{condita} abhängen; das Bezugsnomen \textit{urbe} wäre dann schlicht das Subjekt der Partizipialkonstruktion.
