@@ -42,7 +42,7 @@
 % Deckblatt
 \input{./Deckblatt.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-\setcounter{page}{2}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
 \begingroup
 \flushbottom
 \begin{spacing}{1.25}
@@ -52,7 +52,7 @@
 %\newpage
 \pagebreak
 \endgroup
-%\setcounter{page}{1}
+\setcounter{page}{1}
 % The introduction
 
 \nocite{Menge}
