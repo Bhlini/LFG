@@ -258,7 +258,7 @@ Bei der Erstellung der f-Struktur werden, im Lateinischen beginnend beim Verb, d
 %Die Lexikoneinträge spezifizieren jedoch nicht die Verbindung konkreter Worte mit ihren grammatikalischen Funktionen; dies geschieht in der c-Struktur. 
 
 Welche Attribute zur näheren Bestimmung einer syntaktischen Struktur benötigt werden, wird nach den linguistischen Erfordernissen einer Sprache bestimmt.\footnote{Vgl. \cite[8]{Skript}.} Bei den Partizipien umfassen die nötigen Angaben hinsichtlich der konkreten Wortform Kasus, Numerus, Genus, Verbform (,,MOOD'')\footnote{Hierbei leitet sich ,,MOOD'' genau genommen von ,,Modus'' ab. Obwohl unter Modus in der Regel die Unterscheidung Indikativ - Konjunktiv verstanden wird, kann diese Bezeichnung hier auch im Zusammenhang mit Partizipien verwendet werden, da sich die Eigenschaften `Partizip' und `Indikativ' bzw. `Konjunktiv' gegenseitig ausschließen.}, d.h. hier stets Partizip (,,part''), Zeitverhältnis (,,RELTENSE'', abgekürzt für ,relative tense') und Diathese (wobei das Attribut ,,PASSIVE'' entweder den Wert ,,+'' oder ,,-'' erhält).\footnote{Das Genus verbi, d.h. die rein morphologische Erscheinung in entweder aktiver oder passiver Form, ergibt sich aus der Grundform -- hier in Anlehnung an gängige lateinische Wörterbücher stets die erste Person Singular Indikativ Präsens -- des Prädikats des Partizips im Lexikoneintrag, wie z.B. \textit{mittor} oder \textit{mitto}. Durch diese Form der Notation stellen auch Deponentien kein Problem für die LFG dar, deren Diathese aktiv ist, während ihre morphologische Form im Passiv steht.}
-
+\newpage
 Die hier aufgeführten Eigenschaften eines Lexikoneintrags sollen durch die Beschreibung des konkreten Lexikoneintrags des Partizips \textit{moritura} deutlich gemacht werden. Die konkreten Lexikoneinträge finden sich bei der Betrachtung der spezifischen Partizipialkonstruktionen.
 %Liste der üblicherweise angenommenen f-strukturellen Merkmale/Argumente zusammen mit den (möglichen) Werten dieser Merkmale. (Dalrymple, S. 27-8)
 %das Merkmal Kasus (``CASE'') beispielsweise ist mit bestimmten grammatikalischen Funktionen verbunden (--> so kann ein Subjekt nur den Wert `` Nominativ'' (``nom'') für das Merkmal CASE tragen). Merkmale wie TENSE spezifizieren die morphologische Form eines Arguments. (gekürzt zitiert) (Dalrymple, S. 27)
@@ -298,12 +298,12 @@ Das obenstehende V kennzeichnet die lexikalische Kategorie des Partizips. [1] De
 
 \subsubsection{Redundanz- bzw. Default-Regeln}
 Um die syntaktische Korrektheit der ausgegebenen Sätze zu gewährleisten, können zusätzlich zu den Lexikoneinträgen weitere Bedingungen festgelegt werden. Dies geschieht durch sogenannte Redundanz- bzw. Default-Regeln, die über dem Lexikon operieren\footnote{Vgl. \cite[23-4]{Rohrer}.} Hier werden diejenigen aufgelistet, die für die vorliegenden Phänomene relevant sind. Auch wenn diese Regeln nicht unbedingt notwendig sind, so können sie unseres Erachtens nach die Erzeugung der c-Struktur aus den Syntaxregeln beschleunigen, die durch die Klassifizierung der Partizipien als V erschwert wurde. Anstatt dieser Redundanz- bzw. Default-Regeln könnte man auch zusätzliche Bedingungen den Syntaxregeln anfügen, wie Bresnan und Kaplan beschreiben\footnote{Bresnan und Kaplan 1982, S. 210; zitiert nach \cite[54]{Rohrer}.} und wie in Abschnitt 2.2.1 dieser Arbeit bereits exemplarisch gezeigt wurde.\footnote{Aufgrund der leichteren Verständlichkeit für den Leser erfolgt die Darstellung hier durch Redundanz- bzw. Default-Regeln. Auf eine formelhafte Darstellung wird an dieser Stelle verzichtet.}
-
+\newpage
 Allgemein gilt, dass ein V, das direkt von S dominiert wird, immer eine
 finite Verb"-form ist; das Attribut FIN muss demnach als Wert +, das Attribut MOOD den Wert Indikativ, Konjunktiv oder Imperativ erhalten.
 Der Kasus des Subjekts dieses finiten V ist immer Nominativ; zu beachten ist hier, dass dies beim Bezugswort eines Partizips, d.h. dessen Subjekt, nicht der Fall ist.
-Ferner kann ein V, das von einer VP dominiert wird, kein finites Verb sein; es ist stets entweder ein Partizip, ein Infinitiv oder ein Gerundial. Somit muss als Wert von FIN -, als Wert von MOOD part, inf, gerundium  oder gerundivum eingesetzt sein.
-Wenn V von S\textsubscript{part} direkt dominiert wird, muss es ein Partizip sein.
+Ferner kann ein V, das von einer VP dominiert wird, kein finites Verb sein; es ist stets entweder ein Partizip, ein Infinitiv oder ein Gerundial. Somit muss als Wert von FIN -, als Wert von MOOD part, inf, gerundium  oder gerundivum gesetzt sein.
+Wenn V direkt von S\textsubscript{part} dominiert wird, muss es ein Partizip sein.
 
 %\footnote{Auf weitere Funktionsspezifikationen neben denen der Partizipien bzw. Partizipialkonstruktionen kann im Rahmen dieser Arbeit nicht eingegangen werden. Sie werden für das Deutsche beispielsweise in Skript, S. 48-51 behandelt.}
 
@@ -312,7 +312,7 @@ Weitere allgemeine Regeln sollen nun ausschließlich für Partizipien definiert 
 Die grammatikalische Funktion jedes Partizips in einer Partizipialkonstruktion, d.h. nicht als Teil einer finiten Verbform, ist immer entweder ein XADJ, ein ADJ oder ein XCOMP der übergeordneten grammatikalischen Funktion.\footnote{Ausgenommen sind hier das dominante Partizip in Abhängigkeit von einer Präposition und je nach Umsetzung das substantivierte Partizip. Da Partizipien in dieser Arbeit als V klassifiziert werden, können diese Beobachtungen in keiner allgemeinen Regel formal festgehalten werden, da sie dann für alle Vs, also auch für finite Verbformen, gelten müssten.}
 %($\uparrow$GF) = ($\uparrow$XADJ) $\mid$ ($\uparrow$ADJ) $\mid$ ($\uparrow$XCOMP)
 
-Da das Bezugswort eines PC in jedem Fall eine grammatikalische Funktion der übergeordneten Struktur ist,\footnote{Vgl. KSt S. 711, §138,5a.} nimmt das PC die grammatikalische Funktion XADJ an; dasselbe gilt auch für das substantivierte Partizip -- sofern sein Subjekt als logisch vorhanden angenommen wird. In einer PC-Konstruktion können Partizipien in allen Kasus auftreten. Dies bedeutet, dass ein Partizip mit XADJ-Funktion in jedem Kasus vorkommen kann.
+Da das Bezugswort eines PC in jedem Fall eine grammatikalische Funktion der übergeordneten Struktur ist,\footnote{Vgl. KSt S. 711, §138,5a.} nimmt das PC die grammatikalische Funktion XADJ an; dasselbe gilt auch für das substantivierte Partizip -- sofern sein Subjekt als logisch vorhanden angenommen wird. In einer PC-Konstruktion können Partizipien in allen Kasus auftreten. Ein Partizip mit XADJ-Funktion kann also in jedem Kasus vorkommen.
 
 Der Abl. abs. jedoch ist vom Restsatz semantisch und syntaktisch losgelöst, weswegen sein Bezugswort keine grammatikalische Funktion der übergeordneten Struktur (in aller Regel S) sein darf. Dem Partizip eines Abl. abs. kommt daher unumgänglich die Funktion des ADJ zu. Somit kann geschlussfolgert werden, dass ein Partizip, welches im Ablativ steht, neben der Funktion eines XADJ auch die Funktion eines ADJ annehmen kann. Auch das dominante Partizip nimmt aufgrund seiner syntaktischen Eigenständigkeit die Funktion eines ADJ an. Daher kann ein ADJ zudem in allen anderen Kasus vorkommen.
 
@@ -352,7 +352,7 @@ Das Partizip ist im AcP meist ein PPA, selten ein PPP. Im klassischen Latein kan
 \subsubsection{f-Struktur}
 Unter Einbeziehung der Informationen aus den Lexikoneinträgen, der annotierten c-Struktur, und gegebenenfalls den Redundanz- und Default-Regeln kann schließlich die f-Struktur aufgebaut werden.\footnote{Vgl. \cite[13; 23]{Rohrer}; \cite[14]{Skript}.} Auch wenn Informationen aus der c-Struktur in die f-Struktur einfließen, ist keine der beiden Strukturen in der anderen vorhanden.\footnote{Vgl. \cite[26-7; 35]{Rohrer}; \cite[8]{Skript}.}
 
-Die f-Struktur bildet die abstrakte, funktionale Organisation ab;\footnote{Vgl. \cite[7]{Dal}.} diese wird als weitgehend universell angesehen.\footnote{Vgl. \cite[7; 9]{Bresnan}.} Die f-Struktur wird nicht durch einen Baumgraphen, sondern durch eine Attribut-Wert-Matrix dargestellt.\footnote{Vgl. \cite[55]{Falk}; \cite[7]{Skript}.} Darin sind die Attribute stets atomar, die Werte jedoch können sowohl durch einzelne Merkmale (features) oder semantischen Formen als auch durch eine weitere f-Struktur gebildet werden.\footnote{Vgl. \cite[55]{Falk}; \cite[13]{Rohrer}; \cite[8]{Skript}.} Die inneren f-Strukturen wie auch die übergeordnete f-Struktur als Ganzes werden jeweils in eckige Klammern gefasst.
+Die f-Struktur bildet die abstrakte, funktionale Organisation ab;\footnote{Vgl. \cite[7]{Dal}.} diese wird als weitgehend universell angesehen.\footnote{Vgl. \cite[7; 9]{Bresnan}.} Die f-Struktur wird nicht durch einen Baumgraphen, sondern durch eine Attribut-Wert-Matrix dargestellt.\footnote{Vgl. \cite[55]{Falk}; \cite[7]{Skript}.} Darin sind die Attribute stets atomar, die Werte jedoch können sowohl durch einzelne Merkmale oder semantischen Formen als auch durch eine weitere f-Struktur gebildet werden.\footnote{Vgl. \cite[55]{Falk}; \cite[13]{Rohrer}; \cite[8]{Skript}.} Die inneren f-Strukturen wie auch die übergeordnete f-Struktur werden in eckige Klammern gefasst.
 \newpage
 Jede f-Struktur muss mindestens ein Prädikat enthalten. Den Wert dieses Prädikats bildet stets eine semantische Form, die durch einfache Anführungszeichen gekennzeichnet wird.\footnote{Vgl. \cite[8]{Skript}.} Mit dem Prädikat gehen auch seine übrigen Informationen aus dem Lexikoneintrag in die f-Struktur ein, d.h. seine Subkategorisierungserfordernisse sowie die übrigen Attribut-Wert-Paare, die zur näheren Bestimmung seiner Form nötig sind, wie beispielsweise Tempus und Modus.\footnote{Vgl. \cite[13; 23; 28-9]{Rohrer}; \cite[7; 9]{Skript}; \cite[7]{Dal}. Des Weiteren können funktionale Gleichungen in den f-Strukturen enthalten sein; vgl. \cite[21]{Rohrer}. In den Lexikoneinträgen dieser Arbeit wurde auf derartige Funktionsgleichungen verzichtet, da das Wichtigste bereits in den Redundanz- und Default-Regeln aufgeführt wurde.} 
 
@@ -370,7 +370,9 @@ Die offenen Funktionen XCOMP und XADJ, deren Subjekt von einem Argument außerha
 %Da die kontrollierende Funktion vom Prädikat eines Werks regiert wird, muss im dieses Verbs spezifiziert sein, dass es eine solche Kontrolle über das Subjekt eines seiner Argumente ausüben kann.
 Ein Beispiel hierfür findet sich in dieser Arbeit bei der Betrachtung des Lexikoneintrags der AcP-Konstruktion in Abschnitt 7.2.\footnote{Vgl. \cite[54-5]{Skript}; \cite[30; 40]{Rohrer}. Auf eine andere Art der Kontrolle, die anaphorische Kontrolle, wird in dieser Arbeit nicht eingegangen.}
 
-Die f-Struktur des einfachen Beispielsatzes, \textit{barbaros in Gallia vicit}, wird hier zum besseren Verständnis kurz aufgeführt:
+Die f-Struktur des einfachen Beispielsatzes, \textit{barbaros in Gallia vicit}, wird zum besseren Verständnis auf der nächsten Seite kurz aufgeführt.
+\newline
+\newline
 \begin{singlespace}
 \begin{avm}
 \[ PRED &  \rm ‘vinco \q<SUBJ, OBJ\q>'\\
@@ -429,7 +431,7 @@ Im Übrigen gelten die in den Redundanz- und Default-Regeln genannten Bedingunge
 
 \subsection{Objektabhängiges Participium coniunctum}
 Beim objektabhängigen PC bezieht sich das Partizip auf das Objekt des Hauptsatzes. Im vorliegenden Fall stehen Bezugswort und Partizip im Akkusativ. \\
-Die vorangegangenen Überlegungen sollen am Beispiel des Satzes \textit{legatum in Galliam missum Caesar revocat} in die Praxis umgesetzt werden.
+Die vorangegangenen Überlegungen sollen auf den folgenden Seiten am Beispiel des Satzes \textit{legatum in Galliam missum Caesar revocat} in die Praxis umgesetzt werden.
 
 \subsubsection{Lexikoneintrag}
 \begin{singlespace}
@@ -907,7 +909,7 @@ GEN & n \\
 \section{Dominantes Partizip}
 Beim sogenannten dominanten Partizip trägt nicht das Substantiv, sondern das in Kasus, Numerus und Genus übereinstimmenden Partizip die Hauptbedeutung; das Partizip ,dominiert' daher sein Bezugswort.
 %Beim sogenannten dominanten Partizip ,dominiert` das Partizip sein Bezugswort, weswegen der Hauptfokus auf dem Partizip liegt.
-Aus diesem Grund wird das dominante Partizip im Deutschen in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das Substantiv als Genitiv abhängt. Meistens wird als dominantes Partizip das PPP verwendet.\footnote{Vgl. NM, S. 717 f., §502.}\\
+Aus diesem Grund wird das dominante Partizip im Deutschen in der Regel mit einem Verbalsubstantiv wiedergegeben, von dem das Substantiv als Genitiv abhängt. Meistens wird als dominantes Partizip das PPP verwendet.\footnote{Vgl. NM, S. 717 f., §502.}
 
 \subsection{Vorüberlegungen zur Umsetzung in der LFG}
 %Der Lexikoneintrag zum Partizip der Konstruktion unterscheidet sich nicht wesentlich von den vorherigen.
